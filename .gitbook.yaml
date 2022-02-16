@@ -11,8 +11,14 @@ redirects:
   flexsave-aws/flexsave-regions: ./flexsave/aws.md
   flexsave-aws/overview: ./flexsave/overview.md
   general/login: ./general/log-in.md
-  notifications/default-notifications: ./services/notifications/default.md
-  notifications/managing-alerts-in-shared-slack-channels: ./services/notifications/slack.md
+  general/sharing-feedback-and-feature-requests: ./general/sharing-feedback.md
+  notifications/cloud-credits: ./general/profile.md
+  notifications/default-notifications: ./general/profile.md
+  notifications/default: ./general/profile.md
+  notifications/managing-alerts-in-shared-slack-channels: ./general/slack.md
+  notifications/new-invoices: ./general/profile.md
+  notifications/payment-reminders: ./general/profile.md
+  notifications/slack: ./general/slack.md
   perks/perks: ./services/perks.md
   tickets/aws-access: ./services/consulting-support/aws-access.md
   tickets/aws-ro-access: ./services/consulting-support/aws-access.md

@@ -5,11 +5,11 @@
 ## General
 
 * [Log in to the CMP](general/log-in.md)
-* [Company Registration](general/registration.md)
-* [Your Profile](general/profile.md)
-* [Sharing Feedback](general/sharing-feedback-and-feature-requests.md)
-* [General Settings](general/general-settings.md)
-* [Slack Application](general/slack.md)
+* [Company registration](general/registration.md)
+* [General settings](general/general-settings.md)
+* [Your profile](general/profile.md)
+* [Slack application](general/slack.md)
+* [Sharing feedback](general/sharing-feedback.md)
 
 ## Dashboards & Widgets
 
@@ -140,14 +140,6 @@
 * [User Permissions Explained](user-management/user-permissions-explained.md)
 * [Bulk Invite Users](user-management/bulk-invite-users.md)
 * [Manage Organizations](user-management/manage-organizations.md)
-
-## Notifications
-
-* [Payments Notifications](notifications/payment-reminders.md)
-* [New Invoices Notifications](notifications/new-invoices.md)
-* [Cloud Credits Notifications](notifications/cloud-credits.md)
-* [Slack Notifications](notifications/slack.md)
-* [Default Notifications](notifications/default.md)
 
 ## Vendor Information
 
