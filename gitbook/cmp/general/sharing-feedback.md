@@ -4,7 +4,7 @@ description: >-
   the CMP
 ---
 
-# Sharing Feedback
+# Sharing feedback
 
 When it comes to building a better Cloud Management Platform for you and all customers, your feedback plays a key role. **It is one of the important pieces of input we consider when planning our roadmap, and gives us clear indications of where the needs are in the market.**
 
@@ -18,7 +18,7 @@ Select the functional area that your idea relates to and complete the remaining 
 
 Once finished, click 'Add idea' and your idea will be submitted to our Product Team.
 
-## Upvoting Existing Ideas in the Feedback Hub
+## Upvoting existing ideas in the Feedback Hub
 
 When you [share feedback and/or feature requests](sharing-feedback-and-feature-requests.md) with us, they get submitted to our [**Feedback Hub**](https://feedback.doit-intl.com). There, you see and upvote any ideas you like.
 

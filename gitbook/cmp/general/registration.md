@@ -2,7 +2,7 @@
 description: Your first step to start using DoiT International Cloud Management Platform
 ---
 
-# Company Registration
+# Company registration
 
 At DoiT International we want to create a seamless customer experience from the very first touch-point to the post-contract stage, and that's why registering your company through our Cloud Management Platform is an integral part of a successful customer onboarding process.
 

@@ -1,21 +1,12 @@
----
-description: Settings > General
----
+# General settings
 
-# General Settings
+Select the gear icon from the top navigation bar to edit organization defaults for all users within the Cloud Management Platform (CMP). The CMP will take you to the _General_ settings screen:
 
-The **General** tab of the Settings section contains options that provide company-specific defaults for all users within the CMP.
+![A screenshot of the _General_ settings screen](../.gitbook/assets/cmp-general-settings.png)
 
-## Currency
+The _General_ settings screen has a form that allows you to configure:
 
-![A screenshot of the Currency drop-down menu](../.gitbook/assets/cmp-currency-menu.png)
+* Your organization's default timezone
+* Your organization's default currency
 
-| Section    | Feature        | Behavior                                                                                                                         |
-| ---------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Dashboards | Pulse          | Pulse Dashboard will show all reports in your default currency                                                                   |
-| Analytics  | Reports        | Currency will be the default timezone for any report in [_Explore_ or _New Report_](../cloud-analytics/create-cloud-report/)\_\_ |
-| Analytics  | Budgets        | Currency will be used as the default for any newly [created Budget](../cloud-analytics/manage-budgets.md#creating-budgets)       |
-| Governance | Cost Anomalies | Cost Anomalies will show in configured default currency                                                                          |
-| Savings    | FlexSave       | FlexSave will show in configured default currency                                                                                |
-
-Changing this value will immediately apply the setting to your account and requires no additional save action.
+When you edit the value of any form field on this page, the CMP will automatically save your changes.

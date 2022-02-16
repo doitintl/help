@@ -1,68 +1,116 @@
 ---
-description: How to update your user profile on Cloud Management Platform
+description: How to update your profile, edit your role, change your notification preferences, and generate an API key
 ---
 
-# Your Profile
+# Your profile
 
-You can access and edit your user profile to adjust your personal details and/or notifications settings. To access your profile settings, click your profile icon in the upper-right corner of the page header and select **Profile.**
+To view your profile, select your account name from the top navigation menu, then select your name at the top of the drop-down menu:
 
-You will be taken to a Profile page, where you'll find the following tabs:
+![A  screenshot of the profile drop-down menu](../.gitbook/assets/cmp-profile-drop-down.png)
 
-* Profile
-* Permissions
-* Notifications
-* API
+The _Cloud Management Platform_ (CMP) will take you to your _Profile_ page:
 
-Let's go over what can be configured in each tab.
+![A screenshot of the _Profile_ screen](../.gitbook/assets/cmp-profile.png)
 
-## Profile
+The _Profile_ page has a form that allows you to edit the following information:
 
-* **First / Last Name**
-* **Job Function**
-* **Phone Number**
-* **Default Dashboard** - the default dashboard that appears on your "Homepage" whenever you log in.
+* _First Name_ and _Last Name_ &mdash; Your display name in the CMP
+* _Job Function_ &mdash; Account admins can use job function to help [manage your organization](../user-management/manage-organizations.md)
+* _Phone Number_ &mdash; Your international dialing code and local number
+* _Default Dashboard_ &mdash; The default [dashboard](../dashboards-and-widgets/customizing-dashboards.md) to display when you first log in
+
+When you edit the value of any form field on this page, the CMP will automatically save your changes.
+
+{% hint style="info" %}
+
+Admins or users with the [Users Manager](../user-management/user-permissions-explained#users-manager) permission can [edit any user profile](../user-management/creating-a-new-user#editing-user-profiles).
+
+{% endhint %}
 
 ## Permissions
 
-This is where you can view your [CMP Role](../user-management/manage-roles.md) (and the associated permissions that come with it) and assign yourself to any [Billing Profiles](../invoices-and-payments/setting-up-a-new-billing-profile.md) (if you have the Admin role).
+To view your [role](../user-management/manage-roles.md) and associated [permissions](../user-management/user-permissions-explained.md), select _Permissions_ from the left-hand sidebar. The CMP will take you to the _Permissions_ screen:
 
-## Notifications
+![A screenshot of the _Permissions_ screen](../.gitbook/assets/cmp-profile-permissions.png)
 
-You can request to be notified on the following events:
+The _Permissions_ screen includes the following information:
 
-**New Invoices** - an email will be sent when a new invoice is uploaded to the Cloud Management Platform
+* Your currently assigned role
+* A list of your role entitlements (aka permissions)
+* A list of your assigned [billing profiles](../invoices-and-payments/setting-up-a-new-billing-profile.md)
 
-**Credits Utilization** - request to be notified when your credits are 75% exhausted and then again once they have been fully exhausted.
+{% hint style="info" %}
 
-**Cloud Quota Utilization** - notifies you when you exceed 50% usage of any of your Google Cloud and/or AWS service quotas.
+Admins or users with the [Users Manager](../user-management/user-permissions-explained#users-manager) permission can edit [user roles](../user-management/manage-roles.md).
 
-**Cost Anomalies** - request to be notified when our system detects abnormal usage of your cloud platform (i.e., AWS and/or Google Cloud). Additionally, you can set at which threshold (Information, Warning, Critical) you'd like to be notified.
+Admins or users with the [Billing Profile Admin](../user-management/user-permissions-explained#billing-profile-admin) permission can manage assigned [billing profiles](../invoices-and-payments/setting-up-a-new-billing-profile).
 
-**Payment Due/Overdue** - an email will be sent reminding the user to pay the invoice. There are three different instances of when notifications are sent:
+{% endhint %}
 
-* [ ] The first reminder is sent seven days before an invoice is due.
-* [ ] The second reminder is sent four days after the invoice's due date.
-* [ ] The third reminder is sent 10 days after the invoice's due date.
+## Notification preferences
 
-**Cloud** [**Known Issues**](../services/consulting-support/cloud-incidents.md)
+To edit your notification preferences, select _Notifications_ from the left-hand sidebar. The CMP will take you to the _Notifications_ screen:
 
-* Get alerted whenever there is an infrastructure issue with Google Cloud and/or AWS that may affect your own workloads.
+![A screenshot of the _Notifications_ screen](../.gitbook/assets/cmp-profile-notifications.png)
 
-### Daily Digest Emails
+On the _Notifications_ screen, you can opt-in or out of the following notification types:
 
-Selecting one or more attributions from the dropdown will generate a daily cost digest sent to your email address. You will receive one email per attribution selected detailing:
+* **New Invoices** &mdash; We'll notify you every time there is a new invoice or adjustment
 
-* Previous day's cost
-* Month to date cost (sum costs accrued in the current month)
-* Cost trend (current month cost to date / previous month costs to same date in the previous month)
-* Forecasted current month cost
+* **Credits Utilization** &mdash; We'll let you know on 75% of your Google Cloud or AWS credits and then again when they are fully exhausted
 
-The email will be sent at 6:00 UTC.
+* **Cloud Quota Utilization** &mdash; Be notified every time one of your Google Cloud or AWS service quotas utilization is over 50%
 
-![A screenshot of the email that will be sent](../.gitbook/assets/email-daily-digest.png)
+* **Cost Anomalies** &mdash; We'll alert you when your cloud costs don't align with the anticipated spending (configurable with _Threshold_ and _Delta_)
 
-### API
+* **Payment Due/Overdue** - Get automated updates when invoices are due and overdue
 
-This is where you go to generate your API key in order to [programmatically access several CMP features](../apis/developer-hub.md).
+  * We will send the first reminder seven days before an invoice is due
+  * We will send the second reminder four days after the invoice's due date
+  * We will send the third reminder 10 days after the invoice's due date
 
-After you generate your key, copy and store it somewhere handy, as we won't show it again after you leave the API page.
+* **[Cloud Known Issues](../services/consulting-support/cloud-incidents.md)** &mdash; Be aware of the known infrastructure issues with Google Cloud or Amazon Web Services ahead of time
+
+* **Daily Cost Digest** &mdash; Receive a daily digest of spend vs. same period of the previous month (configurable with _Daily cost digest attributions_)
+
+  Use the _Daily cost digest attributions_ input to select which attributions you want to include in your daily digest.
+
+  You will receive one email per selected attribution detailing:
+
+  * Previous day's cost
+  * Month to date cost (sum costs accrued in the current month)
+  * Cost trend (current month cost to date vs. previous month costs for the same date)
+  * Forecasted current month cost
+
+  We will send you daily digest emails at 06:00 UTC.
+
+### Default notifications
+
+New users are assigned default notifications tailored to their assigned [role](../user-management/manage-roles.md). These notifications ensure that users are informed about important events related to their job function.
+
+| Role            | Default notifications                                                                                                 |
+| --------------- | --------------------------------------------------------------------------------------------------------------------- |
+| _Admin_         | Cloud Quota Utilization<br/>Cloud Cost Anomalies<br/>Payment Due/Overdue<br/>Cloud Known Issues<br/>Daily Cost Digest |
+| _Finance User_  | New Invoices<br/>Cloud Cost Anomalies<br/>Payment Due/Overdue                                                         |
+| _Power User_    | Cloud Quota Utilization<br/>Cloud Cost Anomalies<br/>Cloud Known Issues<br/>Daily Cost Digest                         |
+| _Standard User_ | Cloud Cost Anomalies<br/>Daily Cost Digest                                                                            |
+
+## API key
+
+You need an API key to use the [Cloud Management Platform API](https://developer.doit-intl.com/).
+
+To manage your API key, select _API_ from the left-hand sidebar. The CMP will take you to the _API_ screen:
+
+![A screenshot of the _API_ screen](../.gitbook/assets/cmp-profile-api.png)
+
+To generate a new API key, select the _GENERATE KEY_ button.
+
+After you generate your API key, copy and store it somewhere handy. We won't display your API key again after leaving the _API_ page.
+
+{% hint style="info" %}
+
+In the bottom right-hand corner of the _API Key_ text box, you can use the icons to copy your API key to your system clipboard or download your API key as a JSON file.
+
+{% endhint %}
+
+To delete your API key, select the _DELETE KEY_ button.
