@@ -15,30 +15,31 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: make check
-  telemetry:
-    name: Telemetry
-    needs: checks
-    runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/doitintl/docops/devcontainer:main
-    steps:
-      - uses: actions/checkout@v2
-      - run: make telemetry
-      - uses: crazy-max/ghaction-github-status@v2
-        with:
-          pages_threshold: major_outage
-      - uses: crazy-max/ghaction-github-pages@v2
-        if: success() && github.event_name != 'pull_request'
-        with:
-          target_branch: gh-pages
-          build_dir: gh-pages
-          keep_history: true
-          jekyll: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  # TODO: Fix telemetry and reenable
+  # telemetry:
+  #   name: Telemetry
+  #   needs: checks
+  #   runs-on: ubuntu-latest
+  #   container:
+  #     image: ghcr.io/doitintl/docops/devcontainer:main
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - run: make telemetry
+  #     - uses: crazy-max/ghaction-github-status@v2
+  #       with:
+  #         pages_threshold: major_outage
+  #     - uses: crazy-max/ghaction-github-pages@v2
+  #       if: success() && github.event_name != 'pull_request'
+  #       with:
+  #         target_branch: gh-pages
+  #         build_dir: gh-pages
+  #         keep_history: true
+  #         jekyll: false
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   notification:
     name: Notification
-    needs: telemetry
+    needs: checks
     if: always() && github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:

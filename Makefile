@@ -427,7 +427,7 @@ $(GH_PAGES_DIR)/index.html:
 # TODO: Include GitBook superQuery docs
 # TODO: Include Sphinx CMP docs
 
-GEN_ASSETS_LIST := $(BIN_DIR)/gen-assets-list.sh
+GEN_ASSETS_LIST = $(BIN_DIR)/gen-assets-list.sh
 
 $(GH_PAGES_DIR)/index.html: $(GH_PAGES_DIR)/assets.html
 .PHONY: $(GH_PAGES_DIR)/assets.html
@@ -442,6 +442,8 @@ $(GH_PAGES_DIR)/assets.html:
 
 # https://github.com/errata-ai/vale
 
+# TODO: Wrap this into the `vale.sh` script
+
 VALE_JSON = vale \
 	--config .vale.ini \
 	--minAlertLevel suggestion \
@@ -449,7 +451,7 @@ VALE_JSON = vale \
 	--no-wrap \
 	--no-exit
 
-VALE_JSON_RULE := $(FIND) --mode vale -print0 | xargs -0 $(VALE_JSON) >$@
+VALE_JSON_RULE = $(FIND) --mode vale --print0 | xargs -0 $(VALE_JSON) >$@
 
 $(GH_PAGES_DIR)/index.html: $(GH_PAGES_DIR)/vale.json
 .PHONY: $(GH_PAGES_DIR)/vale.json
