@@ -11,12 +11,10 @@ run_lintspaces() {
     max_newlines="${1}"
     xargs -0 lintspaces \
         --editorconfig .editorconfig \
-        --endofline LF \
         --guessindentation \
         --matchdotfiles \
         --maxnewlines "${max_newlines}" \
-        --newline \
-        --trailingspaces </dev/stdin
+        </dev/stdin
 }
 
 # Python files

@@ -10,6 +10,7 @@ LC_ALL=C
 export LC_ALL
 
 # ANSI formatting
+BLUE='\x1b[34m'
 RED='\x1b[31m'
 RESET='\x1b[0m'
 
@@ -22,7 +23,8 @@ misspell -locale US . |
         >"${tmp_errors}" || true
 
 if test -s "${tmp_errors}"; then
-    sed -E "s,^(.*),  ${RED}\1${RESET}," <"${tmp_errors}"
+    sed -E "s,^(.*): (.*),  ${BLUE}\1:${RESET} ${RED}\2${RESET}," \
+        <"${tmp_errors}"
     rm -f "${tmp_errors}"
     exit 1
 fi

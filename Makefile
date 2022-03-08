@@ -113,7 +113,7 @@ prettier:
 
 # https://github.com/psf/black
 
-BLACK = black --check --quiet .
+BLACK = black --check .
 
 check: black
 .PHONY: black
@@ -231,6 +231,7 @@ update-dict:
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 CSPELL = $(BIN_DIR)/cspell.sh
+
 check: cspell
 .PHONY: cspell
 cspell:
@@ -304,10 +305,6 @@ misspell:
 
 # vale
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# https://github.com/errata-ai/vale
-
-# TODO: https://share.streamlit.io/jdkato/rules/main/app/main.py
 
 VALE := $(BIN_DIR)/vale.sh
 

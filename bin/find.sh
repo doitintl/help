@@ -17,6 +17,7 @@
 #       know when to update the cache
 
 # TODO: Rework this whole script
+# https://github.com/doitintl/doit-composer-airflow-training
 
 # POSIX locale
 LC_ALL=C
@@ -73,7 +74,7 @@ find_sort() {
         -not -path './.docops/lock/*' \
         -not -path './.git/*' \
         -not -exec git check-ignore --quiet {} \; \
-        -print | sort -zn
+        -print | sort -n
 }
 
 filter_find() {

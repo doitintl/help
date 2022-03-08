@@ -7,8 +7,6 @@
 
 # https://github.com/errata-ai/vale
 
-# TODO: https://share.streamlit.io/jdkato/rules/main/app/main.py
-
 run_vale() {
     ./bin/find.sh --mode vale --print0 |
         xargs -0 vale \
