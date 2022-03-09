@@ -322,33 +322,31 @@ vale:
 
 # https://github.com/smallhadroncollider/brok
 
-# BROK = brok --check-certs --only-failures
+BROK = brok --check-certs --only-failures
 
-# TODO: Keep cache file in Git
-
-# TODO: Check in new cache file during automated runs if the check passes
+# TODO: Keep cache file in Git to speed up CICD
 
 # all: brok
-# .PHONY: brok
-# brok:
-# 	$(call print-target)
-# 	$(FIND) -print0 | xargs -0 $(BROK)
+.PHONY: brok
+brok:
+	$(call print-target)
+	$(FIND) --mode md -print0 | xargs -0 $(BROK)
 
 # markdown-link-check
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # https://github.com/tcort/markdown-link-check
 
-# MARKDOWN_LINK_CHECK = markdown-link-check \
-# 	--config .markdown-link-check.json \
-# 	--quiet \
-# 	--retry
+MARKDOWN_LINK_CHECK = markdown-link-check \
+	--config .markdown-link-check.json \
+	--quiet \
+	--retry
 
-# all: markdown-link-check
-# .PHONY: markdown-link-check
-# markdown-link-check:
-# 	$(call print-target)
-# 	$(FIND) --mode md --print0 | xargs -0 $(MARKDOWN_LINK_CHECK)
+all: markdown-link-check
+.PHONY: markdown-link-check
+markdown-link-check:
+	$(call print-target)
+	$(FIND) --mode md --print0 | xargs -0 $(MARKDOWN_LINK_CHECK)
 
 # rm-unused-assets
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

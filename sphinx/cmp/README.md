@@ -45,4 +45,4 @@ Until this version of the documentation goes live, any substantial changes to th
 This project is primarily maintained by [DoiT International][doit-org] staff. However, we do welcome community contributions! Please read the [contribution documentation][contributing] for more information.
 
 [doit-org]: https://github.com/doitintl/
-[contributing]: https://github.com/doitintl/sphinx-docs-cmp/CONTRIBUTING/md
+[contributing]: https://github.com/doitintl/docs/tree/main/CONTRIBUTING.md

@@ -6,9 +6,9 @@ description: >-
 
 # FlexSave for AWS
 
-FlexSave is your cloud co-pilot, dynamically maximizing your cloud-compute discounts for [Amazon Web Services](https://aws.amazon.com) (AWS) without any of the risks or limitations of long-term use commitments.
+FlexSave is your cloud co-pilot, dynamically maximizing your cloud-compute discounts for [Amazon Web Services][aws] (AWS) without any of the risks or limitations of long-term use commitments.
 
-In most cases, save [the equivalent of a 1-year commitment discount](overview.md#how-much-can-i-save-with-flexsave-for-amazon-web-services) on your cloud-compute spend with on-demand access to DoiT International's wholesale inventory of AWS [Savings Plans](https://https/aws.amazon.com/savingsplans/) (SPs) and AWS [EC2 Reserved Instances](https://https/aws.amazon.com/ec2/pricing/reserved-instances/) (RIs).
+In most cases, save [the equivalent of a 1-year commitment discount](overview.md#how-much-can-i-save) on your cloud-compute spend with on-demand access to DoiT International's wholesale inventory of AWS [Savings Plans][sps] (SPs) and AWS [EC2 Reserved Instances][ris] (RIs).
 
 {% hint style="info" %}
 See also:
@@ -82,14 +82,14 @@ Yes, you can. FlexSave works exclusively with your on-demand compute usage and e
 
 #### Can FlexSave provide discounts for on-demand capacity reservations?
 
-FlexSave only supports AWS regional reserved instances. Because AWS on-demand capacity reservations require zonal reserved instances, FlexSave does not provide capacity reservation discounts or discounts for [on-demand capacity reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html).
+FlexSave only supports AWS regional reserved instances. Because AWS on-demand capacity reservations require zonal reserved instances, FlexSave does not provide capacity reservation discounts or discounts for [on-demand capacity reservations][capacity-reservations].
 
-FlexSave only supports AWS regional reserved instances. Because AWS on-demand capacity reservations require zonal reserved instances, FlexSave cannot provide discounts for [on-demand capacity reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html).
+FlexSave only supports AWS regional reserved instances. Because AWS on-demand capacity reservations require zonal reserved instances, FlexSave cannot provide discounts for [on-demand capacity reservations][capacity-reservations].
 
 {% hint style="info" %}
 See also:
 
-* [AWS EC2 documentation: Regional and zonal reserved instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/reserved-instances-scope.html)
+* [AWS EC2 documentation: Regional and zonal reserved instances][regional-zonal]
 {% endhint %}
 
 #### I have a special pricing plan on my AWS account. Can I still use FlexSave, and will it impact my existing savings?
@@ -103,5 +103,11 @@ If you enabled FlexSave today, you might have to wait until the first week of ne
 ### Contact us
 
 {% hint style="info" %}
-If you have additional questions, please [contact our support team](../services/consulting-support/).
+If you have additional questions about FlexSave, please [contact our support team](../services/consulting-support/).
 {% endhint %}
+
+[aws]: https://aws.amazon.com/
+[capacity-reservations]: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html
+[regional-zonal]: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/reserved-instances-scope.html
+[ris]: https:/aws.amazon.com/ec2/pricing/reserved-instances/
+[sps]: https:/aws.amazon.com/savingsplans/

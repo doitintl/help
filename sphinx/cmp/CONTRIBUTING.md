@@ -17,11 +17,11 @@ Please feel free to [create an issue][issues] if you would like to:
 ## Create a pull request
 
 The documentation project is built with [Sphinx][sphinx]. The
-[reStructuredText][rst] (RST) source files are located in the [docs][docs]
+[reStructuredText][rst] (RST) source files are located in the [src][src]
 directory. If you would like to make changes directly, please feel free to
 [fork this repository][fork] and [create a pull request][pr].
 
-[docs]: https://github.com/doitintl/sphinx-docs-cmp/docs
+[src]: https://github.com/doitintl/docs/tree/main/sphinx/cmp/src
 [doit-org]: https://github.com/doitintl/
 [fork]: https://docs.github.com/en/get-started/quickstart/fork-a-repo
 [issues]: https://github.com/doitintl/sphinx-docs-cmp/issues
