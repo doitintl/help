@@ -3,7 +3,7 @@
 # Generate an `index.html` file for a directory
 # =============================================================================
 
-# Usage: ./bin/www-index.sh TARGET_DIR INDEX_FILE
+# Usage: ./bin/website-index.sh TARGET_DIR INDEX_FILE
 
 # POSIX locale
 LC_ALL=C

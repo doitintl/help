@@ -11,14 +11,16 @@
 LC_ALL=C
 export LC_ALL
 
-# Run `markdownlint`
-markdownlint .
+find_md_files() {
+    fdfind -H -t f '\.md$' --print0
+}
+
+find_md_files | xargs -0 markdownlint
 
 # Catch additional errors
 search() {
     pattern="${1}"
-    if (fdfind --hidden --ignore-case --print0 '\.md$' |
-        xargs -0 grep --color=always -E "${pattern}"); then
+    if (find_md_files | xargs -0 grep --color=always -E "${pattern}"); then
         return 1
     else
         return 0

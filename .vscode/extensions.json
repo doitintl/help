@@ -2,6 +2,7 @@
   "recommendations": [
     "codezombiech.gitignore",
     "davidanson.vscode-markdownlint",
+    "dbaeumer.vscode-eslint",
     "eamodio.gitlens",
     "editorconfig.editorconfig",
     "errata-ai.vale-server",
@@ -11,7 +12,10 @@
     "golang.go",
     "redhat.vscode-yaml",
     "shd101wyy.markdown-preview-enhanced",
+    "silvenon.mdx",
     "streetsidesoftware.code-spell-checker",
-    "tht13.html-preview-vscode"
+    "tht13.html-preview-vscode",
+    "vadistic.mdx-inline",
+    "xyc.vscode-mdx-preview"
   ]
 }

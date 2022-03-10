@@ -11,4 +11,5 @@
 LC_ALL=C
 export LC_ALL
 
-shfmt -d -p -i 4 .
+fdfind -H -t f '\.sh$' --print0 |
+    xargs -0 shfmt -d -p -i 4

@@ -1,6 +1,6 @@
-# DoiT Documentation
+# DoiT Help
 
-_Public product documentation for DoiT International_
+_DoiT International help site and product documentation_
 
 [![CICD][actions-cicd-img]][actions-cicd-workflow]
 

@@ -13,9 +13,6 @@ export LC_ALL
 RED='\x1b[1;31m'
 RESET='\x1b[0m'
 
-DOCS_DIR=gitbook/cmp
-ASSETS_DIR=.gitbook/assets
-
 dry_run=0
 for arg in "$@"; do
     case "${arg}" in
@@ -33,34 +30,40 @@ done
 
 OPTIPNG_LOCK_DIR=.docops/lock/optipng
 
-docs_lock_dir="${OPTIPNG_LOCK_DIR}/${DOCS_DIR}"
-mkdir -p "${docs_lock_dir}"
+mkdir -p "${OPTIPNG_LOCK_DIR}"
 
 tmp_errors="$(mktemp)"
-(cd "${DOCS_DIR}/${ASSETS_DIR}" && fdfind --no-ignore '\.png$') |
+find . -type f -name '*.png' -print |
+    grep -vE '(node_modules|build)' |
+    sort -n |
     while read -r file; do
-        basename="$(basename "${file}")"
-        sig_file="${docs_lock_dir}/${basename}.md5sum"
+        sig_file="${OPTIPNG_LOCK_DIR}/${file}.md5sum"
+        dirname="$(dirname "${sig_file}")"
+        mkdir -p "${dirname}"
         if md5sum --check --quiet "${sig_file}" 2>/dev/null; then
             continue
         fi
-        full_filename="${DOCS_DIR}/${ASSETS_DIR}/${file}"
         if test "${dry_run}" = 0; then
-            echo "Compressing: ${full_filename}"
-            optipng -quiet -strip all "${full_filename}"
-            md5sum "${full_filename}" >"${sig_file}"
+            echo "Compressing: ${file}"
+            optipng -quiet -strip all "${file}"
+            md5sum "${file}" >"${sig_file}"
         else
-            echo "${full_filename}" >>"${tmp_errors}"
+            echo "${file}" >>"${tmp_errors}"
         fi
     done
 
 # Clean the cache
-find "${docs_lock_dir}" -type f | while read -r file; do
-    asset_basename="$(basename "${file}" | sed 's,\.md5sum$,,')"
-    if test ! -f "./${DOCS_DIR}/${ASSETS_DIR}/${asset_basename}"; then
-        rm -v "${file}"
-    fi
-done
+find "${OPTIPNG_LOCK_DIR}" -type f |
+    sed "s,^${OPTIPNG_LOCK_DIR}/,," |
+    sed 's,\.md5sum$,,' |
+    sort -n |
+    while read -r file; do
+        sig_file="${OPTIPNG_LOCK_DIR}/${file}.md5sum"
+        if test ! -f "${file}"; then
+            m -v "${sig_file}"
+        fi
+    done
+find "${OPTIPNG_LOCK_DIR}" -type d -empty -delete
 
 status_code=0
 if test -s "${tmp_errors}"; then
