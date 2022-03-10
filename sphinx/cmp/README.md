@@ -1,29 +1,17 @@
-# DoiT CMP User Documentation
+# Sphinx POC
 
-_Public Sphinx repository for the DoiT Cloud Management Platform (CMP) User Documentation_
+This directory contains a _Proof of Concept_ (POC) for building the DoiT CMP documentation using [Sphinx][sphinx].
 
-[![Build][actions-build-img]][actions-build]
+These docs were (essentially) forked from [docs-gitbook-cmp] at commit [329709d] on Nov 18, 2021.
 
-[actions-build-img]: https://github.com/doitintl/sphinx-docs-cmp/actions/workflows/push.yaml/badge.svg
-[actions-build]: https://github.com/doitintl/sphinx-docs-cmp/actions/workflows/push.yaml
+Any changes to the live documentation after Nov 15, 2021 m be mirrored here to keep these docs up-to-date. The same is not true in reverse (i.e., improvements made here do not need to be mirrored back).
 
-**Table of contents**
-
-- [Updating the fork](#updating-the-fork)
-  - [Timeline](#timeline)
-- [Contribute](#contribute)
-
-## Updating the fork
-
-This repository was (essentially) forked from [docs-gitbook-cmp] at commit [329709d] on Nov 18, 2021.
-
-Until this version of the documentation goes live, any substantial changes to the source repository made on the [main timeline][main] after Nov 15, 2021 need to be mirrored here to keep these docs up-to-date. The same is not true in reverse (i.e., improvements made here do not need to be mirrored back).
-
-[docs-gitbook-cmp]: https://github.com/doitintl/docs-gitbook-cmp/
 [329709d]: https://github.com/doitintl/docs-gitbook-cmp/commit/329709d71ac17c30961901e5615428b03e64bde2
+[docs-gitbook-cmp]: https://github.com/doitintl/docs-gitbook-cmp/
 [main]: https://github.com/doitintl/docs-gitbook-cmp/commits/main
+[sphinx]: https://www.sphinx-doc.org/en/master/
 
-### Timeline
+## Timeline
 
 | Date       | Original  | Mirrored  | Short description                                            |
 | ---------- | --------- | --------- | ------------------------------------------------------------ |
@@ -39,10 +27,3 @@ Until this version of the documentation goes live, any substantial changes to th
 
 [fb31b5d]: https://github.com/doitintl/docs-gitbook-cmp/commit/fb31b5ddde6613ff673dd5e7282e3a6e28e42977
 [de3da02]: https://github.com/doitintl/docs-sphinx-cmp/commit/de3da02c44d8873b86e39aafc785b31d9df8ecbc
-
-## Contribute
-
-This project is primarily maintained by [DoiT International][doit-org] staff. However, we do welcome community contributions! Please read the [contribution documentation][contributing] for more information.
-
-[doit-org]: https://github.com/doitintl/
-[contributing]: https://github.com/doitintl/docs/tree/main/CONTRIBUTING.md

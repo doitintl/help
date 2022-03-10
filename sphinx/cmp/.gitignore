@@ -1,9 +1,0 @@
-__pycache__
-.DS_Store
-.venv/
-.vscode/settings.json
-*.lock.json
-*.log
-*.stamp
-*.tmp
-docs/

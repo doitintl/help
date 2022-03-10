@@ -1,5 +1,6 @@
+.venv
 *.csv
 *.html
 *.md
-sphinx/cmp/.venv
+*.py
 sphinx/cmp/docs
