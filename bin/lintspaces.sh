@@ -14,6 +14,5 @@ export LC_ALL
 fdfind -H -t f --print0 |
     xargs -0 lintspaces \
         --editorconfig .editorconfig \
-        --guessindentation \
         --matchdotfiles \
         --maxnewlines 1

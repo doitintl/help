@@ -27,13 +27,12 @@ tag_pattern() {
 P="$(tag_pattern p)"
 A="$(tag_pattern a)"
 I="$(tag_pattern i)"
-EM="$(tag_pattern em)"
 B="$(tag_pattern b)"
 STRONG="$(tag_pattern strong)"
 IMG="$(tag_pattern img)"
 CODE="$(tag_pattern code)"
 PRE="$(tag_pattern pre)"
 
-PATTERN="(${P}|${A}|${I}|${EM}|${B}|${STRONG}|${IMG}|${CODE}|${PRE})"
+PATTERN="(${P}|${A}|${I}|${B}|${STRONG}|${IMG}|${CODE}|${PRE})"
 
 scan "${PATTERN}"

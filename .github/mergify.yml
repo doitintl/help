@@ -1,9 +1,23 @@
 pull_request_rules:
   - name: Ready to merge
     conditions:
-      - label=ready-to-merge
-      - check-success~=^Build
-      - check-success~=^GitGuardian
+      - and:
+          - label=ready-to-merge
+          - check-success~=^Checks
+          - check-success~=^GitGuardian
+          - check-success~=^netlify
+      - or:
+          - check-success~=^Header rules
+          - check-skipped~=^Header rules
+      - or:
+          - check-success~=^Mixed content
+          - check-skipped~=^Mixed content
+      - or:
+          - check-success~=^Pages changed
+          - check-skipped~=^Pages changed
+      - or:
+          - check-success~=^Redirect rules
+          - check-skipped~=^Redirect rules
     actions:
       merge:
         method: rebase

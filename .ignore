@@ -4,6 +4,7 @@
 *.ico
 *.jpeg
 *.jpg
+*.lock
 *.md5sum
 *.mp4
 *.png

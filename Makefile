@@ -1,5 +1,5 @@
 # =============================================================================
-# Build the project
+# Project build
 # =============================================================================
 
 .EXPORT_ALL_VARIABLES:
@@ -13,43 +13,47 @@ RED = [31m
 RESET = [0m
 
 BIN_DIR = ./bin
-GH_PAGES_DIR = gh-pages
-GITBOOK_ASSETS_DIR = .gitbook/assets
-GITBOOK_CMP_DIR = gitbook/cmp
-GITBOOK_SUPERQUERY_DIR = gitbook/superquery
 
 # $(call print-target)
 define print-target
 @ printf "\e$(BOLD)make %s\e$(RESET)\n" "$$(echo $@ | sed 's,.stamp,,')"
 endef
 
-# Meta targets
+# Primary targets
 # =============================================================================
 
-# TODO: Convert all lint checks into scripts and use a single pattern rule to
-#       invoke them
+.DEFAULT_GOAL = help
 
-# TODO: All targets that call a script multiple times should be simplified so
-#       that it can be done by pattern rules
+help:
+	@ printf '%s\n\n' "Usage: make [target]"
+	@ printf '%s\n\n' 'Available targets:'
+	@ grep -E '^.PHONY: [a-z]+ #' Makefile | \
+		sed -E 's,^.PHONY: ([a-z]+) # (.*),\1#\2,' | \
+		column -s '#' -t | \
+		sed -E "s,^([a-z]+),  \1,"
 
-# TODO: Move the lint scripts into a separate directory
-
-# TODO: Now that `find.sh` has been partially refactored, go through each
-#       target and test that it still correctly flags errors
-
-.DEFAULT_GOAL = check
-
-# check
-# -----------------------------------------------------------------------------
-
-# TODO: Check json keys ordering
-
-.PHONY: check
+.PHONY: check # Run all lint checks
 check:
 
 .PHONY: check-parallel
-check-parallel:
+check-parallel: # Run all lint checks in parallel
 	@ $(MAKE) --no-print-directory -j --output-sync=target check
+
+.PHONY: build # Build the Docusaurus website
+build:
+
+.PHONY: telemetry # Generate telemetry data
+telemetry:
+
+# TODO: Evaluate how many of these rules are still needed
+.PHONY: clean # Remove build artifacts
+clean:
+
+# Prerequisite targets
+# =============================================================================
+
+# check
+# -----------------------------------------------------------------------------
 
 only-ascii:
 check: only-ascii
@@ -87,8 +91,8 @@ check: html-entities
 inline-html:
 check: inline-html
 
-update-dict-dry:
-check: update-dict-dry
+update-vocab-dry:
+check: update-vocab-dry
 
 cspell:
 check: cspell
@@ -117,26 +121,27 @@ check: fdupes
 optipng-dry:
 check: optipng-dry
 
-# telemetry
+# build
 # -----------------------------------------------------------------------------
 
-.PHONY: telemetry
-telemetry:
+build: website
+check: website
+.PHONY: website
+website:
+	$(call print-target)
+	@ $(MAKE) -C website build
+
+# telemetry
+# -----------------------------------------------------------------------------
 
 telemetry: telemetry-index
 
 telemetry-index: telemetry-assets
 
-# clean
+# check
 # -----------------------------------------------------------------------------
 
-# TODO: Evaluate how many of these rules are still needed
-
-clean:
-	rm -rf $(GH_PAGES_DIR)
-	find . -type f -name '*.sig' -delete
-	find . -type f -name '*.out' -delete
-	find . -type f -name '*.tmp' -delete
+clean: git-clean
 
 # Pattern targets
 # =============================================================================
@@ -151,6 +156,8 @@ clean:
 
 # Disabled targets
 # =============================================================================
+
+# TODO: Check json keys ordering
 
 # proselintjs
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

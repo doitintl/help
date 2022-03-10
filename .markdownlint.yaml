@@ -1,20 +1,28 @@
 default: true
 
-# Blank line inside blockquote
-# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md028
-MD028: false
-
 # Line length
 # https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md013
 MD013: false
 
-# Emphasis used instead of a heading
-# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md036
-MD036: false
+# Dollar signs used before commands without showing output
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md014
+MD014: false
+
+# Multiple top-level headings in the same document
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md025
+MD025: false
+
+# Blank line inside blockquote
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md028
+MD028: false
 
 # Inline HTML
 # https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md033
 MD033: false
+
+# Emphasis used instead of a heading
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md036
+MD036: false
 
 # GitBook removes `text`, even when specified, so unless we disable this check,
 # every update to a document with a code block like this is going to trip up

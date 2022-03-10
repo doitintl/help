@@ -7,8 +7,8 @@ on:
       - main
 
 jobs:
-  build:
-    name: Build
+  checks:
+    name: Checks
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/doitintl/docops/devcontainer:main
@@ -30,7 +30,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   notification:
     name: Notification
-    needs: build
+    needs: checks
     if: always() && github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
