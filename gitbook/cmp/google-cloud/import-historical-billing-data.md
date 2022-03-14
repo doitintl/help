@@ -10,6 +10,16 @@ This feature enables you to upload all your historical Google Cloud billing data
 
 To get started, first, you need to ensure that you have a Service Account that connects your Google Cloud Organization to CMP. Then, you'll have to grant two additional required permissions.
 
+{% hint style="info" %}
+
+We import your historical Cloud Billing data from Google BigQuery. To start collecting your Google Cloud Billing data, you must [enable Cloud Billing data export to BigQuery](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-setup).
+
+You can only import as much historical Cloud Billing data as you already have available in BigQuery.
+
+Suppose you enable Cloud Billing data export to BigQuery for the first time while following the steps in this document. In that case, you will only have around one month of historical Cloud Billing data to import into the CMP.
+
+{% endhint %}
+
 ## Identify the service account
 
 Within the CMP, select the gear icon (_Settings_) from the top navigation bar, then select _Google Cloud_ under _Cloud settings_. The CMP will take you to the Google Cloud settings screen:
