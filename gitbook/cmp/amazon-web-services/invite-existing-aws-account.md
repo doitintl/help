@@ -71,6 +71,12 @@ After signing in to the AWS Console and accepting the invitation, a final email 
 
 ## Frequently asked questions
 
+### Why should I use the CMP for cost analytics when Amazon provides the AWS Cost Explorer?
+
+When you consolidate with the DoiT International billing organization, the [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/) can only report on [blended rates and costs](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/con-bill-blended-rates.html#Blended_CB). However, the CMP's reporting and analytics features work directly with your non-blended cost data.
+
+If you have a dedicated billing account (i.e., non-consolidated), you can use the AWS Cost Explorer with un-blended costs. However, we still recommend that you refer to the CMP for a fully integrated reporting and analytics experience.
+
 ### I've performed all the requested steps. I have spends on my AWS billing account, but my information is still not there. What could be the reason?
 
 Once successfully completed it takes 24&ndash;72 hours for the data to start flowing through from AWS, then our Cloud Management Platform will update.
