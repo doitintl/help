@@ -6,12 +6,16 @@ description: How to log in and access the Cloud Management Platform (CMP)
 
 You can log in to the DoiT International _Cloud Management Platform_ (CMP) using one of the following methods:
 
-- [Customers](#customers)
-  - [Use an existing Google Workspace account](#use-an-existing-google-workspace-account)
-  - [Use an existing Microsoft Office 365 account](#use-an-existing-microsoft-office-365-account)
-  - [Use an email address and password](#use-an-email-address-and-password)
-- [Partners](#partners)
-  - [Use your Amazon or Google email address](#use-your-amazon-or-google-email-address)
+- [Log-in methods](#log-in-methods)
+  - [Customers](#customers)
+    - [Use an existing Google Workspace account](#use-an-existing-google-workspace-account)
+    - [Use an existing Microsoft Office 365 account](#use-an-existing-microsoft-office-365-account)
+    - [Use an email address and password](#use-an-email-address-and-password)
+  - [Partners](#partners)
+    - [Use your Amazon or Google email address](#use-your-amazon-or-google-email-address)
+- [FAQ](#faq)
+  - [Can I limit access to a single log-in method?](#can-i-limit-access-to-a-single-log-in-method)
+  - [Can I use my own _Single Sign-On_ (SSO) provider?](#can-i-use-my-own-single-sign-on-sso-provider)
 
 To log in, visit the [log-in screen](https://app.doit-intl.com/login):
 
@@ -67,8 +71,24 @@ After selecting _CONTINUE_, the CMP will send you an email with further instruct
 
 ## FAQ
 
-### Can I limit access to a single SSO provider?
+### Can I limit access to a single log-in method?
 
 Yes, you can.
 
-Please create a [support request](../services/consulting-support/README.md) and tell us which SSO provider your organization uses, and we will disable the other SSO provider.
+Please create a [support request](../services/consulting-support/README.md), tell us which log-in method your organization uses, and we will disable the other options.
+
+### Can I use my own _Single Sign-On_ (SSO) provider?
+
+Yes, you can.
+
+Please create a [support request](../services/consulting-support/README.md), and we will configure access via your organization's SSO provider.
+
+We will need the following information:
+
+| SAML providers  | OIDC providers  |
+| --------------- | --------------- |
+| _Entity ID_     | _Client ID_     |
+| _SSO URL_       | _Issuer (URL)_  |
+| _Certificate_   | _Client Secret_ |
+
+You can provide this information in the support request, or we can set up a configuration session with you.
