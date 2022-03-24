@@ -58,9 +58,9 @@ You may have various components of your application(s) spread across different p
 
 {% embed url="https://www.loom.com/share/8d36dbd796c84d51a26b3f836226c883?sharedAppSource=team_library" %}
 
-### Cloud cost optimization
+## Cloud cost optimization
 
-## Rightsizing for Google Cloud
+### Rightsizing for Google Cloud
 
 When you create an instance in Google Cloud and it is under-utilized, you are paying more than you should as a result of idle resources.
 
@@ -86,7 +86,7 @@ See how it works in the video below:
 FlexSave demo for Google Cloud and AWS
 {% endembed %}
 
-## BigQuery Lens
+### BigQuery Lens
 
 As powerful as BQ is, it comes at a high cost depending on your analysts' behavior and how your BigQuery architecture is set up. Adding on to this, trying to identify BigQuery resource inefficiencies without knowing _what_ you're looking for can be a huge time-suck.
 
