@@ -30,7 +30,7 @@ To grant access, you must configure an AWS CloudFormation stack which allows our
 
 ## Technical details
 
-Below is the [template YAML file](https://doit-aws-ops-prod-templates.s3.amazonaws.com/awsops\_sns.yaml) in full.
+Below is the [template YAML file](https://doit-aws-ops-prod-templates.s3.amazonaws.com/awsops_sns.yaml) in full.
 
 {% hint style="info" %}
 If you are installing this CloudFormation template manually, be sure to set your AWS region to `us-east-1`.

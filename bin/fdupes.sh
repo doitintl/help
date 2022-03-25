@@ -10,7 +10,7 @@ LC_ALL=C
 export LC_ALL
 
 # ANSI formatting
-RED='\x1b[31m'
+RED='\x1b[1;31m'
 RESET='\x1b[0m'
 
 tmp_repo_copy="$(mktemp -d)"
@@ -28,7 +28,7 @@ fdupes --quiet --recurse --order=name --noempty --sameline "${tmp_repo_copy}" |
 status_code=0
 if test -s "${tmp_errors}"; then
     printf 'Duplicate files:\n\n'
-    sed -E "s,^(.*),  ${RED}\1${RESET}," <"${tmp_errors}"
+    sed -E "s,^(.*),${RED}\1${RESET}," <"${tmp_errors}"
     status_code=1
 fi
 rm -rf "${tmp_repo_copy}"

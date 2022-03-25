@@ -7,12 +7,12 @@
 
 # https://github.com/streetsidesoftware/cspell
 
-run_cspell() {
-    fdfind --hidden --ignore-case --type f --print0 |
-        xargs -0 cspell \
-            --no-progress \
-            --no-summary \
-            --config .cspell.json
-}
+# POSIX locale
+LC_ALL=C
+export LC_ALL
 
-run_cspell
+fdfind --hidden --ignore-case --type f --print0 |
+    xargs -0 cspell \
+        --no-progress \
+        --no-summary \
+        --config .cspell.json

@@ -24,7 +24,7 @@ Spot Scaling recommends the most suitable configuration for your Auto Scaling Gr
 
 ### Provision
 
-After you apply the recommendations, Spot Scaling updates your Auto Scaling Group to work in a [mixed instances policy](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API\_MixedInstancesPolicy.html). In addition, Spot Scaling replaces on-demand instances with spot instances according to the recommended settings (which you can change anytime).
+After you apply the recommendations, Spot Scaling updates your Auto Scaling Group to work in a [mixed instances policy](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_MixedInstancesPolicy.html). In addition, Spot Scaling replaces on-demand instances with spot instances according to the recommended settings (which you can change anytime).
 
 When Spot Scaling cannot spin up Spot instances due to lack of spot capacity, it automatically falls back to on-demand to ensure availability and reverts to spot instances as soon as possible. As a result, the system uptime for your app(s) are maximized, while EC2 costs are minimized.
 

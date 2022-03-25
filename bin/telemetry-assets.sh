@@ -9,13 +9,14 @@
 LC_ALL=C
 export LC_ALL
 
+ASSETS_DIR=gitbook/cmp/.gitbook/assets
+ASSETS_HTML=gh-pages/assets.html
 ASSETS_URL=https://raw.githubusercontent.com/doitintl/help/main
 
-assets_dir="${1}"
+mkdir -p "$(dirname "${ASSETS_HTML}")"
 
-echo "<h1>Assets contact sheet</h1>"
-
-cat <<EOF
+cat >"${ASSETS_HTML}" <<EOF
+<h1>Assets contact sheet</h1>
 <style>
 img {
     max-width: 100%;
@@ -24,12 +25,12 @@ img {
 </style>
 EOF
 
-(cd "${assets_dir}" && fdfind --no-ignore) |
+(cd "${ASSETS_DIR}" && fdfind --no-ignore) |
     while read -r file; do
         basename="$(basename "${file}")"
-        asset_url="${ASSETS_URL}/${assets_dir}/${basename}"
+        asset_url="${ASSETS_URL}/${ASSETS_DIR}/${basename}"
         echo "<h2 id=\"${basename}\">"
         echo "  <a href=\"#${basename}\">${basename}</a>"
         echo "</h2>"
         echo "<img src=\"${asset_url}\"/>"
-    done
+    done >>"${ASSETS_HTML}"

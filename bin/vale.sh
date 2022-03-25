@@ -7,13 +7,13 @@
 
 # https://github.com/errata-ai/vale
 
-run_vale() {
-    fdfind --hidden --ignore-case --type f --print0 '\.md$' |
-        xargs -0 vale \
-            --config .vale.ini \
-            --minAlertLevel warning \
-            --output=.vale/templates/cli.tmpl \
-            --no-wrap
-}
+# POSIX locale
+LC_ALL=C
+export LC_ALL
 
-run_vale
+fdfind --hidden --ignore-case --type f --print0 '\.md$' |
+    xargs -0 vale \
+        --config .vale.ini \
+        --minAlertLevel warning \
+        --output=.vale/templates/cli.tmpl \
+        --no-wrap

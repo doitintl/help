@@ -12,13 +12,9 @@ LC_ALL=C
 export LC_ALL
 
 # Run `markdownlint`
-# -----------------------------------------------------------------------------
-
 markdownlint .
 
 # Catch additional errors
-# -----------------------------------------------------------------------------
-
 search() {
     pattern="${1}"
     if (fdfind --hidden --ignore-case --print0 '\.md$' |
@@ -31,5 +27,4 @@ search() {
 
 # Try to catch broken Markdown link syntax while allowing other uses of the
 # closing `]` bracket
-
 search '[^0-9]\]\]?)[^\[( :.,]'

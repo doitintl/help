@@ -9,10 +9,13 @@
 LC_ALL=C
 export LC_ALL
 
-target_dir="$(readlink -f "${1}")"
-index_file="$(readlink -f "${2}")"
+TARGET_DIR=gh-pages
+INDEX_FILE=index.html
 
-cd "${target_dir}"
+mkdir -p "${TARGET_DIR}"
+cd "${TARGET_DIR}"
+touch .nojekyll
+printf "User-agent: *\nDisallow: /\n" >robots.txt
 
 tmp_dir="$(mktemp -d)"
 
@@ -34,6 +37,6 @@ tidy -quiet -utf8 -wrap 0 --tidy-mark no "${tmp_dir}/minified.html" |
     sed 's,&nbsp;, ,g' \
         >"${tmp_dir}/tidied.html"
 
-mv "${tmp_dir}/tidied.html" "${index_file}"
+mv "${tmp_dir}/tidied.html" "${INDEX_FILE}"
 
 rm -rf "${tmp_dir}"

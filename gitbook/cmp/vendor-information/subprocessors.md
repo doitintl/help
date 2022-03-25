@@ -27,7 +27,7 @@ The table shows what activity each entity performs and indicates if an entity is
 [fullstory-compliant]: https://help.fullstory.com/hc/en-us/articles/360020623394-GDPR-FAQs
 [google-compliant]: https://cloud.google.com/security/gdpr/
 [google-contact]: https://support.google.com/cloud/contact/dpo
-[hubspot-compliant]: "https://www.hubspot.com/hubfs/security_documents/HubSpot_Security_Overview.pdf
+[hubspot-compliant]: https://www.hubspot.com/data-privacy/gdpr
 [hubspot-contact]: mailto:privacy@hubspot.com
 [mixpanel-compliant]: https://mixpanel.com/legal/mixpanel-gdpr/
 [mixpanel-contact]: mailto:dpo@mixpanel.com

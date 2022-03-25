@@ -20,7 +20,7 @@ Once finished, click 'Add idea' and your idea will be submitted to our Product T
 
 ## Upvoting existing ideas in the Feedback Hub
 
-When you [share feedback and/or feature requests](sharing-feedback-and-feature-requests.md) with us, they get submitted to our [**Feedback Hub**](https://feedback.doit-intl.com). There, you see and upvote any ideas you like.
+When you share feedback and/or feature requests with us, they get submitted to our [**Feedback Hub**](https://feedback.doit-intl.com). There, you see and upvote any ideas you like.
 
 Let's go over how to navigate the Feedback Hub and upvote ideas.
 

@@ -1,16 +1,11 @@
 {
+  "showProgressBar": true,
   "ignorePatterns": [
     {
-      "comment": "Returns a 403 when we check it via GitHub",
-      "pattern": "^https://help.fullstory.com/hc/"
+      "pattern": "^http://"
     },
     {
-      "comment": "ESOCKETTIMEDOUT when we check it via GitHub",
-      "pattern": "^https://www.statisticshowto.com/mann-kendall-trend-test/"
-    },
-    {
-      "comment": "These links require you to log in to your AWS account",
-      "pattern": "^https://console.aws.amazon.com/"
+      "pattern": "^https://"
     }
   ]
 }

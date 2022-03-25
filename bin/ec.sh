@@ -1,14 +1,14 @@
 #!/bin/sh -e
 
-# Wrap the `shfmt` command to provide configuration
+# Wrap the `ec` command
 # =============================================================================
 
-# Usage: ./bin/shfmt.sh
+# Usage: ./bin/ec.sh
 
-# https://github.com/mvdan/sh
+# https://github.com/editorconfig-checker/editorconfig-checker
 
 # POSIX locale
 LC_ALL=C
 export LC_ALL
 
-shfmt -d -p -i 4 .
+ec

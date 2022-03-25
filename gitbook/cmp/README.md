@@ -4,7 +4,7 @@ description: An overview of DoiT International's Cloud Management Platform
 
 # CMP Overview
 
-DoiT International's _Cloud Management Platform_ (CMP) helps the developers and system administrators at digital-native companies improve cloud operations, maintain security, control cost, and ensure governance of its cloud estate.
+Doit International's _Cloud Management Platform_ (CMP) helps the developers and system administrators at digital-native companies improve cloud operations, maintain security, control cost, and ensure governance of its cloud estate.
 
 The CMP has five strategic pillars:
 

@@ -3,7 +3,7 @@
 # Remove unused assets from the Git repository
 # =============================================================================
 
-# Usage: ./bin/rm-unused-assets.sh [--dry-run] DOCS_DIR ASSETS_DIR
+# Usage: ./bin/rm-unused-assets.sh [--dry-run]
 
 # An asset (e.g., a PNG file or a CSV file) is considered to be unused if no
 # documents (i.e., Markdown files) in the GitBook space (i.e., the `docs`
@@ -14,8 +14,11 @@ LC_ALL=C
 export LC_ALL
 
 # ANSI formatting
-RED='\x1b[31m'
+RED='\x1b[1;31m'
 RESET='\x1b[0m'
+
+DOCS_DIR=gitbook/cmp
+ASSETS_DIR=.gitbook/assets
 
 dry_run=0
 for arg in "$@"; do
@@ -32,15 +35,12 @@ for arg in "$@"; do
     esac
 done
 
-docs_dir="${1}"
-assets_dir="${2}"
-
 tmp_errors="$(mktemp)"
-(cd "${docs_dir}/${assets_dir}" && fdfind --no-ignore) |
+(cd "${DOCS_DIR}/${ASSETS_DIR}" && fdfind --no-ignore) |
     while read -r file; do
         pattern="assets/$(basename "${file}")"
-        if ! grep -rsqF "${pattern}" --include='*.md' "${docs_dir}"; then
-            echo "${docs_dir}/${assets_dir}/${file}" >>"${tmp_errors}"
+        if ! grep -rsqF "${pattern}" --include='*.md' "${DOCS_DIR}"; then
+            echo "${DOCS_DIR}/${ASSETS_DIR}/${file}" >>"${tmp_errors}"
         fi
     done
 
@@ -51,7 +51,7 @@ if test -s "${tmp_errors}"; then
         xargs rm -fv <"${tmp_errors}"
     else
         printf 'Unused assets:\n\n'
-        sed -E "s,^(.*),  ${RED}\1${RESET}," <"${tmp_errors}"
+        sed -E "s,^(.*),${RED}\1${RESET}," <"${tmp_errors}"
         status_code=1
     fi
 fi

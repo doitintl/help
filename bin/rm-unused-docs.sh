@@ -13,8 +13,10 @@ LC_ALL=C
 export LC_ALL
 
 # ANSI formatting
-RED='\x1b[31m'
+RED='\x1b[1;31m'
 RESET='\x1b[0m'
+
+DOCS_DIR=gitbook/cmp
 
 dry_run=0
 for arg in "$@"; do
@@ -31,17 +33,15 @@ for arg in "$@"; do
     esac
 done
 
-docs_dir="${1}"
-
 tmp_errors="$(mktemp)"
-(cd "${docs_dir}" && fdfind --ignore-case '\.md$') |
+(cd "${DOCS_DIR}" && fdfind --ignore-case '\.md$') |
     while read -r file; do
         if test "${file}" = 'SUMMARY.md'; then
             continue
         fi
         basename="$(basename "${file}")"
-        if ! grep -rsqF "${basename}" --include='*.md' "./${docs_dir}"; then
-            echo "${docs_dir}/${file}" >>"${tmp_errors}"
+        if ! grep -rsqF "${basename}" --include='*.md' "./${DOCS_DIR}"; then
+            echo "${DOCS_DIR}/${file}" >>"${tmp_errors}"
         fi
     done
 
@@ -52,7 +52,7 @@ if test -s "${tmp_errors}"; then
         xargs rm -fv <"${tmp_errors}"
     else
         printf 'Unused documents:\n\n'
-        sed -E "s,^(.*),  ${RED}\1${RESET}," <"${tmp_errors}"
+        sed -E "s,^(.*),${RED}\1${RESET}," <"${tmp_errors}"
         status_code=1
     fi
 fi

@@ -50,7 +50,7 @@ In the screenshot below you can see that projects are being grouped along the ve
 >
 > [Google Cloud Locations &mdash; Regions & Zones](https://cloud.google.com/about/locations/)
 >
-> [AWS Regions and Availability Zones](https://aws.amazon.com/about-aws/global-infrastructure/regions\_az/)
+> [AWS Regions and Availability Zones](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
 
 > **Resource**
 >

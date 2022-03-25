@@ -48,4 +48,4 @@ Yes. superQuery is a web-based IDE that you can access simply by logging in thro
 
 ## Do you base your security program on a recognized security standard?
 
-Our security program guidelines are based on [OWASP's top 10 security risks](https://www.owasp.org/index.php/Category:OWASP\_Top\_Ten\_Project).\
+Our security program guidelines are based on [OWASP's top 10 security risks](https://owasp.org/www-project-top-ten/).

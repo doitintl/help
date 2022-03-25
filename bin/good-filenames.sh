@@ -3,17 +3,17 @@
 # Find files that should be renamed (for clarity and consistency)
 # =============================================================================
 
-# Usage: ./bin/good-filenames.sh ASSETS_DIR
+# Usage: ./bin/good-filenames.sh
 
 # POSIX locale
 LC_ALL=C
 export LC_ALL
 
 # ANSI formatting
-RED='\x1b[31m'
+RED='\x1b[1;31m'
 RESET='\x1b[0m'
 
-assets_dir="${1}"
+ASSETS_DIR=gitbook/cmp/.gitbook/assets
 
 # Markdown
 # -----------------------------------------------------------------------------
@@ -41,17 +41,17 @@ check_filename() {
 }
 
 tmp_errors="$(mktemp)"
-(cd "${assets_dir}" && fdfind --no-ignore --type f) |
+(cd "${ASSETS_DIR}" && fdfind --no-ignore --type f) |
     while read -r file; do
         check_filename "${file}" |
             sed -E 's,(.*),(\1),' |
-            sed "s,^,${assets_dir}/${file} ," >>"${tmp_errors}"
+            sed "s,^,${ASSETS_DIR}/${file} ," >>"${tmp_errors}"
     done
 
 status_code=0
 if test -s "${tmp_errors}"; then
     printf 'Disallowed filenames:\n\n'
-    sed -E "s,^(.*),  ${RED}\1${RESET}," <"${tmp_errors}"
+    sed -E "s,^(.*),${RED}\1${RESET}," <"${tmp_errors}"
     status_code=1
 fi
 rm -f "${tmp_errors}"

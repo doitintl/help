@@ -3,7 +3,7 @@
 {% hint style="warning" %}
 After March 31st, 2022, we will be sunsetting superQuery and it will not be accessible anymore.
 
-For a list of alternative IDE solutions you can use in superQuery's place and answers to frequently asked questions, [click here](https://docs.google.com/document/d/1ANH0SZNocv71nE6fIEPDPb\_ilGWDvftM3BicorjwXJ8/edit#bookmark=id.b6y8h7usq6gg).
+For a list of alternative IDE solutions you can use in superQuery's place and answers to frequently asked questions, [click here](https://docs.google.com/document/d/1ANH0SZNocv71nE6fIEPDPb_ilGWDvftM3BicorjwXJ8/edit#bookmark=id.b6y8h7usq6gg).
 {% endhint %}
 
 {% hint style="success" %}

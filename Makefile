@@ -23,7 +23,7 @@ define print-target
 @ printf "\e$(BOLD)make %s\e$(RESET)\n" "$$(echo $@ | sed 's,.stamp,,')"
 endef
 
-# Targets
+# Meta targets
 # =============================================================================
 
 # TODO: Convert all lint checks into scripts and use a single pattern rule to
@@ -42,6 +42,8 @@ endef
 # check
 # -----------------------------------------------------------------------------
 
+# TODO: Check json keys ordering
+
 .PHONY: check
 check:
 
@@ -49,182 +51,103 @@ check:
 check-parallel:
 	@ $(MAKE) --no-print-directory -j --output-sync=target check
 
-# TODO: Check json keys ordering
-
-# only-ascii
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-ONLY_ASCII := $(BIN_DIR)/only-ascii.sh
-
-check: only-ascii
-.PHONY: only-ascii
 only-ascii:
-	$(call print-target)
-	$(ONLY_ASCII)
+check: only-ascii
 
-# ec
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# https://github.com/editorconfig-checker/editorconfig-checker
-
-EC := ec
-
-check: ec
-.PHONY: ec
 ec:
-	$(call print-target)
-	$(EC)
+check: ec
 
-# lintspaces
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-LINTSPACES := $(BIN_DIR)/lintspaces.sh
-
-check: lintspaces
-.PHONY: lintspaces
 lintspaces:
-	$(call print-target)
-	$(LINTSPACES)
+check: lintspaces
 
-# prettier
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# https://github.com/prettier/prettier
-
-PRETTIER = prettier --check --ignore-unknown .
-
-check: prettier
-.PHONY: prettier
 prettier:
-	$(call print-target)
-	$(PRETTIER)
+check: prettier
 
-# yamllint
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# https://github.com/adrienverge/yamllint
-
-YAMLLINT = yamllint --config-file .yamllint.yaml .
-
-check: yamllint
-.PHONY: yamllint
 yamllint:
-	$(call print-target)
-	$(YAMLLINT)
+check: yamllint
 
-# shellcheck
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-SHELLCHECK = $(BIN_DIR)/shellcheck.sh
-
-check: shellcheck
-.PHONY: shellcheck
 shellcheck:
-	$(call print-target)
-	$(SHELLCHECK)
+check: shellcheck
 
-# shfmt
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-SHFMT = $(BIN_DIR)/shfmt.sh
-
-check: shfmt
-.PHONY: shfmt
 shfmt:
-	$(call print-target)
-	$(SHFMT)
+check: shfmt
 
-# good-filenames
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# TODO: Include superQuery docs
-
-GOOD_FILENAMES := $(BIN_DIR)/good-filenames.sh
-
-check: good-filenames
-.PHONY: good-filenames
 good-filenames:
-	$(call print-target)
-	$(GOOD_FILENAMES) $(GITBOOK_CMP_DIR)/$(GITBOOK_ASSETS_DIR)
-	@ # $(GOOD_FILENAMES) $(GITBOOK_SUPERQUERY_DIR)/$(GITBOOK_ASSETS_DIR)
+check: good-filenames
 
-# rm-unused-docs
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+rm-unused-docs-dry:
+check: rm-unused-docs-dry
 
-RM_UNUSED_DOCS := $(BIN_DIR)/rm-unused-docs.sh --dry-run
-
-check: rm-unused-docs
-.PHONY: rm-unused-docs
-rm-unused-docs:
-	$(call print-target)
-	$(RM_UNUSED_DOCS) $(GITBOOK_CMP_DIR)
-	$(RM_UNUSED_DOCS) $(GITBOOK_SUPERQUERY_DIR)
-
-# markdownlint
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-MARKDOWNLINT := $(BIN_DIR)/markdownlint.sh
-
-check: markdownlint
-.PHONY: markdownlint
 markdownlint:
-	$(call print-target)
-	$(MARKDOWNLINT)
+check: markdownlint
 
-# html-entities
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-HTML_ENTITIES := $(BIN_DIR)/html-entities.sh
-
-check: html-entities
-.PHONY: html-entities
 html-entities:
-	$(call print-target)
-	$(HTML_ENTITIES)
+check: html-entities
 
-# inline-html
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-INLINE_HTML := $(BIN_DIR)/inline-html.sh
-
-check: inline-html
-.PHONY: inline-html
 inline-html:
-	$(call print-target)
-	$(INLINE_HTML)
+check: inline-html
 
-# update-dict
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+update-dict-dry:
+check: update-dict-dry
 
-UPDATE_DICT := $(BIN_DIR)/update-dict.sh --dry-run
-
-check: update-dict
-.PHONY: update-dict
-update-dict:
-	$(call print-target)
-	$(UPDATE_DICT)
-
-# cspell
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-CSPELL = $(BIN_DIR)/cspell.sh
-
-check: cspell
-.PHONY: cspell
 cspell:
-	$(call print-target)
-	$(CSPELL)
+check: cspell
 
-# misspell
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-MISSPELL = $(BIN_DIR)/misspell.sh
-
-check: misspell
-.PHONY: misspell
 misspell:
+check: misspell
+
+vale:
+check: vale
+
+markdown-link-check:
+check: markdown-link-check
+
+brok:
+check: brok
+
+rm-unused-assets-dry:
+check: rm-unused-assets-dry
+
+fdupes:
+check: fdupes
+
+optipng-dry:
+check: optipng-dry
+
+# telemetry
+# -----------------------------------------------------------------------------
+
+.PHONY: telemetry
+telemetry:
+
+telemetry: telemetry-index
+
+telemetry-index: telemetry-assets
+
+# clean
+# -----------------------------------------------------------------------------
+
+# TODO: Evaluate how many of these rules are still needed
+
+clean:
+	rm -rf $(GH_PAGES_DIR)
+	find . -type f -name '*.sig' -delete
+	find . -type f -name '*.out' -delete
+	find . -type f -name '*.tmp' -delete
+
+# Pattern targets
+# =============================================================================
+
+%:
 	$(call print-target)
-	$(MISSPELL)
+	$(BIN_DIR)/$@.sh
+
+%-dry:
+	$(call print-target)
+	$(BIN_DIR)/$*.sh --dry-run
+
+# Disabled targets
+# =============================================================================
 
 # proselintjs
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -281,64 +204,6 @@ misspell:
 # 	$(FIND_TEXTLINT_RULE) rousseau || true
 # 	$(FIND_TEXTLINT_RULE) alex || true
 
-# vale
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-VALE := $(BIN_DIR)/vale.sh
-
-check: vale
-.PHONY: vale
-vale:
-	$(call print-target)
-	$(VALE)
-
-# brok
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-BROK = $(BIN_DIR)/brok.sh
-
-# all: brok
-.PHONY: brok
-brok:
-	$(call print-target)
-	$(BROK)
-
-# markdown-link-check
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-MARKDOWN_LINK_CHECK = $(BIN_DIR)/markdown-link-check.sh
-
-all: markdown-link-check
-.PHONY: markdown-link-check
-markdown-link-check:
-	$(call print-target)
-	$(MARKDOWN_LINK_CHECK)
-
-# rm-unused-assets
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-RM_UNUSED_ASSETS := $(BIN_DIR)/rm-unused-assets.sh --dry-run
-
-check: rm-unused-assets
-.PHONY: rm-unused-assets
-rm-unused-assets:
-	$(call print-target)
-	$(RM_UNUSED_ASSETS) $(GITBOOK_CMP_DIR) $(GITBOOK_ASSETS_DIR)
-	@ # $(RM_UNUSED_ASSETS) $(GITBOOK_SUPERQUERY_DIR) $(GITBOOK_ASSETS_DIR)
-
-# fdupes
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# TODO: Scan superQuery docs (see `fdupes.sh` file)
-
-FDUPES := $(BIN_DIR)/fdupes.sh
-
-check: fdupes
-.PHONY: fdupes
-fdupes:
-	$(call print-target)
-	$(FDUPES)
-
 # imgdup2go
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -350,52 +215,6 @@ fdupes:
 # 	$(call print-target)
 # 	$(IMGDUP2GO) $(GITBOOK_CMP_DIR)/$(GITBOOK_ASSETS_DIR)
 # 	$(IMGDUP2GO) $(GITBOOK_SUPERQUERY_DIR)/$(GITBOOK_ASSETS_DIR)
-
-# optipng
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-OPTIPNG := $(BIN_DIR)/optipng.sh --dry-run
-
-check: optipng
-.PHONY: optipng
-optipng:
-	$(call print-target)
-	$(OPTIPNG) $(GITBOOK_CMP_DIR) $(GITBOOK_ASSETS_DIR)
-	$(OPTIPNG) $(GITBOOK_SUPERQUERY_DIR) $(GITBOOK_ASSETS_DIR)
-
-# telemetry
-# -----------------------------------------------------------------------------
-
-.PHONY: telemetry
-telemetry:
-
-# index.html
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-WWW_INDEX := $(BIN_DIR)/www-index.sh
-
-telemetry: $(GH_PAGES_DIR)/index.html
-$(GH_PAGES_DIR)/index.html:
-	$(call print-target)
-	@ mkdir -p $(dir $@)
-	cd $(dir $@) && touch .nojekyll
-	cd $(dir $@) && touch robots.txt
-	cd $(dir $@) && printf "User-agent: *\nDisallow: /\n" > robots.txt
-	$(WWW_INDEX) $(dir $@) $@
-
-# assets.html
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# TODO: Include GitBook superQuery docs
-
-GEN_ASSETS_LIST = $(BIN_DIR)/gen-assets-list.sh
-
-$(GH_PAGES_DIR)/index.html: $(GH_PAGES_DIR)/assets.html
-.PHONY: $(GH_PAGES_DIR)/assets.html
-$(GH_PAGES_DIR)/assets.html:
-	$(call print-target)
-	@ mkdir -p $(dir $@)
-	$(GEN_ASSETS_LIST) $(GITBOOK_CMP_DIR)/$(GITBOOK_ASSETS_DIR) >$@
 
 # vale.json
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -420,17 +239,3 @@ $(GH_PAGES_DIR)/assets.html:
 # 	@ mkdir -p $(dir $@)
 # 	$(VALE_JSON_RULE)
 # 	prettier --loglevel silent --write $@
-
-# Maintenance
-# -----------------------------------------------------------------------------
-
-# clean
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# TODO: Evaluate how many of these rules are still needed
-
-clean:
-	rm -rf $(GH_PAGES_DIR)
-	find . -type f -name '*.sig' -delete
-	find . -type f -name '*.out' -delete
-	find . -type f -name '*.tmp' -delete

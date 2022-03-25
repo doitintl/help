@@ -17,13 +17,13 @@ The _Profile_ page has a form that allows you to edit the following information:
 * _First Name_ and _Last Name_ &mdash; Your display name in the CMP
 * _Job Function_ &mdash; Account admins can use job function to help [manage your organization](../user-management/manage-organizations.md)
 * _Phone Number_ &mdash; Your international dialing code and local number
-* _Default Dashboard_ &mdash; The default [dashboard](../dashboards-and-widgets/customizing-dashboards.md) to display when you first log in
+* _Default Dashboard_ &mdash; The default [dashboard](../dashboards/customizing-dashboards.md) to display when you first log in
 
 When you edit the value of any form field on this page, the CMP will automatically save your changes.
 
 {% hint style="info" %}
 
-Admins or users with the [Users Manager](../user-management/user-permissions-explained#users-manager) permission can [edit any user profile](../user-management/creating-a-new-user#editing-user-profiles).
+Admins or users with the [Users Manager](../user-management/user-permissions-explained.md#users-manager) permission can [edit any user profile](../user-management/creating-a-new-user.md#editing-user-profiles).
 
 {% endhint %}
 
@@ -41,9 +41,9 @@ The _Permissions_ screen includes the following information:
 
 {% hint style="info" %}
 
-Admins or users with the [Users Manager](../user-management/user-permissions-explained#users-manager) permission can edit [user roles](../user-management/manage-roles.md).
+Admins or users with the [Users Manager](../user-management/user-permissions-explained.md#users-manager) permission can edit [user roles](../user-management/manage-roles.md).
 
-Admins or users with the [Billing Profile Admin](../user-management/user-permissions-explained#billing-profile-admin) permission can manage assigned [billing profiles](../invoices-and-payments/setting-up-a-new-billing-profile).
+Admins or users with the [Billing Profile Admin](../user-management/user-permissions-explained.md#billing-profile-admin) permission can manage assigned [billing profiles](../invoices-and-payments/setting-up-a-new-billing-profile.md).
 
 {% endhint %}
 

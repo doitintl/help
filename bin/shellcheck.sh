@@ -7,8 +7,8 @@
 
 # https://github.com/koalaman/shellcheck
 
-run_shellcheck() {
-    fdfind -H -t f '\.sh$' --print0 | xargs -0 shellcheck
-}
+# POSIX locale
+LC_ALL=C
+export LC_ALL
 
-run_shellcheck
+fdfind -H -t f '\.sh$' --print0 | xargs -0 shellcheck
