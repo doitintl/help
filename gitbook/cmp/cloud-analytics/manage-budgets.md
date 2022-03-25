@@ -112,7 +112,7 @@ Here is what a typical alert looks like:
 
 ![A screenshot showing an email alert](../.gitbook/assets/email-budget-alert.png)
 
-## Video walk-through
+## Video walkthrough
 
 Watch budgets in action in the video below:
 

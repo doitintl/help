@@ -4,7 +4,7 @@ description: The list of 3rd party services we use within the Cloud Management P
 
 # External Services We Use
 
-We rely on several 3rd party services which you may need to allow access to via your personal firewall. These are the mandatory services for Cloud Management Platform to function:
+We rely on several third-party services which you may need to allow access to via your personal firewall. These are the mandatory services for Cloud Management Platform to function:
 
 ```text
 https://*.googleapis.com

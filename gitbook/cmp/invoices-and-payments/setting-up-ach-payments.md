@@ -60,10 +60,10 @@ There are some edge cases where our ACH verification process doesn't work proper
 
 To manually set up ACH payments, open a support ticket under the "Billing" category, and provide the following information:
 
-* routing number
-* account number
-* account holder name
-* account holder type (individual or company)
+* Routing number
+* Account number
+* Account holder name
+* Account holder type (individual or company)
 
 Once we have this information, we will send two small deposits for verification purposes. Typically, these deposits take 1&ndash;2 business days to appear on your online statement.
 

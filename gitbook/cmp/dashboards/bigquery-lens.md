@@ -69,7 +69,7 @@ Below is a list of the elements that make up the BigQuery Lens dashboard, corres
 
 3. _BigQuery Explorer_ &mdash; Get more granular information as far as your team's BigQuery usage, completely adjustable by the user in the following format:
 
-    * For the _On-demand_ usage type: (_Project_, _Billing Project_, _Dataset_, _Table_, _User_) by (_Scan Price_, _Scan TB_)
+    * For the _On-demand_ usage type: <!-- textlint-disable max-comma -->(_Project_, _Billing Project_, _Dataset_, _Table_, _User_)<!-- textlint-enable --> by (_Scan Price_, _Scan TB_)
     * For _Flat-rate_ usage type: (_Project_, _Billing Project_, _Dataset_, _Table_, _User_) by (_Average Slots_)
 
     Select any of the components of the _BigQuery Explorer_ to drill down into the data.
@@ -93,7 +93,7 @@ Below is a list of the recommendation categories you'll see in the _BigQuery Rec
 * _Cluster your tables_ &mdash; Cluster the tables listed under the _Table_ column by the fields suggested under the _Cluster By_ column.
 * _Enforce Partition Fields_ &mdash; Use the suggested partitioned fields under the _Partition Field_ column for the corresponding queries listed under the _Query ID_ column.
 * _Partition your tables_ &mdash; Partition the tables listed under the _Table_ column by the suggested fields listed under the _Partition Fields_ column.
-* _Limit query jobs_ &mdash; Reduce job execution frequency of the listed jobs under the _Query ID_ column by the percentage you choose on the slider and view the associated savings of each reduced job under the _Savings by Reducing Jobs_ column.
+* _Limit query jobs_ &mdash; Reduce execution frequency of the listed jobs under the _Query ID_ column by the percentage you choose on the slider and view the associated savings of each reduced job under the _Savings by Reducing Jobs_ column.
 * _Switch to monthly flat-rate plan_ &mdash; Purchase the slots amount listed in the _Optimal slots amount_ column to reduce your BigQuery spend.
 
 #### Flat-rate recommendations

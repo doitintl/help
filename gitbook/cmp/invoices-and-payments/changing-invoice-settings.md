@@ -28,7 +28,7 @@ From the billing profile screen, select _Invoice Settings_ from the left-hand me
 
 As a customer, you have two options for each one of your billing profiles:
 
-**Separate the invoice by asset type** &mdash; individual invoices for each of your products. If you have four asset types, (e.g., G Suite, Google Cloud, AWS, and Office 365), you will have four invoices.
+**Separate the invoice by asset type** &mdash; individual invoices for each of your products. <!-- textlint-disable max-comma -->If you have four asset types (e.g., G Suite, Google Cloud, AWS, and Office 365), you will have four invoices.<!-- textlint-enable -->
 
 **Invoice using custom bucketing** &mdash; buckets allow you to combine assets into a group. If you have 16 assets and group them into two buckets, then two invoices will be generated, with eight assets per invoice.
 

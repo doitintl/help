@@ -4,7 +4,7 @@ description: An overview of DoiT International's Cloud Management Platform
 
 # CMP Overview
 
-Doit International's _Cloud Management Platform_ (CMP) helps the developers and system administrators at digital-native companies improve cloud operations, maintain security, control cost, and ensure governance of its cloud estate.
+DoiT International's _Cloud Management Platform_ (CMP) helps the developers and system administrators at digital-native companies improve cloud operations, maintain security, control cost, and ensure governance of its cloud estate.
 
 The CMP has five strategic pillars:
 
@@ -14,7 +14,7 @@ The CMP has five strategic pillars:
 * [Cloud productivity](./#cloud-productivity)
 * [Cloud governance](./#cloud-governance)
 
-In this document, we'll explain. briefly go over each of the main capabilities you have access to in the CMP, along with links to other articles for each feature if you're interested in doing a deeper dive.
+In this document, we'll briefly go over each of the main capabilities you have access to in the CMP, along with links to other articles for each feature if you're interested in doing a deeper dive.
 
 ## Summary
 
@@ -124,7 +124,7 @@ Once a policy is created, developers are free to [create cloud sandbox environme
 
 ### Cloud quota monitoring
 
-Every cloud provider has resource quotas for things like VPCs, CPU cores, and more. If you'd like to change that quota, you can request more, and typically cloud vendors will approve it. However, this takes hours to days.
+Every cloud provider has resource quotas for things like VPCs, CPU cores, and more. If you'd like to change that quota, you can request more, and typically cloud vendors will approve it. Note: This may take hours or days.
 
 However, sometimes your quota limits can, without warning, be hit by a surge of demand that causes you to hit those quotas. When this happens, you're forced to wait for your ticket to be addressed.
 
@@ -205,7 +205,9 @@ CMP gives you capabilities unavailable in Google Cloud or AWS to customize _prec
 
 In the CMP, customers can create as many Billing Profiles as required, per their company's needs.
 
-Additionally, whereas with Google Cloud or AWS you can only pay with a credit card, DoiT International customers have more options for customizing the payment method for their Billing Profile(s) including Credit Card, Wire, Bill.com, and ACH.
+<!-- textlint-disable max-comma -->
+Unlike Google Cloud or AWS (who only allow credit card payments), DoiT International customers can pay via the _Credit Card_, _Wire_, _Bill.com_, and _ACH_ options.
+<!-- textlint-enable -->
 
 [**Invoices**](invoices-and-payments/managing-invoices.md) across all cloud platforms and their current statuses can be easily accessed using the CMP.
 

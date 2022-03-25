@@ -10,7 +10,7 @@ Amazon Web Services maintains service limits on each AWS account to help guarant
 _You must have AWS Business or Enterprise Support in order to use this feature._
 {% endhint %}
 
-However, when you launch a new (workload or need additional resources within the existing workloads, you may receive an error message similar to this one.
+However, when you launch a new workload or need additional resources within the existing workloads, you may receive an error message similar to this one.
 
 !["Elastic IP address could not be allocated."](../.gitbook/assets/aws-elastic-ip.png)
 
@@ -115,8 +115,8 @@ To request a quota increase, click on the 'Modify' button and read the instructi
 * CloudFormation Stacks
 * Auto Scaling Launch Configurations
 * Auto Scaling Groups
-* VPC
-* VPC Internet Gateways
+* VPC <!-- textlint-disable terminology -->
+* VPC Internet Gateways <!-- textlint-enable -->
 * VPC Elastic IP Address
 * IAM Instance Profiles
 * IAM Roles

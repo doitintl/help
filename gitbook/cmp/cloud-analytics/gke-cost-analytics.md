@@ -16,7 +16,7 @@ Enabling GKE Cost Analytics involves three main steps:
 
 1. Connect your Google Cloud Organization by uploading a service account
 2. Enable GKE Usage Metering for your GKE clusters in the Google Cloud console or CloudSDK
-3. Grant the "BigQuery" Data Viewer" role to the service account (generated in step 1)
+3. Grant the "BigQuery Data Viewer" role to the service account (generated in step 1)
 
 {% hint style="info" %}
 You may have already executed some or all of these steps. However, unless ALL steps have been taken, the GKE Cost Analytics feature will not function correctly in the DoiT CMP.
@@ -34,7 +34,7 @@ Then check the box(es) of the additional features you'd like to enable, making s
 
 ![A screenshot showing you the location of the location of the Upload Key button](../.gitbook/assets/cmp-gke-cost-analytics-enable.png)
 
-Click on the "Create Service Account" button. This will display all of the Google SDK ([gcloud)](https://cloud.google.com/sdk) commands you need to run sequentially to create the service account that contains the permissions for all of the features you checked.
+Click on the "Create Service Account" button. This will display all of the Google SDK ([gcloud](https://cloud.google.com/sdk)) commands you need to run sequentially to create the service account that contains the permissions for all of the features you checked.
 
 Finally, once you've executed all of the commands, select the _UPLOAD KEY_ button to upload the service account to the CMP.
 

@@ -1,8 +1,5 @@
-
 abn
 ach
-acks
-actionsx
 actuals
 addpersonschedule
 addwidgetawsquotas
@@ -15,7 +12,6 @@ akiaxxxxxxxxxxxx
 algolia
 allowfullscreen
 alnum
-amet
 amts
 ao
 aren
@@ -27,9 +23,7 @@ asgs
 assumeable
 astra
 atilde
-auml
 auths
-autobuild
 autoscalers
 aviv
 awk
@@ -52,8 +46,6 @@ cc'd
 ccs
 ceval
 cicd
-cis
-cleanshot
 cli
 clonereport
 cloudaudit
@@ -67,7 +59,6 @@ cmp
 cmp's
 cno
 codezombiech
-colab
 consectetur
 cpm
 cpus
@@ -83,7 +74,6 @@ dach
 dataprep
 davidanson
 dces
-ddl
 deandra
 debussylaan
 deleter
@@ -107,7 +97,6 @@ edituserprofiles
 ein
 elazar
 elb
-elit
 ena
 enablement
 endef
@@ -127,7 +116,6 @@ fdb
 fdfind
 fdupes
 featuresconfig
-feedbackhub
 fi
 filterattributions
 finops
@@ -171,7 +159,6 @@ iframe
 ignorecase
 img
 imgdup
-instace
 inviteuser
 iops
 ipynb
@@ -179,6 +166,7 @@ kai
 kasperhesthaven
 knownissuesfilter
 knownissuesnew
+kpi
 kpis
 kubernetes
 lastword
@@ -204,7 +192,6 @@ mirrorings
 mixpanel
 mkdir
 mktemp
-mlc
 monospace
 mpa
 mpas
@@ -227,7 +214,6 @@ oidc
 optimizely
 optipng
 orgs
-oudaudit
 overutilized
 owasp
 oxley
@@ -247,7 +233,6 @@ preconfigured
 preemptible
 prettierrc
 printf
-pro-serv
 projectid
 proselint
 proselintjs
@@ -260,14 +245,11 @@ pylint
 pyroma
 pyyaml
 qg
-queryes
 rarr
 ravsamhq
 rbac
 rcs
-rddd
 readlink
-reate
 rechtsanwaltsgesellschaft
 refreshbudget
 renameboard
@@ -280,20 +262,20 @@ rsq
 rst
 rstcheck
 rstfmt
+saa
 sameline
 sarbanes
 sarl
 sas
 savingsplans
-scaling's
 scheduledemail
 schedulereport
-screnshot
 sdk
 searchindex
 sed
 sek
 selinger
+serv
 serviceaccount
 serviceusage
 sgr
@@ -308,7 +290,6 @@ sles
 smallhadroncollider
 spotscaling
 sps
-sqlseartch
 sre
 ssd
 stax
@@ -325,7 +306,6 @@ sunsetting
 superquery
 supportsharing
 szlig
-tac
 tco
 tcp
 textbox
@@ -349,6 +329,7 @@ tsc
 tt
 ttl
 uc
+udf
 udf's
 udfs
 ui
@@ -375,6 +356,7 @@ versionable
 verylow
 viewknownissues
 visuallizesq
+vm
 vms
 vmware
 vws

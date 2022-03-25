@@ -34,7 +34,7 @@ After signing a contract with AWS, your customer success manager would contact y
 3. Complete Org email verification process (need to be done because the root email has changed)
 4. Enable "Cost and Usage Reports" (if not enabled already)
 5. Create a new S3 bucket (named as `doitintl-awsops-{id}`) to store AWS Cost and Usage report
-6. Set up a new Cost and Usage report ( `doitintl-awsops-{id})`
+6. Set up a new Cost and Usage report (`doitintl-awsops-{id})`)
 
 ### Frequently Asked Questions
 

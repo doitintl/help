@@ -31,7 +31,7 @@ If you'd like to be notified of potential anomalies, check the _Cloud Cost Anoma
 2. Warning
 3. Critical
 
-By default, the threshold for email alerts is set to _Warning_ or higher (i.e., ">= Warning)". You can modify this value to increase or decrease the number of alerts you receive.
+By default, the threshold for email alerts is set to _Warning_ or higher (i.e., ">= Warning"). You can modify this value to increase or decrease the number of alerts you receive.
 
 {% hint style="warning" %}
 

@@ -23,7 +23,7 @@ See also:
 
 * _No risk_ &mdash; FlexSave provides on-demand access to DoiT International's wholesale inventory of SPs, RIs, and CUDs. We handle capacity planning and bear the risk of underutilization, meaning you don't have to.
 
-* _Zero cost_ &mdash; FlexSave costs nothing, there are no hidden fees, and _you are guaranteed to save money_. We optimize our bulk purchasing, so, in most cases, we can afford to pass on the equivalent of a 1-year commitment discount for any SPs, RIs, and CUDs in our wholesale inventory.
+* _Zero cost_ &mdash; FlexSave costs nothing, there are no hidden fees, and _you are guaranteed to save money_. <!-- textlint-disable max-comma -->We optimize our bulk purchasing, so, in most cases, we can afford to pass on the equivalent of a 1-year commitment discount for any SPs, RIs, and CUDs in our wholesale inventory.<!-- textlint-enable -->
 
 * _Easy to use_ &mdash; FlexSave runs on auto-pilot, continually applying the optimum cost-saving strategy to your account. You can enable or disable FlexSave whenever you like.
 

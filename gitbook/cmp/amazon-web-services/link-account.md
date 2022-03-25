@@ -61,7 +61,7 @@ Within about 30 seconds of creating the stack, the CMP _Settings_ page will upda
 
 #### Option 2: Create role via CLI
 
-If you prefer to run the commands yourself in AWS CloudShell, select  the _PREFER CLI?_ button instead. A pop-up will appear with the commands you should run to generate the role with the requisite policies for the features you selected. After running the command, it may take up to 30 seconds for the account to link to the CMP.
+If you prefer to run the commands yourself in AWS CloudShell, select the _PREFER CLI?_ button instead. A pop-up will appear with the commands you should run to generate the role with the requisite policies for the features you selected. After running the command, it may take up to 30 seconds for the account to link to the CMP.
 
 ![A screenshot CLI Instructions modal dialog](../.gitbook/assets/cmp-aws-link-account-cli-modal.png)
 
@@ -75,7 +75,7 @@ Select the _Create a role manually_ radio button, then make a note of the listed
 
 #### Creating an AWS IAM Role
 
-In a separate tab, open the AWS Management Console. Next, go to _Security, Identity, & Compliance > IAM_, or type `IAM` in the _Find Services_ search bar and select _Roles_ on the left-hand side of the page.
+In a separate tab, open the AWS Management Console. Then, go to _Security, Identity, & Compliance > IAM_, or type `IAM` in the _Find Services_ search bar and select _Roles_ on the left-hand side of the page.
 
 Next, select _Create Role_.
 

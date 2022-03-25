@@ -10,7 +10,7 @@ description: >-
 Customers willing to export their Google Cloud billing data are advised to [Set up Cloud Billing data export to BigQuery](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-setup). Note, you will need to have a Billing Account Administrator role for the target Cloud Billing account.
 {% endhint %}
 
-Cloud Management Platform can automatically export detailed  billing data \(such as usage, cost estimates, and pricing data\) to a BigQuery table. Then you can access your billing data from BigQuery for detailed analysis or use a tool such as Looker to visualize your data.
+Cloud Management Platform can automatically export detailed billing data \(such as usage, cost estimates, and pricing data\) to a BigQuery table. Then you can access your billing data from BigQuery for detailed analysis or use a tool such as Looker to visualize your data.
 
 {% hint style="warning" %}
 **Request Access** - You will need to request access to the billing export table by opening a support request at [https://support.doit-intl.com](https://support.doit-intl.com). Please provide your Google user, a Google group, or a service account you'd like to use when querying the billing export table
@@ -26,7 +26,7 @@ Cloud Management Platform can automatically export detailed  billing data \(such
 To query the Google Cloud Billing data in BigQuery, you need to specify the table name in the FROM clause. The table name is determined using three values: project.dataset.BQ\_table\_name.
 
 * Project is always `doitintl-cmp-gcp-data`
-* dataset is `gcp_billing_` concatenated with the name of your Google Billing account. Dashes in the billing account ID should be replaced with underscores. For example, if your Google Billing Account ID is 006C3F-3613C3-2A2169, the dataset name would be  `gcp_billing_006C3F_3613C3_2A2169`
+* Dataset is `gcp_billing_` concatenated with the name of your Google Billing account. Dashes in the billing account ID should be replaced with underscores. For example, if your Google Billing Account ID is 006C3F-3613C3-2A2169, the dataset name would be `gcp_billing_006C3F_3613C3_2A2169`
 * BQ\_table\_name is `gcp_billing`
 
 ## Table Configuration

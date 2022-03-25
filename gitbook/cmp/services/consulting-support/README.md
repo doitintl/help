@@ -10,7 +10,7 @@ As a customer, you are not limited to any number of tickets or by how much time 
 
 {% hint style="info" %}
 
-For more information about the services we offer, please visit the [Services](https://www.doit-intl.com/services/) page on our main website.
+For more information about the services we offer, please visit the [Services](https://www.doit-intl.com/services/) page on our main site.
 
 {% endhint %}
 

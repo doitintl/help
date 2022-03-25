@@ -11,4 +11,5 @@
 LC_ALL=C
 export LC_ALL
 
-fdfind -H -t f '\.sh$' --print0 | xargs -0 shellcheck
+fdfind -H -t f '\.sh$' --print0 |
+    xargs -0 shellcheck

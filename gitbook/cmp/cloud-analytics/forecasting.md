@@ -16,7 +16,7 @@ Use forecasting in your Cloud Analytics reports by selecting the _Forecast_ opti
 
 When you select this option, the CMP will generate a forecast line which estimates what your costs may look like for the period you selected moving forward.
 
-For example, if you selected "Last 30 days" under the _Time Range_ dropdown, your forecast will display cloud cost estimates for 30 days looking forward"
+For example, if you selected "Last 30 days" under the _Time Range_ dropdown, your forecast will display cloud cost estimates for 30 days looking forward.
 
 ![A screenshot of a forecast report](../.gitbook/assets/cmp-report-ml-forecast.png)
 

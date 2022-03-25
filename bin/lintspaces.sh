@@ -11,7 +11,7 @@
 LC_ALL=C
 export LC_ALL
 
-fdfind -H -t f '\.[^p][^y][^.]?$' |
+fdfind -H -t f --print0 |
     xargs -0 lintspaces \
         --editorconfig .editorconfig \
         --guessindentation \

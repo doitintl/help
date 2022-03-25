@@ -38,7 +38,7 @@ Sign in to the AWS account you'd like to integrate with CloudHealth with an IAM 
 
 The first user will be an administrator we create for you.
 
-Further users and administrators can be created by yourself in the [Cloudhealth Interface](https://apps.cloudhealthtech.com/users) as an Admin.
+Further users and administrators can be created by yourself in the [CloudHealth Interface](https://apps.cloudhealthtech.com/users) as an Admin.
 
 If you are yourself not an admin, you need to approach an admin in your company to do this.
 

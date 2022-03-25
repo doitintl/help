@@ -33,7 +33,9 @@ Most of these are self-explanatory, as you would simply make your changes the sa
 
 {% hint style="warning" %}
 
-The discount is not available for the following services: Google Maps APIs, Google Support, Looker, Preemptible VMs (compute engine), 3rd party GCP Marketplace services, Premium OS Images.
+<!-- textlint-disable max-comma -->
+The discount is not available for: Google Maps APIs, Google Support, Looker, Preemptible VMs (compute engine), third-party GCP Marketplace services, or Premium OS Images.
+<!-- textlint-enable -->
 
 {% endhint %}
 
@@ -51,7 +53,9 @@ Use this to perform advanced analysis in your reports with just a click. Use thi
 
 ### Time Interval & Time range
 
-Specify the frequency in which data is aggregated. For the time interval, you have the following options: Hour, Day, Week, Month, Quarter, Year.
+<!-- textlint-disable max-comma -->
+Specify the frequency in which data is aggregated. For the time interval, you have the following options: Hour, Day, Week, Month, Quarter, and Year.
+<!-- textlint-enable -->
 
 For the time range, the options are the following:
 

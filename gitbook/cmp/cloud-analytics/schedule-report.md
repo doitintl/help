@@ -25,7 +25,7 @@ Begin by opening a report that you have "Owner" access to. Then, click on the cl
 
 ![A screenshot showing an example report](../.gitbook/assets/cmp-example-report.png)
 
-Then, configure the scheduled delivery:
+Next, configure the scheduled delivery:
 
 * Set other users, you'd like to be included on report's distribution
 * Optionally, update email's subject and the message to provide more context for recipients
@@ -58,17 +58,13 @@ In addition to using these values, every field in a cron expression can also use
 Schedule intervals lower than daily are not permitted with Cloud Analytics, meaning the first 2 places must be numbers between (&ndash;59) and (0&ndash;23)
 {% endhint %}
 
-To create a schedule that repeats, use special characters to describe when that schedule is to repeat. For example, the cron expression 30 8 \* \* Mon-Fri configures a schedule to start at 8:30 AM on every Monday, Tuesday, Wednesday, Thursday, and Friday.
-
-Your scheduled report will look something like the image below. From the email, you'll be able to preview the report and open an interactive report in Cloud Analytics, by using the "Open Live Report" button.
+To create a schedule that repeats, use special characters to describe when that schedule is to repeat. <!-- textlint-disable max-comma -->For example, the cron expression 30 8 \* \* Mon-Fri configures a schedule to start at 8:30 AM on every Monday, Tuesday, Wednesday, Thursday, and Friday.<!-- textlint-enable -->
 
 Select the access level you'd like to give them, and click "Add" to give them access to the report and add them to the list of scheduled report recipients.
 
 ![A screenshot showing the Some recipients need access to this report modal dialog](../.gitbook/assets/cmp-recipients-need-access-dialog.png)
 
 Your scheduled report will look something like the image below. From the email, you'll be able to preview the report and open an interactive report in Cloud Analytics, by using the "Open Live Report" button.
-
-Your scheduled report will look something like in the example below. From the email, you'll be able to preview the report and open an interactive report in Cloud Analytics, by using the "Open Live Report" button.
 
 ![A screenshot showing the location of the Open Live Report button](../.gitbook/assets/cmp-open-live-report-button.png)
 

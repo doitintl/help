@@ -158,7 +158,7 @@ Service Account keys are only used by backend systems to retrieve relevant data 
 
 We do not provide your data to any 3rd party, with the exceptions listed below required for core CMP functionality.
 
-* **CMP Support** &mdash; We use ZenDesk as a backend for support ticketing functionality. All ticket-related data are stored in ZenDesk and retrieved using ZenDesk APIs \[1].
+* **CMP Support** &mdash; We use Zendesk as a backend for support ticketing functionality. All ticket-related data are stored in Zendesk and retrieved using Zendesk APIs \[1].
 * **Payments** &mdash; We use Stripe for payments. All payment-related data (such as Credit card or bank account details) are stored in the Stripe platform and used via Stripe APIs \[2].
 
 ## Compliance

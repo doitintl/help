@@ -30,7 +30,7 @@ To create a Google Cloud Service account, please execute the following steps:
 2. Review the permissions each service request (by expanding the card)
 3. Select on "Create Service Account"
 
-A slide-out will appear on the right-hand side of the screen containing the Google SDK ([gcloud)](https://cloud.google.com/sdk) commands you will need to run in order to create the service account and set it up with the correct role.
+A slide-out will appear on the right-hand side of the screen containing the Google SDK ([gcloud](https://cloud.google.com/sdk)) commands you will need to run in order to create the service account and set it up with the correct role.
 
 Before executing the `gcloud` commands, ensure that you have selected an appropriate project to create your service account. The project should be one that you are planning to keep long-term and that will only be accessible by only trusted people.
 

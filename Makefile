@@ -96,6 +96,9 @@ check: cspell
 misspell:
 check: misspell
 
+textlint-dry:
+check: textlint-dry
+
 vale:
 check: vale
 
@@ -162,47 +165,6 @@ clean:
 # proselintjs:
 # 	$(call print-target)
 # 	$(FIND) --print0 | xargs -0 $(PROSELINTJS) || true
-
-# textlint
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# https://github.com/textlint/textlint
-
-# TEXTLINT = textlint --config .textlintrc.yaml
-
-# FIND_TEXTLINT_RULE := $(FIND) --print0 | xargs -0 $(TEXTLINT) --rule
-
-# all: textlint
-# .PHONY: textlint
-# textlint:
-# 	$(call print-target)
-# 	# Global rules
-# 	$(FIND_TEXTLINT_RULE) no-todo || true
-# 	$(FIND_TEXTLINT_RULE) no-start-duplicated-conjunction || true
-# 	$(FIND_TEXTLINT_RULE) max-comma || true
-# 	$(FIND_TEXTLINT_RULE) editorconfig || true
-# 	$(FIND_TEXTLINT_RULE) no-dead-link || true
-# 	$(FIND_TEXTLINT_RULE) no-empty-section || true
-# 	$(FIND_TEXTLINT_RULE) terminology || true
-# 	$(FIND_TEXTLINT_RULE) @textlint-rule/no-invalid-control-character || true
-# 	$(FIND_TEXTLINT_RULE) @textlint-rule/no-unmatched-pair || true
-# 	$(FIND_TEXTLINT_RULE) no-zero-width-spaces|| true
-# 	$(FIND_TEXTLINT_RULE) doubled-spaces || true
-# 	$(FIND_TEXTLINT_RULE) @textlint-rule/no-duplicate-abbr|| true
-# 	# English rules
-# 	$(FIND_TEXTLINT_RULE) unexpanded-acronym || true
-# 	$(FIND_TEXTLINT_RULE) abbr-within-parentheses || true
-# 	$(FIND_TEXTLINT_RULE) en-max-word-count || true
-# 	$(FIND_TEXTLINT_RULE) apostrophe || true
-# 	$(FIND_TEXTLINT_RULE) diacritics || true
-# 	$(FIND_TEXTLINT_RULE) stop-words || true
-# 	$(FIND_TEXTLINT_RULE) en-capitalization || true
-# 	$(FIND_TEXTLINT_RULE) common-misspellings || true
-# 	$(FIND_TEXTLINT_RULE) spelling || true
-# 	$(FIND_TEXTLINT_RULE) en-spell || true
-# 	$(FIND_TEXTLINT_RULE) write-good || true
-# 	$(FIND_TEXTLINT_RULE) rousseau || true
-# 	$(FIND_TEXTLINT_RULE) alex || true
 
 # imgdup2go
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

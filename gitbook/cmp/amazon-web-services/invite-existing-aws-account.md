@@ -30,7 +30,7 @@ Then:
 
 1. Select the billing profile you would like to invite
 2. Enter the 12-digit AWS Account ID
-3. Add invitation notes (optional
+3. Add invitation notes (optional)
 
 When you are done, select _Invite_.
 
@@ -73,7 +73,7 @@ After signing in to the AWS Console and accepting the invitation, a final email 
 
 ### Why should I use the CMP for cost analytics when Amazon provides the AWS Cost Explorer?
 
-When you consolidate with the DoiT International billing organization, the [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/) can only report on [blended rates and costs](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/con-bill-blended-rates.html#Blended_CB). However, the CMP's reporting and analytics features work directly with your non-blended cost data.
+When you consolidate with the DoiT International billing organization, the [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/) can only report on [blended rates and costs](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/con-bill-blended-rates.html#Blended_CB). On the other hand, the CMP's reporting and analytics features work directly with your non-blended cost data.
 
 If you have a dedicated billing account (i.e., non-consolidated), you can use the AWS Cost Explorer with un-blended costs. However, we still recommend that you refer to the CMP for a fully integrated reporting and analytics experience.
 
@@ -91,15 +91,15 @@ If you can't see that invite, check if you have left your organization as specif
 
 If you can see the invite on the organization's page, consider the following:
 
-Is the invite in your spam folder? Did you enter the correct AWS account id when inviting the account?
+Is the invite in your spam folder? Did you enter the correct AWS account ID when inviting the account?
 
 If you are still having issues, you can [open a support ticket](https://hello.doit-intl.com/support).
 
-### My payer account is showing as N/A or my CloudHealth status shows as "critical" or "unknown". what does that mean?
+### My payer account is showing as N/A or my CloudHealth status shows as "critical" or "unknown". What does that mean?
 
 !["CloudHealth Status: Unknown"](../.gitbook/assets/cmp-cloudhealth-status-unknown.png)
 
-It means that your Cloudhealth configuration was not done properly.
+It means that your CloudHealth configuration was not done properly.
 
 **Actions to take:** please [open a support ticket](https://hello.doit-intl.com/support) if you see the CloudHealth status as "critical" or "unknown", or if you see Payer Account: N/A.
 

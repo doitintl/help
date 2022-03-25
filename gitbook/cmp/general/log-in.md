@@ -16,7 +16,9 @@ To log in, visit the [log-in screen](https://app.doit-intl.com/login):
 
 #### Use an existing Google Workspace account
 
+<!-- textlint-disable terminology -->
 Select the _SIGN IN WITH GOOGLE_ button and follow your organization's _Single Sign-On_ (SSO) instructions to log in.
+<!-- textlint-enable -->
 
 {% hint style="info" %}
 

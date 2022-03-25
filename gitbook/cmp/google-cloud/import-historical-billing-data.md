@@ -58,7 +58,7 @@ You need to have the appropriate IAM role/permission in GCP to grant the require
 4. Check if **bigquery.jobs.create** is included in the assigned permissions, if yes, no further action is needed since these permissions will be inherited by the projects
 5. If bigquery.jobs.create permission is not yet added, click on "**Edit Role**"
 6. Click "**Add Permissions**"
-7. Filter by **"Permission : bigquery.jobs.create**" and check the box for this permission
+7. Filter by "**Permission: bigquery.jobs.create**" and check the box for this permission
 8. Click "**Add**"
 
 ![A screenshot showing how to select an organization, access the IAM & Admin menu item, and then select Roles](../.gitbook/assets/gcp-iam-admin-select-roles.png)
