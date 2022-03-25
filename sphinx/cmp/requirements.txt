@@ -1,4 +1,0 @@
-docutils<0.17>=0.15
-livereload
-sphinx
-sphinx-book-theme

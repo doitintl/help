@@ -1,7 +1,0 @@
-=====
-Perks
-=====
-
-.. toctree::
-
-   perks

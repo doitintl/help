@@ -7,18 +7,9 @@
 
 # https://github.com/schorfES/node-lintspaces
 
-run_lintspaces() {
-    max_newlines="${1}"
+fdfind -H -t f '\.[^p][^y][^.]?$' |
     xargs -0 lintspaces \
         --editorconfig .editorconfig \
         --guessindentation \
         --matchdotfiles \
-        --maxnewlines "${max_newlines}" \
-        </dev/stdin
-}
-
-# Python files
-fdfind -H -t f '\.py$' | run_lintspaces 2
-
-# All other files
-fdfind -H -t f '\.[^p][^y][^.]?$' | run_lintspaces 1
+        --maxnewlines 1

@@ -17,10 +17,6 @@ GH_PAGES_DIR = gh-pages
 GITBOOK_ASSETS_DIR = .gitbook/assets
 GITBOOK_CMP_DIR = gitbook/cmp
 GITBOOK_SUPERQUERY_DIR = gitbook/superquery
-SPHINX_ASSETS_DIR = src/_assets
-SPHINX_CMP_DIR = sphinx/cmp
-SPHINX_CMP_DOCS_DIR := $(SPHINX_CMP_DIR)/docs
-SPHINX_CMP_VENV_DIR := $(SPHINX_CMP_DIR)/.venv
 
 # $(call print-target)
 define print-target
@@ -103,19 +99,6 @@ prettier:
 	$(call print-target)
 	$(PRETTIER)
 
-# black
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# https://github.com/psf/black
-
-BLACK = black --check .
-
-check: black
-.PHONY: black
-black:
-	$(call print-target)
-	$(BLACK)
-
 # yamllint
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -164,7 +147,6 @@ good-filenames:
 	$(call print-target)
 	$(GOOD_FILENAMES) $(GITBOOK_CMP_DIR)/$(GITBOOK_ASSETS_DIR)
 	@ # $(GOOD_FILENAMES) $(GITBOOK_SUPERQUERY_DIR)/$(GITBOOK_ASSETS_DIR)
-	@ # $(GOOD_FILENAMES) $(SPHINX_CMP_DIR)/$(SPHINX_ASSETS_DIR)
 
 # rm-unused-docs
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -335,8 +317,6 @@ markdown-link-check:
 # rm-unused-assets
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# TODO: Make this check work for Sphinx (RST files in particular)
-
 RM_UNUSED_ASSETS := $(BIN_DIR)/rm-unused-assets.sh --dry-run
 
 check: rm-unused-assets
@@ -345,7 +325,6 @@ rm-unused-assets:
 	$(call print-target)
 	$(RM_UNUSED_ASSETS) $(GITBOOK_CMP_DIR) $(GITBOOK_ASSETS_DIR)
 	@ # $(RM_UNUSED_ASSETS) $(GITBOOK_SUPERQUERY_DIR) $(GITBOOK_ASSETS_DIR)
-	@ # $(RM_UNUSED_ASSETS) $(SPHINX_SUPERQUERY_DIR) $(SPHINX_ASSETS_DIR)
 
 # fdupes
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -371,7 +350,6 @@ fdupes:
 # 	$(call print-target)
 # 	$(IMGDUP2GO) $(GITBOOK_CMP_DIR)/$(GITBOOK_ASSETS_DIR)
 # 	$(IMGDUP2GO) $(GITBOOK_SUPERQUERY_DIR)/$(GITBOOK_ASSETS_DIR)
-# 	$(IMGDUP2GO) $(SPHINX_CMP_DIR)/$(SPHINX_ASSETS_DIR)
 
 # optipng
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -384,7 +362,6 @@ optipng:
 	$(call print-target)
 	$(OPTIPNG) $(GITBOOK_CMP_DIR) $(GITBOOK_ASSETS_DIR)
 	$(OPTIPNG) $(GITBOOK_SUPERQUERY_DIR) $(GITBOOK_ASSETS_DIR)
-	$(OPTIPNG) $(SPHINX_CMP_DIR) $(SPHINX_ASSETS_DIR)
 
 # telemetry
 # -----------------------------------------------------------------------------
@@ -410,7 +387,6 @@ $(GH_PAGES_DIR)/index.html:
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # TODO: Include GitBook superQuery docs
-# TODO: Include Sphinx CMP docs
 
 GEN_ASSETS_LIST = $(BIN_DIR)/gen-assets-list.sh
 
@@ -455,8 +431,6 @@ $(GH_PAGES_DIR)/assets.html:
 
 clean:
 	rm -rf $(GH_PAGES_DIR)
-	rm -rf $(SPHINX_CMP_DOCS_DIR)
-	rm -rf $(SPHINX_CMP_VENV_DIR)
 	find . -type f -name '*.sig' -delete
 	find . -type f -name '*.out' -delete
 	find . -type f -name '*.tmp' -delete

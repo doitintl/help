@@ -1,6 +1,0 @@
-APIs
-====
-
-.. toctree::
-
-   developer-hub
