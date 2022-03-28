@@ -9,6 +9,7 @@ LC_ALL = C
 
 .DEFAULT_GOAL = help
 
+.PHONY: help
 help:
 	@ printf '%s\n\n' "Usage: make [target]"
 	@ printf '%s\n\n' 'Available targets:'

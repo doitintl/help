@@ -57,6 +57,8 @@ rules:
   # https://github.com/nodaguti/textlint-rule-write-good
   # write-good: true
 
+  # https://github.com/textlint-rule/textlint-rule-proselint
+
   # https://github.com/azu/textlint-rule-en-max-word-count
   en-max-word-count:
     max: 40

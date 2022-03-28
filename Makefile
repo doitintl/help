@@ -24,6 +24,7 @@ endef
 
 .DEFAULT_GOAL = help
 
+.PHONY: help
 help:
 	@ printf '%s\n\n' "Usage: make [target]"
 	@ printf '%s\n\n' 'Available targets:'
@@ -49,7 +50,7 @@ telemetry:
 .PHONY: clean # Remove build artifacts
 clean:
 
-# Prerequisite targets
+# Primary prerequisites
 # =============================================================================
 
 # check
