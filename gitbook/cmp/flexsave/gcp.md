@@ -36,6 +36,15 @@ For platform-agnostic information, see:
 * [Flexsave overview: FAQs](overview.md#faqs)
 {% endhint %}
 
+#### What changes should I expect to see in my Google Cloud Console?
+
+You should expect to see:
+
+* Commitment scope set to _Billing account_
+* Projects with 3-year committed use discounts and names like `doitintl-fs-xxxxxxx` attached to your billing account
+
+The commitments will apply committed use discounts across all eligible usage (all projects) associated with this billing account when enabling billing account scope.
+
 #### Can I use Flexsave if I already use CUDs or _Sustained Use Discounts_ (SUDs)?
 
 Absolutely. Flexsave works exclusively with your on-demand compute usage and excludes anything already covered by an existing discount.
@@ -49,15 +58,6 @@ Flexsave can provide CUD discounts for GKE nodes that use the [Google Compute En
 #### I have a special pricing plan on my GCP account. Can I still use Flexsave, and will it impact my existing savings?
 
 Flexsave can still work with your account and will provide savings _in addition to_ the discounts from your pricing plan.
-
-#### What changes should I expect to see in my Google Cloud Console?
-
-You should expect to see:
-
-* Commitment scope set to _Billing account_
-* Projects with 3-year committed use discounts and names like `doitintl-fs-xxxxxxx` attached to your billing account
-
-The commitments will apply committed use discounts across all eligible usage (all projects) associated with this billing account when enabling billing account scope.
 
 ### Contact us
 

@@ -76,8 +76,9 @@ For platform-agnostic information, see:
 
 #### What changes should I expect to see in my AWS Console?
 
-* Flexsave is dynamically adding or removing AWS accounts to your AWS Organization. These accounts are just to carry the Saving Plans.
-* You should expect to see AWS account(s) with a 3-year Saving Plan and names like fs-xxxxx
+* Flexsave will dynamically add or remove AWS accounts to your AWS Organization
+  * You should expect to see AWS accounts with a 3-year Saving Plan and names like `fs-xxxxx`
+  * These accounts carry the Saving Plans used by Flexsave
 
 #### Can I use Flexsave if I am already using SPs or RIs?
 
