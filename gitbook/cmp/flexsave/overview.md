@@ -60,6 +60,17 @@ Default roles with this permission:
 * [Admin](../user-management/manage-roles.md#admin)
 {% endhint %}
 
+{% hint style="warning" %}
+
+After you enable Flexsave, you should expect to see projects with names like `fs-xxxxx` or `doitintl-fs-xxxxxxx` attached to your AWS or GCP billing account, among other changes.
+
+For more information, see the corresponding FAQ entry:
+
+* [What changes should I expect to see in my AWS Console?](aws.md#what-changes-should-i-expect-to-see-in-my-aws-console)
+* [What changes should I expect to see in my Google Cloud Console?](gcp.md#what-changes-should-i-expect-to-see-in-my-google-cloud-console)
+
+{% endhint %}
+
 ## Monitor your savings
 
 Within the CMP, select _Savings_ from the top menu bar, then select _Flexsave_ from the drop-down menu. If Flexsave is active, the CMP will take you to the Flexsave dashboard:
