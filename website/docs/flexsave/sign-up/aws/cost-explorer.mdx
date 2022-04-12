@@ -1,0 +1,374 @@
+---
+sidebar_position: 1
+---
+
+# Savings estimate for Flexsave AWS
+
+Discover how much you could be saving with Flexsave for AWS.
+
+Flexsave performs continuous machine learning analysis of your compute workloads, identifies the ideal blend of savings plans, and automatically applies them to your account.
+
+- No need to consolidate
+- No commitments
+- No upfront fees
+
+TODO: Add box saying this is for non-consolidated customers
+
+## Get your savings estimate
+
+Within the CMP, select the _Savings_ option from the top navigation menu, then select _Flexsave AWS_:
+
+<picture
+  img={require('../../../../assets/png/cmp-flexsave-cost-explorer.png')}
+  alt="A screenshot of the Flexsave cost explorer screen"
+/>
+
+Select the _GET YOU SAVINGS ESTIMATE_ button to continue.
+
+### Cost Explorer access
+
+After selecting the _GET YOU SAVINGS ESTIMATE_ button, the Flexsave wizard will advance you to the first step, _Cost Explorer access_:
+
+<picture
+  img={require('../../../../assets/png/cmp-flexsave-cost-explorer-aws-access.png')}
+  alt="A screenshot of the Flexsave cost explorer access screen"
+/>
+
+DoiT uses the [Cost Explorer API][cost-explorer-api] to fetch aggregated information about your spend with AWS. This information doesn't contain names of your machines, buckets or tags. This information will enable the calculation of your potential savings with Flexsave.
+
+To use the Cost Explorer API, we have prepared a template [CloudFormation stack][cloudformation stack] stack that creates a [Cross-Account role][cross-account-role] that grants DoiT International limited read-only permissions to query your AWS account (see below for details).
+
+To create the CloudFormation stack, select the _CREATE STACK_ button. The CMP will open a window prompting you to log into your AWS console.
+
+:::warning
+
+Your you must authenticate as a [management account][management-account] (i.e., a _payer account_) to continue. If your account is linked to a management account (e.g., for [consolidated billing][consolidated-billing]), you will not be able to continue.
+
+:::
+
+After logging in to your AWS console, AWS will prompt you to [create the CloudFormation stack][create-stack] from our template configuration:
+
+<picture
+  img={require('../../../../assets/png/aws-flexsave-create-stack-cost-explorer.png')}
+  alt="A screenshot of the AWS _Quick create stack_ screen"
+/>
+
+You can [download the YAML file][cost-explorer-yaml] using the displayed _Template URL_ to view the template stack definition.
+
+The YAML file will look something like this:
+
+```yaml
+Description: This template creates a Cross-Account-Role that will grant DoiT Flexsave permissions to get your AWS recommendations
+Parameters:
+  CustomerId:
+    Type: String
+    Description: Customer ID for Cross-Account-Role
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      - Label:
+          default: 'Cross-Account Role Configuration.  *Do Not Modify*'
+        Parameters:
+          - CustomerId
+Resources:
+  CrossAccountRole:
+    Properties:
+      Description: DoiT International Flexsave
+      RoleName: 'doitintl_cmp'
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action:
+              - 'sts:AssumeRole'
+            Effect: Allow
+            Principal:
+              AWS: !Sub arn:aws:iam::068664126052:root
+            Sid: 'Estimations'
+        Version: '2012-10-17'
+      Path: '/'
+      Policies:
+        - PolicyDocument:
+            Statement:
+              - Action:
+                  - 'ce:get-savings-plans-rec'
+                  - 'ce:get-cost-usage'
+                Effect: Allow
+                Resource: '*'
+            Version: '2012-10-17'
+          PolicyName: FlexsaveGetRecommendationsPolicy
+    Type: 'AWS::IAM::Role'
+  DoitCmpHook:
+    Type: Custom::DoitCmpHook
+    Properties:
+      ServiceToken: 'arn:aws:sns:us-east-1:068664126052:doitintl-aws-connect'
+      RoleArn: !GetAtt CrossAccountRole.Arn
+      AccountID: !Ref 'AWS::AccountId'
+      ExternalID: !Ref CustomerId
+      NotificationUrl: 'https://scheduled-tasks-dot-doitintl-cmp-dev.uc.r.appspot.com/webhooks/v1/flexsave-standalone-aws/update-recommendations'
+    Version: '1.0'
+Outputs:
+  RoleName:
+    Value: !Ref CrossAccountRole
+  RoleArn:
+    Value: !GetAtt CrossAccountRole.Arn
+```
+
+In summary, this stack creates:
+
+- An [Cross-Account role][cross-account-role] named `doitintl_cmp` with read-only permissions to:
+  - [Get AWS savings plans purchase recommendations][get-savings-plans-rec]
+  - [Get AWS cost and usage metrics][get-cost-usage]
+- A webhook that allows DoiT International to securely request this data
+
+This configuration allows Flexsave to get the information it needs to determine the optimal way to reduce your monthly cloud spend.
+
+If you are happy with the configuration, scroll to the bottom of the page and
+select the _Capabilities_ checkbox indicating that you acknowledge that AWS CloudFormation might create IAM resources with custom names (in this instance, the `doitintl_cmp` role).
+
+Finally, select _CREATE STACK_
+
+The AWS console will take you to the stack overview screen:
+
+<picture
+  img={require('../../../../assets/png/aws-flexsave-create-stack-cost-explorer-done.png')}
+  alt="A screenshot of the AWS _Quick create stack_ screen"
+/>
+
+At first, the status of your stack will be `CREATE_IN_PROGRESS`. Eventually the status will change to `CREATE_COMPLETE`. The CMP will wait for the stack to be created before attempting to fetch your billing data.
+
+Switch back to the CMP:
+
+<picture
+  img={require('../../../../assets/png/cmp-flexsave-cost-explorer-aws-access-loading.png')}
+  alt="A screenshot of the Flexsave cost explorer access screen"
+/>
+
+You may have to wait up to 30 seconds while AWS CloudFormation creates the stack and the CMP fetches your billing data. If this process fails, a red box will be shown directing you to contact support.
+
+After the stack is created and the CMP has fetched your billing data, you will be automatically redirected to [your savings estimation](#savings-estimation).
+
+### Savings estimation
+
+After [granting Cost Explorer access](#organization-access), the Flexsave wizard will advance you to the second step, _Savings estimation_:
+
+<picture
+  img={require('../../../../assets/png/cmp-flexsave-cost-explorer-aws-savings-estimation.png')}
+  alt="A screenshot of the Flexsave savings estimation screen"
+/>
+
+This screen displays your personalized savings estimation as determined using the data fetched from your AWS account in the previous step.
+
+In the example above, you can see:
+
+- Last month, the customer's cloud compute costs totaled $48,765.01
+- Flexsave could have reduced those costs to $32,671.63, lowering their monthly spend by $16,093.38
+- If the customer enables Flexsave, they could save an estimated $175k&ndash;$232k over the next 12 months (based on 0&ndash;5% annual growth)
+
+_The actual figures shown may differ from the example shown above._
+
+After reviewing your personalized savings estimation, you can [enable Flexsave](#enable-flexsave) by selecting the _ENABLE FLEXSAVE_ button.
+
+## Enable Flexsave
+
+### Organization access
+
+After selecting the _ENABLE FLEXSAVE_ button, the CMP will take you to the _Organization access_ step:
+
+<picture
+  img={require('../../../../assets/png/cmp-flexsave-cost-explorer-aws-organization-access.png')}
+  alt="A screenshot of the Flexsave organization access screen"
+/>
+
+Flexsave works by dynamically attaching DoiT-owned AWS accounts with [Saving Plans][savings-plans] to your organization. When our AWS accounts are attached to your organization, AWS automatically applies DoiT's Savings Plans to _your_ eligible compute workloads.
+
+To allow Flexsave to work, we have prepared a another template [CloudFormation stack][cloudformation stack] stack for you to use. TODO: Add explanation
+
+To create this CloudFormation stack, you will need supply an AWS _Cost and
+Usage_ (CUR) Report. We will periodically fetch this report and use the data to model your current and future compute usage, allowing Flexsave to predict the ideal blend of Savings Plans to maximize your coverage.
+
+:::warning
+
+For help viewing or creating AWS Cost and Usage reports, see:
+
+- [Viewing your Cost and Usage Reports details][view-cur-reports]
+- [Creating Cost and Usage Reports][create-cur-reports]
+
+::::
+
+If you don't have a Cost and Usage Report set up, you must create one before
+continuing.
+
+Select the Cost and Usage Report you want to use with Flexsave. Under the _Report Details_ section, locate the _S3 bucket_ and _Report path prefix_ labels.
+
+In the CMP, on the _Organization access_ screen:
+
+1. Enter the _S3 bucket_ value into the _S3 Bucket_ field
+2. Enter the _Report path prefix_ value into the _CUR path_ field
+
+Then, select _CREATE STACK_
+
+The CMP will open a window prompting you to log into your AWS console.
+
+:::warning
+
+Your you must authenticate as a [management account][management-account] (i.e., a _payer account_) to continue. If your account is linked to a management account (e.g., for [consolidated billing][consolidated-billing]), you will not be able to continue.
+
+:::
+
+After logging in to your AWS console, AWS will prompt you to [create the CloudFormation stack][create-stack] from our template configuration:
+
+<picture
+  img={require('../../../../assets/png/aws-flexsave-create-stack-org-access.png')}
+  alt="A screenshot of the AWS _Quick create stack_ screen"
+/>
+
+You can [download the YAML file][org-access-yaml] using the displayed _Template URL_ to view the template stack definition.
+
+The YAML file will look something like this:
+
+```yaml
+Description: This template creates a policy to allow Flexsave to mange saving plans.
+Parameters:
+  CustomerId:
+    Type: String
+    Description: Customer ID for Cross-Account-Role
+  S3Bucket:
+    Type: String
+    Description: CUR S3 Bucket URL
+  CurPath:
+    Type: String
+    Description: CUR S3 Bucket Path
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      - Label:
+          default: 'Cross-Account Role Configuration.  *Do Not Modify*'
+        Parameters:
+          - CustomerId
+          - S3Bucket
+          - CurPath
+Resources:
+  OrgBillingPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: doitintl_cmp
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Sid: Management
+            Action:
+              - organizations:ListAccounts*
+              - organizations:ListHandshakes*
+              - organizations:DescribeOrganization
+              - organizations:DescribeAccount
+              - organizations:DescribeHandshake
+              - organizations:InviteAccountToOrganization
+            Resource: '*'
+          - Effect: Allow
+            Sid: CostAndUsage
+            Action:
+              - ec2:DescribeReservedInstances
+              - savingsplans:DescribeSavingsPlans
+              - ce:Get*
+              - cur:DescribeReportDefinitions
+            Resource: '*'
+          - Effect: Allow
+            Sid: Onboarding
+            Action:
+              - iam:GetRole
+              - iam:GetPolicy
+            Resource:
+              - !Sub 'arn:aws:iam::${AWS::AccountId}:role/doitintl_cmp'
+              - !Sub 'arn:aws:iam::${AWS::AccountId}:policy/doitintl_cmp'
+          - Effect: Allow
+            Sid: S3Bucket
+            Action:
+              - s3:ListBucket
+            Resource: !Sub
+              - 'arn:aws:s3:::${BucketName}'
+              - BucketName: !Ref S3Bucket
+          - Effect: Allow
+            Sid: S3Object
+            Action:
+              - s3:GetObject
+            Resource: !Sub
+              - 'arn:aws:s3:::${BucketName}/*'
+              - BucketName: !Ref S3Bucket
+      Roles:
+        - 'doitintl_cmp'
+  DoitCmpHook:
+    Type: Custom::DoitCmpHook
+    Properties:
+      ServiceToken: 'arn:aws:sns:us-east-1:068664126052:doitintl-aws-connect'
+      RoleArn: 'doitintl_cmp'
+      AccountID: !Ref 'AWS::AccountId'
+      ExternalID: !Ref CustomerId
+      NotificationUrl: 'https://scheduled-tasks-dot-doitintl-cmp-dev.uc.r.appspot.com/webhooks/v1/flexsave-standalone-aws/update-billing'
+      S3Bucket: !Ref S3Bucket
+      CurPath: !Ref CurPath
+    Version: '1.0'
+Outputs:
+  RoleName:
+    Value: 'doitintl_cmp'
+```
+
+In summary, this stack creates:
+
+- Role name: `doitintl_cmp`
+- Policy name `doitintl_cmp`
+- Management group is used for adding/removing and overseeing our Account inventory that contains our Savings Plans
+- CostAndUsage group is used to track cost and recommendations &mdash long term we will transition to billing data, but will be used for now
+- Onboarding group is used to periodically check permissions on our roles and policies
+- S3 group is used to get CUR
+
+This configuration allows Flexsave to get the information it needs to determine the optimal way to reduce your monthly cloud spend.
+
+If you are happy with the configuration, scroll to the bottom of the page and
+select the _Capabilities_ checkbox indicating that you acknowledge that AWS CloudFormation might create IAM resources with custom names (in this instance, the `doitintl_cmp` role).
+
+Finally, select _CREATE STACK_
+
+The AWS console will take you to the stack overview screen:
+
+<picture
+  img={require('../../../../assets/png/aws-flexsave-create-stack-cost-explorer-done.png')}
+  alt="A screenshot of the AWS _Quick create stack_ screen"
+/>
+
+At first, the status of your stack will be `CREATE_IN_PROGRESS`. Eventually the status will change to `CREATE_COMPLETE`. The CMP will wait for the stack to be created before attempting to fetch your billing data.
+
+Switch back to the CMP:
+
+<picture
+  img={require('../../../../assets/png/cmp-flexsave-cost-explorer-aws-access-loading.png')}
+  alt="A screenshot of the Flexsave cost explorer access screen"
+/>
+
+You may have to wait up to 30 seconds while AWS CloudFormation creates the stack and the CMP fetches your billing data. If this process fails, a red box will be shown directing you to contact support.
+
+After the stack is created and the CMP has fetched your billing data, you will be automatically redirected to [your savings estimation](#get-your-savings-estimate).
+
+### Flexsave activation
+
+<picture
+  img={require('../../../../assets/png/cmp-flexsave-cost-explorer-aws-activation.png')}
+  alt="A screenshot of the Flexsave activation screen"
+/>
+
+## Troubleshooting
+
+Lorem ipsum
+
+[cost-explorer-api]: https://docs.aws.amazon.com/cost-management/latest/userguide/ce-api.html
+[cloudformation stack]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html
+[cost-explorer-yaml]: https://doit-cmp-ops-pub.s3.amazonaws.com/dev/flexsave_create_role_N_policies.yml
+[management-account]: https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#account
+[consolidated-billing]: https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html
+[savings-plans]: https://aws.amazon.com/savingsplans/
+[get-savings-plans-rec]: https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_get-savings-plans-rec.html
+[get-cost-usage]: https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_get-cost-usage.html
+[create-stack]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-create-stack.html
+[cross-account-role]: https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html
+[view-cur-reports]: https://docs.aws.amazon.com/cur/latest/userguide/view-cur.html
+[create-cur-reports]: https://docs.aws.amazon.com/cur/latest/userguide/creating-cur.html
+[org-access-yaml]: https://doit-cmp-ops-pub.s3.amazonaws.com/dev/flexsave_create_policies.yml
