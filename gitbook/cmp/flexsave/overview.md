@@ -62,7 +62,7 @@ Default roles with this permission:
 
 {% hint style="warning" %}
 
-After you enable Flexsave, you should expect to see projects with names like `fs-xxxxx` or `doitintl-fs-xxxxxxx` attached to your AWS or GCP billing account, among other changes.
+After you enable Flexsave, you should expect to see accounts with names like `fs-xxxxx` attached to your AWS account or projects with names like `doitintl-fs-xxxxxxx` attached to GCP account, among other changes.
 
 For more information, see the corresponding FAQ entry:
 
