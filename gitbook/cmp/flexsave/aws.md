@@ -8,7 +8,7 @@ description: >-
 
 Flexsave is your cloud co-pilot, dynamically maximizing your cloud-compute discounts for [Amazon Web Services](https://aws.amazon.com) (AWS) without any of the risks or limitations of long-term use commitments.
 
-In most cases, save [the equivalent of a 1-year commitment discount](overview.md#how-much-can-i-save) on your cloud-compute spend with on-demand access to DoiT International's wholesale inventory of AWS [Savings Plans](https://https/aws.amazon.com/savingsplans/) (SPs) and AWS [EC2 Reserved Instances](https://https/aws.amazon.com/ec2/pricing/reserved-instances/) (RIs).
+In most cases, save [the equivalent of a 1-year commitment discount](overview.md#how-much-can-i-save) on your cloud-compute spend with on-demand access to DoiT International's wholesale inventory of AWS [Savings Plans](https://aws.amazon.com/savingsplans/) (SPs) and AWS [EC2 Reserved Instances](https://aws.amazon.com/ec2/pricing/reserved-instances/) (RIs).
 
 {% hint style="info" %}
 See also:
@@ -48,14 +48,14 @@ If you cannot find any [Convertible Reserved Instances](https://docs.aws.amazon.
 {% hint style="success" %}
 We support the following products:
 
-* [AWS EC2](https://aws.amazon.com/ec2/) — Secure and resizable compute capacity for virtually any workload
+* [AWS EC2](https://aws.amazon.com/ec2/) &mdash; Secure and resizable compute capacity for virtually any workload
 {% endhint %}
 
 {% hint style="info" %}
 We support these products for customers with dedicated billing accounts:
 
-* [AWS Lambda](https://aws.amazon.com/lambda/) — Run code without thinking about servers or clusters
-* [AWS Fargate](https://aws.amazon.com/fargate/) — Serverless compute for containers
+* [AWS Lambda](https://aws.amazon.com/lambda/) &mdash; Run code without thinking about servers or clusters
+* [AWS Fargate](https://aws.amazon.com/fargate/) &mdash; Serverless compute for containers
 {% endhint %}
 
 {% hint style="warning" %}
@@ -74,9 +74,7 @@ For platform-agnostic information, see:
 * [Flexsave overview: FAQs](overview.md#faqs)
 {% endhint %}
 
-####
-
-**What changes should I expect to see in my AWS Console?**
+#### What changes should I expect to see in my AWS Console?
 
 * Flexsave is dynamically adding or removing AWS accounts to your AWS Organization. These accounts are just to carry the Saving Plans.
 * You should expect to see AWS account(s) with a 3-year Saving Plan and names like fs-xxxxx

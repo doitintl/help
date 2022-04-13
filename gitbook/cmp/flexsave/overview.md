@@ -19,10 +19,15 @@ See also:
 
 ## Benefits
 
-* _No commitment_ — AWS and GCP provide cloud-compute discounts (SPs, RIs, and CUDs) with mandatory commitment periods lasting one year or more. Flexsave provides the same cloud-compute discounts with no commitments.
-* _No risk_ — Flexsave provides on-demand access to DoiT International's wholesale inventory of SPs, RIs, and CUDs. We handle capacity planning and bear the risk of underutilization, meaning you don't have to.
-* _Zero cost_ — Flexsave costs nothing, there are no hidden fees, and _you are guaranteed to save money_. We optimize our bulk purchasing, so, in most cases, we can afford to pass on the equivalent of a 1-year commitment discount for any SPs, RIs, and CUDs in our wholesale inventory.
-* _Easy to use_ — Flexsave runs on auto-pilot, continually applying the optimum cost-saving strategy to your account. You can enable or disable Flexsave whenever you like.
+* _No commitment_ &mdash; AWS and GCP provide cloud-compute discounts (SPs, RIs, and CUDs) with mandatory commitment periods lasting one year or more. Flexsave provides the same cloud-compute discounts with no commitments.
+
+* _No risk_ &mdash; Flexsave provides on-demand access to DoiT International's wholesale inventory of SPs, RIs, and CUDs. We handle capacity planning and bear the risk of underutilization, meaning you don't have to.
+
+<!-- textlint-disable max-comma -->
+* _Zero cost_ &mdash; Flexsave costs nothing, there are no hidden fees, and _you are guaranteed to save money_. We optimize our bulk purchasing, so, in most cases, we can afford to pass on the equivalent of a 1-year commitment discount for any SPs, RIs, and CUDs in our wholesale inventory.
+<!-- textlint-disable -->
+
+* _Easy to use_ &mdash; Flexsave runs on auto-pilot, continually applying the optimum cost-saving strategy to your account. You can enable or disable Flexsave whenever you like.
 
 ## How it works
 
@@ -67,9 +72,9 @@ In the example screenshot above, Flexsave for GCP has only been active for one a
 
 In the top-right hand corner of the screen, a _Time range_ drop-down menu allows you to select the time range you want to view. Above the bar chart, the CMP displays three essential statistics for the specified time range:
 
-* _Time range savings rate_ — The effective discount applied to your on-demand spend
-* _Time range savings_ — Your savings as a result of using Flexsave
-* _Time range net On-Demand spend_ — Your net on-demand spend after applying Flexsave discount
+* _Time range savings rate_ &mdash; The effective discount applied to your on-demand spend
+* _Time range savings_ &mdash; Your savings as a result of using Flexsave
+* _Time range net On-Demand spend_ &mdash; Your net on-demand spend after applying Flexsave discount
 
 In the bar chart shown above:
 

@@ -19,13 +19,14 @@ RESET='\x1b[0m'
 tmp_errors="$(mktemp)"
 
 run_brok() {
-    fdfind --hidden --ignore-case --type f --print0 '\.md$$' |
-        xargs -0 brok \
-            --check-certs --only-failures --no-color --ignore \
-            'https://fonts.gstatic.com' \
-            'https://www.googleapis.com/robot' \
-            'https://accounts.google.com/o/oauth2/token' \
-            'https://help.fullstory.com/'
+    fdfind --hidden --ignore-case --type f --print0 '\.md$$' | xargs -0 brok \
+        --check-certs --only-failures --no-color --ignore \
+        'https://accounts.google.com/o/oauth2/token' \
+        'https://docs.github.com/en/get-started/quickstart/fork-a-repo' \
+        'https://docs.github.com/en/github/collaborating-with-pull-requests' \
+        'https://fonts.gstatic.com' \
+        'https://help.fullstory.com/' \
+        'https://www.googleapis.com/robot'
 }
 
 tmp_errors="$(mktemp)"

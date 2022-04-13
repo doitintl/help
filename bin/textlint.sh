@@ -36,12 +36,18 @@ run_fdfind() {
     fdfind -H -t f --print0 '\.md$$'
 }
 
+run_textlint() {
+    run_fdfind |
+        xargs -0 textlint "${@}" \
+            --config .textlintrc.yaml
+}
+
 if test "${dry_run}" = 1; then
-    run_fdfind |
-        xargs -0 textlint \
-            --config .textlintrc.yaml
+    if ! run_textlint; then
+        printf 'For help ignoring errors, see: '
+        printf 'https://textlint.github.io/docs/ignore.html\n'
+        exit 1
+    fi
 else
-    run_fdfind |
-        xargs -0 textlint --fix \
-            --config .textlintrc.yaml
+    run_textlint --fix
 fi
