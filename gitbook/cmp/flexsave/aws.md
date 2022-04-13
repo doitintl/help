@@ -6,9 +6,9 @@ description: >-
 
 # Flexsave for AWS
 
-Flexsave is your cloud co-pilot, dynamically maximizing your cloud-compute discounts for [Amazon Web Services][aws] (AWS) without any of the risks or limitations of long-term use commitments.
+Flexsave is your cloud co-pilot, dynamically maximizing your cloud-compute discounts for [Amazon Web Services](https://aws.amazon.com) (AWS) without any of the risks or limitations of long-term use commitments.
 
-In most cases, save [the equivalent of a 1-year commitment discount](overview.md#how-much-can-i-save) on your cloud-compute spend with on-demand access to DoiT International's wholesale inventory of AWS [Savings Plans][sps] (SPs) and AWS [EC2 Reserved Instances][ris] (RIs).
+In most cases, save [the equivalent of a 1-year commitment discount](overview.md#how-much-can-i-save) on your cloud-compute spend with on-demand access to DoiT International's wholesale inventory of AWS [Savings Plans](https://https/aws.amazon.com/savingsplans/) (SPs) and AWS [EC2 Reserved Instances](https://https/aws.amazon.com/ec2/pricing/reserved-instances/) (RIs).
 
 {% hint style="info" %}
 See also:
@@ -48,16 +48,14 @@ If you cannot find any [Convertible Reserved Instances](https://docs.aws.amazon.
 {% hint style="success" %}
 We support the following products:
 
-* [AWS EC2](https://aws.amazon.com/ec2/) &mdash; Secure and resizable compute capacity for virtually any workload
+* [AWS EC2](https://aws.amazon.com/ec2/) — Secure and resizable compute capacity for virtually any workload
 {% endhint %}
 
 {% hint style="info" %}
-We plan to support the following products soon:
+We support these products for customers with dedicated billing accounts:
 
-* [AWS Lambda](https://aws.amazon.com/lambda/) &mdash; Run code without thinking about servers or clusters
-* [AWS Fargate](https://aws.amazon.com/fargate/) &mdash; Serverless compute for containers
-
-Support for these products will be limited to customers with dedicated billing accounts.
+* [AWS Lambda](https://aws.amazon.com/lambda/) — Run code without thinking about servers or clusters
+* [AWS Fargate](https://aws.amazon.com/fargate/) — Serverless compute for containers
 {% endhint %}
 
 {% hint style="warning" %}
@@ -76,18 +74,25 @@ For platform-agnostic information, see:
 * [Flexsave overview: FAQs](overview.md#faqs)
 {% endhint %}
 
+####
+
+**What changes should I expect to see in my AWS Console?**
+
+* Flexsave is dynamically adding or removing AWS accounts to your AWS Organization. These accounts are just to carry the Saving Plans.
+* You should expect to see AWS account(s) with a 3-year Saving Plan and names like fs-xxxxx
+
 #### Can I use Flexsave if I am already using SPs or RIs?
 
 Yes, you can. Flexsave works exclusively with your on-demand compute usage and excludes anything already covered by your own SPs or RIs.
 
 #### Can Flexsave provide discounts for on-demand capacity reservations?
 
-Flexsave only supports AWS regional reserved instances. Because AWS on-demand capacity reservations require zonal reserved instances, Flexsave does not provide capacity reservation discounts or discounts for [on-demand capacity reservations][capacity-reservations].
+Flexsave only supports AWS regional reserved instances. Because AWS on-demand capacity reservations require zonal reserved instances, Flexsave does not provide capacity reservation discounts or discounts for [on-demand capacity reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html).
 
 {% hint style="info" %}
 See also:
 
-* [AWS EC2 documentation: Regional and zonal reserved instances][regional-zonal]
+* [AWS EC2 documentation: Regional and zonal reserved instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/reserved-instances-scope.html)
 {% endhint %}
 
 #### I have a special pricing plan on my AWS account. Can I still use Flexsave, and will it impact my existing savings?
@@ -103,9 +108,3 @@ If you enabled Flexsave today, you might have to wait until the first week of ne
 {% hint style="info" %}
 If you have additional questions about Flexsave, please [contact our support team](../services/consulting-support/).
 {% endhint %}
-
-[aws]: https://aws.amazon.com/
-[capacity-reservations]: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html
-[regional-zonal]: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/reserved-instances-scope.html
-[ris]: https:/aws.amazon.com/ec2/pricing/reserved-instances/
-[sps]: https:/aws.amazon.com/savingsplans/
