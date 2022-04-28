@@ -17,13 +17,13 @@ Essentially, billing records that don't align with your anticipated spending beh
 
 To manage your notifications, select the _Settings_ icon (a gear) from the top menu, then select _Identity and access_.
 
-![A screenshot showing the _Identity and access_ screen](../.gitbook/assets/cmp-iam-screen.png)
+![A screenshot showing the Identity and access screen](../.gitbook/assets/cmp-iam-screen.png)
 
 On this screen, select your own user account.
 
 Then, on your user profile page, select _Notifications_ from the left-hand menu:
 
-![A screenshot showing the _Notifications_ screen](../.gitbook/assets/cmp-notifications.png)
+![A screenshot showing the Notifications screen](../.gitbook/assets/cmp-notifications.png)
 
 If you'd like to be notified of potential anomalies, check the _Cloud Cost Anomalies_ box and then set the minimum severity threshold you want to be alerted on. There are three levels of severity:
 
@@ -34,10 +34,16 @@ If you'd like to be notified of potential anomalies, check the _Cloud Cost Anoma
 By default, the threshold for email alerts is set to _Warning_ or higher (i.e., ">= Warning"). You can modify this value to increase or decrease the number of alerts you receive.
 
 {% hint style="warning" %}
-
 Please note: We begin analyzing your data as soon as you sign up. However, we need to gather at least seven full days of reference data before we have enough information to detect anomalies. If anomaly detection is critical to your operation, we strongly recommend you wait this period out before making any significant changes to your cloud spend.
-
 {% endhint %}
+
+## Configure custom anomaly scopes
+
+If you would like to monitor a specific subset of costs within your accounts, you can use attributions to define a custom scope.
+
+[Read more about attributions here](../cloud-analytics/attributing-cloud-spend.md#edit-settings)
+
+for instance - if you would like to create anomalies to only monitor your production infrastructure, this can be accomplished easily by creating an attribution defining your environment and then enabling it for monitoring.
 
 ## View anomalies
 

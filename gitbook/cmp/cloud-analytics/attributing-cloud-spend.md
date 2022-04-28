@@ -18,7 +18,7 @@ Required Permissions: **Cloud Analytics**
 
 Select _Analytics_ from the top menu and then select _Attributions_ to access your attributions:
 
-![A screenshot of the _Attributions_ screen](../.gitbook/assets/cmp-attributions-screen.png)
+![A screenshot of the Attributions screen](../.gitbook/assets/cmp-attributions-screen.png)
 
 To create a new attribution, select the _NEW ATTRIBUTION_ button.
 
@@ -38,7 +38,7 @@ You will have every cloud billing dimension to choose from; as well as any custo
 
 From there, filter your selections either by keyword, exclusion, or regular expression just as you would do in Cloud Analytics Reports. Continuing our example from above, let's filter for projects which the production team uses.
 
-![A screenshot showing the _Filter Projects_ form](../.gitbook/assets/cmp-filter-projects-form.png)
+![A screenshot showing the Filter Projects form](../.gitbook/assets/cmp-filter-projects-form.png)
 
 Finally, click "Save" to apply the filter on your condition.
 
@@ -47,8 +47,48 @@ Once you've set a condition, a quick preview will appear showing your attributio
 Using our example from above, we will also create similar attributions for dev and ops teams.
 
 {% hint style="info" %}
-You should **not** set multiple separate conditions with the same field &mdash; unless there is an exclusion set up in one of those conditions.
+You should **not** set multiple separate conditions with the same field — unless there is an exclusion set up in one of those conditions.
 {% endhint %}
+
+## Advanced Attribution Options
+
+Once attributions are configured you will have some additional options in the '3-dot' menu to the right of the list
+
+![Attribution List with 3-dot menu](<../.gitbook/assets/image (3).png>)
+
+As the owner of an attribution you will see several options.
+
+![](<../.gitbook/assets/image (2).png>)
+
+### Subscribe to daily digest
+
+Subscribing to a daily digest will send you a daily update showing you month to date cost and run rate for the scope of your attribution. &#x20;
+
+### Share Attribution
+
+Grant additional permissions to other users of the CMP or transfer ownership
+
+### Delete Attribution
+
+Remove the attribution from the CMP&#x20;
+
+### Edit Settings
+
+In the settings panel you can enable Anomaly Detection for the scope defined by your attribution.
+
+![](../.gitbook/assets/image.png)
+
+By enabling this monitor, the CMP will monitor the scope defined in your attribution for Cost anomalies. &#x20;
+
+For instance if you create an attribution that is filtered to a single or set of SKUs you would be alerted to anomalies that occur only in that set of objects (as opposed to at the scope of your entire spend per cloud).
+
+[Learn more about Cost Anomalies here](broken-reference)
+
+
+
+
+
+##
 
 ## Using Attributions in Cloud Analytics Reports
 
@@ -58,7 +98,7 @@ In the event that you have many attributions, make sure to click on the Attribut
 
 In the example below, only the production, dev, and ops team attributions will be included in the report:
 
-![A screenshot showing the _Filter attributions_ form](../.gitbook/assets/cmp-filter-attributions-form.png)
+![A screenshot showing the Filter attributions form](../.gitbook/assets/cmp-filter-attributions-form.png)
 
 View the bite-sized video below for a closer look at Attributions and using them in your Cloud Reports.
 
