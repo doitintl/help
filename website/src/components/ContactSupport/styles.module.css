@@ -1,0 +1,28 @@
+.contact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 98px 0;
+}
+
+.contact_title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0.25px;
+}
+
+.contact_button {
+  background-color: #007dff;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  border-width: 0;
+  width: 139px;
+  height: 36px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+}
