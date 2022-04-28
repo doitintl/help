@@ -43,7 +43,7 @@ If you would like to monitor a specific subset of costs within your accounts, yo
 
 [Read more about attributions here](../cloud-analytics/attributing-cloud-spend.md#edit-settings)
 
-for instance - if you would like to create anomalies to only monitor your production infrastructure, this can be accomplished easily by creating an attribution defining your environment and then enabling it for monitoring.
+For example, let's say you would like to create anomalies to only monitor your production infrastructure. You can accomplish this by creating an attribution defining your environment and then enabling it for monitoring.
 
 ## View anomalies
 

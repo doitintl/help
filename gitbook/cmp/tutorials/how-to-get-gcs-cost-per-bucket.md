@@ -19,9 +19,9 @@ This tutorial is intended for people who are somewhat familiar with Google Cloud
 Start with adding labels to your Google Cloud Storage buckets.
 
 1. Open the [Cloud Storage browser](https://console.cloud.google.com/storage/browser) in the Google Cloud Console
-2.  In the bucket list, find the bucket you want to apply a label to, and click its **overflow** menu:
+2. In the bucket list, find the bucket you want to apply a label to, and click its **overflow** menu:
 
-    <img src="../.gitbook/assets/gcp-overflow-menu-icon (1).png" alt="A screenshot showing the overflow menu icon" data-size="original">
+   [A screenshot showing the overflow menu icon](../.gitbook/assets/gcp-overflow-menu-icon.png)
 3. Click Edit labels
 4. In the side panel that appears, click the + Add label button
 5. Specify `bucket-name` as a 'key' and the name of the bucket as a 'value' for your label

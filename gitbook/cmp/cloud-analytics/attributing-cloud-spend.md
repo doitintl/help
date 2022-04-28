@@ -47,18 +47,18 @@ Once you've set a condition, a quick preview will appear showing your attributio
 Using our example from above, we will also create similar attributions for dev and ops teams.
 
 {% hint style="info" %}
-You should **not** set multiple separate conditions with the same field — unless there is an exclusion set up in one of those conditions.
+You should **not** set multiple separate conditions with the same field &mdash; unless there is an exclusion set up in one of those conditions.
 {% endhint %}
 
 ## Advanced Attribution Options
 
-Once attributions are configured you will have some additional options in the '3-dot' menu to the right of the list
+Once attributions are configured you will have some additional options in the '3-dot' menu to the right of the list:
 
-![Attribution List with 3-dot menu](<../.gitbook/assets/image (3).png>)
+![A screenshot of the attribution list with a 3-dot menu on each line](../.gitbook/assets/cmp-attribution-list-menu.png)
 
-As the owner of an attribution you will see several options.
+As the owner of an attribution you will see several option:
 
-![](<../.gitbook/assets/image (2).png>)
+![A screenshot of the 3-dot menu options](../.gitbook/assets/cmp-attribution-list-menu-options.png)
 
 ### Subscribe to daily digest
 
@@ -70,25 +70,19 @@ Grant additional permissions to other users of the CMP or transfer ownership
 
 ### Delete Attribution
 
-Remove the attribution from the CMP&#x20;
+Remove the attribution from the CMP
 
 ### Edit Settings
 
 In the settings panel you can enable Anomaly Detection for the scope defined by your attribution.
 
-![](../.gitbook/assets/image.png)
+![A screenshot of the Attributions Settings panel](../.gitbook/assets/cmp-attributions-settings.png)
 
-By enabling this monitor, the CMP will monitor the scope defined in your attribution for Cost anomalies. &#x20;
+By enabling this monitor, the CMP will monitor the scope defined in your attribution for Cost anomalies.
 
-For instance if you create an attribution that is filtered to a single or set of SKUs you would be alerted to anomalies that occur only in that set of objects (as opposed to at the scope of your entire spend per cloud).
+For example, let's say you create an attribution that is filtered to a single or set of SKUs. You would be alerted to anomalies that occur only in that set of objects (as opposed to at the scope of your entire spend per cloud).
 
-[Learn more about Cost Anomalies here](broken-reference)
-
-
-
-
-
-##
+[Learn more about Cost Anomalies here](../anomaly-detection/cloud-anomalies.md)
 
 ## Using Attributions in Cloud Analytics Reports
 
