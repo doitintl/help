@@ -165,7 +165,6 @@ serviceaccount
 serviceusage
 shellcheck
 shfmt
-silvenon
 skus
 sles
 smallhadroncollider
@@ -199,7 +198,6 @@ unnest
 unpartitioned
 upvote
 upvoting
-vadistic
 vellip
 venv
 visuallizesq
