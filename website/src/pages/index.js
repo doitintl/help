@@ -5,26 +5,15 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
-import logoBlackUrl from '../../static/img/doit-logo-black.png';
-import logoWhiteUrl from '../../static/img/doit-logo-white.png';
+import ContactSupport from '@site/src/components/ContactSupport';
 
 import ThemedImage from '@theme/ThemedImage';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <ThemedImage
-          alt="DoiT International"
-          height="81"
-          sources={{
-            light: logoWhiteUrl,
-            dark: logoBlackUrl,
-          }}
-        />
-      </div>
+    <header className={clsx('hero hero--primary', styles.hero_banner)}>
+      <h1 className={styles.hero_title}>How can we help you?</h1>
     </header>
   );
 }
@@ -38,6 +27,7 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        <ContactSupport />
       </main>
     </Layout>
   );
