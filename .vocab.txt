@@ -93,7 +93,7 @@ ignorecase
 imgdup
 iops
 ipynb
-knowledgeble
+knowledgeable
 kpis
 kubernetes
 launchtemplate
