@@ -3,6 +3,7 @@
   align-items: center;
   flex-direction: column;
   padding: 98px 0;
+  margin: 0 9%;
 }
 
 .contact_title {
@@ -25,4 +26,8 @@
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
+}
+
+.contact_container {
+  background: #fcfcfc;
 }

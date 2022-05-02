@@ -1,0 +1,9 @@
+.learn_more_container {
+  display: flex;
+}
+
+.learn_more_wrapper {
+  margin: 0 9%;
+  padding-top: 56px;
+  padding-bottom: 100px;
+}

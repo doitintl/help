@@ -9,3 +9,15 @@
   height: 200px;
   width: 200px;
 }
+
+.feature {
+  padding-right: 5%;
+}
+
+.features_container {
+  background-color: #fcfcfc;
+}
+
+.features_container_inner {
+  margin: 0 9%;
+}
