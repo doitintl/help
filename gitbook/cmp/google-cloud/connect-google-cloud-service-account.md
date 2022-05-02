@@ -35,7 +35,11 @@ A slide-out will appear on the right-hand side of the screen containing the Goog
 {% hint style="info" %}
 Before executing the `gcloud` commands, ensure that:
 
-* You have selected an appropriate project to create your service account. The project should be one that you are planning to keep long-term and that will only be accessible by only trusted people.
+* You have selected an appropriate Google Cloud project to create your service account.
+
+  * The project must be connected to a [Google Cloud Billing account](https://cloud.google.com/billing/docs/concepts#billing_account).
+
+  * The project should be one that you are planning to keep long-term and that will only be accessible by only trusted people.
 
 * Your Google Cloud user account has the [Organization Role Administrator role](https://cloud.google.com/iam/docs/understanding-custom-roles#organization_role_administrator_role) or, alternatively, the [Role Administrator role](https://cloud.google.com/iam/docs/understanding-custom-roles#role_administrator_role) for the project you have selected.
 {% endhint %}
