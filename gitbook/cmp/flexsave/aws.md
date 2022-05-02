@@ -35,10 +35,10 @@ We currently support:
 
 * Linux-based operating systems
 * Windows-based operating systems (including Microsoft SQL Server)
-{% endhint %}
 
-{% hint style="warning" %}
-We do not support _RedHat Enterprise Linux_ (RHEL) and _SuSe Enterprise Linux_ (SLES) at this time.
+For customers with dedicated billing accounts, we also support:
+
+* _RedHat Enterprise Linux_ (RHEL) and _SuSe Enterprise Linux_ (SLES)
 {% endhint %}
 
 If you cannot find any [Convertible Reserved Instances](https://docs.aws.amazon.com/whitepapers/latest/cost-optimization-reservation-models/standard-vs.-convertible-offering-classes.html) using one of our supported operating systems (see above) in your region, Flexsave does not support that instance type.
@@ -76,9 +76,7 @@ For platform-agnostic information, see:
 
 #### What changes should I expect to see in my AWS Console?
 
-* Flexsave will dynamically add or remove AWS accounts to your AWS Organization
-  * You should expect to see AWS accounts with a 3-year Saving Plan and names like `fs-xxxxx`
-  * These accounts carry the Saving Plans used by Flexsave
+For customers with a dedicated billing account, Flexsave will dynamically add or remove AWS accounts to your AWS Organization. These accounts carry the Saving Plans used by Flexsave. You should expect to see AWS accounts with 3-year Saving Plans and names like `fs-xxxxx` attached to your AWS organization.
 
 #### Can I use Flexsave if I am already using SPs or RIs?
 
@@ -98,9 +96,11 @@ See also:
 
 Flexsave can still work with your account and will provide savings _in addition to_ the discounts from your pricing plan.
 
-#### Why don't I see any savings?
+#### How soon after enabling Flexsave should I expect to see the savings?
 
-If you enabled Flexsave today, you might have to wait until the first week of next month before you start to see any savings. This delay is because AWS releases monthly billing data retroactively, and we need the most recent billing data to analyze your resource utilization and apply savings.
+Customers on a dedicated billing account should expect to see savings within 72 hours.
+
+Customers on a shared billing account should expect to see savings in the first week of the subsequent month. Your savings are delayed because we need to wait for AWS to release your billing data at the end of the month. We need your most recent billing data to analyze resource utilization and determine the optimal savings strategy.
 
 ### Contact us
 
