@@ -5,19 +5,10 @@ pull_request_rules:
           - label=ready-to-merge
           - check-success~=^Checks
           - check-success~=^GitGuardian
-          - check-success~=^netlify
       - or:
-          - check-success~=^Header rules
-          - check-skipped~=^Header rules
-      - or:
-          - check-success~=^Mixed content
-          - check-skipped~=^Mixed content
-      - or:
-          - check-success~=^Pages changed
-          - check-skipped~=^Pages changed
-      - or:
-          - check-success~=^Redirect rules
-          - check-skipped~=^Redirect rules
+          - check-success~=^((Header|Redirect) rules|Mixed content)
+          - check-skipped~=^((Header|Redirect) rules|Mixed content)
+          - check-neutral~=^((Header|Redirect) rules|Mixed content)
     actions:
       merge:
         method: rebase
