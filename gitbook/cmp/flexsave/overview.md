@@ -61,14 +61,11 @@ Default roles with this permission:
 {% endhint %}
 
 {% hint style="warning" %}
+Customers should expect to see some changes in their AWS Console or Google Cloud Console after enabling Flexsave:
 
-After you enable Flexsave, you should expect to see accounts with names like `fs-xxxxx` attached to your AWS account or projects with names like `doitintl-fs-xxxxxxx` attached to GCP account, among other changes.
+* AWS customers with dedicated billing accounts will see AWS accounts with 3-year Saving Plans and names like `fs-xxxxx` attached to your AWS organization. See the [AWS FAQ](aws.md#what-changes-should-i-expect-to-see-in-my-aws-console) for more information.
 
-For more information, see the corresponding FAQ entry:
-
-* [What changes should I expect to see in my AWS Console?](aws.md#what-changes-should-i-expect-to-see-in-my-aws-console)
-* [What changes should I expect to see in my Google Cloud Console?](gcp.md#what-changes-should-i-expect-to-see-in-my-google-cloud-console)
-
+* GCP customers will see projects with 3-year committed use discounts and names like `doitintl-fs-xxxxxxx` attached to your billing account. See the  [GCP FAQ](gcp.md#what-changes-should-i-expect-to-see-in-my-google-cloud-console) for more information.
 {% endhint %}
 
 ## Monitor your savings
@@ -89,7 +86,7 @@ In the top-right hand corner of the screen, a _Time range_ drop-down menu allows
 
 In the bar chart shown above:
 
-* The dark blue area of each bar represents the net AWS on-demand spend for that month
+* The dark blue area of each bar represents the net GCP on-demand spend for that month
 * The light blue area of the bar represents the on-demand spend you would have paid without Flexsave
 * The shaded regions represent forecasted numbers based on the current usage patterns
 
