@@ -1,13 +1,12 @@
 import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import SpotlightFeatures from '@site/src/components/SpotlightFeatures';
 import ContactSupport from '@site/src/components/ContactSupport';
-
-import ThemedImage from '@theme/ThemedImage';
+import LearnMore from '@site/src/components/LearnMore';
+import GettingStarted from '@site/src/components/GettingStarted';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -25,8 +24,10 @@ export default function Home() {
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
-      <main>
-        <HomepageFeatures />
+      <main className={styles.main}>
+        <GettingStarted />
+        <SpotlightFeatures />
+        <LearnMore />
         <ContactSupport />
       </main>
     </Layout>

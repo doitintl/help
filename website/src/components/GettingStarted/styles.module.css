@@ -1,0 +1,14 @@
+.cards_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.getting_started {
+  margin-bottom: 40px;
+}
+
+.getting_started_container {
+  margin: 0 9%;
+  padding-top: 56px;
+  padding-bottom: 70px;
+}

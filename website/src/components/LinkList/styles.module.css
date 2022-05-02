@@ -1,0 +1,6 @@
+.link_list {
+  display: flex;
+  width: 33%;
+  flex-direction: column;
+  line-height: 43px;
+}
