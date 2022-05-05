@@ -48,14 +48,14 @@ If you cannot find any [Convertible Reserved Instances](https://docs.aws.amazon.
 {% hint style="success" %}
 We support the following products:
 
-* [AWS EC2](https://aws.amazon.com/ec2/) &mdash; Secure and resizable compute capacity for virtually any workload
+* [AWS EC2](https://aws.amazon.com/ec2/) — Secure and resizable compute capacity for virtually any workload
 {% endhint %}
 
 {% hint style="info" %}
 We support these products for customers with dedicated billing accounts:
 
-* [AWS Lambda](https://aws.amazon.com/lambda/) &mdash; Run code without thinking about servers or clusters
-* [AWS Fargate](https://aws.amazon.com/fargate/) &mdash; Serverless compute for containers
+* [AWS Lambda](https://aws.amazon.com/lambda/) — Run code without thinking about servers or clusters
+* [AWS Fargate](https://aws.amazon.com/fargate/) — Serverless compute for containers
 {% endhint %}
 
 {% hint style="warning" %}
@@ -101,6 +101,10 @@ Flexsave can still work with your account and will provide savings _in addition 
 Customers on a dedicated billing account should expect to see savings within 72 hours.
 
 Customers on a shared billing account should expect to see savings in the first week of the subsequent month. Your savings are delayed because we need to wait for AWS to release your billing data at the end of the month. We need your most recent billing data to analyze resource utilization and determine the optimal savings strategy.
+
+**Why isn't the Savings showing up?**
+
+The savings show with a 3 days delay. At the beginning of a new month, the Savings will show on the 4th day of the month.&#x20;
 
 ### Contact us
 

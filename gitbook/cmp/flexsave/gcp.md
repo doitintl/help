@@ -6,9 +6,9 @@ description: >-
 
 # Flexsave for GCP
 
-Flexsave is your cloud co-pilot, dynamically maximizing your cloud-compute discounts for [Google Compute Platform][gcp] (GCP) without any of the risks or limitations of long-term use commitments.
+Flexsave is your cloud co-pilot, dynamically maximizing your cloud-compute discounts for [Google Compute Platform](https://cloud.google.com) (GCP) without any of the risks or limitations of long-term use commitments.
 
-In most cases, save [the equivalent of a 1-year commitment discount](overview.md#how-much-can-i-save) on your cloud-compute spend with on-demand access to DoiT International's wholesale inventory of GCP [Committed Use Discounts][cuds] (CUDs).
+In most cases, save [the equivalent of a 1-year commitment discount](overview.md#how-much-can-i-save) on your cloud-compute spend with on-demand access to DoiT International's wholesale inventory of GCP [Committed Use Discounts](https://https/cloud.google.com/docs/cuds) (CUDs).
 
 {% hint style="info" %}
 See also:
@@ -22,7 +22,7 @@ See also:
 
 ### Supported regions and machine types
 
-Flexsave supports all GCP [regions](https://cloud.google.com/compute/docs/regions-zones) and [machine types](https://cloud.google.com/compute/docs/machine-types) supported by resource-based CUDs (except for GPU accelerators, i.e., `A2` instances). We don't support [commitments for GPUs or SSDs][gpus-ssds].
+Flexsave supports all GCP [regions](https://cloud.google.com/compute/docs/regions-zones) and [machine types](https://cloud.google.com/compute/docs/machine-types) supported by resource-based CUDs (except for GPU accelerators, i.e., `A2` instances). We don't support [commitments for GPUs or SSDs](https://cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts#commitments\_for\_gpus\_and\_local\_ssd).
 
 ## Help
 
@@ -43,7 +43,15 @@ You should expect to see:
 * Commitment scope set to _Billing account_
 * Projects with 3-year committed use discounts and names like `doitintl-fs-xxxxxxx` attached to your billing account
 
-The commitments will apply committed use discounts across all eligible usage (all projects) associated with this billing account when enabling billing account scope.
+The commitments will apply committed use discounts across all eligible usage (all projects) associated with this billing account when enabling the billing account scope.
+
+#### How soon after enabling Flexsave should I expect to see the savings?
+
+You should expect to see savings within 72 hours.
+
+**Why isn't the Savings showing up?**
+
+The Savings show with a three-day delay. At the beginning of a new month, the Savings will show on the 4th day of the month.&#x20;
 
 #### Can I use Flexsave if I already use CUDs or _Sustained Use Discounts_ (SUDs)?
 
@@ -53,7 +61,7 @@ Any resources that do not qualify for committed use discounts automatically qual
 
 #### Can I use Flexsave with _Google Kubernetes Engine_ (GKE)?
 
-Flexsave can provide CUD discounts for GKE nodes that use the [Google Compute Engine (GCE) pricing model][gke-pricing]. However, we cannot provide [CUD discounts for GKE Autopilot Mode][gke-autopilot].
+Flexsave can provide CUD discounts for GKE nodes that use the [Google Compute Engine (GCE) pricing model](https://cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts#restrictions). However, we cannot provide [CUD discounts for GKE Autopilot Mode](https://cloud.google.com/kubernetes-engine/cud).
 
 #### I have a special pricing plan on my GCP account. Can I still use Flexsave, and will it impact my existing savings?
 
@@ -64,10 +72,3 @@ Flexsave can still work with your account and will provide savings _in addition 
 {% hint style="info" %}
 If you have additional questions about Flexsave, please [contact our support team](../services/consulting-support/).
 {% endhint %}
-
-[aws]: https://aws.amazon.com/
-[gke-pricing]: https://cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts#restrictions
-[cuds]: https:/cloud.google.com/docs/cuds
-[gcp]: https://cloud.google.com/
-[gke-autopilot]: https://cloud.google.com/kubernetes-engine/cud
-[gpus-ssds]: https://cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts#commitments_for_gpus_and_local_ssd
