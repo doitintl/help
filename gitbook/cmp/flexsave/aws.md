@@ -48,14 +48,14 @@ If you cannot find any [Convertible Reserved Instances](https://docs.aws.amazon.
 {% hint style="success" %}
 We support the following products:
 
-* [AWS EC2](https://aws.amazon.com/ec2/) — Secure and resizable compute capacity for virtually any workload
+* [AWS EC2](https://aws.amazon.com/ec2/) &mdash; Secure and resizable compute capacity for virtually any workload
 {% endhint %}
 
 {% hint style="info" %}
 We support these products for customers with dedicated billing accounts:
 
-* [AWS Lambda](https://aws.amazon.com/lambda/) — Run code without thinking about servers or clusters
-* [AWS Fargate](https://aws.amazon.com/fargate/) — Serverless compute for containers
+* [AWS Lambda](https://aws.amazon.com/lambda/) &mdash; Run code without thinking about servers or clusters
+* [AWS Fargate](https://aws.amazon.com/fargate/) &mdash; Serverless compute for containers
 {% endhint %}
 
 {% hint style="warning" %}

@@ -8,7 +8,7 @@ description: >-
 
 Flexsave is your cloud co-pilot, dynamically maximizing your cloud-compute discounts for [Google Compute Platform](https://cloud.google.com) (GCP) without any of the risks or limitations of long-term use commitments.
 
-In most cases, save [the equivalent of a 1-year commitment discount](overview.md#how-much-can-i-save) on your cloud-compute spend with on-demand access to DoiT International's wholesale inventory of GCP [Committed Use Discounts](https://https/cloud.google.com/docs/cuds) (CUDs).
+In most cases, save [the equivalent of a 1-year commitment discount](overview.md#how-much-can-i-save) on your cloud-compute spend with on-demand access to DoiT International's wholesale inventory of GCP [Committed Use Discounts](https://cloud.google.com/docs/cuds) (CUDs).
 
 {% hint style="info" %}
 See also:
