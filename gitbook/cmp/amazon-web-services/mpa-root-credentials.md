@@ -18,8 +18,8 @@ We set the root user's email address to a unique DoiT-owned email account. Autom
 
 You can manage all access as either:
 
-* Users within the DoiT [Cloud Management Platform](https://app.doit-intl.com)
-* IAM Roles for AWS resources, such as EC2 instances
+- Users within the DoiT [Cloud Management Platform](https://app.doit-intl.com)
+- IAM Roles for AWS resources, such as EC2 instances
 
 For the specific tasks that require AWS account root user permission, a small set of DoiT staff can carry out the tasks.
 

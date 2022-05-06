@@ -96,7 +96,7 @@ For added granularity, when creating reports in CMP, you will see labels dimensi
 For AWS, not all cost allocation tags are automatically imported in CMP. Please submit a [support request](../../services/consulting-support/README.md) if you have any new tags that needs to be added in your reports.
 {% endhint %}
 
-"**GKE Labels**" become available only when [GKE Cost Analytics](../gke-cost-analytics.md) has been successfully configured. These are [_labels applied at the cluster level_](https://cloud.google.com/kubernetes-engine/docs/how-to/creating-managing-labels#about\_labeling\_clusters) _and_ propagates to all of the cluster's individual resources (such as nodes and persistent disks).
+"**GKE Labels**" become available only when [GKE Cost Analytics](../gke-cost-analytics.md) has been successfully configured. These are [_labels applied at the cluster level_](https://cloud.google.com/kubernetes-engine/docs/how-to/creating-managing-labels#about_labeling_clusters) _and_ propagates to all of the cluster's individual resources (such as nodes and persistent disks).
 
 {% hint style="warning" %}
 You cannot combine both Google Cloud Labels and GKE Labels in the same report.

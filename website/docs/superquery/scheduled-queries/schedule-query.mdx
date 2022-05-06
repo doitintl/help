@@ -23,23 +23,23 @@ Your query scheduler settings (screenshot at the end) contain four main sections
 
 ### Query details
 
-* Give your scheduled query a recognizable name. This will help you identify the query if you have multiple scheduled queries.
-* By default, the name you've given the query tab will be used.
+- Give your scheduled query a recognizable name. This will help you identify the query if you have multiple scheduled queries.
+- By default, the name you've given the query tab will be used.
 
 ### Set up scheduler interval
 
-* Determine how often you'd like the query to execute.
-* Select one of the preset options in the dropdown, or customize your interval.
-* For custom intervals, refer to [this article](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) and [this article](https://www.freeformatter.com/cron-expression-generator-quartz.html) if you need help setting up the proper notation.
+- Determine how often you'd like the query to execute.
+- Select one of the preset options in the dropdown, or customize your interval.
+- For custom intervals, refer to [this article](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) and [this article](https://www.freeformatter.com/cron-expression-generator-quartz.html) if you need help setting up the proper notation.
 
 ### Set up the query's destination table
 
-* This is just like setting up a destination table for a regular query.
-* Give the table a recognizable name, and decide whether you'd like the results to append to or overwrite the table's previous results.
+- This is just like setting up a destination table for a regular query.
+- Give the table a recognizable name, and decide whether you'd like the results to append to or overwrite the table's previous results.
 
 ### Notification options
 
-* Decide whether you'd like to receive alerts when the query executes successfully, fails, or both.
+- Decide whether you'd like to receive alerts when the query executes successfully, fails, or both.
 
 :::note
 Note: When you are scheduling a query that contains [variables](../superquery-editor/variables.mdx), the variable will execute as a literal value.
@@ -78,6 +78,6 @@ To do so, write out your queries as you would in a Query Tab, separated by a sem
 
 There are a couple unique characteristics about superQuery's scheduler. Notably, you can:
 
-* Schedule queries that Create, Update, and Delete other tables.
-* Set **Job priority** to Batch mode to help in cases when the scheduled query is triggered during high load times (when using Slots). BigQuery's engine will allocate resources at the best time.
-* Select the billing project the query will be executed on while defining another project inside your SQL.
+- Schedule queries that Create, Update, and Delete other tables.
+- Set **Job priority** to Batch mode to help in cases when the scheduled query is triggered during high load times (when using Slots). BigQuery's engine will allocate resources at the best time.
+- Select the billing project the query will be executed on while defining another project inside your SQL.

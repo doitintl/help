@@ -89,9 +89,9 @@ The CMP will open a modal dialog:
 
 To import your historical billing data into the CMP, enter the following:
 
-* Billing Account ID &mdash; For example `01CF51-9FDB87-7894FD`
-* Source Project &mdash; Enter the _Project ID_
-* Source Dataset &mdash; Enter the _Dataset ID_
+- Billing Account ID &mdash; For example `01CF51-9FDB87-7894FD`
+- Source Project &mdash; Enter the _Project ID_
+- Source Dataset &mdash; Enter the _Dataset ID_
 
 When you are done, select _Import_ to continue.
 

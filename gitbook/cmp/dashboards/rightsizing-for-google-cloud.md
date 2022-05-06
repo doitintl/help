@@ -6,9 +6,9 @@ To use Rightsizing for Google Cloud, you must verify that your service account w
 
 If successful, you will see:
 
-* Either a Healthy or Partial value underneath the Status column in your Configured Accounts widget, and
-* Healthy status next to "Rightsizing Insights" under the Features widget, and
-* Healthy status next to "Rightsizing Resize" under the Features widget
+- Either a Healthy or Partial value underneath the Status column in your Configured Accounts widget, and
+- Healthy status next to "Rightsizing Insights" under the Features widget, and
+- Healthy status next to "Rightsizing Resize" under the Features widget
 
 _This is optional. However, without the permissions granted here, you will have to make the rightsizing changes yourself in the Google Cloud Console, as opposed to doing it in a couple of clicks from the CMP._
 

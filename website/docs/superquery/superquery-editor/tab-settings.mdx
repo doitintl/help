@@ -19,51 +19,52 @@ Let's go over each of the options:
 
 ## Select Project
 
-* This is the project to be billed when you execute a query in the active tab.
-* By default, "Auto" mode is selected. This pulls your current project from your SQL.
-* If you need to bill another project, select your project from the dropdown list.
+- This is the project to be billed when you execute a query in the active tab.
+- By default, "Auto" mode is selected. This pulls your current project from your SQL.
+- If you need to bill another project, select your project from the dropdown list.
 
 ## SQL Dialect
 
-* This lets you toggle between **Standard** and **Legacy** SQL dialects, as well as superQuery's "**Auto-Detect**" mode.
-* The default setting is "**Auto-Detect**" mode, which automatically detects your SQL syntax from your query and makes sure it runs correctly. This also replaces the necessity to put #standardSQL or #legacySQL.
+- This lets you toggle between **Standard** and **Legacy** SQL dialects, as well as superQuery's "**Auto-Detect**" mode.
+- The default setting is "**Auto-Detect**" mode, which automatically detects your SQL syntax from your query and makes sure it runs correctly. This also replaces the necessity to put #standardSQL or #legacySQL.
 
 ## Cache Preference
 
 You have three options for caching:
 
-* "**SuperQuery**" &mdash; executes your query leveraging superQuery's enhanced caching if you have it set up.
-* "**BigQuery**" &mdash; executes your query without applying any enhanced cost-saving logic.
-* "**Off**" &mdash; executes your query using superQuery's query optimization algorithm, but without caching.
+- "**SuperQuery**" &mdash; executes your query leveraging superQuery's enhanced caching if you have it set up.
+- "**BigQuery**" &mdash; executes your query without applying any enhanced cost-saving logic.
+- "**Off**" &mdash; executes your query using superQuery's query optimization algorithm, but without caching.
 
 <!-- markdownlint-disable-next-line -->
+
 [![](https://downloads.intercomcdn.com/i/o/130019029/eaac9cf1706138996e0c05c5/image.png)](https://downloads.intercomcdn.com/i/o/130019029/eaac9cf1706138996e0c05c5/image.png)
 
 ## Query Priority
 
-* Interactive queries will start immediately.
-* Queries with batch priority have fewer quota restrictions, but may not execute for up to 24 hours.
+- Interactive queries will start immediately.
+- Queries with batch priority have fewer quota restrictions, but may not execute for up to 24 hours.
 
 For more details on query priority, see GCP's [documentation](https://developers.google.com/bigquery/docs/queries#batchqueries).
 
 ## Processing Location
 
-* Specify the location in which the query will execute. Queries that run in a specific location may only reference data in that location.
-* For data in US/EU, you may choose Unspecified to run the query in the location where the data resides. For data in other locations, you must specify the query location explicitly.
+- Specify the location in which the query will execute. Queries that run in a specific location may only reference data in that location.
+- For data in US/EU, you may choose Unspecified to run the query in the location where the data resides. For data in other locations, you must specify the query location explicitly.
 
 ## Max**. Query Cost**
 
-* Sets a limit for the tab's query cost.
-* If this query will have a cost billed beyond this limit, the query will not execute (without incurring a charge).
+- Sets a limit for the tab's query cost.
+- If this query will have a cost billed beyond this limit, the query will not execute (without incurring a charge).
 
 ## Destination Table
 
 Generates a new table based on the result of an executed query.
 
-* **Project**: Choose the project where the destination table will be created.
-* **Dataset**: Choose the dataset within that project that will store the table.
-* **Table**: Give your new table a name.
-* **Preference**: Use this option to control the write disposition of the destination table. You have three options:
+- **Project**: Choose the project where the destination table will be created.
+- **Dataset**: Choose the dataset within that project that will store the table.
+- **Table**: Give your new table a name.
+- **Preference**: Use this option to control the write disposition of the destination table. You have three options:
 
 1. Write if empty &mdash; Writes the query results to the table only if the table is empty.
 2. Append to table &mdash; Appends the query results to an existing table.

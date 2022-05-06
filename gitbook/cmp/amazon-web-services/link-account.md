@@ -93,9 +93,9 @@ _Core_ permissions are for a minimum set of read-only permissions we need as a f
 
 For _Core_, you need to add three built-in policies to your role:
 
-* `SecurityAudit`
-* `Billing`
-* `AWSSavingsPlansReadOnlyAccess`
+- `SecurityAudit`
+- `Billing`
+- `AWSSavingsPlansReadOnlyAccess`
 
 To add permissions for other features, you'll need to create a new policy. If you wish to enable this feature, select _Create policy_.
 
@@ -109,37 +109,37 @@ A new tab will open for you to create the policy. Switch to the "JSON" tab and c
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Action": [
-                "ec2:Describe*",
-                "ec2:CreateLaunchTemplate",
-                "ec2:CreateLaunchTemplateVersion",
-                "ec2:ModifyLaunchTemplate",
-                "ec2:RunInstances",
-                "ec2:TerminateInstances",
-                "ec2:CreateTags",
-                "ec2:DeleteTags",
-                "ec2:CreateLaunchTemplateVersion",
-                "ec2:CancelSpotInstanceRequests",
-                "autoscaling:CreateOrUpdateTags",
-                "autoscaling:UpdateAutoScalingGroup",
-                "autoscaling:Describe*",
-                "autoscaling:AttachInstances",
-                "autoscaling:BatchDeleteScheduledAction",
-                "autoscaling:BatchPutScheduledUpdateGroupAction",
-                "cloudformation:ListStacks",
-                "cloudformation:Describe*",
-                "iam:PassRole",
-                "events:PutRule",
-                "events:PutTargets",
-                "events:PutEvents"
-            ],
-            "Resource": "*",
-            "Effect": "Allow"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "ec2:Describe*",
+        "ec2:CreateLaunchTemplate",
+        "ec2:CreateLaunchTemplateVersion",
+        "ec2:ModifyLaunchTemplate",
+        "ec2:RunInstances",
+        "ec2:TerminateInstances",
+        "ec2:CreateTags",
+        "ec2:DeleteTags",
+        "ec2:CreateLaunchTemplateVersion",
+        "ec2:CancelSpotInstanceRequests",
+        "autoscaling:CreateOrUpdateTags",
+        "autoscaling:UpdateAutoScalingGroup",
+        "autoscaling:Describe*",
+        "autoscaling:AttachInstances",
+        "autoscaling:BatchDeleteScheduledAction",
+        "autoscaling:BatchPutScheduledUpdateGroupAction",
+        "cloudformation:ListStacks",
+        "cloudformation:Describe*",
+        "iam:PassRole",
+        "events:PutRule",
+        "events:PutTargets",
+        "events:PutEvents"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
 }
 ```
 
@@ -147,7 +147,7 @@ A new tab will open for you to create the policy. Switch to the "JSON" tab and c
 
 After the JSON for the new policy you want to create is pasted, click "**Next: Tags**". If you aren't adding tags to this role, then you may proceed by clicking on "**Next: Review**".
 
-Finally, give your policy an identifiable name, like "spotscaling\_policy", and a description if necessary. Then click on "**Create Policy**".
+Finally, give your policy an identifiable name, like "spotscaling_policy", and a description if necessary. Then click on "**Create Policy**".
 
 ![A screenshot of the policy name](../.gitbook/assets/aws-linking-8.png)
 
@@ -190,7 +190,7 @@ After the JSON for the new policy you want to create is pasted, click "**Next: T
 
 ![A screenshot of the first step in the _Create policy_ flow](../.gitbook/assets/aws-linking-8.png)
 
-Give your policy an identifiable name, like "doit\_intl\_quotas" in the case of the Quota Monitoring feature, and a description if necessary. Then click on "**Create Policy**".
+Give your policy an identifiable name, like "doit_intl_quotas" in the case of the Quota Monitoring feature, and a description if necessary. Then click on "**Create Policy**".
 
 ![A screenshot of the third step in the AWS _Create policy_ flow](../.gitbook/assets/aws-linking-9.png)
 

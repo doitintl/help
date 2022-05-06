@@ -89,25 +89,25 @@ Has access to all features in the Cloud Management Platform and the CMP API, and
 
 ## Summary: Pre-built Roles and Permissions
 
-| Permissions           | Admin     | Finance User | IT Manager   | Power User   | Standard User | superQuery User |
-| --------------------- | :-------: | :----------: | :----------: | :----------: | :-----------: | :-------------: |
-| Anomalies Viewer      | &check;   | &check;      | &check;      | &check;      |               |                 |
-| Assets Manager        | &check;   |              | &check;      |              |               |                 |
-| Attributions Manager  | &check;   |              |              | &check;      | &check;       |                 |
-| Billing Profile Admin | &check;   | &check;      |              |              |               |                 |
-| Budgets Manager       | &check;   |              |              | &check;      | &check;       |                 |
-| Cloud Analytics       | &check;   | &check;      |              | &check;      | &check;       |                 |
-| Contracts Viewer      | &check;   | &check;      |              | &check;      | &check;       |                 |
-| Flexible RI Admin     | &check;   |              |              | &check;      |               |                 |
-| Invoice Viewer        | &check;   | &check;      |              |              |               |                 |
-| Issues Viewer         | &check;   | &check;      | &check;      | &check;      | &check;       | &check;         |
-| Settings Manager      | &check;   |              |              | &check;      |               |                 |
-| Sandbox Admin         | &check;   |              |              | &check;      |               |                 |
-| Sandbox User          | &check;   |              |              | &check;      | &check;       |                 |
-| Spot0                 | &check;   |              |              | &check;      |               |                 |
-| Support Requester     | &check;   | &check;      | &check;      | &check;      | &check;       | &check;         |
-| Users Manager         | &check;   |              |              | &check;      |               |                 |
-| superQuery            | &check;   |              |              | &check;      | &check;       | &check;         |
+| Permissions           |  Admin  | Finance User | IT Manager | Power User | Standard User | superQuery User |
+| --------------------- | :-----: | :----------: | :--------: | :--------: | :-----------: | :-------------: |
+| Anomalies Viewer      | &check; |   &check;    |  &check;   |  &check;   |               |                 |
+| Assets Manager        | &check; |              |  &check;   |            |               |                 |
+| Attributions Manager  | &check; |              |            |  &check;   |    &check;    |                 |
+| Billing Profile Admin | &check; |   &check;    |            |            |               |                 |
+| Budgets Manager       | &check; |              |            |  &check;   |    &check;    |                 |
+| Cloud Analytics       | &check; |   &check;    |            |  &check;   |    &check;    |                 |
+| Contracts Viewer      | &check; |   &check;    |            |  &check;   |    &check;    |                 |
+| Flexible RI Admin     | &check; |              |            |  &check;   |               |                 |
+| Invoice Viewer        | &check; |   &check;    |            |            |               |                 |
+| Issues Viewer         | &check; |   &check;    |  &check;   |  &check;   |    &check;    |     &check;     |
+| Settings Manager      | &check; |              |            |  &check;   |               |                 |
+| Sandbox Admin         | &check; |              |            |  &check;   |               |                 |
+| Sandbox User          | &check; |              |            |  &check;   |    &check;    |                 |
+| Spot0                 | &check; |              |            |  &check;   |               |                 |
+| Support Requester     | &check; |   &check;    |  &check;   |  &check;   |    &check;    |     &check;     |
+| Users Manager         | &check; |              |            |  &check;   |               |                 |
+| superQuery            | &check; |              |            |  &check;   |    &check;    |     &check;     |
 
 ## Custom Roles
 

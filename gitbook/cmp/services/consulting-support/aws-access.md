@@ -10,9 +10,9 @@ When you open a technical support request with DoiT International, we may occasi
 
 ## Key points
 
-* We only access your AWS account to provide technical support per our contractual obligations. We never access your AWS account for any other reason.
-* Support engineers never have write-access to your AWS account. The only exception to this rule is that we are able to raise AWS support requests on your behalf.
-* [AWS CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html) can provide a complete log of every action that we perform on your account.
+- We only access your AWS account to provide technical support per our contractual obligations. We never access your AWS account for any other reason.
+- Support engineers never have write-access to your AWS account. The only exception to this rule is that we are able to raise AWS support requests on your behalf.
+- [AWS CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html) can provide a complete log of every action that we perform on your account.
 
 {% hint style="info" %}
 When you grant an access request, the individual staff member will not have write-access to your account.
@@ -60,7 +60,7 @@ Resources:
           - Effect: Allow
             Principal:
               AWS:
-              - !Ref AccountNumberParameter
+                - !Ref AccountNumberParameter
             Action:
               - 'sts:AssumeRole'
   CustomerPolicy:
@@ -116,11 +116,11 @@ Resources:
         - !Ref AssumeableRole
   Hook:
     Type: Custom::Hook
-    Version: "1.0"
+    Version: '1.0'
     Properties:
       ServiceToken: !Ref ServiceToken
       RoleArn: !GetAtt AssumeableRole.Arn
-      AccountId: !Ref "AWS::AccountId"
+      AccountId: !Ref 'AWS::AccountId'
     DependsOn:
       - CustomerPolicy
 Outputs:
@@ -132,16 +132,16 @@ Outputs:
 
 Please note:
 
-* CloudFormation will create a management role that allows us to create, update, and delete individual support roles.
+- CloudFormation will create a management role that allows us to create, update, and delete individual support roles.
 
   For each support role, we use the management role to generate a unique cryptographic key pair. Because key creation has to be done by your [IdP](https://docs.aws.amazon.com/singlesignon/latest/userguide/idp.html), the management role itself requires some limited write permissions. However:
 
-  * The CMP has automated access to the management role, and this is how our systems interact with your account. DoiT staff members _do not_ have access to the management role.
+  - The CMP has automated access to the management role, and this is how our systems interact with your account. DoiT staff members _do not_ have access to the management role.
 
-  * The management role's write permissions are tightly scoped and only grant what is necessary to perform key generation and the management of DoiT support roles.
+  - The management role's write permissions are tightly scoped and only grant what is necessary to perform key generation and the management of DoiT support roles.
 
   Crucially, _the management role can only modify the IAM policies and roles that it creates itself_. The management role does not have write-access to any of your other IAM policies or roles.
 
-* We create an IAM Policy and IAM Role for each staff member with the [SecurityAudit](https://console.aws.amazon.com/iam/home#policies/arn:aws:iam::aws:policy/SecurityAudit) policy attached to each role.
+- We create an IAM Policy and IAM Role for each staff member with the [SecurityAudit](https://console.aws.amazon.com/iam/home#policies/arn:aws:iam::aws:policy/SecurityAudit) policy attached to each role.
 
-[quick-create]: https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateUrl=https%3A%2F%2Fdoit-aws-ops-prod-templates.s3.amazonaws.com%2Fawsops\_sns.yaml\&stackName=DoiT-Management-Stack\&param\_AccountNumberParameter=462932234033\&param\_ServiceToken=arn%3Aaws%3Asns%3Aus-east-1%3A462932234033%3Aprod-cfn
+[quick-create]: https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateUrl=https%3A%2F%2Fdoit-aws-ops-prod-templates.s3.amazonaws.com%2Fawsops_sns.yaml&stackName=DoiT-Management-Stack&param_AccountNumberParameter=462932234033&param_ServiceToken=arn%3Aaws%3Asns%3Aus-east-1%3A462932234033%3Aprod-cfn

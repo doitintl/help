@@ -14,8 +14,8 @@ Choose a name that suits your use-case (e.g., "Finance", "Google Cloud", "AWS", 
 
 Every dashboard can be _Private_ or _Public_:
 
-* Private &mdash; only you can view the dashboard
-* Public &mdash; any user in your organization can access this dashboard
+- Private &mdash; only you can view the dashboard
+- Public &mdash; any user in your organization can access this dashboard
 
 If you select _Public_, you will be given the option to allow other people in your organization to edit the dashboard.
 

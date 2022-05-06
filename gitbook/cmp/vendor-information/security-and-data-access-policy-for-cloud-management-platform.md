@@ -6,12 +6,12 @@ description: Security and Data Access Policy for Cloud Management Platform
 
 This document outlines what customer data Cloud Management Platform accesses, why, what data is stored, and how we do that. **If you're not using DoiT Cloud Management Platform for the following features, this article doesn't apply.**
 
-* Sandboxes for Google Cloud
-* Google Cloud Rightsizing
-* Google Kubernetes Engine Metering
-* BigQuery Lens
-* Google Cloud and/or AWS Proactive Quota Monitoring
-* AWS ASG Optimizer
+- Sandboxes for Google Cloud
+- Google Cloud Rightsizing
+- Google Kubernetes Engine Metering
+- BigQuery Lens
+- Google Cloud and/or AWS Proactive Quota Monitoring
+- AWS ASG Optimizer
 
 **TL;DR:** We only access data required for Cloud Management Platform (CMP) functionality. We store and handle your data in a secure way, encrypted in transit and at rest. We do not provide the data to any 3rd party, with the exceptions required for core CMP functionality and listed below.
 
@@ -131,11 +131,11 @@ ec2:RunInstances
 
 We only store data required for CMP functionality.
 
-* **Cloud Billing exports**- required for core Billing functionality; stored in BigQuery
-* **User information** &mdash; required for core CPM functionality; stored in Firestore
-* **Assets created via using CMP** ([Invoices](../invoices-and-payments/managing-invoices.md), [Billing Profiles](../invoices-and-payments/setting-up-a-new-billing-profile.md), etc.) &mdash; required for core CMP functionality; stored in Firestore
-* **Contracts** &mdash; required for core CMP functionality; stored in Google Cloud Storage
-* **Service Account Keys** &mdash; required for core CPM functionality; stored in Firestore and encrypted with KMS
+- **Cloud Billing exports**- required for core Billing functionality; stored in BigQuery
+- **User information** &mdash; required for core CPM functionality; stored in Firestore
+- **Assets created via using CMP** ([Invoices](../invoices-and-payments/managing-invoices.md), [Billing Profiles](../invoices-and-payments/setting-up-a-new-billing-profile.md), etc.) &mdash; required for core CMP functionality; stored in Firestore
+- **Contracts** &mdash; required for core CMP functionality; stored in Google Cloud Storage
+- **Service Account Keys** &mdash; required for core CPM functionality; stored in Firestore and encrypted with KMS
 
 ## How we handle and store your data
 
@@ -143,10 +143,10 @@ All data we handle are encrypted in transit using industry-standard protocols li
 
 All data we store are encrypted at rest:
 
-* **Google BigQuery** &mdash; using Google-managed encryption keys and Advanced Encryption Standard (AES)
-* **Google Firestore** &mdash; using Google-managed encryption keys and AES
-* **Google Cloud Storage** &mdash; using Google-managed encryption keys and AES
-* **Service Account Keys** &mdash; encrypted using Google Cloud KMS and stored in Google Secret Manager
+- **Google BigQuery** &mdash; using Google-managed encryption keys and Advanced Encryption Standard (AES)
+- **Google Firestore** &mdash; using Google-managed encryption keys and AES
+- **Google Cloud Storage** &mdash; using Google-managed encryption keys and AES
+- **Service Account Keys** &mdash; encrypted using Google Cloud KMS and stored in Google Secret Manager
 
 ## Who can access your data?
 
@@ -158,8 +158,8 @@ Service Account keys are only used by backend systems to retrieve relevant data 
 
 We do not provide your data to any 3rd party, with the exceptions listed below required for core CMP functionality.
 
-* **CMP Support** &mdash; We use Zendesk as a backend for support ticketing functionality. All ticket-related data are stored in Zendesk and retrieved using Zendesk APIs \[1].
-* **Payments** &mdash; We use Stripe for payments. All payment-related data (such as Credit card or bank account details) are stored in the Stripe platform and used via Stripe APIs \[2].
+- **CMP Support** &mdash; We use Zendesk as a backend for support ticketing functionality. All ticket-related data are stored in Zendesk and retrieved using Zendesk APIs \[1].
+- **Payments** &mdash; We use Stripe for payments. All payment-related data (such as Credit card or bank account details) are stored in the Stripe platform and used via Stripe APIs \[2].
 
 ## Compliance
 
@@ -175,6 +175,6 @@ Cloud Management Platform ISO/IEC 27001 and SOC 2/3 certificates may be requeste
 
 ## External references
 
-* \[1]: Zendesk Privacy and Data Protection: [https://www.zendesk.co.uk/company/privacy-and-data-protection/](https://www.zendesk.co.uk/company/privacy-and-data-protection/)
-* \[2]: Stripe Global Privacy Policy: [https://stripe.com/gb/privacy](https://stripe.com/gb/privacy)
-* \[3]: EU Data Protection page: [https://ec.europa.eu/info/law/law-topic/data-protection\_en](https://ec.europa.eu/info/law/law-topic/data-protection\_en)
+- \[1]: Zendesk Privacy and Data Protection: [https://www.zendesk.co.uk/company/privacy-and-data-protection/](https://www.zendesk.co.uk/company/privacy-and-data-protection/)
+- \[2]: Stripe Global Privacy Policy: [https://stripe.com/gb/privacy](https://stripe.com/gb/privacy)
+- \[3]: EU Data Protection page: [https://ec.europa.eu/info/law/law-topic/data-protection_en](https://ec.europa.eu/info/law/law-topic/data-protection_en)

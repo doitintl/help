@@ -32,9 +32,9 @@ When Spot Scaling cannot spin up Spot instances due to lack of spot capacity, it
 
 Spot Scaling continuously assesses your Auto Scaling Groups and presents important metrics such as:
 
-* Costs
-* Spot and On-Demand hours
-* Savings for the previous and current month.
+- Costs
+- Spot and On-Demand hours
+- Savings for the previous and current month.
 
 ## What are the advantages of Spot Scaling?
 
@@ -50,11 +50,11 @@ Spot Scaling continuously assesses your Auto Scaling Groups and presents importa
 
 **Scenario:** 0 m5.xlarge instances; replacing 80% of on-demand instances with Spot instances
 
-|                   | **Without Spot Scaling**                          | **With Spot Scaling**                                                                                                                                     |
+|                   |             **Without Spot Scaling**              |                                                                   **With Spot Scaling**                                                                   |
 | ----------------- | :-----------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | Monthly Cost      | 50 instances &times; $0.192 &times; 730h = $7,008 | 10 instances &times; $0.192 &times; 730h = $1,401<br><br>40 instances &times; $0.0399 &times; 730h = $1,165<br><br> Total cost = $1,401 + $1,165 = $2,566 |
-| Monthly Savings $ | $0                                                | $4,442                                                                                                                                                    |
-| Monthly Savings % | 0%                                                | 63%                                                                                                                                                       |
+| Monthly Savings $ |                        $0                         |                                                                          $4,442                                                                           |
+| Monthly Savings % |                        0%                         |                                                                            63%                                                                            |
 
 Now let's explore how to [set up and use Spot Scaling](setup.md).
 

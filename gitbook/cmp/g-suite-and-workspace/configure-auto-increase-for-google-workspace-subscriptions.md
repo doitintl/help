@@ -11,9 +11,11 @@ Auto-increase for Google Workspace ensures that you'll always have enough licens
 All you have to do is set a threshold for the minimum number of Workspace licenses you'd always like to have available. Let's see how to set this up!
 
 {% hint style="info" %}
+
 At a minimum, to manage Google Workspace licenses, your [User Role](../user-management/manage-roles.md) must contain the following permission:
 
-* Assets Manager
+- Assets Manager
+
 {% endhint %}
 
 {% hint style="warning" %}

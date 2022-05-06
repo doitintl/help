@@ -20,9 +20,9 @@ You will need to enable the BigQuery Lens feature on this screen to use the BigQ
 
 After your service account has been uploaded and you have enabled the features you want, you will see:
 
-* Either a _HEALTHY_ or _PARTIAL_ value underneath the _Status_ column in your _Configured Accounts_ widget
-* _HEALTHY_ status next to _BigQuery Lens_ in the _Features_ widget
-* _HEALTHY_ status next to _BigQuery Lens Advanced_ in the _Features_ widget (optional)
+- Either a _HEALTHY_ or _PARTIAL_ value underneath the _Status_ column in your _Configured Accounts_ widget
+- _HEALTHY_ status next to _BigQuery Lens_ in the _Features_ widget
+- _HEALTHY_ status next to _BigQuery Lens Advanced_ in the _Features_ widget (optional)
 
 ## Setup
 
@@ -62,17 +62,18 @@ Below is a list of the elements that make up the BigQuery Lens dashboard, corres
 
 1. _Time range and Usage type dropdowns_:
 
-   * _Time range_ &mdash; Adjusts the time frame of the data you're looking at, and has options of _Last 30 days_, _Last 7 days_, or _Last day_
-   * _Usage type_ &mdash; Determines which BigQuery projects you're looking at, based on the pricing model you're using to pay for them, and has options of _On demand_ or _Flat-rate_
+   - _Time range_ &mdash; Adjusts the time frame of the data you're looking at, and has options of _Last 30 days_, _Last 7 days_, or _Last day_
+   - _Usage type_ &mdash; Determines which BigQuery projects you're looking at, based on the pricing model you're using to pay for them, and has options of _On demand_ or _Flat-rate_
 
 2. _Recommendations_ &mdash; Comprehensive recommendations with details about how to act on each suggestion.
 
 3. _BigQuery Explorer_ &mdash; Get more granular information as far as your team's BigQuery usage, completely adjustable by the user in the following format:
 
-    * For the _On-demand_ usage type: <!-- textlint-disable max-comma -->(_Project_, _Billing Project_, _Dataset_, _Table_, _User_)<!-- textlint-enable --> by (_Scan Price_, _Scan TB_)
-    * For _Flat-rate_ usage type: (_Project_, _Billing Project_, _Dataset_, _Table_, _User_) by (_Average Slots_)
+   - For the _On-demand_ usage type: <!-- textlint-disable max-comma -->(_Project_, _Billing Project_, _Dataset_, _Table_, _User_)<!-- textlint-enable --> by (_Scan Price_, _Scan TB_)
+   - For _Flat-rate_ usage type: (_Project_, _Billing Project_, _Dataset_, _Table_, _User_) by (_Average Slots_)
 
-    Select any of the components of the _BigQuery Explorer_ to drill down into the data.
+   Select any of the components of the _BigQuery Explorer_ to drill down into the data.
+
 4. _Slots Consumption_ &mdash; The number of slots consumed by your organization in terms of _Peak usage_ and _Average usage_ by _Day_ or _Hour_.
 
 5. _BigQuery Scans by Table Type_ &mdash; See how much data you are scanning from various types of tables, broken down between unpartitioned tables and multiple types of partitioned tables, along with external sources (e.g., _Google Sheets_).
@@ -89,20 +90,20 @@ Below is a list of the recommendation categories you'll see in the _BigQuery Rec
 
 #### On-demand recommendations
 
-* _Backup and remove unused tables_ &mdash; Back up and remove the tables listed under the _Table_ column. If the table has multiple partitions, select the number under _Partition(s) to Remove_ to see which partitions should be removed.
-* _Cluster your tables_ &mdash; Cluster the tables listed under the _Table_ column by the fields suggested under the _Cluster By_ column.
-* _Enforce Partition Fields_ &mdash; Use the suggested partitioned fields under the _Partition Field_ column for the corresponding queries listed under the _Query ID_ column.
-* _Partition your tables_ &mdash; Partition the tables listed under the _Table_ column by the suggested fields listed under the _Partition Fields_ column.
-* _Limit query jobs_ &mdash; Reduce execution frequency of the listed jobs under the _Query ID_ column by the percentage you choose on the slider and view the associated savings of each reduced job under the _Savings by Reducing Jobs_ column.
-* _Switch to monthly flat-rate plan_ &mdash; Purchase the slots amount listed in the _Optimal slots amount_ column to reduce your BigQuery spend.
+- _Backup and remove unused tables_ &mdash; Back up and remove the tables listed under the _Table_ column. If the table has multiple partitions, select the number under _Partition(s) to Remove_ to see which partitions should be removed.
+- _Cluster your tables_ &mdash; Cluster the tables listed under the _Table_ column by the fields suggested under the _Cluster By_ column.
+- _Enforce Partition Fields_ &mdash; Use the suggested partitioned fields under the _Partition Field_ column for the corresponding queries listed under the _Query ID_ column.
+- _Partition your tables_ &mdash; Partition the tables listed under the _Table_ column by the suggested fields listed under the _Partition Fields_ column.
+- _Limit query jobs_ &mdash; Reduce execution frequency of the listed jobs under the _Query ID_ column by the percentage you choose on the slider and view the associated savings of each reduced job under the _Savings by Reducing Jobs_ column.
+- _Switch to monthly flat-rate plan_ &mdash; Purchase the slots amount listed in the _Optimal slots amount_ column to reduce your BigQuery spend.
 
 #### Flat-rate recommendations
 
-* _Move repeating queries to a different time slot_ &mdash; Lower your minimum average slots requirements by moving the recurring queries to a less-busy hour of the day.
+- _Move repeating queries to a different time slot_ &mdash; Lower your minimum average slots requirements by moving the recurring queries to a less-busy hour of the day.
 
   Review the _BigQuery Slots Consumption_ widget with the interval set to _Hour_ to identify suitable hours. Any troughs in your daily slots consumption indicate optimal hours to run recurring queries.
 
-* _Backup and remove unused tables_ &mdash; Back up and remove the unused tables to lower costs.
+- _Backup and remove unused tables_ &mdash; Back up and remove the unused tables to lower costs.
 
 ## Frequently Asked Questions (FAQ)
 
@@ -112,13 +113,13 @@ We need write-permissions to be able to run the BigQuery Lens. The sections belo
 
 We need the following write permissions for the standard BigQuery Lens:
 
-* `bigquery.datasets.create`
-* `logging.sinks.create`
-* `bigquery.jobs.create`
+- `bigquery.datasets.create`
+- `logging.sinks.create`
+- `bigquery.jobs.create`
 
 For BigQuery Lens Advanced, we need the following write permission:
 
-* `bigquery.tables.getData`
+- `bigquery.tables.getData`
 
 ### Why do you need an extra permission for BigQuery Lens Advanced?
 
@@ -129,10 +130,12 @@ This permission allows us to query your BigQuery tables, find your top 20 non-cl
 More specifically, this permission helps us identify the cardinality of the columns referenced in the `WHERE` clause (i.e., the columns which can be clustered on). Knowing how many distinct elements exist in each column allows us to compute the average chunk size and determine the best savings candidates.
 
 {% hint style="info" %}
+
 BigQuery Lens Advanced provides recommendations based on the presumption that:
 
-* You will continue to execute similar queries as you did during the previous 30 day period, and
-* You will reference fields in the order that we recommend
+- You will continue to execute similar queries as you did during the previous 30 day period, and
+- You will reference fields in the order that we recommend
+
 {% endhint %}
 
 ### What datasets do you create?
@@ -153,9 +156,9 @@ We have two main processes, one of which runs queries and the other which runs t
 
    The following queries are executed as part of this process:
 
-   * Aggregations are written to the `pegUtilsT2` and `queries` tables
-   * Daily run of cost simulation queries to provide the cost savings information and potential savings
-   * Daily run of lens calculation queries to provide detailed BigQuery usage
+   - Aggregations are written to the `pegUtilsT2` and `queries` tables
+   - Daily run of cost simulation queries to provide the cost savings information and potential savings
+   - Daily run of lens calculation queries to provide detailed BigQuery usage
 
 ### What does it mean when I see "Not yet allocated" in the Cost Explorer?
 
@@ -163,9 +166,9 @@ You will see "Not yet allocated" when analyzing dimensions like _Projects_ in th
 
 We may not be able to detect which table is being scanned because of:
 
-* Queries like `SELECT 1`
-* Queries we are unable to parse due to complexity (i.e., a parser time out), or
-* Queries that use a function or statement that we do not support yet
+- Queries like `SELECT 1`
+- Queries we are unable to parse due to complexity (i.e., a parser time out), or
+- Queries that use a function or statement that we do not support yet
 
 ![A screenshot highlighting the _Not yet allocated_ figure](../.gitbook/assets/cmp-not-yet-allocated.png)
 

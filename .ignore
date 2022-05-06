@@ -9,3 +9,5 @@
 *.mp4
 *.png
 *.svg
+node_modules
+build

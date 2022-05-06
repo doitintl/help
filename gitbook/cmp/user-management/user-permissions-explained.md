@@ -10,76 +10,76 @@ Raising support or consulting requests doesn't require any permission or role.
 
 ### Anomalies Viewer
 
-* Access Cost and Usage Anomalies
+- Access Cost and Usage Anomalies
 
 ### IT Manager (previously Assets Manager)
 
-* View and Manage assets, including managing licenses
-* Purchase additional licenses and subscriptions for [G Suite](../g-suite-and-workspace/purchasing-g-suite-licenses.md)
-* Purchase additional licenses and subscriptions for [Office 365](../microsoft-office-365/purchasing-office-365-licenses.md)
-* Create new AWS accounts
-* Invite existing AWS accounts
-* Create new Google Cloud billing accounts
+- View and Manage assets, including managing licenses
+- Purchase additional licenses and subscriptions for [G Suite](../g-suite-and-workspace/purchasing-g-suite-licenses.md)
+- Purchase additional licenses and subscriptions for [Office 365](../microsoft-office-365/purchasing-office-365-licenses.md)
+- Create new AWS accounts
+- Invite existing AWS accounts
+- Create new Google Cloud billing accounts
 
 ### Attributions Manager
 
-* Create, delete and manage attributions
+- Create, delete and manage attributions
 
 ### Billing Profile Admin
 
-* Create, view and manage billing profiles
-* Update Payment Methods, Address, Accounts Payable, Invoice Settings
+- Create, view and manage billing profiles
+- Update Payment Methods, Address, Accounts Payable, Invoice Settings
 
 ### Budgets Manager
 
-* Create, delete and manage budgets
+- Create, delete and manage budgets
 
 ### Cloud Analytics
 
-* Create and view [Cloud Reports](../cloud-analytics/create-cloud-report/) and [Attributions](../cloud-analytics/attributing-cloud-spend.md)
+- Create and view [Cloud Reports](../cloud-analytics/create-cloud-report/) and [Attributions](../cloud-analytics/attributing-cloud-spend.md)
 
 ### Contracts Viewer
 
-* Provides access to the commercial contracts
+- Provides access to the commercial contracts
 
 ### Flexsave Admin
 
-* Enable and disable [Flexsave](../flexsave/overview.md)
+- Enable and disable [Flexsave](../flexsave/overview.md)
 
 ### Invoice Viewer
 
-* View and pay invoices
+- View and pay invoices
 
 ### Issues Viewer
 
-* Access to cloud outage information
+- Access to cloud outage information
 
 ### Users Manager
 
-* Create Users
-* Update Users
-* Remove Users
+- Create Users
+- Update Users
+- Remove Users
 
 ### Settings Manager
 
-* Manage your Cloud Management Platform account settings
-* Access the Settings page via the left-hand navigation bar
-* [Upload Google Cloud service key](../google-cloud/connect-google-cloud-service-account.md)
-* Add AWS ARN
-* Set up Slack channel integration for alerts on [cost anomalies](../anomaly-detection/cloud-anomalies.md) and [known issues](../services/consulting-support/cloud-incidents.md)
+- Manage your Cloud Management Platform account settings
+- Access the Settings page via the left-hand navigation bar
+- [Upload Google Cloud service key](../google-cloud/connect-google-cloud-service-account.md)
+- Add AWS ARN
+- Set up Slack channel integration for alerts on [cost anomalies](../anomaly-detection/cloud-anomalies.md) and [known issues](../services/consulting-support/cloud-incidents.md)
 
 ### Perks Viewer
 
-* Access and request Perks
+- Access and request Perks
 
 ### Sandbox Admin
 
-* Create and modify [Cloud Sandbox policies](../cloud-sandbox-management/configuring-a-policy-for-sandbox-accounts.md).
+- Create and modify [Cloud Sandbox policies](../cloud-sandbox-management/configuring-a-policy-for-sandbox-accounts.md).
 
 ### Sandbox Viewer
 
-* [Create Cloud Sandboxes](../cloud-sandbox-management/create-gcp-sandbox-accounts.md)
+- [Create Cloud Sandboxes](../cloud-sandbox-management/create-gcp-sandbox-accounts.md)
 
 ### superQuery
 
-* Access to superQuery IDE
+- Access to superQuery IDE

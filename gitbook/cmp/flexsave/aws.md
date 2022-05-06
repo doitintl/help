@@ -11,11 +11,13 @@ Flexsave is your cloud co-pilot, dynamically maximizing your cloud-compute disco
 In most cases, save [the equivalent of a 1-year commitment discount](overview.md#how-much-can-i-save) on your cloud-compute spend with on-demand access to DoiT International's wholesale inventory of AWS [Savings Plans](https://aws.amazon.com/savingsplans/) (SPs) and AWS [EC2 Reserved Instances](https://aws.amazon.com/ec2/pricing/reserved-instances/) (RIs).
 
 {% hint style="info" %}
+
 See also:
 
-* [Flexsave overview: Benefits](overview.md#benefits)
-* [Flexsave overview: How it works](overview.md#how-it-works)
-* [Flexsave overview: Start saving](overview.md#start-saving)
+- [Flexsave overview: Benefits](overview.md#benefits)
+- [Flexsave overview: How it works](overview.md#how-it-works)
+- [Flexsave overview: Start saving](overview.md#start-saving)
+
 {% endhint %}
 
 ## Capabilities
@@ -31,14 +33,16 @@ You can check what instances types are available in your region using the [Amazo
 Select the _Convertible Reserved Instances for Amazon EC2_ tab and enter your search criteria. The table of available instance types will automatically refresh.
 
 {% hint style="success" %}
+
 We currently support:
 
-* Linux-based operating systems
-* Windows-based operating systems (including Microsoft SQL Server)
+- Linux-based operating systems
+- Windows-based operating systems (including Microsoft SQL Server)
 
 For customers with dedicated billing accounts, we also support:
 
-* _RedHat Enterprise Linux_ (RHEL) and _SuSe Enterprise Linux_ (SLES)
+- _RedHat Enterprise Linux_ (RHEL) and _SuSe Enterprise Linux_ (SLES)
+
 {% endhint %}
 
 If you cannot find any [Convertible Reserved Instances](https://docs.aws.amazon.com/whitepapers/latest/cost-optimization-reservation-models/standard-vs.-convertible-offering-classes.html) using one of our supported operating systems (see above) in your region, Flexsave does not support that instance type.
@@ -46,16 +50,20 @@ If you cannot find any [Convertible Reserved Instances](https://docs.aws.amazon.
 ### Supported products
 
 {% hint style="success" %}
+
 We support the following products:
 
-* [AWS EC2](https://aws.amazon.com/ec2/) &mdash; Secure and resizable compute capacity for virtually any workload
+- [AWS EC2](https://aws.amazon.com/ec2/) &mdash; Secure and resizable compute capacity for virtually any workload
+
 {% endhint %}
 
 {% hint style="info" %}
+
 We support these products for customers with dedicated billing accounts:
 
-* [AWS Lambda](https://aws.amazon.com/lambda/) &mdash; Run code without thinking about servers or clusters
-* [AWS Fargate](https://aws.amazon.com/fargate/) &mdash; Serverless compute for containers
+- [AWS Lambda](https://aws.amazon.com/lambda/) &mdash; Run code without thinking about servers or clusters
+- [AWS Fargate](https://aws.amazon.com/fargate/) &mdash; Serverless compute for containers
+
 {% endhint %}
 
 {% hint style="warning" %}
@@ -67,11 +75,13 @@ We do not support any other products like [AWS RDS](https://aws.amazon.com/rds/)
 ### FAQs
 
 {% hint style="info" %}
+
 These frequently asked questions (FAQs) apply to Flexsave for AWS.
 
 For platform-agnostic information, see:
 
-* [Flexsave overview: FAQs](overview.md#faqs)
+- [Flexsave overview: FAQs](overview.md#faqs)
+
 {% endhint %}
 
 #### What changes should I expect to see in my AWS Console?
@@ -87,9 +97,11 @@ Yes, you can. Flexsave works exclusively with your on-demand compute usage and e
 Flexsave only supports AWS regional reserved instances. Because AWS on-demand capacity reservations require zonal reserved instances, Flexsave does not provide capacity reservation discounts or discounts for [on-demand capacity reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html).
 
 {% hint style="info" %}
+
 See also:
 
-* [AWS EC2 documentation: Regional and zonal reserved instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/reserved-instances-scope.html)
+- [AWS EC2 documentation: Regional and zonal reserved instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/reserved-instances-scope.html)
+
 {% endhint %}
 
 #### I have a special pricing plan on my AWS account. Can I still use Flexsave, and will it impact my existing savings?

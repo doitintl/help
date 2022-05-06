@@ -28,12 +28,12 @@ To upgrade to a higher edition, locate the G Suite subscription for which you wa
 
 Upgrade options:
 
-* G Suite Basic to Business or Enterprise edition
-* G Suite Business to Enterprise edition
+- G Suite Basic to Business or Enterprise edition
+- G Suite Business to Enterprise edition
 
 Select the G Suite edition you'd like to upgrade to, and click on 'Submit'.
 
-![A screenshot showing the \_Change g Suite Edition modal dialog](../.gitbook/assets/cmp-g-suite-business.png)
+![A screenshot showing the _Change g Suite Edition modal dialog](../.gitbook/assets/cmp-g-suite-business.png)
 
 An email notification confirming your recent order will be sent to you.
 

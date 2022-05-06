@@ -24,7 +24,9 @@ Permissions are managed and defined by the user's GCP admin(s) in Google IAM and
 We request the following scopes:
 
 <!-- textlint-disable terminology -->
+
 [https://www.googleapis.com/auth/bigquery](https://www.googleapis.com/auth/bigquery) &mdash; View and Manage your data in Google BigQuery
+
 <!-- textlint-enable -->
 
 [https://www.googleapis.com/auth/cloud-platform](https://www.googleapis.com/auth/cloud-platform) &mdash; View and manage your data across Google Cloud Platform services
@@ -37,13 +39,13 @@ The [second scope](https://www.googleapis.com/auth/cloud-platform) is required f
 
 For example:
 
-* Querying data stored in a Google Sheet in Google Drive
-* Opening query results in a Google Sheet.
-* Connecting your GCS Bucket so that downloaded results get stored there.
+- Querying data stored in a Google Sheet in Google Drive
+- Opening query results in a Google Sheet.
+- Connecting your GCS Bucket so that downloaded results get stored there.
 
 ## Does superQuery manage user access privileges to BigQuery tables and data?
 
-No, superQuery passes the user's OAuth 2.0 Token to BigQuery as part of the query execution process. User access privileges are enforced by BigQuery based on your team's [Google IAM settings](https://console.cloud.google.com/iam-admin/iam?project=tamir-215609\)).
+No, superQuery passes the user's OAuth 2.0 Token to BigQuery as part of the query execution process. User access privileges are enforced by BigQuery based on your team's [Google IAM settings](<https://console.cloud.google.com/iam-admin/iam?project=tamir-215609)>).
 
 ## My company is sensitive to the usage of Chrome extensions &mdash; is there another way we can use superQuery?
 

@@ -43,8 +43,16 @@ lint:
 lint-parallel: # Run all lint checks in parallel
 	@ $(MAKE) --no-print-directory -j --output-sync=target lint
 
+.PHONY: start # Start the Docusaurus development server
+start:
+	$(call print-target)
+	@ $(MAKE) -C website start
+
 .PHONY: build # Build the Docusaurus website
+check: build
 build:
+	$(call print-target)
+	@ $(MAKE) -C website build
 
 .PHONY: telemetry # Generate telemetry data
 telemetry:
@@ -124,16 +132,6 @@ lint: fdupes
 
 optipng-dry:
 lint: optipng-dry
-
-# build
-# -----------------------------------------------------------------------------
-
-build: website
-check: website
-.PHONY: website
-website:
-	$(call print-target)
-	@ $(MAKE) -C website build
 
 # telemetry
 # -----------------------------------------------------------------------------
