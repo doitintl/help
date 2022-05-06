@@ -16,8 +16,8 @@ If you're new to Cloud Reports or haven't created a Cloud Report yet, we recomme
 
 ### Available Sharing Permissions
 
-* **Viewer**: Sees the report in "read-only" mode. Can only modify "Metric" and the chart type.
-* **Editor**: Can modify all settings of a Cloud Report, and share the report with others.
+- **Viewer**: Sees the report in "read-only" mode. Can only modify "Metric" and the chart type.
+- **Editor**: Can modify all settings of a Cloud Report, and share the report with others.
 
 ### How to share a report
 
@@ -27,8 +27,8 @@ To share a Cloud Report with your team, select the _Share_ icon (three connected
 
 This will open a pop-up that will give you two options when sharing:
 
-* Give everyone on your team Viewer access.
-* Explicitly give someone from your team Viewer or Editor Access.
+- Give everyone on your team Viewer access.
+- Explicitly give someone from your team Viewer or Editor Access.
 
 Once you've entered the email(s) of who you're sharing your Cloud Report with, click "Add" and then hit "Save" to apply your changes.
 

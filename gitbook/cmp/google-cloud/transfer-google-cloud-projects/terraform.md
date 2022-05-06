@@ -10,14 +10,14 @@ To add the Terraform service account as Billing User, you should be a Billing Ac
 
 See also:
 
-* [Overview of Cloud Billing roles in IAM](https://cloud.google.com/billing/docs/how-to/billing-access#overview-of-cloud-billing-roles-in-cloud-iam)
-* [Update Cloud Billing permissions](https://cloud.google.com/billing/docs/how-to/billing-access#update-cloud-billing-permissions)
+- [Overview of Cloud Billing roles in IAM](https://cloud.google.com/billing/docs/how-to/billing-access#overview-of-cloud-billing-roles-in-cloud-iam)
+- [Update Cloud Billing permissions](https://cloud.google.com/billing/docs/how-to/billing-access#update-cloud-billing-permissions)
 
 {% endhint %}
 
 To grant permission for projects that are managed by Terraform, follow these steps:
 
-1. Sign in to the [Google Cloud Console](https://console.cloud.google.com/?\_ga=2.46935335.1241116962.1634885894-310662435.1627993656).
+1. Sign in to the [Google Cloud Console](https://console.cloud.google.com/?_ga=2.46935335.1241116962.1634885894-310662435.1627993656).
 
 2. Open the Cloud Console Navigation menu, and then select **Billing**.
 
@@ -70,6 +70,6 @@ resource "google_project" "my_project" {
 
 See also:
 
-* [Terraform: Google Cloud Platform `google_project`](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/google\_project#billing\_account)
+- [Terraform: Google Cloud Platform `google_project`](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/google_project#billing_account)
 
 {% endhint %}

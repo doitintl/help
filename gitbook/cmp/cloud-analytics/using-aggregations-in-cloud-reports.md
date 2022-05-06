@@ -36,8 +36,8 @@ If you're viewing your results in a Table view, then a final column titled "Tota
 
 ![A screenshot showing a % of Row aggregation report](../.gitbook/assets/cmp-report-aggregation-pct-row.png)
 
-## Cost&div;Usage
+## Cost/Usage
 
-"Cost&div;Usage" aggregations are great for use cases requiring cost-per-unit pricing validation. In the example below, we are using this aggregation to examine BigQuery SKU costs per project.
+"Cost/Usage" aggregations are great for use cases requiring cost-per-unit pricing validation. In the example below, we are using this aggregation to examine BigQuery SKU costs per project.
 
-![A screenshot showing a Cost&div;Usage aggregation report](../.gitbook/assets/cmp-report-aggregation-unit-cost.png)
+![A screenshot showing a Cost/Usage aggregation report](../.gitbook/assets/cmp-report-aggregation-unit-cost.png)

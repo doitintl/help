@@ -32,8 +32,8 @@ You cannot enforce invitation-only access to the CMP. However, if you create a d
 
 There are two ways you can access the page to edit a user's profile:
 
-* Check the "Continue to editing user profile" box when initially inviting them.
-* Click on their email in your Users list.
+- Check the "Continue to editing user profile" box when initially inviting them.
+- Click on their email in your Users list.
 
 When editing a profile, you have four sections:
 
@@ -56,9 +56,9 @@ You can also bulk delete users from your organization. Instead of selecting _UPD
 
 ### Notification Types
 
-* _New Invoices_ &mdash; Get sent an email when a new invoice is uploaded to the Cloud Management Platform.
-* _Cost Anomalies_ &mdash; Get notified when our system detects abnormal usage of your cloud platform (i.e., AWS or Google Cloud)
-* _Payment Due/Overdue_ &mdash; Get automated updates when your invoices are becoming due and when they're overdue.
-* _Credit Alerts_ &mdash; request to be notified when your credits are nearly exhausted (75% utilization), and once again when they've been exhausted.
-* _Cloud Quota Utilization_ &mdash; Get alerted when your Google Cloud and/or AWS service quota utilization exceeds 80%.
-* _Cloud Known Issues_ &mdash; Get notified when there are any [known infrastructure issues](../services/consulting-support/cloud-incidents.md) with Google Cloud and/or AWS.
+- _New Invoices_ &mdash; Get sent an email when a new invoice is uploaded to the Cloud Management Platform.
+- _Cost Anomalies_ &mdash; Get notified when our system detects abnormal usage of your cloud platform (i.e., AWS or Google Cloud)
+- _Payment Due/Overdue_ &mdash; Get automated updates when your invoices are becoming due and when they're overdue.
+- _Credit Alerts_ &mdash; request to be notified when your credits are nearly exhausted (75% utilization), and once again when they've been exhausted.
+- _Cloud Quota Utilization_ &mdash; Get alerted when your Google Cloud and/or AWS service quota utilization exceeds 80%.
+- _Cloud Known Issues_ &mdash; Get notified when there are any [known infrastructure issues](../services/consulting-support/cloud-incidents.md) with Google Cloud and/or AWS.

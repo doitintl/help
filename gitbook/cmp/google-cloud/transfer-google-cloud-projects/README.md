@@ -11,19 +11,21 @@ description: >-
 To change the Cloud Billing account for a project, you need to be able to move a project from your existing Cloud Billing account to another Cloud Billing account provided by DoiT International. To accomplish this task, you need permissions adequate to unlink the project from the existing Cloud Billing account AND to link the project to the target Cloud Billing account.
 
 {% hint style="warning" %}
+
 If you have Google Cloud Marketplace subscriptions for any of the below products - **please reach out to your DoiT Account Manager** - switching billing account for projects that use these products may result in data loss.
 
 The products in question are:
 
-* Confluent Apache Kafka on Confluent Cloud
-* Neo4j AuraDB Professional
-* Neo4j GCP Integration Service (Prod)
-* Redis Labs Redis Enterprise Cloud
-* Trifacta Cloud Dataprep by Trifacta
-* DataStax Astra for Apache Cassandra (Beta)
-* Elastic Cloud (managed Elasticsearch Service)
-* NetApp, Inc. NetApp Cloud Volumes Service
-* MongoDB Atlas
+- Confluent Apache Kafka on Confluent Cloud
+- Neo4j AuraDB Professional
+- Neo4j GCP Integration Service (Prod)
+- Redis Labs Redis Enterprise Cloud
+- Trifacta Cloud Dataprep by Trifacta
+- DataStax Astra for Apache Cassandra (Beta)
+- Elastic Cloud (managed Elasticsearch Service)
+- NetApp, Inc. NetApp Cloud Volumes Service
+- MongoDB Atlas
+
 {% endhint %}
 
 Here is a short video explaining how you can check whether or not your billing account has any of the above marketplace subscriptions:&#x20;

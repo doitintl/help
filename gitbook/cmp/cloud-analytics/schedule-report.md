@@ -16,8 +16,8 @@ Required Permissions: **Cloud Analytics**
 
 There are two ways to schedule emailed reports:
 
-* Via a specific Report's page
-* Via the main Cloud Analytics page
+- Via a specific Report's page
+- Via the main Cloud Analytics page
 
 ### Scheduling via a report s page
 
@@ -27,9 +27,9 @@ Begin by opening a report that you have "Owner" access to. Then, click on the cl
 
 Next, configure the scheduled delivery:
 
-* Set other users, you'd like to be included on report's distribution
-* Optionally, update email's subject and the message to provide more context for recipients
-* Set up when you'd like to be delivered (using [_cron expression_](https://crontab.guru))
+- Set other users, you'd like to be included on report's distribution
+- Optionally, update email's subject and the message to provide more context for recipients
+- Set up when you'd like to be delivered (using [_cron expression_](https://crontab.guru))
 
 ![A screenshot showing the Schedule Report Email Delivery modal dialog](../.gitbook/assets/cmp-schedule-report-email-dialog.png)
 
@@ -39,7 +39,7 @@ If you've included someone who doesn't have access to the report, you will be as
 
 ## About Cron expressions
 
-The delivery time and recurrence of a Cloud Analytics Report can be configured by using a [cron expression](https://wikipedia.org/wiki/Cron#CRON\_expression). Cron is a time-based job scheduler originally used in Unix-like computer operating systems. A cron expression is a string comprising of five or six fields separated by whitespace. The following table defines the fields of a cron expression and the possible values for each field.
+The delivery time and recurrence of a Cloud Analytics Report can be configured by using a [cron expression](https://wikipedia.org/wiki/Cron#CRON_expression). Cron is a time-based job scheduler originally used in Unix-like computer operating systems. A cron expression is a string comprising of five or six fields separated by whitespace. The following table defines the fields of a cron expression and the possible values for each field.
 
 | Minute     | Hour       | Day        | Month                                                                 | Day of the week                                                     |
 | ---------- | ---------- | ---------- | --------------------------------------------------------------------- | ------------------------------------------------------------------- |
@@ -98,8 +98,8 @@ If you need to delete the scheduled report, please use the Delete button on the 
 
 A few limitations exist for scheduled reports:
 
-* Each report can only have a single email delivery schedule
-* Preset reports cannot be scheduled. You can [clone](cloning-and-or-customizing-cloud-reports.md#clone-reports) the report though and schedule it.
-* The person who scheduled the report is always included in the email
-* You can't schedule a report to be delivered more than once a day.
-* Only chart-based reports can be scheduled (i.e. no tables or heat maps at this time)
+- Each report can only have a single email delivery schedule
+- Preset reports cannot be scheduled. You can [clone](cloning-and-or-customizing-cloud-reports.md#clone-reports) the report though and schedule it.
+- The person who scheduled the report is always included in the email
+- You can't schedule a report to be delivered more than once a day.
+- Only chart-based reports can be scheduled (i.e. no tables or heat maps at this time)

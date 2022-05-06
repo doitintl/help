@@ -12,12 +12,12 @@ An example cloud analytics report:
 
 There are several types of edits you can make to a report like this:
 
-* Adding additional dimensions
-* Changing the metric by which your dimensions are being measured
-* Reordering results
-* Changing the visualization
-* Modifying the time interval and/or range
-* Filtering dimensions
+- Adding additional dimensions
+- Changing the metric by which your dimensions are being measured
+- Reordering results
+- Changing the visualization
+- Modifying the time interval and/or range
+- Filtering dimensions
 
 Most of these are self-explanatory, as you would simply make your changes the same way you made your original selection.
 
@@ -34,7 +34,9 @@ Most of these are self-explanatory, as you would simply make your changes the sa
 {% hint style="warning" %}
 
 <!-- textlint-disable max-comma -->
+
 The discount is not available for: Google Maps APIs, Google Support, Looker, Preemptible VMs (compute engine), third-party GCP Marketplace services, or Premium OS Images.
+
 <!-- textlint-enable -->
 
 {% endhint %}
@@ -54,7 +56,9 @@ Use this to perform advanced analysis in your reports with just a click. Use thi
 ### Time Interval & Time range
 
 <!-- textlint-disable max-comma -->
+
 Specify the frequency in which data is aggregated. For the time interval, you have the following options: Hour, Day, Week, Month, Quarter, and Year.
+
 <!-- textlint-enable -->
 
 For the time range, the options are the following:
@@ -99,9 +103,9 @@ To enable Comparison mode select either **Show actuals** or **Show percentage** 
 
 Comparison mode is
 
-* Only supported on _Table_ based views.
-* Only supported with _Total Aggregation_
-* Must be used on _Time series data_
+- Only supported on _Table_ based views.
+- Only supported with _Total Aggregation_
+- Must be used on _Time series data_
 
 When selected _**we will automatically adjust your report**_, you will be warned of the changes and asked to confirm.
 
@@ -143,16 +147,16 @@ Depending on the edits you're making to your Cloud Report, you may have to re-ru
 
 Any edits which don't alter the results themselves will update the report in real-time. This includes changes made to:
 
-* Metric measurement
-* Chart type
-* Sorting of results
-* ML Features such as [Trend Analysis](trend-analysis.md) or [Forecasting](forecasting.md)
+- Metric measurement
+- Chart type
+- Sorting of results
+- ML Features such as [Trend Analysis](trend-analysis.md) or [Forecasting](forecasting.md)
 
 ### Edits requiring a refresh
 
 Updates made to reports which require you to refresh it include:
 
-* Adding additional dimensions
-* Modifying the time interval and/or range
-* Filtering dimensions
-* [Filtering metrics](metric-filters.md)
+- Adding additional dimensions
+- Modifying the time interval and/or range
+- Filtering dimensions
+- [Filtering metrics](metric-filters.md)

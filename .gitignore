@@ -6,7 +6,6 @@
 .env.local
 .env.production.local
 .env.test.local
-.vscode/settings.json
 *.log
 *.out
 *.tmp

@@ -8,8 +8,8 @@ description: >-
 
 For cases in which you'll want to create a copy of an existing Cloud Report, you have the option to either:
 
-* Clone the report
-* Customize the report
+- Clone the report
+- Customize the report
 
 Let's go over the differences, and how to perform each action.
 

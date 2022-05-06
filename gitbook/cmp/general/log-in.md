@@ -17,7 +17,9 @@ To log in, visit the [log-in screen](https://app.doit-intl.com/login):
 #### Use an existing Google Workspace account
 
 <!-- textlint-disable terminology -->
+
 Select the _SIGN IN WITH GOOGLE_ button and follow your organization's _Single Sign-On_ (SSO) instructions to log in.
+
 <!-- textlint-enable -->
 
 {% hint style="info" %}
@@ -82,11 +84,11 @@ Please create a [support request](../services/consulting-support/README.md), and
 
 We will need the following information:
 
-| SAML providers  | OIDC providers  |
-| --------------- | --------------- |
-| _Entity ID_     | _Client ID_     |
-| _SSO URL_       | _Issuer (URL)_  |
-| _Certificate_   | _Client Secret_ |
+| SAML providers | OIDC providers  |
+| -------------- | --------------- |
+| _Entity ID_    | _Client ID_     |
+| _SSO URL_      | _Issuer (URL)_  |
+| _Certificate_  | _Client Secret_ |
 
 You can provide this information in the support request, or we can set up a configuration session with you.
 
@@ -104,7 +106,7 @@ However, if you [invite a user](../user-management/creating-a-new-user.md) and p
 
 See also:
 
-* [Google Workspace: Set up your own custom SAML application](https://support.google.com/a/answer/6087519?hl=en)
-* [Okta: Get started with app integrations](https://help.okta.com/oie/en-us/Content/Topics/Apps/apps-overview-get-started.htm)
+- [Google Workspace: Set up your own custom SAML application](https://support.google.com/a/answer/6087519?hl=en)
+- [Okta: Get started with app integrations](https://help.okta.com/oie/en-us/Content/Topics/Apps/apps-overview-get-started.htm)
 
 {% endhint %}

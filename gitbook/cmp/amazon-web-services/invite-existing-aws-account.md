@@ -105,8 +105,8 @@ It means that your CloudHealth configuration was not done properly.
 
 **The consequences are the following:**
 
-* Our Cloud Management Platform is not able to properly reflect your reservation data, and you cannot use the Flexsave and Spot Scaling services.
-* It also means you will not be able to run reports on this asset, the reason being that the data is not flowing to our platform.
+- Our Cloud Management Platform is not able to properly reflect your reservation data, and you cannot use the Flexsave and Spot Scaling services.
+- It also means you will not be able to run reports on this asset, the reason being that the data is not flowing to our platform.
 
 ### I want historical backfill. What should I do?
 

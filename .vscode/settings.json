@@ -1,0 +1,16 @@
+{
+  // cspell: disable
+  "files.associations": {
+    "cspell.json": "jsonc",
+    "devcontainer.json": "jsonc",
+    "extensions.json": "jsonc",
+    "*.md": "markdown",
+    "*.mdx": "mdx"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[mdx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

@@ -52,11 +52,11 @@ You will also see the current on-demand costs and hours running for that Auto Sc
 
 Examine the recommendations. If needed, you can adjust several aspects of the recommendation to your liking. You may modify the following values of a recommendation:
 
-* On-Demand Base Capacity
-* On-Demand Instances
-* Spot Instances
-* Allowed Instance Types
-* Availability Zones
+- On-Demand Base Capacity
+- On-Demand Instances
+- Spot Instances
+- Allowed Instance Types
+- Availability Zones
 
 If you want to edit values under "Allowed Instance Types" and "Availability Zones", click on the corresponding "EDIT" button.
 
@@ -78,8 +78,8 @@ Finally, after applying a recommendation, your ASG will have a value of "Optimiz
 
 With Spot Scaling you have two optional features you can turn on when optimizing your ASG's configuration:
 
-* **Keep my ASG up to date**: If turned on, Spot Scaling will automatically update the ASG's configuration to continuously maximize system runtime and spot-related EC2 savings.
-* **Fallback to On-Demand**: When there aren't where enough unused EC2 instances to meet demand for Spot instances, Spot Scaling will automatically fall back to on-demand instances.
+- **Keep my ASG up to date**: If turned on, Spot Scaling will automatically update the ASG's configuration to continuously maximize system runtime and spot-related EC2 savings.
+- **Fallback to On-Demand**: When there aren't where enough unused EC2 instances to meet demand for Spot instances, Spot Scaling will automatically fall back to on-demand instances.
 
 ## Watch Spot Scaling Demo
 

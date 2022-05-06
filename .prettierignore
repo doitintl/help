@@ -2,8 +2,6 @@
 .venv
 *.csv
 *.html
-*.md
-*.mdx
 *.py
 sphinx/cmp/docs
 build

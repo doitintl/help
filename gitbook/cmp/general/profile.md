@@ -14,10 +14,10 @@ The _Cloud Management Platform_ (CMP) will take you to your _Profile_ page:
 
 The _Profile_ page has a form that allows you to edit the following information:
 
-* _First Name_ and _Last Name_ &mdash; Your display name in the CMP
-* _Job Function_ &mdash; Account admins can use job function to help [manage your organization](../user-management/manage-organizations.md)
-* _Phone Number_ &mdash; Your international dialing code and local number
-* _Default Dashboard_ &mdash; The default [dashboard](../dashboards/customizing-dashboards.md) to display when you first log in
+- _First Name_ and _Last Name_ &mdash; Your display name in the CMP
+- _Job Function_ &mdash; Account admins can use job function to help [manage your organization](../user-management/manage-organizations.md)
+- _Phone Number_ &mdash; Your international dialing code and local number
+- _Default Dashboard_ &mdash; The default [dashboard](../dashboards/customizing-dashboards.md) to display when you first log in
 
 When you edit the value of any form field on this page, the CMP will automatically save your changes.
 
@@ -35,9 +35,9 @@ To view your [role](../user-management/manage-roles.md) and associated [permissi
 
 The _Permissions_ screen includes the following information:
 
-* Your currently assigned role
-* A list of your role entitlements (aka permissions)
-* A list of your assigned [billing profiles](../invoices-and-payments/setting-up-a-new-billing-profile.md)
+- Your currently assigned role
+- A list of your role entitlements (aka permissions)
+- A list of your assigned [billing profiles](../invoices-and-payments/setting-up-a-new-billing-profile.md)
 
 {% hint style="info" %}
 
@@ -55,32 +55,32 @@ To edit your notification preferences, select _Notifications_ from the left-hand
 
 On the _Notifications_ screen, you can opt-in or out of the following notification types:
 
-* **New Invoices** &mdash; We'll notify you every time there is a new invoice or adjustment
+- **New Invoices** &mdash; We'll notify you every time there is a new invoice or adjustment
 
-* **Credits Utilization** &mdash; We'll let you know on 75% of your Google Cloud or AWS credits and then again when they are fully exhausted
+- **Credits Utilization** &mdash; We'll let you know on 75% of your Google Cloud or AWS credits and then again when they are fully exhausted
 
-* **Cloud Quota Utilization** &mdash; Be notified every time one of your Google Cloud or AWS service quotas utilization is over 50%
+- **Cloud Quota Utilization** &mdash; Be notified every time one of your Google Cloud or AWS service quotas utilization is over 50%
 
-* **Cost Anomalies** &mdash; We'll alert you when your cloud costs don't align with the anticipated spending (configurable with _Threshold_ and _Delta_)
+- **Cost Anomalies** &mdash; We'll alert you when your cloud costs don't align with the anticipated spending (configurable with _Threshold_ and _Delta_)
 
-* **Payment Due/Overdue** - Get automated updates when invoices are due and overdue
+- **Payment Due/Overdue** - Get automated updates when invoices are due and overdue
 
-  * We will send the first reminder seven days before an invoice is due
-  * We will send the second reminder four days after the invoice's due date
-  * We will send the third reminder 10 days after the invoice's due date
+  - We will send the first reminder seven days before an invoice is due
+  - We will send the second reminder four days after the invoice's due date
+  - We will send the third reminder 10 days after the invoice's due date
 
-* **[Cloud Known Issues](../services/consulting-support/cloud-incidents.md)** &mdash; Be aware of the known infrastructure issues with Google Cloud or Amazon Web Services ahead of time
+- **[Cloud Known Issues](../services/consulting-support/cloud-incidents.md)** &mdash; Be aware of the known infrastructure issues with Google Cloud or Amazon Web Services ahead of time
 
-* **Daily Cost Digest** &mdash; Receive a daily digest of spend vs. same period of the previous month (configurable with _Daily cost digest attributions_)
+- **Daily Cost Digest** &mdash; Receive a daily digest of spend vs. same period of the previous month (configurable with _Daily cost digest attributions_)
 
   Use the _Daily cost digest attributions_ input to select which attributions you want to include in your daily digest.
 
   You will receive one email per selected attribution detailing:
 
-  * Previous day's cost
-  * Month to date cost (sum costs accrued in the current month)
-  * Cost trend (current month cost to date vs. previous month costs for the same date)
-  * Forecasted current month cost
+  - Previous day's cost
+  - Month to date cost (sum costs accrued in the current month)
+  - Cost trend (current month cost to date vs. previous month costs for the same date)
+  - Forecasted current month cost
 
   We will send you daily digest emails at 06:00 UTC.
 

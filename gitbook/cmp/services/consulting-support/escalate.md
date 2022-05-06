@@ -22,9 +22,9 @@ You will not see an _ESCALATE_ button when viewing another user's ticket (see [t
 
 When escalating a ticket, the CMP will prompt you to select a reason:
 
-* _Long Resolution Time_
-* _Business Impact_
-* _Technical Expertise_
-* _Other_
+- _Long Resolution Time_
+- _Business Impact_
+- _Technical Expertise_
+- _Other_
 
 After selecting the escalation reason, you may add a comment if you wish to provide more information about why you are escalating the ticket.

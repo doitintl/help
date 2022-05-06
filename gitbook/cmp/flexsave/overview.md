@@ -11,23 +11,26 @@ Flexsave is your cloud co-pilot, dynamically maximizing your cloud-compute disco
 In most cases, save [the equivalent of a 1-year commitment discount](overview.md#how-much-can-i-save) on your cloud-compute spend with on-demand access to DoiT International's wholesale inventory of AWS [Savings Plans](https://aws.amazon.com/savingsplans/) (SPs), AWS [EC2 Reserved Instances](https://aws.amazon.com/ec2/pricing/reserved-instances/) (RIs), and GCP [Committed Use Discounts](https://cloud.google.com/docs/cuds) (CUDs).
 
 {% hint style="info" %}
+
 See also:
 
-* [Flexsave for AWS](aws.md)
-* [Flexsave for GCP](gcp.md)
+- [Flexsave for AWS](aws.md)
+- [Flexsave for GCP](gcp.md)
+
 {% endhint %}
 
 ## Benefits
 
-* _No commitment_ &mdash; AWS and GCP provide cloud-compute discounts (SPs, RIs, and CUDs) with mandatory commitment periods lasting one year or more. Flexsave provides the same cloud-compute discounts with no commitments.
+- _No commitment_ &mdash; AWS and GCP provide cloud-compute discounts (SPs, RIs, and CUDs) with mandatory commitment periods lasting one year or more. Flexsave provides the same cloud-compute discounts with no commitments.
 
-* _No risk_ &mdash; Flexsave provides on-demand access to DoiT International's wholesale inventory of SPs, RIs, and CUDs. We handle capacity planning and bear the risk of underutilization, meaning you don't have to.
+- _No risk_ &mdash; Flexsave provides on-demand access to DoiT International's wholesale inventory of SPs, RIs, and CUDs. We handle capacity planning and bear the risk of underutilization, meaning you don't have to.
 
 <!-- textlint-disable max-comma -->
-* _Zero cost_ &mdash; Flexsave costs nothing, there are no hidden fees, and _you are guaranteed to save money_. We optimize our bulk purchasing, so, in most cases, we can afford to pass on the equivalent of a 1-year commitment discount for any SPs, RIs, and CUDs in our wholesale inventory.
+
+- _Zero cost_ &mdash; Flexsave costs nothing, there are no hidden fees, and _you are guaranteed to save money_. We optimize our bulk purchasing, so, in most cases, we can afford to pass on the equivalent of a 1-year commitment discount for any SPs, RIs, and CUDs in our wholesale inventory.
 <!-- textlint-disable -->
 
-* _Easy to use_ &mdash; Flexsave runs on auto-pilot, continually applying the optimum cost-saving strategy to your account. You can enable or disable Flexsave whenever you like.
+- _Easy to use_ &mdash; Flexsave runs on auto-pilot, continually applying the optimum cost-saving strategy to your account. You can enable or disable Flexsave whenever you like.
 
 ## How it works
 
@@ -45,27 +48,31 @@ Within the CMP, select _Savings_ from the top menu bar, then select _Flexsave_ f
 
 At the top of the screen, you can see:
 
-* Your estimated savings rate (based on your on-demand spend history)
-* Your estimated monthly savings as a result of using Flexsave
-* Your estimated monthly on-demand spend after applying your Flexsave discount
+- Your estimated savings rate (based on your on-demand spend history)
+- Your estimated monthly savings as a result of using Flexsave
+- Your estimated monthly on-demand spend after applying your Flexsave discount
 
 To enable Flexsave, select the _START SAVING_ button on the bottom left-hand corner of the page.
 
 {% hint style="info" %}
+
 Required permissions: [Flexsave Admin](../user-management/user-permissions-explained.md#flexsave-admin)
 
 Default roles with this permission:
 
-* [Power User](../user-management/manage-roles.md#power-user)
-* [Admin](../user-management/manage-roles.md#admin)
+- [Power User](../user-management/manage-roles.md#power-user)
+- [Admin](../user-management/manage-roles.md#admin)
+
 {% endhint %}
 
 {% hint style="warning" %}
+
 Customers should expect to see some changes in their AWS Console or Google Cloud Console after enabling Flexsave:
 
-* AWS customers with dedicated billing accounts will see AWS accounts with 3-year Saving Plans and names like `fs-xxxxx` attached to your AWS organization. See the [AWS FAQ](aws.md#what-changes-should-i-expect-to-see-in-my-aws-console) for more information.
+- AWS customers with dedicated billing accounts will see AWS accounts with 3-year Saving Plans and names like `fs-xxxxx` attached to your AWS organization. See the [AWS FAQ](aws.md#what-changes-should-i-expect-to-see-in-my-aws-console) for more information.
 
-* GCP customers will see projects with 3-year committed use discounts and names like `doitintl-fs-xxxxxxx` attached to your billing account. See the  [GCP FAQ](gcp.md#what-changes-should-i-expect-to-see-in-my-google-cloud-console) for more information.
+- GCP customers will see projects with 3-year committed use discounts and names like `doitintl-fs-xxxxxxx` attached to your billing account. See the [GCP FAQ](gcp.md#what-changes-should-i-expect-to-see-in-my-google-cloud-console) for more information.
+
 {% endhint %}
 
 ## Monitor your savings
@@ -80,15 +87,15 @@ In the example screenshot above, Flexsave for GCP has only been active for one a
 
 In the top-right hand corner of the screen, a _Time range_ drop-down menu allows you to select the time range you want to view. Above the bar chart, the CMP displays three essential statistics for the specified time range:
 
-* _Time range savings rate_ &mdash; The effective discount applied to your on-demand spend
-* _Time range savings_ &mdash; Your savings as a result of using Flexsave
-* _Time range net On-Demand spend_ &mdash; Your net on-demand spend after applying Flexsave discount
+- _Time range savings rate_ &mdash; The effective discount applied to your on-demand spend
+- _Time range savings_ &mdash; Your savings as a result of using Flexsave
+- _Time range net On-Demand spend_ &mdash; Your net on-demand spend after applying Flexsave discount
 
 In the bar chart shown above:
 
-* The dark blue area of each bar represents the net GCP on-demand spend for that month
-* The light blue area of the bar represents the on-demand spend you would have paid without Flexsave
-* The shaded regions represent forecasted numbers based on the current usage patterns
+- The dark blue area of each bar represents the net GCP on-demand spend for that month
+- The light blue area of the bar represents the on-demand spend you would have paid without Flexsave
+- The shaded regions represent forecasted numbers based on the current usage patterns
 
 ## Help
 
@@ -96,9 +103,9 @@ In the bar chart shown above:
 
 On your monthly invoices, you will see a line item for Flexsave credits with information like this:
 
-* _Description_: Flexsave Savings
-* _Units_: -1
-* _PPU_: $206,967.51
+- _Description_: Flexsave Savings
+- _Units_: -1
+- _PPU_: $206,967.51
 
 Because _Units_ is always set to -1 (indicating a credit), the Flexsave _Price Per Unit_ (PPU) amount is subtracted from your total spend.
 
@@ -114,17 +121,19 @@ Here's an abbreviated example:
 ### FAQs
 
 {% hint style="info" %}
+
 These frequently asked questions (FAQs) apply to Flexsave in general.
 
 For general platform-specific information, see:
 
-* [Flexsave for AWS: FAQs](aws.md#faqs)
-* [Flexsave for GCP: FAQs](gcp.md#faqs)
+- [Flexsave for AWS: FAQs](aws.md#faqs)
+- [Flexsave for GCP: FAQs](gcp.md#faqs)
+
 {% endhint %}
 
 #### How much can I save?
 
-In most cases, your savings will be equivalent to (or higher than) the applicable [AWS Convertible Reserved Instance 1-year Full Upfront](https://aws.amazon.com/ec2/pricing/reserved-instances/pricing/) or [1-year Google Committed Use Discount](https://cloud.google.com/compute/vm-instance-pricing#committed\_use).
+In most cases, your savings will be equivalent to (or higher than) the applicable [AWS Convertible Reserved Instance 1-year Full Upfront](https://aws.amazon.com/ec2/pricing/reserved-instances/pricing/) or [1-year Google Committed Use Discount](https://cloud.google.com/compute/vm-instance-pricing#committed_use).
 
 #### How is using Flexsave better than purchasing discounts directly from AWS or GCP?
 
@@ -136,8 +145,8 @@ Flexsave does not require any commitments, allowing you to adapt your workload a
 
 Flexsave will be unavailable if either of the following is true:
 
-* You recently connected your AWS or GCP account, and we haven't finished importing and processing your billing data.
-* You do have not yet met the minimum seven days of qualifying on-demand spend needed for Flexsave to begin analyzing your resource utilization.
+- You recently connected your AWS or GCP account, and we haven't finished importing and processing your billing data.
+- You do have not yet met the minimum seven days of qualifying on-demand spend needed for Flexsave to begin analyzing your resource utilization.
 
 If we are still importing and processing your billing data, you can instead select the _NOTIFY ME_ button to receive an update when Flexsave is available.
 

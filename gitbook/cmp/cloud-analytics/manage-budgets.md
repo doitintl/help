@@ -44,8 +44,8 @@ After refreshing and setting a budget amount, two visual bars will appear below:
 
 The two bars represent:
 
-* **Current Spend** &mdash; Your current spend relative to alert thresholds (next section) you've set.
-* **Forecasted Spend** &mdash; How much you are forecasted to spend by the end of the budget period.
+- **Current Spend** &mdash; Your current spend relative to alert thresholds (next section) you've set.
+- **Forecasted Spend** &mdash; How much you are forecasted to spend by the end of the budget period.
 
 You will also notice a budget preview that incorporates a machine-learning prediction of future spend.
 
@@ -73,8 +73,8 @@ To share your budget, click the "Share" icon in the top right of the "Sharing & 
 
 This will open a pop-up that will give you two options when sharing:
 
-* Give everyone on your team Viewer access.
-* Explicitly give someone from your team Viewer or Editor Access.
+- Give everyone on your team Viewer access.
+- Explicitly give someone from your team Viewer or Editor Access.
 
 Having View access means the budget will appear on the main Budgets page, and that you can view the budget itself &mdash; but you can't make any edits to the budget.
 

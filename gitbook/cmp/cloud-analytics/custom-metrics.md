@@ -12,15 +12,15 @@ Custom metrics allows customers to calculate metrics based on existing [attribut
 
 For example:
 
-* **Percentage of GCP CUD utilized**
+- **Percentage of GCP CUD utilized**
 
   CUD (committed use discount) Usage / CUD (committed use discount) Commitment
 
-* **Amortized Instance Reservation Consumption**
+- **Amortized Instance Reservation Consumption**
 
   Monthly Ec2 Instance type usage / (1 yr Reserved Instance type commitment / 12)
 
-* **Percentage Shared Infrastructure Cost**
+- **Percentage Shared Infrastructure Cost**
 
   Shared Infrastructure costs / Total Infrastructure Cost
 
@@ -38,8 +38,8 @@ For more information, see our [Metric selection documentation](editing-your-clou
 
 For instance, if you want to create a metric to track the percentage consumption of a compute commitment, you will require two attributions:
 
-* Compute Usage
-* Compute Consumption
+- Compute Usage
+- Compute Consumption
 
 You must create these attributions before you creating a custom metric.
 

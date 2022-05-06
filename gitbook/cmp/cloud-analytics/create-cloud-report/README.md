@@ -22,12 +22,12 @@ To access your Cloud Reports, select _Reports_ from the _Analytics_ menu item on
 
 By default, CMP provided several preset reports to start with, such as:
 
-* Google Cloud Monthly Credits History 12mo
-* Daily Google Cloud Cost 12mo
-* Monthly Google Cloud Cost by Service 12mo
-* Monthly Google Cloud Cost by Project 12mo
-* Google Cloud CloudSQL Hourly Cost 60d
-* Trending Up Google Cloud Costs
+- Google Cloud Monthly Credits History 12mo
+- Daily Google Cloud Cost 12mo
+- Monthly Google Cloud Cost by Service 12mo
+- Monthly Google Cloud Cost by Project 12mo
+- Google Cloud CloudSQL Hourly Cost 60d
+- Trending Up Google Cloud Costs
 
 Click on the "Explore" button on the top-right part of the Cloud Analytics page to begin working on a new ad-hoc Cloud Report. Reports created this way will not be automatically saved _unless_ you give it a name.
 

@@ -32,7 +32,6 @@ cloudhealth
 cloudreports
 clsx
 cmp's
-codezombiech
 colab
 cpus
 cras
@@ -40,8 +39,6 @@ createrole
 d'italie
 dach
 dataprep
-davidanson
-dbaeumer
 dces
 deandra
 debussylaan
@@ -53,7 +50,6 @@ doit
 doitintl
 drinkware
 dryrun
-eamodio
 ecam
 editmsg
 elazar
@@ -61,7 +57,6 @@ enablement
 endef
 endembed
 endhint
-esbenp
 espa
 fargate
 fdfind
@@ -70,8 +65,6 @@ finops
 firestore
 flexri
 flexsave
-fnando
-foxundermoon
 francesc
 fullstory
 gcloud
@@ -80,6 +73,7 @@ geneve
 ghaction
 gitbook
 googleapis
+haverstock
 hellip
 hideable
 horiz
@@ -124,7 +118,6 @@ nbsp
 ndash
 noempty
 nojekyll
-odio
 oidc
 optimizely
 optipng
@@ -189,7 +182,6 @@ toolset
 trifacta
 trunc
 truste
-tyriar
 udfs
 uncheck
 underutilization

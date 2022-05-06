@@ -42,9 +42,9 @@ Or follow the detailed instructions below grant the access using GCP Console UI.
 
 ### Grant permissions for GCP Organization
 
-* Go to GCP [Resource Manager](https://console.cloud.google.com/cloud-resource-manager)
-* Select your organization
-* On the permissions info panel on the right, add the service account email as Billing Administrator Administrator
+- Go to GCP [Resource Manager](https://console.cloud.google.com/cloud-resource-manager)
+- Select your organization
+- On the permissions info panel on the right, add the service account email as Billing Administrator Administrator
 
 ![A screenshot showing you how to access the Add Member button](../../.gitbook/assets/gcp-add-member-button.png)
 

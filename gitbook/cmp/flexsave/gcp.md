@@ -11,37 +11,41 @@ Flexsave is your cloud co-pilot, dynamically maximizing your cloud-compute disco
 In most cases, save [the equivalent of a 1-year commitment discount](overview.md#how-much-can-i-save) on your cloud-compute spend with on-demand access to DoiT International's wholesale inventory of GCP [Committed Use Discounts](https://cloud.google.com/docs/cuds) (CUDs).
 
 {% hint style="info" %}
+
 See also:
 
-* [Flexsave overview: Benefits](overview.md#benefits)
-* [Flexsave overview: How it works](overview.md#how-it-works)
-* [Flexsave overview: Start saving](overview.md#start-saving)
+- [Flexsave overview: Benefits](overview.md#benefits)
+- [Flexsave overview: How it works](overview.md#how-it-works)
+- [Flexsave overview: Start saving](overview.md#start-saving)
+
 {% endhint %}
 
 ## Capabilities
 
 ### Supported regions and machine types
 
-Flexsave supports all GCP [regions](https://cloud.google.com/compute/docs/regions-zones) and [machine types](https://cloud.google.com/compute/docs/machine-types) supported by resource-based CUDs (except for GPU accelerators, i.e., `A2` instances). We don't support [commitments for GPUs or SSDs](https://cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts#commitments\_for\_gpus\_and\_local\_ssd).
+Flexsave supports all GCP [regions](https://cloud.google.com/compute/docs/regions-zones) and [machine types](https://cloud.google.com/compute/docs/machine-types) supported by resource-based CUDs (except for GPU accelerators, i.e., `A2` instances). We don't support [commitments for GPUs or SSDs](https://cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts#commitments_for_gpus_and_local_ssd).
 
 ## Help
 
 ### FAQs
 
 {% hint style="info" %}
+
 These frequently asked questions (FAQs) apply to Flexsave for GCP.
 
 For platform-agnostic information, see:
 
-* [Flexsave overview: FAQs](overview.md#faqs)
+- [Flexsave overview: FAQs](overview.md#faqs)
+
 {% endhint %}
 
 #### What changes should I expect to see in my Google Cloud Console?
 
 You should expect to see:
 
-* Commitment scope set to _Billing account_
-* Projects with 3-year committed use discounts and names like `doitintl-fs-xxxxxxx` attached to your billing account
+- Commitment scope set to _Billing account_
+- Projects with 3-year committed use discounts and names like `doitintl-fs-xxxxxxx` attached to your billing account
 
 The commitments will apply committed use discounts across all eligible usage (all projects) associated with this billing account when enabling the billing account scope.
 

@@ -56,10 +56,10 @@ After selecting _NEW REQUEST_, the CMP will take you through the steps of creati
 
 2. Select the severity of your request. Each severity level corresponds with a target response time:
 
-   * General Guidance &mdash; Four hours
-   * System Impaired &mdash; Two hours
-   * Production System Impaired &mdash; One hour
-   * Production System Down &mdash; 30 minutes
+   - General Guidance &mdash; Four hours
+   - System Impaired &mdash; Two hours
+   - Production System Impaired &mdash; One hour
+   - Production System Down &mdash; 30 minutes
 
 3. Write a descriptive subject, add any additional CCs to the ticket, and provide a complete description of your request.
 

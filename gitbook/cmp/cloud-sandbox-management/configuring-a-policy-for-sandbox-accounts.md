@@ -12,13 +12,13 @@ Set up a Google Cloud Sandbox Policy to enforce rules which automate sandbox man
 
 With a sandbox policy, you can:
 
-* Set up sandbox budgets
-* Get alerts or automatically disable billing when a budget is hit
-* Limit the number of sandboxes per user
-* Connect all sandboxes to your Google Cloud billing account, organization, and IAM folder
-* Give all sandboxes a stable naming convention
+- Set up sandbox budgets
+- Get alerts or automatically disable billing when a budget is hit
+- Limit the number of sandboxes per user
+- Connect all sandboxes to your Google Cloud billing account, organization, and IAM folder
+- Give all sandboxes a stable naming convention
 
-_To create Google Cloud Sandbox Accounts, you must verify that a Google Cloud service account was successfully configured. You can read more on how to configure your Google Cloud service account at [Connect Your Google Cloud Organization_](../google-cloud/connect-google-cloud-service-account.md)._
+_To create Google Cloud Sandbox Accounts, you must verify that a Google Cloud service account was successfully configured. You can read more on how to configure your Google Cloud service account at [Connect Your Google Cloud Organization_](../google-cloud/connect-google-cloud-service-account.md).\_
 
 {% hint style="info" %}
 Required Permission: **Sandbox Admin**
@@ -36,14 +36,14 @@ A notification will pop up informing you that the sandbox policy doesn't guarant
 
 Complete the Sandbox Management Policy form:
 
-* GCP Billing Account
-* Organization
-* IAM folder
-* Budget
-* Sandboxes per User &mdash; 10 maximum
-* Sandbox Name Prefix
-* Budget Type &mdash; One Time or Monthly
-* End of Budget Action &mdash; Send Alert or Disable Billing
+- GCP Billing Account
+- Organization
+- IAM folder
+- Budget
+- Sandboxes per User &mdash; 10 maximum
+- Sandbox Name Prefix
+- Budget Type &mdash; One Time or Monthly
+- End of Budget Action &mdash; Send Alert or Disable Billing
 
 ![A screenshot showing the Sandbox Policy modal dialog](../.gitbook/assets/cmp-sandbox-policy-2.png)
 

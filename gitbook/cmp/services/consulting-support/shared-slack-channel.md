@@ -10,9 +10,9 @@ We encourage you to create a shared Slack channel with DoiT International so tha
 
 You can use the shared Slack channel to ask questions or make requests:
 
-* We will try to respond to you within fifteen minutes
-* We will deal with simple questions and trivial requests on the spot
-* If more investigation or work is needed, we will prompt you to [create a support request](README.md) so that we can switch to an asynchronous workflow
+- We will try to respond to you within fifteen minutes
+- We will deal with simple questions and trivial requests on the spot
+- If more investigation or work is needed, we will prompt you to [create a support request](README.md) so that we can switch to an asynchronous workflow
 
 ## Create your shared Slack channel
 
@@ -44,9 +44,9 @@ Select the chain icon to the right of the channel name to copy a link you can sh
 
 Additionally, you can configure the CMP to send notifications to the shared Slack channel about:
 
-* _Google Cloud or AWS Known Issues_ &mdash; Get notified about [cloud incidents](cloud-incidents.md)
-* [_Cost Anomalies_](../../anomaly-detection/cloud-anomalies.md) &mdash; Get notified when our system detects abnormal usage of your cloud platform
-* _Google Cloud and AWS Quotas Utilization Alerts_ &mdash; Get alerted when your cloud platform quota utilization exceeds 80%.
-* _Daily Cost Digest_ &mdash; Get a [daily digest](../../general/profile.md#daily-digest-emails) with an optional filter for [cost attributions](../../cloud-analytics/attributing-cloud-spend.md)
+- _Google Cloud or AWS Known Issues_ &mdash; Get notified about [cloud incidents](cloud-incidents.md)
+- [_Cost Anomalies_](../../anomaly-detection/cloud-anomalies.md) &mdash; Get notified when our system detects abnormal usage of your cloud platform
+- _Google Cloud and AWS Quotas Utilization Alerts_ &mdash; Get alerted when your cloud platform quota utilization exceeds 80%.
+- _Daily Cost Digest_ &mdash; Get a [daily digest](../../general/profile.md#daily-digest-emails) with an optional filter for [cost attributions](../../cloud-analytics/attributing-cloud-spend.md)
 
 The shared Slack channel configuration options will auto-save whenever you make a change.

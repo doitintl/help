@@ -11,8 +11,9 @@ const config = {
   url: 'https://doitintl-help.netlify.app',
   baseUrl: '/',
   trailingSlash: false,
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'error',
+  onBrokenMarkdownLinks: 'error',
+  onDuplicateRoutes: 'error',
   favicon: 'img/favicon.ico',
   organizationName: 'doitintl', // Usually your GitHub org/user name.
   projectName: 'help', // Usually your repo name.
@@ -43,15 +44,6 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/doit-logo-black-rect.png',
-      announcementBar: {
-        id: 'announcement',
-        content:
-          '&#9888;&#65039;&nbsp;' +
-          'This is a preview of the next generation ' +
-          'DoiT International Help Center' +
-          '&nbsp;&#9888;&#65039;',
-        isCloseable: false,
-      },
       navbar: {
         title: 'Help Center',
         hideOnScroll: false,

@@ -10,8 +10,8 @@ Please follow the below steps to switch your Google Cloud projects to use DoiT-p
 
 To follow this tutorial, your Google Cloud account must have the following permissions:
 
-* [Project Owner](https://cloud.google.com/iam/docs/understanding-roles)
-* [Billing Account Administrator](https://cloud.google.com/iam/docs/understanding-roles)
+- [Project Owner](https://cloud.google.com/iam/docs/understanding-roles)
+- [Billing Account Administrator](https://cloud.google.com/iam/docs/understanding-roles)
 
 Please get in touch with your organization's Google Cloud administrator for help with your account permissions.
 
@@ -19,24 +19,24 @@ Please get in touch with your organization's Google Cloud administrator for help
 
 ## The steps
 
-* Go to [https://console.cloud.google.com/billing](https://console.cloud.google.com/billing)
-* Make sure your organization is selected and then click on your the billing account from the list
+- Go to [https://console.cloud.google.com/billing](https://console.cloud.google.com/billing)
+- Make sure your organization is selected and then click on your the billing account from the list
 
 ![A screenshot showing you the organization selection menu and the billing account list](../../.gitbook/assets/gcp-organization-menu-billing-account-list.png)
 
-* Click on Manage
+- Click on Manage
 
 ![A screenshot showing the location of the Manager option](../../.gitbook/assets/gcp-manager-option.png)
 
-* The list of your Google Cloud projects currently linked to this billing account will be displayed. For each of the projects, click on the three-dots menu and select "Change billing"
+- The list of your Google Cloud projects currently linked to this billing account will be displayed. For each of the projects, click on the three-dots menu and select "Change billing"
 
 ![A screenshot showing the location of the Change Billing option](../../.gitbook/assets/gcp-change-billing-option.png)
 
-* In the popup modal, please select the new billing account provided to you by DoiT International
+- In the popup modal, please select the new billing account provided to you by DoiT International
 
 ![A screenshot showing you the billing account dropdown menu](../../.gitbook/assets/gcp-billing-account-menu.png)
 
-* Repeat for each projects on the list
+- Repeat for each projects on the list
 
 Within an hour, your transferred projects will appear in DoiT [Cloud Management Platform](https://hello.doit-intl.com).
 

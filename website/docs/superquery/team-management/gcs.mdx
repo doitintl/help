@@ -19,23 +19,23 @@ Then click "**Set credentials**" to set up your Google Cloud Storage service acc
 
 ## Enter Google Cloud Storage Credentials
 
-* Enter the name of your GCS bucket.
-* Follow Google Cloud's instructions for [creating service account keys](https://cloud.google.com/iam/docs/creating-managing-service-account-keys#iam-service-account-keys-create-console).
+- Enter the name of your GCS bucket.
+- Follow Google Cloud's instructions for [creating service account keys](https://cloud.google.com/iam/docs/creating-managing-service-account-keys#iam-service-account-keys-create-console).
 
 Keys created using the GCP Console or the `gcloud` command-line tool look like this:
 
 ```json
 {
-"type": "service_account",
-"project_id": "[PROJECT-ID]",
-"private_key_id": "[KEY-ID]",
-"private_key": "-----BEGIN PRIVATE KEY-----\n[PRIVATE-KEY]\n-----END PRIVATE KEY-----\n",
-"client_email": "[SERVICE-ACCOUNT-EMAIL]",
-"client_id": "[CLIENT-ID]",
-"auth_uri": "https://accounts.google.com/o/oauth2/auth",
-"token_uri": "https://accounts.google.com/o/oauth2/token",
-"auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-"client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/[SERVICE-ACCOUNT-EMAIL]"
+  "type": "service_account",
+  "project_id": "[PROJECT-ID]",
+  "private_key_id": "[KEY-ID]",
+  "private_key": "-----BEGIN PRIVATE KEY-----\n[PRIVATE-KEY]\n-----END PRIVATE KEY-----\n",
+  "client_email": "[SERVICE-ACCOUNT-EMAIL]",
+  "client_id": "[CLIENT-ID]",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/[SERVICE-ACCOUNT-EMAIL]"
 }
 ```
 

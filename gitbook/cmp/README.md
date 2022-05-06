@@ -8,10 +8,10 @@ DoiT International's _Cloud Management Platform_ (CMP) helps the developers and 
 
 The CMP has four strategic pillars:
 
-* [Cloud analytics](./#cloud-analytics)
-* [Cloud cost optimization](./#cloud-cost-optimization)
-* [Cloud enablement](./#cloud-enablement)
-* [Cloud governance](./#cloud-governance)
+- [Cloud analytics](./#cloud-analytics)
+- [Cloud cost optimization](./#cloud-cost-optimization)
+- [Cloud enablement](./#cloud-enablement)
+- [Cloud governance](./#cloud-governance)
 
 <!--* [Cloud productivity](./#cloud-productivity)-->
 
@@ -21,20 +21,20 @@ In this document, we'll briefly go over each of the main capabilities you have a
 
 The following table offers a brief summary of our support for [Google Cloud Platform](https://cloud.google.com/gcp) (GCP), [Amazon Web Services](https://aws.amazon.com) (AWS), and [Microsoft Azure](https://azure.microsoft.com):
 
-| Feature                                                              | GCP                                                      | AWS                                | Azure     |
-| -------------------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------- | --------- |
-| **CloudOps**                                                         |                                                          |                                    |           |
-| [Consulting and support](services/consulting-support/)               | Yes                                                      | Yes                                | Yes       |
-| [Cloud known issues](services/consulting-support/cloud-incidents.md) | Yes                                                      | Yes                                | No        |
-| [Sandboxes](./#cloud-sandboxes)                                      | Yes                                                      | No                                 | No        |
-| [Governance](./#cloud-governance)                                    | Yes                                                      | Yes                                | No        |
-| **Costs analysis and optimization**                                  |                                                          |                                    |           |
-| Lenses                                                               | [BigQuery Lens](dashboards/bigquery-lens.md),<br>GKE Lens| [AWS Lens](dashboards/aws-lens.md) | No        |
-| [Cost history widgets](dashboards/widgets-overview.md)               | Yes                                                      | Yes                                | Yes       |
-| [Cloud analytics](./#cloud-analytics)                                | Yes                                                      | Yes                                | No        |
-| [Costs anomalies](./#cost-anomalies)                                 | Yes                                                      | Yes                                | No        |
-| [Flexsave](flexsave/overview.md)                                     | Yes                                                      | Yes                                | No        |
-| [EC2 Spot Scaling](spot-scaling/overview.md)                         | N/A                                                      | Yes                                | N/A       |
+| Feature                                                              | GCP                                                       | AWS                                | Azure |
+| -------------------------------------------------------------------- | --------------------------------------------------------- | ---------------------------------- | ----- |
+| **CloudOps**                                                         |                                                           |                                    |       |
+| [Consulting and support](services/consulting-support/)               | Yes                                                       | Yes                                | Yes   |
+| [Cloud known issues](services/consulting-support/cloud-incidents.md) | Yes                                                       | Yes                                | No    |
+| [Sandboxes](./#cloud-sandboxes)                                      | Yes                                                       | No                                 | No    |
+| [Governance](./#cloud-governance)                                    | Yes                                                       | Yes                                | No    |
+| **Costs analysis and optimization**                                  |                                                           |                                    |       |
+| Lenses                                                               | [BigQuery Lens](dashboards/bigquery-lens.md),<br>GKE Lens | [AWS Lens](dashboards/aws-lens.md) | No    |
+| [Cost history widgets](dashboards/widgets-overview.md)               | Yes                                                       | Yes                                | Yes   |
+| [Cloud analytics](./#cloud-analytics)                                | Yes                                                       | Yes                                | No    |
+| [Costs anomalies](./#cost-anomalies)                                 | Yes                                                       | Yes                                | No    |
+| [Flexsave](flexsave/overview.md)                                     | Yes                                                       | Yes                                | No    |
+| [EC2 Spot Scaling](spot-scaling/overview.md)                         | N/A                                                       | Yes                                | N/A   |
 
 ## Cloud analytics
 
@@ -42,12 +42,12 @@ The following table offers a brief summary of our support for [Google Cloud Plat
 
 Cloud Reports give you instant visibility into your Google Cloud and AWS costs without having to spend agonizing hours manually scanning through cloud bills.
 
-* Analyze cloud spend to identify optimization opportunities.
-* [Build customized reports](cloud-analytics/create-cloud-report/) and [share](cloud-analytics/sharing-cloud-reports.md) them with others.
-* Monitor costs on the go from your phone.
-* [Detect trends](cloud-analytics/trend-analysis.md) in your cloud usage
-* [Forecast your cloud spend](cloud-analytics/forecasting.md) across all time ranges and any cloud services
-* Cross-check your SUD/CUD credits with by-the-hour reporting.
+- Analyze cloud spend to identify optimization opportunities.
+- [Build customized reports](cloud-analytics/create-cloud-report/) and [share](cloud-analytics/sharing-cloud-reports.md) them with others.
+- Monitor costs on the go from your phone.
+- [Detect trends](cloud-analytics/trend-analysis.md) in your cloud usage
+- [Forecast your cloud spend](cloud-analytics/forecasting.md) across all time ranges and any cloud services
+- Cross-check your SUD/CUD credits with by-the-hour reporting.
 
 {% embed url="https://www.loom.com/share/3bb89b9c624a4a52a2ecfbb61a56b4b8" %}
 
@@ -67,9 +67,9 @@ When you create an instance in Google Cloud and it is under-utilized, you are pa
 
 With Instance Rightsizing for Google Cloud, you will:
 
-* Get notified of idle resources across _all_ projects, and potential savings from rightsizing.
-* [Identify and delete and/or modify idle VMs](dashboards/rightsizing-for-google-cloud.md) in two clicks.
-* Never pay for underutilized Google Compute instances again.
+- Get notified of idle resources across _all_ projects, and potential savings from rightsizing.
+- [Identify and delete and/or modify idle VMs](dashboards/rightsizing-for-google-cloud.md) in two clicks.
+- Never pay for underutilized Google Compute instances again.
 
 {% embed url="https://www.loom.com/share/cecfc1a7f3d84240a5be922e27c0ac56?sharedAppSource=team_library" %}
 
@@ -113,11 +113,11 @@ Cloud Sandbox for Google Cloud gives admins and developers the governance and au
 
 First, [create a sandbox policy](cloud-sandbox-management/configuring-a-policy-for-sandbox-accounts.md) to automate sandbox management. With a policy set up, you can:
 
-* Connect to your Google Cloud billing account, organization, and IAM folder.
-* Set sandbox budgets.
-* Get alerts when a budget is hit, or automatically disable the billing.
-* Limit the number of sandboxes per user.
-* Give your sandbox names a stable naming convention.
+- Connect to your Google Cloud billing account, organization, and IAM folder.
+- Set sandbox budgets.
+- Get alerts when a budget is hit, or automatically disable the billing.
+- Limit the number of sandboxes per user.
+- Give your sandbox names a stable naming convention.
 
 Once a policy is created, developers are free to [create cloud sandbox environments](cloud-sandbox-management/create-gcp-sandbox-accounts.md) themselves. No more submitting tickets just to get a new environment provisioned by an SRE. Finally, when sandboxes are up and running, you can monitor them all from a central hub.
 
@@ -143,10 +143,10 @@ As a result, critical staff resources are wasted manually monitoring for and ide
 
 Available to DoiT customers right from the CMP, it also offers:
 
-* Context-aware detection that treats each Google Cloud service uniquely.
-* Advanced alerting that goes beyond static budgets & thresholds
-* Fine-tune alerts by training them with your direct feedback.
-* Real-time analysis of workload activity
+- Context-aware detection that treats each Google Cloud service uniquely.
+- Advanced alerting that goes beyond static budgets & thresholds
+- Fine-tune alerts by training them with your direct feedback.
+- Real-time analysis of workload activity
 
 {% embed url="https://www.youtube.com/watch?v=h6V7XfhsdmY&list=PLEBxNMZ7Mu3_hmB2I2LXcDSYt1SXcjwMz&index=1" %}
 
@@ -156,10 +156,10 @@ As a DoiT International customer, you have access to 80+ battle-tested senior cl
 
 Within the CMP you can:
 
-* Create [consulting and support requests](services/consulting-support/)
-* [Escalate](services/consulting-support/escalate.md) support requests
-* [Share](services/consulting-support/ticket-sharing.md) support requests with others
-* Get access to exclusive [training](services/training.md), [professional services](services/proserv.md), and [perks](services/perks.md)
+- Create [consulting and support requests](services/consulting-support/)
+- [Escalate](services/consulting-support/escalate.md) support requests
+- [Share](services/consulting-support/ticket-sharing.md) support requests with others
+- Get access to exclusive [training](services/training.md), [professional services](services/proserv.md), and [perks](services/perks.md)
 
 {% embed url="https://www.loom.com/share/ec2e0bca53fc46ef80061dd96be2f1a0?sharedAppSource=team_library" %}
 
@@ -179,12 +179,12 @@ CMP gives you complete self-service management of assets across Google Cloud, AW
 
 From your Asset Management screen, you can:
 
-* View all cloud subscriptions in one place.
-* [Create a new Google Cloud Billing Account](google-cloud/create-google-cloud-billing-account.md) and/or an [AWS account](amazon-web-services/create-an-aws-account.md).
-* [Invite an existing AWS account](amazon-web-services/invite-existing-aws-account.md)
-* [Purchase additional seats for G Suite](g-suite-and-workspace/purchasing-g-suite-licenses.md) and/or [Office 365](microsoft-office-365/purchasing-office-365-licenses.md) yourself.
-* Automate subscription management with [auto-provisioning](g-suite-and-workspace/configure-auto-increase-for-google-workspace-subscriptions.md) for G Suite, guaranteeing there is an open seat at all times.
-* [Tag Assets](assets-and-contracts/tag-assets.md) for classification and invoicing purposes (e.g. team name, cost center, location, etc.).
+- View all cloud subscriptions in one place.
+- [Create a new Google Cloud Billing Account](google-cloud/create-google-cloud-billing-account.md) and/or an [AWS account](amazon-web-services/create-an-aws-account.md).
+- [Invite an existing AWS account](amazon-web-services/invite-existing-aws-account.md)
+- [Purchase additional seats for G Suite](g-suite-and-workspace/purchasing-g-suite-licenses.md) and/or [Office 365](microsoft-office-365/purchasing-office-365-licenses.md) yourself.
+- Automate subscription management with [auto-provisioning](g-suite-and-workspace/configure-auto-increase-for-google-workspace-subscriptions.md) for G Suite, guaranteeing there is an open seat at all times.
+- [Tag Assets](assets-and-contracts/tag-assets.md) for classification and invoicing purposes (e.g. team name, cost center, location, etc.).
 
 Additionally, you can view your order history of all licenses and subscriptions across all of your cloud products.
 
@@ -197,17 +197,19 @@ CMP gives you capabilities unavailable in Google Cloud or AWS to customize _prec
 In the CMP, customers can create as many Billing Profiles as required, per their company's needs.
 
 <!-- textlint-disable max-comma -->
+
 Unlike Google Cloud or AWS (who only allow credit card payments), DoiT International customers can pay via the _Credit Card_, _Wire_, _Bill.com_, and _ACH_ options.
+
 <!-- textlint-enable -->
 
 [**Invoices**](invoices-and-payments/managing-invoices.md) across all cloud platforms and their current statuses can be easily accessed using the CMP.
 
 From the Invoices page, you can:
 
-* Click on an invoice to view a detailed breakdown.
-* Download invoices.
-* Sort invoices by billing profile, cloud service, date, etc.
-* Get an at-a-glance look at the invoice status, the product it's referencing, and the total/balance.
+- Click on an invoice to view a detailed breakdown.
+- Download invoices.
+- Sort invoices by billing profile, cloud service, date, etc.
+- Get an at-a-glance look at the invoice status, the product it's referencing, and the total/balance.
 
 Any tags placed on assets will also appear in invoices so you can more easily identify invoice items.
 
@@ -227,19 +229,19 @@ Via the Contracts page, you get self-service access to all cloud contracts you a
 
 Use User Management to:
 
-* [Add colleagues](user-management/creating-a-new-user.md) to your CMP team.
-* Management Billing Profile assignments.
-* Configure notifications for alerts like payment reminders, new invoices, and more.
-* [Set up and grant roles](user-management/manage-roles.md) that give access to various CMP features.
+- [Add colleagues](user-management/creating-a-new-user.md) to your CMP team.
+- Management Billing Profile assignments.
+- Configure notifications for alerts like payment reminders, new invoices, and more.
+- [Set up and grant roles](user-management/manage-roles.md) that give access to various CMP features.
 
 ### Managed cloud support
 
 Within the CMP you can resolve your cloud issues quickly with hyper-responsive and unlimited support from DoiT International &mdash; at no extra cost.
 
-* [Open tickets](services/consulting-support/) with experienced Cloud Architects and Engineers.
-* View open or historical tickets and their statuses.
-* [Share tickets](services/consulting-support/ticket-sharing.md) with other team members.
-* Stay up to date on any [known issues](services/consulting-support/cloud-incidents.md) across all clouds you use.
+- [Open tickets](services/consulting-support/) with experienced Cloud Architects and Engineers.
+- View open or historical tickets and their statuses.
+- [Share tickets](services/consulting-support/ticket-sharing.md) with other team members.
+- Stay up to date on any [known issues](services/consulting-support/cloud-incidents.md) across all clouds you use.
 
 ## Contribute
 

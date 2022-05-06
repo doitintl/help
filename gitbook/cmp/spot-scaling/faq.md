@@ -14,9 +14,9 @@ Spot instances are most suitable for applications that have fault tolerance buil
 
 Additional use cases include:
 
-* **Batch processing** &mdash; you can use the AWS Batch service in combination with spot instances to run batch processing on spot instances that are currently available at a low cost. This can generate significant cost savings compared to running the same batch process using on-demand instances.
-* **Continuous integration** &mdash; development and testing are very common in a cloud environment. Dev/test tasks typically run on an irregular schedule, and because they are not production workloads, they can tolerate occasional interruptions.
-* **High Performance Computing (HPC)** &mdash; you can use spot instances to run massively parallel workloads like artificial intelligence analytics applications. These applications run on graphical processing units (GPUs), and since GPU instances are expensive, spot instances can be a big help.
+- **Batch processing** &mdash; you can use the AWS Batch service in combination with spot instances to run batch processing on spot instances that are currently available at a low cost. This can generate significant cost savings compared to running the same batch process using on-demand instances.
+- **Continuous integration** &mdash; development and testing are very common in a cloud environment. Dev/test tasks typically run on an irregular schedule, and because they are not production workloads, they can tolerate occasional interruptions.
+- **High Performance Computing (HPC)** &mdash; you can use spot instances to run massively parallel workloads like artificial intelligence analytics applications. These applications run on graphical processing units (GPUs), and since GPU instances are expensive, spot instances can be a big help.
 
 ## What are the best practices to use Spot instances?
 
