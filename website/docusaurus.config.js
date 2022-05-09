@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'DoiT Help Center',
   tagline: 'Dinosaurs are cool',
-  url: 'https://help.doit-intl.com',
+  url: 'https://doitintl-help.netlify.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
