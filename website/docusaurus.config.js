@@ -10,6 +10,7 @@ const config = {
   tagline: 'Dinosaurs are cool',
   url: 'https://doitintl-help.netlify.app',
   baseUrl: '/',
+  trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
