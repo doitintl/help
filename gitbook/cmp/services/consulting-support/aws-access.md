@@ -26,14 +26,14 @@ DoiT International uses secure [Identity Providers](https://docs.aws.amazon.com/
 
 When you request technical support and create a new service request with DoiT International, you will be prompted to grant DoiT International access to your AWS account.
 
-To grant access, you must configure an AWS CloudFormation stack which allows our system to interact with your account. We have prepared a [template configuration](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateUrl=https%3A%2F%2Fdoit-aws-ops-prod-templates.s3.amazonaws.com%2Fawsops\_sns.yaml\&stackName=DoiT-Management-Stack\&param\_AccountNumberParameter=462932234033\&param\_ServiceToken=arn%3Aaws%3Asns%3Aus-east-1%3A462932234033%3Aprod-cfn) for you to install.
+To grant access, you must use our AWS CloudFormation [quick-create link][quick-create]. The quick-create link provides a template configuration that will allow our system to interact with your account.
 
 ## Technical details
 
-Below is the [template YAML file](https://doit-aws-ops-prod-templates.s3.amazonaws.com/awsops_sns.yaml) in full.
+The AWS CloudFormation [template configuration](https://doit-aws-ops-prod-templates.s3.amazonaws.com/awsops_sns.yaml) is shown below.
 
-{% hint style="info" %}
-If you are installing this CloudFormation template manually, be sure to set your AWS region to `us-east-1`.
+{% hint style="warning" %}
+This template configuration is shown for reference only. If you want to install this AWS CloudFormation stack, please use the [quick-create link][quick-create] to instantiate your stack with the proper parameters.
 {% endhint %}
 
 ```yaml
@@ -143,3 +143,5 @@ Please note:
   Crucially, _the management role can only modify the IAM policies and roles that it creates itself_. The management role does not have write-access to any of your other IAM policies or roles.
 
 * We create an IAM Policy and IAM Role for each staff member with the [SecurityAudit](https://console.aws.amazon.com/iam/home#policies/arn:aws:iam::aws:policy/SecurityAudit) policy attached to each role.
+
+[quick-create]: https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateUrl=https%3A%2F%2Fdoit-aws-ops-prod-templates.s3.amazonaws.com%2Fawsops\_sns.yaml\&stackName=DoiT-Management-Stack\&param\_AccountNumberParameter=462932234033\&param\_ServiceToken=arn%3Aaws%3Asns%3Aus-east-1%3A462932234033%3Aprod-cfn
