@@ -66,7 +66,7 @@ If you need to set up DoiT International as a new vendor in your systems, you ca
 
 * Our company name is DoiT International UK\&I, Ltd
 * Our VAT number is 349 5963 45
-* Our address is: 201 Haverstock Road (2nd-floor) London, NW3 4QG, England, United Kingdom
+* Our address is: c/o Mazars LLP, Tower Bridge House, St Katherine's Way, London, E1W 1DD
 
 ## United States
 
