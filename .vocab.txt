@@ -3,6 +3,7 @@ aicpa
 akiaiosfodnn
 akiaxxxxxxxxxxxx
 algolia
+algoliasearch
 allowfullscreen
 alnum
 amet
@@ -45,6 +46,7 @@ debussylaan
 deleter
 devcontainer
 docops
+docsearch
 doesn't
 doit
 doitintl

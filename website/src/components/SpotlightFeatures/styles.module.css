@@ -5,6 +5,12 @@
   width: 100%;
 }
 
+@media screen and (max-width: 680px) {
+  .features {
+    flex-direction: column;
+  }
+}
+
 .featureSvg {
   height: 200px;
   width: 200px;
@@ -12,6 +18,11 @@
 
 .feature {
   padding-right: 5%;
+}
+@media screen and (min-width: 680px) {
+  .feature {
+    width: 33%;
+  }
 }
 
 .features_container {

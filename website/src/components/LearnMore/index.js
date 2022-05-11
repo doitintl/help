@@ -35,8 +35,8 @@ const LearnMore = () => {
     <div className={styles.learn_more_wrapper}>
       <h1>Learn more</h1>
       <div className={styles.learn_more_container}>
-        {lists.map((list) => (
-          <LinkList list={list}></LinkList>
+        {lists.map((list, i) => (
+          <LinkList key={i} list={list}></LinkList>
         ))}
       </div>
     </div>

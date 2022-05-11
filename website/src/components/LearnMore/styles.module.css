@@ -2,6 +2,12 @@
   display: flex;
 }
 
+@media screen and (max-width: 680px) {
+  .learn_more_container {
+    flex-direction: column;
+  }
+}
+
 .learn_more_wrapper {
   margin: 0 9%;
   padding-top: 56px;
