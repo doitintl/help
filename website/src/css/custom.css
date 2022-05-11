@@ -78,3 +78,22 @@
 [data-theme='dark'] .footer {
   --ifm-footer-background-color: var(--ifm-navbar-background-color);
 }
+
+.DocSearch-Button {
+  background: #ffffff !important;
+  height: 70px !important;
+  width: 90vw;
+  max-width: 750px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 4px !important;
+}
+
+.DocSearch-Button-Placeholder {
+  font-size: 1.5rem !important;
+}
+
+.DocSearch-Button:active,
+.DocSearch-Button:focus,
+.DocSearch-Button:hover {
+  color: #969faf !important;
+}

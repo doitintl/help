@@ -3,8 +3,10 @@ import React from 'react';
 import styles from './styles.module.css';
 
 const LinkList = ({ list }) => {
-  const linkNodes = list.links.map((link) => (
-    <a href={link.href}>{link.text}</a>
+  const linkNodes = list.links.map((link, i) => (
+    <a key={i} href={link.href}>
+      {link.text}
+    </a>
   ));
   return <div className={styles.link_list}>{linkNodes}</div>;
 };

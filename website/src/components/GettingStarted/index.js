@@ -25,8 +25,8 @@ const GettingStarted = () => (
   <section className={styles.getting_started_container}>
     <h1 className={styles.getting_started}>Getting Started</h1>
     <div className={styles.cards_container}>
-      {cards.map((card) => (
-        <IconCard card={card} />
+      {cards.map((card, i) => (
+        <IconCard key={i} card={card} />
       ))}
     </div>
   </section>
