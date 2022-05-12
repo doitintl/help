@@ -60,7 +60,7 @@ find "${OPTIPNG_LOCK_DIR}" -type f |
     while read -r file; do
         sig_file="${OPTIPNG_LOCK_DIR}/${file}.md5sum"
         if test ! -f "${file}"; then
-            m -v "${sig_file}"
+            rm -fv "${sig_file}"
         fi
     done
 find "${OPTIPNG_LOCK_DIR}" -type d -empty -delete
