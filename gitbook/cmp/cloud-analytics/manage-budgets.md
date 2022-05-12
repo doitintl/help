@@ -108,10 +108,6 @@ When you exceed a budget threshold, you'll receive an email detailing:
 2. Your current spend
 3. The forecasted date when you will reach 100% of your budget
 
-Here is what a typical alert looks like:
-
-![A screenshot showing an email alert](../.gitbook/assets/email-budget-alert.png)
-
 ## Video walkthrough
 
 Watch budgets in action in the video below:
