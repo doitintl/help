@@ -86,6 +86,9 @@ lint: good-filenames
 rm-unused-docs-dry:
 lint: rm-unused-docs-dry
 
+rm-unused-assets-dry:
+lint: rm-unused-assets-dry
+
 markdownlint:
 lint: markdownlint
 
@@ -115,9 +118,6 @@ lint: markdown-link-check
 
 brok:
 lint: brok
-
-rm-unused-assets-dry:
-lint: rm-unused-assets-dry
 
 fdupes:
 lint: fdupes
