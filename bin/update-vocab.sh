@@ -42,7 +42,7 @@ match_words() {
 
 tmp_vocab="$(mktemp)"
 
-match_words | awk '{print tolower($0)}' | sort | uniq >"${tmp_vocab}"
+match_words | awk '{print tolower($0)}' | grep . | sort | uniq >"${tmp_vocab}"
 
 status_code=0
 
