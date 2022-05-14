@@ -185,7 +185,6 @@ clean: git-clean
 # imgdup2go:
 # 	$(call print-target)
 # 	$(IMGDUP2GO) $(GITBOOK_CMP_DIR)/$(GITBOOK_ASSETS_DIR)
-# 	$(IMGDUP2GO) $(GITBOOK_SUPERQUERY_DIR)/$(GITBOOK_ASSETS_DIR)
 
 # vale.json
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

@@ -18,7 +18,6 @@ rsync -qa . "${tmp_repo_copy}"
 make --no-print-directory -C "${tmp_repo_copy}" --silent clean
 
 rm -rf "${tmp_repo_copy}/.git"
-rm -rf "${tmp_repo_copy}/gitbook/superquery"
 rm -rf "${tmp_repo_copy}/website/static/img"
 rm -rf "${tmp_repo_copy}/website/docs"
 
