@@ -106,6 +106,9 @@ lint: html-entities
 inline-html:
 lint: inline-html
 
+eslint:
+lint: eslint
+
 update-vocab-dry:
 lint: update-vocab-dry
 
@@ -129,6 +132,15 @@ lint: brok
 
 fdupes:
 lint: fdupes
+
+IMGDUP2GO := $(BIN_DIR)/imgdup2go.sh
+
+all: imgdup2go
+.PHONY: imgdup2go
+imgdup2go:
+	$(call print-target)
+	$(IMGDUP2GO) gitbook/cmp/.gitbook/assets
+	$(IMGDUP2GO) website/static/img/docs
 
 optipng-dry:
 lint: optipng-dry
@@ -174,17 +186,6 @@ clean: git-clean
 # proselintjs:
 # 	$(call print-target)
 # 	$(FIND) --print0 | xargs -0 $(PROSELINTJS) || true
-
-# imgdup2go
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# IMGDUP2GO := $(BIN_DIR)/imgdup2go.sh
-
-# all: imgdup2go
-# .PHONY: imgdup2go
-# imgdup2go:
-# 	$(call print-target)
-# 	$(IMGDUP2GO) $(GITBOOK_CMP_DIR)/$(GITBOOK_ASSETS_DIR)
 
 # vale.json
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

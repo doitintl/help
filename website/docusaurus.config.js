@@ -60,8 +60,7 @@ const config = {
             label: 'Cloud Management Platform',
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'devHubSideBar',
+            href: 'https://developer.doit-intl.com/',
             position: 'left',
             label: 'Developer Hub',
           },
