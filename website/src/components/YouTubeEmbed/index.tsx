@@ -6,7 +6,7 @@ interface Props {
   id: string;
 }
 
-export default function LoomEmbed({ id = '' }: Props): JSX.Element {
+export default function YouTubeEmbed({ id = '' }: Props): JSX.Element {
   return (
     <div className={styles.youtubeEmbed}>
       <iframe
