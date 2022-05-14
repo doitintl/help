@@ -5,6 +5,7 @@
 .env.local
 .env.production.local
 .env.test.local
+*.err
 *.log
 *.out
 *.tmp
