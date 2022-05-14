@@ -12,7 +12,7 @@ export LC_ALL
 find_ignored() {
     while read -r pattern; do
         find . -name "${pattern}" -not -path './.git/*'
-    done <.gitignore
+    done <"${TOP_DIR=.}/.gitignore"
 }
 
 find_ignored | sort -n | while read -r path; do

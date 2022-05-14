@@ -12,7 +12,8 @@ BOLD = [1m
 RED = [31m
 RESET = [0m
 
-BIN_DIR = ./bin
+TOP_DIR = $(patsubst %/,%,$(dir $(lastword $(MAKEFILE_LIST))))
+BIN_DIR = $(TOP_DIR)/bin
 
 # $(call print-target)
 define print-target
@@ -52,12 +53,11 @@ start:
 check: build
 build:
 	$(call print-target)
-	@ $(MAKE) -C website build
+	@ $(MAKE) -C website $@
 
 .PHONY: telemetry # Generate telemetry data
 telemetry:
 
-# TODO: Evaluate how many of these rules are still needed
 .PHONY: clean # Remove build artifacts
 clean:
 

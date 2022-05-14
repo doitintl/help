@@ -91,6 +91,7 @@ ipynb
 knowledgeable
 kpis
 kubernetes
+lastword
 launchtemplate
 lintspaces
 loglevel
@@ -129,6 +130,7 @@ overutilized
 owasp
 oxley
 partia
+patsubst
 pidof
 porta
 posix

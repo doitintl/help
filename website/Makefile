@@ -44,3 +44,7 @@ serve: install
 .PHONY: deploy # Publish the website to GitHub pages
 deploy: install
 	yarn deploy
+
+.PHONY: clean # Remove build artifacts
+clean:
+	@ $(MAKE) -f ../Makefile $@
