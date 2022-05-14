@@ -1,7 +1,5 @@
 actuals
 aicpa
-akiaiosfodnn
-akiaxxxxxxxxxxxx
 algolia
 algoliasearch
 allowfullscreen
@@ -9,7 +7,6 @@ alnum
 amet
 amts
 aren
-arrayquery
 asg's
 asgs
 assumeable
@@ -33,9 +30,7 @@ cloudhealth
 cloudreports
 clsx
 cmp's
-colab
 cpus
-cras
 createrole
 d'italie
 dach
@@ -50,7 +45,6 @@ docsearch
 doesn't
 doit
 doitintl
-drinkware
 dryrun
 ecam
 editmsg
@@ -70,7 +64,6 @@ flexsave
 francesc
 fullstory
 gcloud
-gcp's
 geneve
 ghaction
 gitbook
@@ -87,7 +80,6 @@ iframe
 ignorecase
 imgdup
 iops
-ipynb
 knowledgeable
 kpis
 kubernetes
@@ -111,12 +103,8 @@ mixpanel
 mkdir
 mktemp
 monospace
-mozallowfullscreen
 mpas
 mvdan
-mydataset
-myproject
-mytable
 nbsp
 ndash
 noempty
@@ -127,7 +115,6 @@ optipng
 orgs
 oudaudit
 overutilized
-owasp
 oxley
 partia
 patsubst
@@ -143,13 +130,11 @@ proselint
 proselintjs
 proselintrc
 proserv
-queryes
 quis
 rarr
 ravsamhq
 rbac
 rechtsanwaltsgesellschaft
-renameboard
 resourcemanager
 rhel
 roadmap
@@ -158,7 +143,6 @@ sarbanes
 sarl
 savingsplans
 serv
-serviceaccount
 serviceusage
 shellcheck
 shfmt
@@ -166,16 +150,13 @@ skus
 sles
 smallhadroncollider
 spotscaling
-sqlseartch
 stax
 stopwords
 stra
 subnetworks
 subprocessor
 subprocessors
-sunsetting
 superquery
-tempor
 textbox
 textlint
 textlintrc
@@ -194,13 +175,10 @@ unnest
 unpartitioned
 upvote
 upvoting
-vellip
 venv
-visuallizesq
 vmware
 walkthrough
 warranwood
-webkitallowfullscreen
 xlarge
 xpra
 zendesk

@@ -61,12 +61,6 @@ const config = {
           },
           {
             type: 'docSidebar',
-            sidebarId: 'superQuerySideBar',
-            position: 'left',
-            label: 'superQuery',
-          },
-          {
-            type: 'docSidebar',
             sidebarId: 'devHubSideBar',
             position: 'left',
             label: 'Developer Hub',
