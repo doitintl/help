@@ -79,7 +79,3 @@ Raising support or consulting requests doesn't require any permission or role.
 ### Sandbox Viewer
 
 - [Create Cloud Sandboxes](../cloud-sandbox-management/create-gcp-sandbox-accounts.md)
-
-### superQuery
-
-- Access to superQuery IDE

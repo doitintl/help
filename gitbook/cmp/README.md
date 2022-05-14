@@ -165,12 +165,6 @@ Within the CMP you can:
 
 {% embed url="https://www.loom.com/share/9ff183270cb84e32817818589a80d37e?sharedAppSource=team_library" %}
 
-<!--
-## Cloud productivity
-
-This section used to contain information about superQuery.
--->
-
 ## Cloud governance
 
 ### Asset management
