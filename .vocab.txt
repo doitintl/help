@@ -79,6 +79,7 @@ ifeq
 iframe
 ignorecase
 imgdup
+imgdupignore
 iops
 knowledgeable
 kpis

@@ -1,0 +1,108 @@
+---
+sidebar_position: 2
+description: A fundamentally new way to save money on your Amazon workloads without making long-term commitments
+---
+
+# Flexsave for AWS
+
+Flexsave is your cloud co-pilot, dynamically maximizing your cloud-compute discounts for [Amazon Web Services](https://aws.amazon.com) (AWS) without any of the risks or limitations of long-term use commitments.
+
+In most cases, save [the equivalent of a 1-year commitment discount](overview.mdx#how-much-can-i-save) on your cloud-compute spend with on-demand access to DoiT International's wholesale inventory of AWS [Savings Plans](https://aws.amazon.com/savingsplans/) (SPs) and AWS [EC2 Reserved Instances](https://aws.amazon.com/ec2/pricing/reserved-instances/) (RIs).
+
+:::info See also
+
+- [Flexsave overview: Benefits](overview.mdx#benefits)
+- [Flexsave overview: How it works](overview.mdx#how-it-works)
+- [Flexsave overview: Start saving](overview.mdx#start-saving)
+
+:::
+
+## Capabilities
+
+### Supported regions
+
+Flexsave supports all AWS [regions](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions).
+
+### Supported instance types
+
+You can check what instances types are available in your region using the [Amazon EC2 Reserved Instances Pricing](https://aws.amazon.com/ec2/pricing/reserved-instances/pricing/) page.
+
+Select the _Convertible Reserved Instances for Amazon EC2_ tab and enter your search criteria. The table of available instance types will automatically refresh.
+
+We currently support:
+
+- Linux-based operating systems
+- Windows-based operating systems (including Microsoft SQL Server)
+
+For customers with dedicated billing accounts, we also support:
+
+- _RedHat Enterprise Linux_ (RHEL) and _SuSe Enterprise Linux_ (SLES)
+
+If you cannot find any [Convertible Reserved Instances](https://docs.aws.amazon.com/whitepapers/latest/cost-optimization-reservation-models/standard-vs.-convertible-offering-classes.html) using one of our supported operating systems (see above) in your region, Flexsave does not support that instance type.
+
+### Supported products
+
+We support the following products:
+
+- [AWS EC2](https://aws.amazon.com/ec2/) &mdash; Secure and resizable compute capacity for virtually any workload
+
+We support these products for customers with dedicated billing accounts:
+
+- [AWS Lambda](https://aws.amazon.com/lambda/) &mdash; Run code without thinking about servers or clusters
+- [AWS Fargate](https://aws.amazon.com/fargate/) &mdash; Serverless compute for containers
+
+We do not support any other products like [AWS RDS](https://aws.amazon.com/rds/), [VMware Cloud on AWS](https://aws.amazon.com/vmware/), and [Amazon ElastiCache](https://aws.amazon.com/elasticache/) at this time.
+
+## Help
+
+### FAQs
+
+:::info
+
+These frequently asked questions (FAQs) apply to Flexsave for AWS.
+
+For platform-agnostic information, see:
+
+- [Flexsave overview: FAQs](overview.mdx#faqs)
+
+:::
+
+#### What changes should I expect to see in my AWS Console?
+
+For customers with a dedicated billing account, Flexsave will dynamically add or remove AWS accounts to your AWS Organization. These accounts carry the Saving Plans used by Flexsave. You should expect to see AWS accounts with 3-year Saving Plans and names like `fs-xxxxx` attached to your AWS organization.
+
+#### Can I use Flexsave if I am already using SPs or RIs?
+
+Yes, you can. Flexsave works exclusively with your on-demand compute usage and excludes anything already covered by your own SPs or RIs.
+
+#### Can Flexsave provide discounts for on-demand capacity reservations?
+
+Flexsave only supports AWS regional reserved instances. Because AWS on-demand capacity reservations require zonal reserved instances, Flexsave does not provide capacity reservation discounts or discounts for [on-demand capacity reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html).
+
+:::note See also
+
+- [AWS EC2 documentation: Regional and zonal reserved instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/reserved-instances-scope.html)
+
+:::
+
+#### I have a special pricing plan on my AWS account. Can I still use Flexsave, and will it impact my existing savings?
+
+Flexsave can still work with your account and will provide savings _in addition to_ the discounts from your pricing plan.
+
+#### How soon after enabling Flexsave should I expect to see the savings?
+
+Customers on a dedicated billing account should expect to see savings within 72 hours.
+
+Customers on a shared billing account should expect to see savings in the first week of the subsequent month. Your savings are delayed because we need to wait for AWS to release your billing data at the end of the month. We need your most recent billing data to analyze resource utilization and determine the optimal savings strategy.
+
+**Why isn't the Savings showing up?**
+
+The savings show with a 3 days delay. At the beginning of a new month, the Savings will show on the 4th day of the month.&#x20;
+
+### Contact us
+
+:::tip
+
+If you have additional questions about Flexsave, please [contact our support team](../services/consulting-support/index.mdx).
+
+:::

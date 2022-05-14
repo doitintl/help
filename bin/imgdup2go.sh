@@ -15,22 +15,26 @@ RESET='\x1b[0m'
 
 assets_dir="${1}"
 
+IMGDUP2GO_IGNORE=.imgdupignore
 IMGDUP2GO_LOCK=.docops/lock/imgdup2go
 mkdir -p "${IMGDUP2GO_LOCK}"
 
-ASSETS_SIG="${IMGDUP2GO_LOCK}/assets.md5sum"
-ASSETS_OUT="${IMGDUP2GO_LOCK}/assets.out"
+ASSETS_BASENAME="$(basename "${assets_dir}")"
+ASSETS_SIG="${IMGDUP2GO_LOCK}/${ASSETS_BASENAME}.md5sum"
+ASSETS_OUT="${IMGDUP2GO_LOCK}/${ASSETS_BASENAME}.out"
 
 handle_exit() {
     if test -s "${ASSETS_OUT}"; then
         sed -E "s,^(.*),${RED}\1${RESET}," <"${ASSETS_OUT}"
-        return 1
+        rm -f "${ASSETS_OUT}"
+        exit 1
     fi
-    return 0
+    rm -f "${ASSETS_OUT}"
+    exit 0
 }
 
 # Reuse the output cache if the signatures match
-md5sum docs/.gitbook/assets/* >"${ASSETS_SIG}.tmp"
+md5sum "${assets_dir}"/* >"${ASSETS_SIG}.tmp"
 if cmp "${ASSETS_SIG}.tmp" "${ASSETS_SIG}" >/dev/null 2>&1; then
     handle_exit
 fi
@@ -40,8 +44,11 @@ echo >"${ASSETS_SIG}"
 
 # Generate the output cache
 echo 'Processing images...'
+# Isolate errors
+
 imgdup2go -dryrun -algo diff -path "${assets_dir}" 2>/dev/null |
     grep "${assets_dir}" |
+    grep -vf "${IMGDUP2GO_IGNORE}" |
     sed -E 's,.* imgdup2go.go:[0-9]+: ,,' \
         >"${ASSETS_OUT}"
 
