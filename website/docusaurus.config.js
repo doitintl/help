@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+require('dotenv').config();
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -147,6 +148,11 @@ const config = {
       },
     }),
   plugins: [],
+  customFields: {
+    ALGOLIA_API_KEY: process.env.ALGOLIA_API_KEY,
+    ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID,
+    INDEX_NAME: process.env.INDEX_NAME,
+  },
 };
 
 module.exports = config;
