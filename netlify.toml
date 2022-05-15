@@ -1,3 +1,10 @@
 [build]
-  publish = "website/build"
-  command = "make build"
+publish = "website/build"
+command = "make build"
+
+[[plugins]]
+package = "@algolia/netlify-plugin-crawler"
+
+[plugins.inputs]
+renderJavaScript = true
+template = "hierarchical"
