@@ -55,6 +55,11 @@ build:
 	$(call print-target)
 	@ $(MAKE) -C website $@
 
+.PHONY: serve # Serve the built website locally
+serve:
+	$(call print-target)
+	@ $(MAKE) -C website serve
+
 .PHONY: telemetry # Generate telemetry data
 telemetry:
 
