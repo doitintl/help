@@ -114,9 +114,15 @@ Customers on a dedicated billing account should expect to see savings within 72 
 
 Customers on a shared billing account should expect to see savings in the first week of the subsequent month. Your savings are delayed because we need to wait for AWS to release your billing data at the end of the month. We need your most recent billing data to analyze resource utilization and determine the optimal savings strategy.
 
-**Why isn't the Savings showing up?**
+#### Why isn't my Savings showing up?
 
-The savings show with a 3 days delay. At the beginning of a new month, the Savings will show on the 4th day of the month.&#x20;
+Savings for a new month will show up with a three-day delay (i.e., the 4th day of a new month).
+
+#### How long does an instance have to run before it qualifies for Flexsave?
+
+For customers with shared billing accounts, Flexsave allocates capacity for the current month based on utilization during the last 7 days of the previous month.
+
+For customers with dedicated billing accounts, qualification is instantaneous as long as it falls under covered spend.
 
 ### Contact us
 
