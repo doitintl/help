@@ -53,6 +53,7 @@ enablement
 endef
 endembed
 endhint
+escheck
 espa
 fargate
 fdfind
@@ -62,6 +63,7 @@ firestore
 flexri
 flexsave
 francesc
+fssa
 fullstory
 gcloud
 geneve
@@ -90,6 +92,7 @@ lintspaces
 loglevel
 maci
 mailto
+markdowncheck
 markdownlint
 martialonline
 matchdotfiles
@@ -182,5 +185,6 @@ walkthrough
 warranwood
 xlarge
 xpra
+yamlcheck
 zendesk
 zocalo

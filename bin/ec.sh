@@ -11,4 +11,5 @@
 LC_ALL=C
 export LC_ALL
 
-ec
+fdfind -H -t f --print0 |
+    xargs -0 ec

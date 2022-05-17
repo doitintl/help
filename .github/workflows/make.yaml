@@ -1,20 +1,36 @@
-name: CICD
+name: Make
 
 on:
   pull_request:
   push:
     branches:
       - main
+      - feature/fssa
 
 jobs:
-  checks:
-    name: Checks
+  check:
+    name: Check
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/doitintl/docops/devcontainer:main
     steps:
       - uses: actions/checkout@v2
       - run: make check
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/doitintl/docops/devcontainer:main
+    steps:
+      - uses: actions/checkout@v2
+      - run: make build
+  telemetry:
+    name: Telemetry
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/doitintl/docops/devcontainer:main
+    steps:
+      - uses: actions/checkout@v2
       - run: make telemetry
       - uses: crazy-max/ghaction-github-status@v2
         with:
@@ -30,7 +46,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   notification:
     name: Notification
-    needs: checks
+    needs:
+      - check
+      - build
+      - telemetry
     if: always() && github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:

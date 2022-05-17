@@ -7,8 +7,6 @@
 # POSIX locale
 LC_ALL = C
 
-BUILD_ERRORS = build.err
-
 .DEFAULT_GOAL = help
 
 .PHONY: help
@@ -38,10 +36,7 @@ start: install
 .PHONY: build # Bundle the website into static files for production
 build: install
 	rm -f $(BUILD_ERRORS)
-	yarn build 2>$(BUILD_ERRORS)
-	sed -i -E '/^($$|[^a-zA-Z])/d' $(BUILD_ERRORS)
-	if test -s $(BUILD_ERRORS); then cat $(BUILD_ERRORS); exit 1; fi
-	rm -f $(BUILD_ERRORS)
+	yarn build
 
 .PHONY: serve # Serve the built website locally
 serve: install

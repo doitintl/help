@@ -34,15 +34,8 @@ help:
 		column -s '#' -t | \
 		sed -E "s,^([a-z]+),  \1,"
 
-.PHONY: check # Lint the project and test the build
-check: lint build
-
-.PHONY: lint # Run all lint checks
-lint:
-
-.PHONY: lint-parallel
-lint-parallel: # Run all lint checks in parallel
-	@ $(MAKE) --no-print-directory -j --output-sync=target lint
+.PHONY: check # Run all checks
+check:
 
 .PHONY: start # Start the Docusaurus development server
 start:
@@ -50,7 +43,6 @@ start:
 	@ $(MAKE) -C website start
 
 .PHONY: build # Build the Docusaurus website
-check: build
 build:
 	$(call print-target)
 	@ $(MAKE) -C website $@
@@ -73,70 +65,70 @@ clean:
 # -----------------------------------------------------------------------------
 
 only-ascii:
-lint: only-ascii
+check: only-ascii
 
 ec:
-lint: ec
+check: ec
 
 lintspaces:
-lint: lintspaces
+check: lintspaces
 
 prettier:
-lint: prettier
+check: prettier
 
-yamllint:
-lint: yamllint
+yamlcheck:
+check: yamllint
 
 shellcheck:
-lint: shellcheck
+check: shellcheck
 
 shfmt:
-lint: shfmt
+check: shfmt
 
 good-filenames:
-lint: good-filenames
+check: good-filenames
 
 rm-unused-docs-dry:
-lint: rm-unused-docs-dry
+check: rm-unused-docs-dry
 
 rm-unused-assets-dry:
-lint: rm-unused-assets-dry
+check: rm-unused-assets-dry
 
-markdownlint:
-lint: markdownlint
+markdowncheck:
+check: markdownlint
 
 html-entities:
-lint: html-entities
+check: html-entities
 
 inline-html:
-lint: inline-html
+check: inline-html
 
-eslint:
-lint: eslint
+escheck:
+check: eslint
 
 update-vocab-dry:
-lint: update-vocab-dry
+check: update-vocab-dry
 
 cspell:
-lint: cspell
+check: cspell
 
 misspell:
-lint: misspell
+check: misspell
 
 textlint-dry:
-lint: textlint-dry
+check: textlint-dry
 
 vale:
-lint: vale
+check: vale
 
 markdown-link-check:
-lint: markdown-link-check
+check: markdown-link-check
 
 brok:
-lint: brok
+check: brok
 
 fdupes:
-lint: fdupes
+check: fdupes
 
 IMGDUP2GO := $(BIN_DIR)/imgdup2go.sh
 
@@ -148,7 +140,7 @@ imgdup2go:
 	$(IMGDUP2GO) website/static/img/docs
 
 optipng-dry:
-lint: optipng-dry
+check: optipng-dry
 
 # telemetry
 # -----------------------------------------------------------------------------

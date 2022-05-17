@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+
 require('dotenv').config();
 
 /** @type {import('@docusaurus/types').Config} */
@@ -26,9 +27,8 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/doitintl/docs/tree/main/docusaurus/docs',
+          editUrl: 'https://github.com/doitintl/help/tree/main/website/docs',
+          showLastUpdateTime: true,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -146,6 +146,14 @@ const config = {
         darkTheme: darkCodeTheme,
         additionalLanguages: ['shell-session', 'java'],
       },
+      /*
+      // Disabled until the index page search bar can be styled independently
+      algolia: {
+        appId: process.env.ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_API_KEY,
+        indexName: process.env.INDEX_NAME,
+      },
+      */
     }),
   plugins: [],
   customFields: {
