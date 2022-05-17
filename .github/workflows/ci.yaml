@@ -1,4 +1,4 @@
-name: Make
+name: CI
 
 on:
   pull_request:
@@ -50,7 +50,10 @@ jobs:
       - check
       - build
       - telemetry
-    if: always() && github.event_name != 'pull_request'
+    if: |
+      always()
+      && github.event_name != 'pull_request'
+      && github.ref_name == 'main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -60,7 +63,7 @@ jobs:
         env:
           STATUS: '{workflow} workflow <{run_url}|{status_message}>'
           COMMIT: for commit `<{commit_url}|{commit_sha}>`
-          BRANCH: on branch `{branch}`
+          BRANCH: on branch `${{ github.ref_name }}`
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         with:
           status: ${{ steps.check.outputs.status }}

@@ -2,10 +2,10 @@
 
 _DoiT International Help Center and product documentation_
 
-[![Make][actions-make-img]][actions-make-workflow]
+[![CI][actions-ci-img]][actions-ci-workflow]
 
-[actions-make-img]: https://github.com/doitintl/docs/actions/workflows/make.yaml/badge.svg
-[actions-make-workflow]: https://github.com/doitintl/docs/actions/workflows/make.yaml
+[actions-ci-img]: https://github.com/doitintl/docs/actions/workflows/ci.yaml/badge.svg
+[actions-ci-workflow]: https://github.com/doitintl/docs/actions/workflows/ci.yaml
 
 **Table of contents**
 
