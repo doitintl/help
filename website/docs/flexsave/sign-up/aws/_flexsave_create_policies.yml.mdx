@@ -1,0 +1,86 @@
+```yaml
+Description: This template creates a policy to allow Flexsave to mange saving plans.
+Parameters:
+  CustomerId:
+    Type: String
+    Description: Customer ID for Cross-Account-Role
+  S3Bucket:
+    Type: String
+    Description: CUR S3 Bucket URL
+  CurPath:
+    Type: String
+    Description: CUR S3 Bucket Path
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      - Label:
+          default: 'Cross-Account Role Configuration.  *Do Not Modify*'
+        Parameters:
+          - CustomerId
+          - S3Bucket
+          - CurPath
+Resources:
+  OrgBillingPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: doitintl_cmp
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Sid: Management
+            Action:
+              - organizations:ListAccounts*
+              - organizations:ListHandshakes*
+              - organizations:DescribeOrganization
+              - organizations:DescribeAccount
+              - organizations:DescribeHandshake
+              - organizations:InviteAccountToOrganization
+            Resource: '*'
+          - Effect: Allow
+            Sid: CostAndUsage
+            Action:
+              - ec2:DescribeReservedInstances
+              - savingsplans:DescribeSavingsPlans
+              - ce:Get*
+              - cur:DescribeReportDefinitions
+            Resource: '*'
+          - Effect: Allow
+            Sid: Onboarding
+            Action:
+              - iam:GetRole
+              - iam:GetPolicy
+            Resource:
+              - !Sub 'arn:aws:iam::${AWS::AccountId}:role/doitintl_cmp'
+              - !Sub 'arn:aws:iam::${AWS::AccountId}:policy/doitintl_cmp'
+          - Effect: Allow
+            Sid: S3Bucket
+            Action:
+              - s3:ListBucket
+            Resource: !Sub
+              - 'arn:aws:s3:::${BucketName}'
+              - BucketName: !Ref S3Bucket
+          - Effect: Allow
+            Sid: S3Object
+            Action:
+              - s3:GetObject
+            Resource: !Sub
+              - 'arn:aws:s3:::${BucketName}/*'
+              - BucketName: !Ref S3Bucket
+      Roles:
+        - 'doitintl_cmp'
+  DoitCmpHook:
+    Type: Custom::DoitCmpHook
+    Properties:
+      ServiceToken: 'arn:aws:sns:us-east-1:068664126052:doitintl-aws-connect'
+      RoleArn: 'doitintl_cmp'
+      AccountID: !Ref 'AWS::AccountId'
+      ExternalID: !Ref CustomerId
+      NotificationUrl: 'https://scheduled-tasks-dot-me-doit-intl-com.uc.r.appspot.com/webhooks/v1/flexsave-standalone-aws/update-billing'
+      S3Bucket: !Ref S3Bucket
+      CurPath: !Ref CurPath
+    Version: '1.0'
+Outputs:
+  RoleName:
+    Value: 'doitintl_cmp'
+```

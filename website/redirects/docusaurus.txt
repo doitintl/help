@@ -1,1 +1,13 @@
-# /docs/amazon-web-services/  /docs/amazon-web-services/invite-existing-aws-account
+/docs/amazon-web-services/                  /docs/amazon-web-services/invite-existing-aws-account
+/docs/flexsave/aws                          /docs/flexsave/csp/aws
+/docs/flexsave/gcp                          /docs/flexsave/csp/gcp
+/docs/flexsave/onboarding/aws               /docs/flexsave/sign-up/aws/get-estimate
+/docs/flexsave/onboarding/aws/activate      /docs/flexsave/sign-up/aws/activate
+/docs/flexsave/onboarding/aws/get-estimate  /docs/flexsave/sign-up/aws/get-estimate
+/docs/flexsave/onboarding/gcp               /docs/flexsave/sign-up/gcp/get-estimate
+/docs/flexsave/onboarding/gcp/activate      /docs/flexsave/sign-up/gcp/activate
+/docs/flexsave/onboarding/gcp/get-estimate  /docs/flexsave/sign-up/gcp/get-estimate
+/docs/flexsave/overview                     /docs/flexsave
+/flexsave/aws                               /docs/flexsave/csp/aws
+/flexsave/gcp                               /docs/flexsave/csp/gcp
+/flexsave/overview                          /docs/flexsave

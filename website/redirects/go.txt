@@ -6,43 +6,43 @@
 # =============================================================================
 
 # Learn more about Flexsave
-/go/flexsave/sign-up                                            /_blank.txt 200
+/go/flexsave/sign-up                                 /docs/flexsave
 
 # GCP setup estimate
 # -----------------------------------------------------------------------------
 
 # Learn about how Flexsave works
-/go/flexsave/sign-up/gcp/estimate/how-it-works                  /_blank.txt 200
+/go/flexsave/sign-up/gcp/estimate/how-it-works       /docs/flexsave/csp/gcp
 
 # Learn about required policies
-/go/flexsave/sign-up/gcp/estimate/policies                      /_blank.txt 200
+/go/flexsave/sign-up/gcp/estimate/policies           /docs/flexsave/sign-up/gcp/get-estimate#set-up-your-estimate
 
 # Review our data compliance information
-/go/flexsave/sign-up/gcp/compliance                             /_blank.txt 200
+/go/flexsave/sign-up/gcp/compliance                  /docs/flexsave/sign-up/gcp/security-compliance
 
 # AWS setup estimate
 # -----------------------------------------------------------------------------
 
 # Learn about how Flexsave works
-/go/flexsave/sign-up/aws/estimate/how-it-works                  /_blank.txt 200
+/go/flexsave/sign-up/aws/estimate/how-it-works       /docs/flexsave/csp/aws
 
 # Learn about required policies
-/go/flexsave/sign-up/aws/estimate/policies                      /_blank.txt 200
+/go/flexsave/sign-up/aws/estimate/policies           /docs/flexsave/sign-up/aws/get-estimate#TBD
 
 # Review our data compliance information
-/go/flexsave/sign-up/aws/compliance                             /_blank.txt 200
+/go/flexsave/sign-up/aws/compliance                  /docs/flexsave/sign-up/aws/security-compliance
 
 # GCP activation
 # -----------------------------------------------------------------------------
 
 # Learn about required policies
-/go/flexsave/sign-up/gcp/activate/policies                      /_blank.txt 200
+/go/flexsave/sign-up/gcp/activate/policies           /docs/flexsave/sign-up/gcp/activate#activate-flexsave-for-gcp
 
 # AWS Activation
 # -----------------------------------------------------------------------------
 
 # Find your S3 bucket URL and CUR path
-/go/flexsave/sign-up/aws/activate/cost-usage-report             /_blank.txt 200
+/go/flexsave/sign-up/aws/activate/cost-usage-report  /docs/flexsave/sign-up/aws/activate#TBD
 
 # Learn about required policies
-/go/flexsave/sign-up/aws/activate/policies                      /_blank.txt 200
+/go/flexsave/sign-up/aws/activate/policies           /docs/flexsave/sign-up/aws/activate#TBD

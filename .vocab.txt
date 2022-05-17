@@ -170,6 +170,7 @@ skus
 sles
 smallhadroncollider
 spotscaling
+ssds
 stax
 stefanzweifel
 stereobooster
@@ -193,7 +194,6 @@ trunc
 truste
 udfs
 uncheck
-underutilization
 unmatch
 unnest
 unpartitioned

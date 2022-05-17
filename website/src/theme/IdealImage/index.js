@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import clsx from 'clsx';
 import ReactIdealImage from '@endiliey/react-ideal-image';
 import Zooming from 'zooming';
 
@@ -182,7 +183,7 @@ function getFallbackPath(obj) {
 }
 
 export default function IdealImage(props) {
-  const { alt, img } = props;
+  const { alt, img, frame } = props;
   const ref = React.createRef();
   const fallbackPath = getFallbackPath(img);
 
@@ -208,10 +209,11 @@ export default function IdealImage(props) {
     });
 
     return (
-      <div className={styles.idealImageContainer} ref={ref}>
+      <div className={clsx(frame, styles.idealImageContainer)} ref={ref}>
         <img
           src={fallbackPath}
           alt={alt}
+          title={alt}
           className={styles.devImage}
           {...newProps}
         />
@@ -227,10 +229,11 @@ export default function IdealImage(props) {
   }
 
   return (
-    <div className={styles.idealImageContainer} ref={ref}>
+    <div className={clsx(frame, styles.idealImageContainer)} ref={ref}>
       <ReactIdealImage
         {...props}
         alt={alt}
+        title={alt}
         className={styles.idealImage}
         theme={idealImageTheme}
         width={width}
