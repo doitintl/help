@@ -35,6 +35,9 @@ max_line_length = off
 [.markdown-link-check.json]
 max_line_length = off
 
+[{template.json,dispatch.yaml}]
+max_line_length = off
+
 [*.md5sum]
 max_line_length = off
 

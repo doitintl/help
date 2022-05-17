@@ -150,6 +150,7 @@ serv
 serviceusage
 shellcheck
 shfmt
+signcl
 skus
 sles
 smallhadroncollider
@@ -157,6 +158,7 @@ spotscaling
 stax
 stopwords
 stra
+sublist
 subnetworks
 subprocessor
 subprocessors
@@ -168,6 +170,7 @@ theodor
 tmpl
 tolower
 toolset
+tostring
 trifacta
 trunc
 truste
