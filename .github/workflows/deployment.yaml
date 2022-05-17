@@ -1,0 +1,11 @@
+on:
+  repository_dispatch:
+    types:
+      - deployment
+
+jobs:
+  check:
+    name: Check
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.event.client_payload.deploy_url }}
