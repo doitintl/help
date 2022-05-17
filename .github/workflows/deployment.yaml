@@ -1,11 +1,23 @@
+name: Deployment
+
 on:
   repository_dispatch:
     types:
       - deployment
 
 jobs:
-  check:
-    name: Check
+  handle:
+    name: Handle
     runs-on: ubuntu-latest
+    env:
+      BRANCH: ${{ github.event.client_payload.branch }}
+      DEPLOY_URL: ${{ github.event.client_payload.deploy_url }}
     steps:
-      - run: echo ${{ github.event.client_payload.deploy_url }}
+      - uses: actions/checkout@v2
+      - run: |
+          cat .docops/algolia-template.json |
+          jq '.index_name = "${{ env.BRANCH }}"' |
+          jq '.start_urls = ["${{ env.DEPLOY_URL }}/"]' |
+          jq '.sitemap_urls = ["${{ env.DEPLOY_URL }}/sitemap.xml"]' \
+          > .docops/algolia.json
+      - run: cat .docops/algolia.json
