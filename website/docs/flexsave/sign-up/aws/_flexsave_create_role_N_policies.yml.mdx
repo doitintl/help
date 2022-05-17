@@ -1,0 +1,54 @@
+```yaml
+Description: This template creates a Cross-Account-Role that will grant DoiT Flexsave permissions to get your AWS recommendations
+Parameters:
+  CustomerId:
+    Type: String
+    Description: Customer ID for Cross-Account-Role
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      - Label:
+          default: 'Cross-Account Role Configuration.  *Do Not Modify*'
+        Parameters:
+          - CustomerId
+Resources:
+  CrossAccountRole:
+    Properties:
+      Description: DoiT International Flexsave
+      RoleName: 'doitintl_cmp'
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action:
+              - 'sts:AssumeRole'
+            Effect: Allow
+            Principal:
+              AWS: !Sub arn:aws:iam::068664126052:root
+            Sid: 'Estimations'
+        Version: '2012-10-17'
+      Path: '/'
+      Policies:
+        - PolicyDocument:
+            Statement:
+              - Action:
+                  - 'ce:GetSavingsPlansPurchaseRecommendation'
+                  - 'ce:GetCostAndUsage'
+                Effect: Allow
+                Resource: '*'
+            Version: '2012-10-17'
+          PolicyName: FlexsaveGetRecommendationsPolicy
+    Type: 'AWS::IAM::Role'
+  DoitCmpHook:
+    Type: Custom::DoitCmpHook
+    Properties:
+      ServiceToken: 'arn:aws:sns:us-east-1:068664126052:doitintl-aws-connect'
+      RoleArn: !GetAtt CrossAccountRole.Arn
+      AccountID: !Ref 'AWS::AccountId'
+      ExternalID: !Ref CustomerId
+      NotificationUrl: 'https://scheduled-tasks-dot-me-doit-intl-com.uc.r.appspot.com/webhooks/v1/flexsave-standalone-aws/update-recommendations'
+    Version: '1.0'
+Outputs:
+  RoleName:
+    Value: !Ref CrossAccountRole
+  RoleArn:
+    Value: !GetAtt CrossAccountRole.Arn
+```

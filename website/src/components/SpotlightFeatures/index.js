@@ -27,7 +27,7 @@ const featureListRow1 = [
       'Flexsave is your cloud co-pilot, dynamically maximizing your \
       cloud-compute discounts for AWS and Google Cloud without any of the \
       risks or limitations of long-term use commitments.',
-    link: '/docs/flexsave/overview',
+    link: '/docs/flexsave',
   },
 ];
 

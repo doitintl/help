@@ -1,0 +1,142 @@
+---
+sidebar_label: Get your savings estimate
+sidebar_position: 1
+---
+
+# Get your savings estimate for Amazon Web Services
+
+import Hook from '../_hook.mdx';
+
+<Hook name="Amazon Web Services" abbr="AWS" />
+
+import Preamble from '../../_aws-preamble.mdx';
+
+<Preamble indexHref={require('../../index.mdx')} />
+
+import CreateAccount from '../_create-account.mdx';
+
+<CreateAccount />
+
+## Create your savings estimate
+
+import EstimatePreamble from '../_estimate-preamble.mdx';
+
+<EstimatePreamble csp="Amazon Web Services" />
+
+### Create a CloudFormation stack
+
+After selecting _GET ESTIMATE_, the sign-up flow will advance you to the next screen which contains instructions for creating a CloudFormation stack.
+
+Follow the instructions on screen to create your CloudFormation stack.
+
+#### More information
+
+DoiT uses the [Cost Explorer API][cost-explorer-api] to fetch aggregated information about your spend with AWS. This information doesn't contain names of your machines, buckets or tags. This information will enable the calculation of your potential savings with Flexsave.
+
+To use the Cost Explorer API, we have prepared a template [CloudFormation stack][cloudformation stack] stack that creates a [Cross-Account role][cross-account-role] that grants DoiT International limited read-only permissions to query your AWS account (see below for details).
+
+To create the CloudFormation stack, select the _OPEN AWS CLOUDFORMATION CONSOLE_ button. The browser will open a window prompting you to log into your AWS console.
+
+:::warning
+
+You must authenticate as a [management account][management-account] (i.e., a _payer account_) to continue.
+
+If your account is merely linked to a management account (e.g., for [consolidated billing][consolidated-billing]), you will not be able to continue.
+
+:::
+
+After logging in to your AWS console, AWS will prompt you to [create the CloudFormation stack][create-stack] from our template configuration:
+
+<picture
+  img={require('../../../../assets/png/aws-flexsave-create-stack-cost-explorer.png')}
+  alt="A screenshot of the AWS _Quick create stack_ screen"
+/>
+
+You can [download the YAML file][cost-explorer-yaml] using the displayed _Template URL_ to view the template stack definition.
+
+The YAML file looks like this:
+
+import YAML from './_flexsave_create_role_N_policies.yml.mdx';
+
+<YAML />
+
+In summary, this stack creates:
+
+- An [Cross-Account role][cross-account-role] named `doitintl_cmp` with read-only permissions to:
+  - [Get AWS savings plans purchase recommendations][get-savings-plans-rec]
+  - [Get AWS cost and usage metrics][get-cost-usage]
+- A webhook that tells us when the stack is created
+
+This configuration allows Flexsave to get the information it needs to determine the optimal way to reduce your monthly cloud spend.
+
+If you are happy with the configuration, scroll to the bottom of the page and
+select the _Capabilities_ checkbox indicating that you acknowledge that AWS CloudFormation might create IAM resources with custom names (in this instance, the `doitintl_cmp` role).
+
+Finally, select _CREATE STACK_
+
+The AWS console will take you to the stack overview screen:
+
+<picture
+  img={require('../../../../assets/png/aws-flexsave-create-stack-cost-explorer-done.png')}
+  alt="A screenshot of the AWS _Quick create stack_ screen"
+/>
+
+At first, the status of your stack will be `CREATE_IN_PROGRESS`. Eventually the status will change to `CREATE_COMPLETE`. We will wait for the stack to be created before attempting to fetch your billing data.
+
+When you are ready, switch back to the sign-up flow and select the **VIEW MY ESTIMATE** button.
+
+:::caution
+
+You may have to wait up to 30 seconds while AWS CloudFormation creates the stack and we fetch your billing data. If this process fails, an alert will be shown directing you to contact support.
+
+If this happens, wait another 30 seconds and try again.
+
+:::
+
+## Your savings estimate
+
+After your CloudFormation stack is created and we have successfully fetched your billing data, you will be automatically redirected to the savings estimate screen.
+
+<picture
+  img={require('../../../../assets/png/flexsave-aws-savings-estimation.png')}
+  alt="AWS savings estimate"
+  frame="drop-shadow"
+/>
+
+import EstimateDesc from '../_estimate-desc.mdx';
+
+<EstimateDesc />
+
+When you're ready, select **RETURN TO HOME** to review the steps needed to [activate
+Flexsave](activate.mdx).
+
+<!--
+This screen displays your personalized savings estimation, which is, in part, calculated using the data fetched from your AWS account in the previous step.
+
+In the example above, you can see:
+
+- Last month, the customer's cloud compute costs totaled $48,765.01
+- Flexsave could have reduced those costs to $32,671.63, lowering their monthly spend by $16,093.38
+- If the customer enables Flexsave, they could save an estimated $175k&ndash;$232k over the next 12 months (based on 0&ndash;5% annual growth)
+
+_The actual figures shown may differ from the example shown above._
+-->
+
+<!--
+
+## Next steps
+
+After reviewing your personalized savings estimation, you can [activate Flexsave](activate.mdx).
+
+--->
+
+[cost-explorer-api]: https://docs.aws.amazon.com/cost-management/latest/userguide/ce-api.html
+[cloudformation stack]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html
+[cost-explorer-yaml]: https://doit-cmp-ops-pub.s3.amazonaws.com/prod/flexsave_create_role_N_policies.yml
+[management-account]: https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#account
+[consolidated-billing]: https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html
+[savings-plans]: https://aws.amazon.com/savingsplans/
+[get-savings-plans-rec]: https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_get-savings-plans-rec.html
+[get-cost-usage]: https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_get-cost-usage.html
+[create-stack]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-create-stack.html
+[cross-account-role]: https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html

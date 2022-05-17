@@ -79,6 +79,6 @@
 /hc/en-us/sections/360008583992-Cloud-Sandbox-Management                                                   /docs/cmp#cloud-sandboxes
 /hc/en-us/sections/360008805191-G-Suite                                                                    /docs/cmp#asset-management
 /hc/en-us/sections/360008830772-Anomaly-Detection                                                          /docs/cmp#cost-anomalies
-/hc/en-us/sections/360008939951-AWS-Flex-RIs                                                               /docs/flexsave/aws
+/hc/en-us/sections/360008939951-AWS-Flex-RIs                                                               /docs/flexsave/csp/aws
 /hc/en-us/sections/360009379892-Cloud-Analytics                                                            /docs/cmp#cloud-analytics
 /hc/en-us/sections/360009379892-Cloud-Reports                                                              /docs/cmp#reports

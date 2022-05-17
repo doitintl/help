@@ -1,0 +1,86 @@
+---
+sidebar_label: Get your savings estimate
+sidebar_position: 1
+---
+
+# Get your savings estimate for Google Cloud Platform
+
+import Hook from '../_hook.mdx';
+
+<Hook csp="Google Cloud Platform" abbr="GCP" />
+
+import Preamble from '../../_gcp-preamble.mdx';
+
+<Preamble indexHref={require('../../index.mdx')} />
+
+import CreateAccount from '../_create-account.mdx';
+
+<CreateAccount />
+
+## Create your savings estimate
+
+import EstimatePreamble from '../_estimate-preamble.mdx';
+
+<EstimatePreamble csp="Google Cloud Platform" />
+
+import Link from '@docusaurus/Link';
+
+1. Fill in your organization ID on the estimate page.
+
+   See [Google Cloud Docs](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id) for help finding your organization ID. The code snippets will be updated automatically once the organization ID is provided.
+
+1. Open the Google Cloud Shell, copy the command code snippets and run them in sequence in the shell.
+
+   1. Create a custom role named `DoiT Flexsave Role` in your organization:
+
+      ```bash
+      gcloud iam roles create doit_flexsave_role \
+          --organization $ORGANIZATION_ID \
+          --title="DoiT Flexsave Role" \
+          --stage=GA \
+          --permissions=recommender.usageCommitmentRecommendations.list,compute.instances.list
+      ```
+
+      This command grants the custom role the following permissions:
+
+      <dl>
+        <dt>
+          <code>recommender.usageCommitmentRecommendations.list</code>
+        </dt>
+        <dd>
+          Allows to view resource-based committed use discount
+          recommendations using Google's{' '}
+          <Link to="https://cloud.google.com/docs/cuds-recommender">
+            CUD recommender
+          </Link>
+        </dd>
+        <dt>
+          <code>compute.instances.list</code>
+        </dt>
+        <dd>Allows to view compute instances</dd>
+      </dl>
+
+   1. Add an IAM policy binding to associate the `doit_flexsave_role` role to the service account.
+
+      ```bash
+      gcloud organizations add-iam-policy-binding $ORG_ID \
+          --member=serviceAccount:$DoiT_service_account_email \
+          --role=organizations/$ORG_ID/roles/doit_flexsave_role
+      ```
+
+1. Select the **View my estimate** button to see the estimation result.
+
+## Your savings estimate
+
+<picture
+  img={require('../../../../assets/png/flexsave-gcp-savings-estimation.png')}
+  alt="GCP savings estimate"
+  frame="drop-shadow"
+/>
+
+import EstimateDesc from '../_estimate-desc.mdx';
+
+<EstimateDesc />
+
+When you're ready, select **RETURN TO HOME** to review the steps needed to [activate
+Flexsave](activate.mdx).

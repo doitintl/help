@@ -59,7 +59,7 @@ trap recompress EXIT
 
 tmp_errors="$(mktemp)"
 find . -type f -name '*.png' -print |
-    grep -vE '(node_modules|build)' |
+    grep -vE '(node_modules/|build/)' |
     sort -n |
     while read -r file; do
         sig_file="${OPTIPNG_LOCK_DIR}/${file}.md5sum"

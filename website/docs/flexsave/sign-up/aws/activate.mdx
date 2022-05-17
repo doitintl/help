@@ -1,0 +1,190 @@
+---
+sidebar_label: Activate Flexsave
+sidebar_position: 3
+---
+
+# Activate Flexsave for Amazon Web Services
+
+## Provide payment information
+
+import SetUpBilling from '../_set-up-billing.mdx';
+
+<SetUpBilling />
+
+Upon completion, you will be taken to back to the Flexsave for AWS screen:
+
+<picture
+  img={require('../../../../assets/png/flexsave-aws-landing-estimate-done.png')}
+  alt="Flexsave AWS landing page after creating billing profile"
+  frame="drop-shadow"
+/>
+
+Here you can:
+
+- Select the **VIEW** button to check your payment information.
+- Select the **SET UP FLEXSAVE** button to continue the activation process.
+
+## Set up Flexsave
+
+After selecting **SET UP FLEXSAVE**, you will be presented with the _DoiT International Flexsave Agreement_.
+
+To proceed with Flexsave activation, you must read the agreement text in full, complete the short accompanying form (two checkboxes), and select **CONFIRM AGREEMENT**.
+
+### Prepare your AWS Cost and Usage Report
+
+Flexsave works by dynamically attaching DoiT-owned AWS accounts with [Saving Plans][savings-plans] to your organization. These accounts contain no resources other than Savings Plans. When our AWS accounts are attached to your organization, AWS automatically applies DoiT's Savings Plans to your eligible compute workloads.
+
+To provide the additional access needed for Flexsave to work, we have prepared a another template CloudFormation stack stack for you to create.
+
+However, before doing that, you will need supply an AWS [Cost and Usage Report](https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html) (CUR). We will periodically fetch this report and use the data to model your current and future compute usage, allowing Flexsave to predict the ideal blend of Savings Plans to maximize your coverage.
+
+:::tip
+
+You may already have an Cost and Usage Report set up for your AWS account.
+
+However, unless it matches the specification required for Flexsave (detailed in the next section), you will need to reconfigure it or create a new one. _Many of our customers find it easier and more intuitive to create a new report than to reconfigure an existing one._
+
+The cost of creating a new Cost and Usage Report is the same as the cost of a small S3 bucket.
+
+:::
+
+#### Create a new report
+
+To create a new AWS Cost and Usage Report, follow the instructions in the [AWS: Create a Cost and Usage Report](https://docs.aws.amazon.com/cur/latest/userguide/cur-create.html) document, with the following in mind:
+
+- You must select **Include resource IDs**
+- The **Data refresh settings** setting has no effect on Flexsave
+- When you **Configure S3 Bucket**, make a note of the S3 bucket name you choose (you will need it for the next section)
+- Make a note of the **Report path prefix** you choose (you will need it for the next section)
+- For **Time granularity**, you must select **Hourly**
+- **Report versioning** has no effect on Flexsave
+- For **Enable report data integration for**, select **Amazon Redshift or Amazon QuickSight** (i.e., produces CSV files with `.gz` compression)
+
+When you're done, your report should look something like this:
+
+<picture
+  img={require('../../../../assets/png/aws-cur-overview.png')}
+  alt="AWS Cost and Usage Report overview screen"
+  frame="drop-shadow"
+/>
+
+In the example above, note:
+
+- The **S3 bucket** value is `flexsave reports`
+- The **Report path prefix** value is `CUR/flexsave-cur-report`
+- The **Time granularity** value is **Hourly**
+- The **Compression type** value is **GZIP**
+- The **File format** value is `text/csv`
+- The **Report content** list contains **Resource IDs**
+
+:::tip
+
+From this list, you are free to choose a custom **S3 bucket** name and **Report path prefix**. However, your report must match all of the other values.
+
+:::
+
+<!--
+:::info See also
+
+- [AWS: Creating Cost and Usage Reports](https://docs.aws.amazon.com/cur/latest/userguide/cur-create.html)
+- [AWS: Viewing your Cost and Usage Report](https://docs.aws.amazon.com/cur/latest/userguide/view-cur.html)
+
+:::
+--->
+
+#### Verify access to your report files
+
+Before you proceed to the next section and create your CloudFormation stack, you must:
+
+- Wait for your report to be run at least one time (this should happen within an hour)
+- Verify that at least one report file (with a `.gz` suffix) is visible in the S3 bucket at the path you configured when creating the report
+
+### Provide access to activate Flexsave AWS
+
+After verifying access to your report files in the previous section, return to the Flexsave sign-up flow, and complete the form:
+
+1. For **S3 bucket**, enter the bucket name you chose for the **Configure S3 Bucket** step when [creating the AWS Cost and Usage Report](#create-a-new-report) in the previous section
+
+2. For **Report path prefix**, enter the path prefix you chose for the **Report path prefix** step when [creating the AWS Cost and Usage Report](#create-a-new-report) in the previous section
+
+When you are done, select the **OPEN AWS CLOUDFORMATION CONSOLE** button.
+
+:::info
+
+If we are unable to access access your report files, the page will display an error message. If this happens to you, it may be for one of the following reasons:
+
+- Either of the **S3 bucket URL** or **Report path prefix** value may be incorrect
+- Your report has not run yet (see [Verify access to your report files](#verify-access-to-your-report-files))
+
+:::
+
+#### Create your CloudFormation stack
+
+If we are able to successfully access your report files, the browser will open a window prompting you to log into your AWS console.
+
+:::warning
+
+Your you must authenticate as the same account used to [get your estimation](get-estimate.mdx), which should have been a [management account][management-account] (i.e., a _payer account_).
+
+:::
+
+After logging in to your AWS console, AWS will prompt you to [create the CloudFormation stack][create-stack] from our template configuration:
+
+<picture
+  img={require('../../../../assets/png/aws-flexsave-create-stack-org-access.png')}
+  alt="A screenshot of the AWS _Quick create stack_ screen"
+/>
+
+You can [download the YAML file][org-access-yaml] using the displayed _Template URL_ to view the template stack definition.
+
+The YAML file looks like this:
+
+import YAML from './_flexsave_create_policies.yml.mdx';
+
+<YAML />
+
+In summary, this stack creates:
+
+- Role name `doitintl_cmp`
+- Policy name `doitintl_cmp`
+- A `Management` group for adding, removing, and overseeing our account inventory of Savings Plans
+- A `CostAndUsage` group to track cost and recommendations
+<!-- Long term we will transition to billing data, but `CostAndUsage` is used for now -->
+- A `Onboarding` group to periodically check permissions on our roles and policies
+- The `S3Bucket` and `S3Object` groups to get CURs
+
+This configuration allows Flexsave to get the information it needs to determine the optimal way to reduce your monthly cloud spend.
+
+If you are happy with the configuration, scroll to the bottom of the page and
+select the **Capabilities** checkbox indicating that you acknowledge that AWS CloudFormation might create IAM resources with custom names (in this instance, the `doitintl_cmp` role).
+
+Finally, select **CREATE STACK**.
+
+The AWS console will take you to the stack overview screen:
+
+<picture
+  img={require('../../../../assets/png/aws-flexsave-create-stack-cost-explorer-done.png')}
+  alt="A screenshot of the AWS _Quick create stack_ screen"
+/>
+
+At first, the status of your stack will be `CREATE_IN_PROGRESS`. Eventually the status will change to `CREATE_COMPLETE`. We will wait for the stack to be created before attempting to fetch your billing data.
+
+Switch back to the sign-up flow and select **DONE**.
+
+Once activated, Flexsave will start processing your information and building an optimization plan. The whole process may take up to 24 hours. You'll be notified by email when it's completed.
+
+<picture
+  img={require('../../../../assets/png/flexsave-aws-pending-activation.png')}
+  alt="Flexsave for AWS activation pending screen"
+  frame="drop-shadow"
+/>
+
+[cloudformation stack]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html
+[management-account]: https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#account
+[consolidated-billing]: https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html
+[savings-plans]: https://aws.amazon.com/savingsplans/
+[get-savings-plans-rec]: https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_get-savings-plans-rec.html
+[get-cost-usage]: https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_get-cost-usage.html
+[create-stack]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-create-stack.html
+[cross-account-role]: https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html
+[org-access-yaml]: https://doit-cmp-ops-pub.s3.amazonaws.com/prod/flexsave_create_policies.yml

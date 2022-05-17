@@ -79,6 +79,18 @@ div[role='banner'] div {
   z-index: 9999;
 }
 
+/* Image frames */
+
+.drop-shadow img {
+  /*
+  TODO: Figure out how to emulate existing images
+
+  margin-left: 2rem;
+  margin-right: 3rem;
+  */
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
 /* Customizations for the front page grid */
 
 :root {
