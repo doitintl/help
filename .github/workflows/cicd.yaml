@@ -1,4 +1,4 @@
-name: CI
+name: CICD
 
 on:
   pull_request:
@@ -24,6 +24,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: make build
+
+  # TODO: Trigger Netlify build if check and build succeed
+
   telemetry:
     name: Telemetry
     runs-on: ubuntu-latest

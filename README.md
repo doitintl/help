@@ -2,10 +2,10 @@
 
 _DoiT International Help Center and product documentation_
 
-[![CI][actions-ci-img]][actions-ci-workflow]
+[![CICD][actions-cicd-img]][actions-cicd-workflow]
 
-[actions-ci-img]: https://github.com/doitintl/docs/actions/workflows/ci.yaml/badge.svg
-[actions-ci-workflow]: https://github.com/doitintl/docs/actions/workflows/ci.yaml
+[actions-cicd-img]: https://github.com/doitintl/docs/actions/workflows/cicd.yaml/badge.svg
+[actions-cicd-workflow]: https://github.com/doitintl/docs/actions/workflows/cicd.yaml
 
 **Table of contents**
 
