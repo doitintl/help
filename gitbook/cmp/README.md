@@ -15,7 +15,7 @@ The CMP has four strategic pillars:
 
 <!--* [Cloud productivity](./#cloud-productivity)-->
 
-In this document, we'll briefly go over each of the main capabilities you have access to in the CMP, along with links to other articles for each feature if you're interested in doing a deeper dive.
+In this document, we'll briefly go over each of the main capabilities you have access to in the CMP, along with links to other articles for each feature, in case you're interested in doing a deeper dive.
 
 ## Summary
 
