@@ -3,7 +3,6 @@
   "start_urls": [""],
   "sitemap_urls": [""],
   "sitemap_alternate_links": true,
-  "js_render": true,
   "stop_urls": ["/tests"],
   "selectors": {
     "lvl0": {
