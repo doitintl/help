@@ -1,0 +1,63 @@
+name: Cron
+
+on:
+  schedule:
+    # Run at 06:00 every Saturday
+    - cron: '0 6 * * 6'
+
+jobs:
+  check:
+    name: Check
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/doitintl/docops/devcontainer:main
+    env:
+      GIT_NAME: DocsBot
+      GIT_EMAIL: 105730821+doitintl-docsbot@users.noreply.github.com
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.DOCSBOT_PAT }}
+      - run: make check
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: .brokdb
+          commit_user_name: ${{ secrets.GIT_NAME }}
+          commit_user_email: ${{ secrets.GIT_EMAIL }}
+          commit_message: Update link check status cache
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/doitintl/docops/devcontainer:main
+    steps:
+      - uses: actions/checkout@v2
+      - run: make build
+
+  # TODO: Use custom Python script to handle repository notifications (with the
+  # goal being to switch to a single updatable message per commit)
+
+  notification:
+    name: Notification
+    needs:
+      - check
+      - build
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: martialonline/workflow-status@v2
+        id: check
+      - uses: ravsamhq/notify-slack-action@v1
+        env:
+          STATUS: '{workflow} workflow <{run_url}|{status_message}>'
+          COMMIT: for commit `<{commit_url}|{commit_sha}>`
+          BRANCH: on branch `${{ github.ref_name }}`
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        with:
+          status: ${{ steps.check.outputs.status }}
+          notification_title: ''
+          message_format: ${{ env.STATUS }} ${{ env.COMMIT }} ${{ env.BRANCH }}
+          footer: <{repo_url}|{repo}>
+          notify_when: success,warning,failure

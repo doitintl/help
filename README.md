@@ -2,10 +2,14 @@
 
 _DoiT International Help Center and product documentation_
 
-[![CICD][actions-cicd-img]][actions-cicd-workflow]
+[![Commits][actions-commits-img]][actions-commits-workflow] [![Deployments][actions-deployments-img]][actions-deployments-workflow] [![Cron][actions-cron-img]][actions-cron-workflow]
 
-[actions-cicd-img]: https://github.com/doitintl/docs/actions/workflows/cicd.yaml/badge.svg
-[actions-cicd-workflow]: https://github.com/doitintl/docs/actions/workflows/cicd.yaml
+[actions-commits-img]: https://github.com/doitintl/docs/actions/workflows/commits.yaml/badge.svg
+[actions-commits-workflow]: https://github.com/doitintl/docs/actions/workflows/commits.yaml
+[actions-deployments-img]: https://github.com/doitintl/docs/actions/workflows/deployments.yaml/badge.svg
+[actions-deployments-workflow]: https://github.com/doitintl/docs/actions/workflows/deployments.yaml
+[actions-cron-img]: https://github.com/doitintl/docs/actions/workflows/cron.yaml/badge.svg
+[actions-cron-workflow]: https://github.com/doitintl/docs/actions/workflows/cron.yaml
 
 **Table of contents**
 

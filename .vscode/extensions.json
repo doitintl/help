@@ -18,6 +18,7 @@
     "tyriar.sort-lines",
     "vadistic.mdx-inline",
     "xyc.vscode-mdx-preview",
-    "rvest.vs-code-prettier-eslint"
+    "rvest.vs-code-prettier-eslint",
+    "timonwong.shellcheck"
   ]
 }

@@ -1,4 +1,4 @@
-name: CICD
+name: Commits
 
 on:
   pull_request:
@@ -47,6 +47,10 @@ jobs:
           jekyll: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # TODO: Use custom Python script to handle repository notifications (with the
+  # goal being to switch to a single updatable message per commit)
+
   notification:
     name: Notification
     needs:
