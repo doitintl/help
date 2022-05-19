@@ -1,4 +1,4 @@
-name: Dispatch
+name: Deployments
 
 on:
   repository_dispatch:

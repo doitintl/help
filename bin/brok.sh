@@ -16,22 +16,23 @@ BLUE='\x1b[1;34m'
 RED='\x1b[1;31m'
 RESET='\x1b[0m'
 
-tmp_errors="$(mktemp)"
+IGNORE_FILE=.brokignore
 
 run_brok() {
-    fdfind --hidden --ignore-case --type f --print0 '\.md$$' | xargs -0 brok \
-        --check-certs --only-failures --no-color --ignore \
-        'https://accounts.google.com/o/oauth2/token' \
-        'https://docs.github.com/en/get-started/quickstart/fork-a-repo' \
-        'https://docs.github.com/en/github/collaborating-with-pull-requests' \
-        'https://fonts.gstatic.com' \
-        'https://help.fullstory.com/' \
-        'https://www.googleapis.com/robot'
+    # Cache results for six days (518400000 milliseconds)
+    # shellcheck disable=SC2046
+    fdfind --hidden --ignore-case --type f --print0 '\.md$$' |
+        xargs -0 brok \
+            --check-certs \
+            --only-failures \
+            --no-color \
+            --cache 518400000 \
+            --ignore $(tr '\n' ' ' <"${IGNORE_FILE}")
 }
 
 tmp_errors="$(mktemp)"
 status_code=0
-if ! run_brok >/dev/null 2>"${tmp_errors}"; then
+if ! run_brok 2>"${tmp_errors}"; then
     sed '/^$/d' <"${tmp_errors}" |
         sed -E "s,\[(.*)\],${BLUE}\1${RESET}," |
         sed -E "s,.+\((.+)\): (.+),  ${RED}HTTP \1: \2 ${RESET},"

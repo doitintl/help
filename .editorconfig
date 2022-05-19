@@ -13,6 +13,9 @@ trim_trailing_whitespace = true
 indent_size = 1
 max_line_length = off
 
+[{*.csv,*.html}]
+max_line_length = off
+
 [{*.sh,*.py}]
 indent_size = 4
 
@@ -20,14 +23,17 @@ indent_size = 4
 indent_size = 4
 indent_style = tab
 
-[{*.csv,*.html}]
+[*.md5sum]
+max_line_length = off
+
+[{template.json,dispatch.yaml}]
+max_line_length = off
+
+[_redirects]
 max_line_length = off
 
 [.brokdb]
 max_line_length = off
-
-[.textlintrc.yaml]
-max_line_length = 82
 
 [.gitbook.yaml]
 max_line_length = off
@@ -35,11 +41,8 @@ max_line_length = off
 [.markdown-link-check.json]
 max_line_length = off
 
-[{template.json,dispatch.yaml}]
-max_line_length = off
-
-[*.md5sum]
-max_line_length = off
+[.textlintrc.yaml]
+max_line_length = 82
 
 [LICENSE]
 indent_size = 2
