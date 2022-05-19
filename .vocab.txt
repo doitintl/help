@@ -1,7 +1,6 @@
 actuals
 aicpa
 algolia
-algoliasearch
 allowfullscreen
 alnum
 amet
