@@ -121,6 +121,9 @@ check: textlint-dry
 vale:
 check: vale
 
+redirects-lint:
+check: redirects-lint
+
 markdown-link-check:
 check: markdown-link-check
 
