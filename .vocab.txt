@@ -34,7 +34,6 @@ cpus
 createrole
 d'italie
 dach
-darrenjennings
 dataprep
 dces
 deandra
