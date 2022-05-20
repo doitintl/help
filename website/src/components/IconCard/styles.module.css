@@ -19,4 +19,5 @@
 
 .icon_card_title {
   margin-top: 30px;
+  font-weight: var(--ifm-font-weight-bold);
 }

@@ -3,21 +3,19 @@ import IconCard from '../IconCard';
 import logoBlackUrl from '../../../static/img/doit-logo-black.png';
 import styles from './styles.module.css';
 
+// TODO: Resolve partial duplication of `navbar` configuration
 const cards = [
   {
-    title: 'this is the title',
+    title: 'Cloud Management Platform',
     image: logoBlackUrl,
     imageAlt: '',
+    href: '/docs/cmp',
   },
   {
-    title: 'this is the title',
+    title: 'Developer Hub',
     image: logoBlackUrl,
     imageAlt: '',
-  },
-  {
-    title: 'this is the title',
-    image: logoBlackUrl,
-    imageAlt: '',
+    href: 'https://developer.doit-intl.com/',
   },
 ];
 

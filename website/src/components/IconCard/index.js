@@ -12,7 +12,9 @@ const IconCard = ({ card }) => (
         light: card.image,
       }}
     />
-    <p className={styles.icon_card_title}>{card.title}</p>
+    <p className={styles.icon_card_title}>
+      <a href={card.href}>{card.title}</a>
+    </p>
   </div>
 );
 

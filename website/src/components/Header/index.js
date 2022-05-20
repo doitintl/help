@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 
 const Header = () => (
   <header className={clsx('hero hero--primary', styles.hero_banner)}>
-    <h1 className={styles.hero_title}>How can we help you?</h1>
+    <h1 className={styles.hero_title}>What are you looking for?</h1>
     <Search />
   </header>
 );
