@@ -1,8 +1,7 @@
 pull_request_rules:
   - name: Ready to merge
     conditions:
-      - and:
-          - label=ready-to-merge
+      - label=ready-to-merge
     actions:
       merge:
         method: rebase
