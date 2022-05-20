@@ -29,6 +29,9 @@ max_line_length = off
 [{template.json,dispatch.yaml}]
 max_line_length = off
 
+[docusaurus.config.js]
+max_line_length = off
+
 [_redirects]
 max_line_length = off
 

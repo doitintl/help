@@ -9,7 +9,7 @@ require('dotenv').config();
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'DoiT Help Center',
-  tagline: 'Dinosaurs are cool',
+  tagline: "We're always here to help",
   url: 'https://doitintl-help.netlify.app',
   baseUrl: '/',
   trailingSlash: false,
@@ -17,8 +17,8 @@ const config = {
   onBrokenMarkdownLinks: 'error',
   onDuplicateRoutes: 'error',
   favicon: 'img/favicon.ico',
-  organizationName: 'doitintl', // Usually your GitHub org/user name.
-  projectName: 'help', // Usually your repo name.
+  organizationName: 'doitintl',
+  projectName: 'help',
 
   presets: [
     [
@@ -45,6 +45,12 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/doit-logo-black-rect.png',
+      // Disable dark mode switch
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      },
       navbar: {
         title: 'Help Center',
         hideOnScroll: false,
@@ -65,6 +71,12 @@ const config = {
             position: 'left',
             label: 'Developer Hub',
           },
+          {
+            href: 'https://github.com/doitintl/help',
+            position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
+          },
         ],
       },
       docs: {
@@ -75,67 +87,110 @@ const config = {
       },
       footer: {
         style: 'dark',
+        logo: {
+          alt: 'DoiT',
+          src: 'img/doit-logo-white.svg',
+          href: 'https://www.doit-intl.com/',
+          width: 100,
+        },
+        copyright: `Copyright ${new Date().getFullYear()}, DoiT International. MIT License.`,
         links: [
           {
-            title: 'Under construction',
+            title: 'Support and consulting',
             items: [
               {
-                label: 'Example',
-                to: '/example',
+                label: 'Contact us',
+                href: 'https://www.doit-intl.com/contact/',
               },
               {
-                label: 'Example',
-                to: '/example',
+                label: 'Feature requests',
+                href: 'https://feedback.doit-intl.com/',
               },
               {
-                label: 'Example',
-                to: '/example',
+                label: 'Open a ticket',
+                href: 'https://support.doit-intl.com/login',
               },
               {
-                label: 'Example',
-                to: '/example',
+                label: 'Log into your account',
+                href: 'https://hello.doit-intl.com/',
               },
               {
-                label: 'Example',
-                to: '/example',
+                label: 'Technical support',
+                href: 'https://www.doit-intl.com/services/managed-support-msp/',
+              },
+              {
+                label: 'Technical consulting',
+                href: 'https://www.doit-intl.com/services/#cloud-consulting-engineering',
+              },
+              {
+                label: 'Support stats',
+                href: 'https://www.doit-intl.com/stats/',
               },
             ],
           },
           {
-            title: 'Under construction',
+            title: 'Discover',
             items: [
               {
-                label: 'Example',
-                href: 'https://example.com/',
+                label: 'Blog',
+                href: 'https://blog.doit-intl.com/',
               },
               {
-                label: 'Example',
-                href: 'https://example.com/',
+                label: 'GitHub',
+                href: 'https://github.com/doitintl',
               },
               {
-                label: 'Example',
-                href: 'https://example.com/',
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/company/doitintl',
+              },
+              {
+                label: 'YouTube',
+                href: 'https://www.youtube.com/c/MultiCloudEngineering',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/doitint',
+              },
+              {
+                label: 'Facebook',
+                href: 'https://www.facebook.com/DoIT.International/',
               },
             ],
           },
           {
-            title: 'Under construction',
+            title: 'Company',
             items: [
               {
-                label: 'Example',
-                href: 'https://example.com/',
+                label: 'Homepage',
+                href: 'https://www.doit-intl.com/',
               },
               {
-                label: 'Example',
-                href: 'https://example.com/',
+                label: 'Vendor information',
+                to: '/docs/vendor-information/general-vendor-information',
               },
               {
-                label: 'Example',
-                href: 'https://example.com/',
+                label: 'Data access policy',
+                to: '/docs/vendor-information/security-and-data-access-policy-for-cloud-management-platform',
               },
               {
-                label: 'Example',
-                href: 'https://example.com/',
+                label: 'External services we use',
+                to: '/docs/vendor-information/external-services',
+              },
+              {
+                label: 'Exchange rates',
+                to: '/docs/vendor-information/exchange-rates',
+              },
+              {
+                label: 'Our subprocessors',
+                href: '/docs/vendor-information/subprocessors',
+              },
+              {
+                label: 'Compliance',
+                href: 'https://www.doit-intl.com/compliance/',
+              },
+              {
+                label: 'Privacy policy',
+                href: 'https://www.doit-intl.com/privacy/',
               },
             ],
           },

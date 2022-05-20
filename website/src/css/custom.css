@@ -54,6 +54,20 @@
   color: var(--ifm-color-black);
 }
 
+/* Navigation bar */
+
+.header-github-link:hover {
+  opacity: 0.6;
+}
+
+.header-github-link::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background: url(../../static/img/github.svg) no-repeat;
+}
+
 /* Document logo */
 
 #docs-logo {
@@ -75,9 +89,15 @@
   --ifm-footer-title-color: var(--ifm-color-white);
 }
 
+.footer a:hover {
+  color: var(--ifm-footer-link-color);
+}
+
 [data-theme='dark'] .footer {
   --ifm-footer-background-color: var(--ifm-navbar-background-color);
 }
+
+/* DocSearch */
 
 .DocSearch-Button {
   background: #ffffff !important;

@@ -15,4 +15,5 @@
 
 .hero_title {
   color: #fff;
+  font-weight: var(--ifm-font-weight-normal);
 }

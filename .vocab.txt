@@ -84,7 +84,6 @@ ignorecase
 imgdup
 imgdupignore
 iops
-knowledgeable
 kpis
 kubernetes
 lastword

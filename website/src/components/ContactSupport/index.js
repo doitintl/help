@@ -5,13 +5,16 @@ const ContactSupport = () => {
   return (
     <section className={styles.contact_container}>
       <div className={styles.contact}>
-        <h1 className={styles.contact_title}>Contact support</h1>
+        <h1 className={styles.contact_title}>We're always here to help</h1>
         <p>
-          If you need additional support, one of our knowledgeable support
-          team will be happy to assist.
+          Our technical support team and cloud reliability engineers are
+          standing by,{' '}
+          <a href="https://www.doit-intl.com/stats/" target="_blank">
+            24 hours a day
+          </a>
         </p>
         <button href="#" className={styles.contact_button}>
-          raise a ticket
+          Open a ticket
         </button>
       </div>
     </section>
