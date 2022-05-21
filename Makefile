@@ -52,9 +52,6 @@ serve:
 	$(call print-target)
 	@ $(MAKE) -C website serve
 
-.PHONY: telemetry # Generate telemetry data
-telemetry:
-
 .PHONY: clean # Remove build artifacts
 clean:
 
@@ -144,13 +141,6 @@ imgdup2go:
 
 optipng-dry:
 check: optipng-dry
-
-# telemetry
-# -----------------------------------------------------------------------------
-
-telemetry: telemetry-index
-
-telemetry-index: telemetry-assets
 
 # check
 # -----------------------------------------------------------------------------

@@ -16,6 +16,7 @@ aviv
 awsops
 belinga
 blockquote
+brockdb
 brok
 brokdb
 brokignore
@@ -68,7 +69,6 @@ fssa
 fullstory
 gcloud
 geneve
-ghaction
 gitbook
 googleapis
 haverstock
@@ -101,18 +101,14 @@ mazars
 mbps
 mdash
 mdns
-minifier
 mirrorings
 mixpanel
 mkdir
 mktemp
-monospace
 mpas
 mvdan
-nbsp
 ndash
 noempty
-nojekyll
 oidc
 optimizely
 optipng
