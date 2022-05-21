@@ -41,13 +41,14 @@ jobs:
     env:
       DEPLOY_URL: '${{ github.event.client_payload.deploy_url }}'
       BRANCH: '${{ github.event.client_payload.branch }}'
-      COMMIT_SHA: '${{ github.event.client_payload.commit_ref }}'
+      COMMIT_SHA: '${{ github.event.client_payload.commit_sha }}'
       COMMIT_URL: '${{ github.event.client_payload.commit_url }}'
     steps:
       - uses: actions/checkout@v2
       - uses: martialonline/workflow-status@v2
         id: check
       - uses: ravsamhq/notify-slack-action@v1
+        if: env.BRANCH == 'main'
         env:
           STATUS: '{workflow} workflow <{run_url}|{status_message}> for commit'
           COMMIT: '`<${{ env.COMMIT_URL }}|${{ env.COMMIT_SHA }}>`'
