@@ -2,12 +2,12 @@
 
 _DoiT International Help Center and product documentation_
 
-[![Commits][actions-commits-img]][actions-commits-workflow] [![Deployments][actions-deployments-img]][actions-deployments-workflow] [![Cron][actions-cron-img]][actions-cron-workflow]
+[![Integration][actions-integration-img]][actions-integration-workflow] [![Deployment][actions-deployment-img]][actions-deployment-workflow] [![Cron job][actions-cron-img]][actions-cron-workflow]
 
-[actions-commits-img]: https://github.com/doitintl/docs/actions/workflows/commits.yaml/badge.svg
-[actions-commits-workflow]: https://github.com/doitintl/docs/actions/workflows/commits.yaml
-[actions-deployments-img]: https://github.com/doitintl/docs/actions/workflows/deployments.yaml/badge.svg
-[actions-deployments-workflow]: https://github.com/doitintl/docs/actions/workflows/deployments.yaml
+[actions-integration-img]: https://github.com/doitintl/docs/actions/workflows/integration.yaml/badge.svg
+[actions-integration-workflow]: https://github.com/doitintl/docs/actions/workflows/integration.yaml
+[actions-deployment-img]: https://github.com/doitintl/docs/actions/workflows/deployment.yaml/badge.svg
+[actions-deployment-workflow]: https://github.com/doitintl/docs/actions/workflows/deployment.yaml
 [actions-cron-img]: https://github.com/doitintl/docs/actions/workflows/cron.yaml/badge.svg
 [actions-cron-workflow]: https://github.com/doitintl/docs/actions/workflows/cron.yaml
 
