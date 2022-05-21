@@ -50,8 +50,8 @@ jobs:
       - uses: ravsamhq/notify-slack-action@v1
         env:
           STATUS: '{workflow} workflow <{run_url}|{status_message}> for commit'
-          COMMIT: '`<${{ secrets.COMMIT_URL }}|${{ secrets.COMMIT_SHA }}>`'
-          BRANCH: 'on branch `${{ secrets.BRANCH }}`'
+          COMMIT: '`<${{ env.COMMIT_URL }}|${{ env.COMMIT_SHA }}>`'
+          BRANCH: 'on branch `${{ env.BRANCH }}`'
           SLACK_WEBHOOK_URL: '${{ secrets.SLACK_WEBHOOK_URL }}'
         with:
           status: ${{ steps.check.outputs.status }}
