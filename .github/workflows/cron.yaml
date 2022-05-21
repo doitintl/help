@@ -1,4 +1,4 @@
-name: Cron
+name: Cron job
 
 on:
   schedule:
@@ -18,7 +18,12 @@ jobs:
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.DOCSBOT_PAT }}
+      # Invalidate cache
+      - run: rm .brockdb
+      # Rebuild cache
       - run: make check
+      # Silence Git warning
+      - run: git config --add safe.directory .
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           file_pattern: .brokdb

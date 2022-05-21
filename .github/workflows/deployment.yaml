@@ -1,0 +1,61 @@
+name: Deployment
+
+on:
+  repository_dispatch:
+    types:
+      - deployment
+
+jobs:
+  crawl:
+    name: Crawl
+    runs-on: ubuntu-latest
+    env:
+      DEPLOY_URL: ${{ github.event.client_payload.deploy_url }}
+      BRANCH: ${{ github.event.client_payload.branch }}
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          cat .docops/algolia/template.json |
+          jq '.index_name = "${{ env.BRANCH }}"' |
+          jq '.start_urls = ["${{ env.DEPLOY_URL }}/"]' |
+          jq '.sitemap_urls = ["${{ env.DEPLOY_URL }}/sitemap.xml"]' \
+          > algolia.json
+      - run: |
+          echo "::set-output name=config::$(cat algolia.json | jq -r tostring)"
+        id: env
+      - uses: signcl/docsearch-scraper-action@master
+        env:
+          APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
+          API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+          CONFIG: ${{ steps.env.outputs.config }}
+
+  # TODO: Use custom Python script to handle repository notifications (with the
+  # goal being to switch to a single updatable message per commit)
+
+  notification:
+    name: Notification
+    needs:
+      - crawl
+    if: always()
+    runs-on: ubuntu-latest
+    env:
+      DEPLOY_URL: '${{ github.event.client_payload.deploy_url }}'
+      BRANCH: '${{ github.event.client_payload.branch }}'
+      COMMIT_SHA: '${{ github.event.client_payload.commit_ref }}'
+      COMMIT_URL: '${{ github.event.client_payload.commit_url }}'
+    steps:
+      - uses: actions/checkout@v2
+      - uses: martialonline/workflow-status@v2
+        id: check
+      - uses: ravsamhq/notify-slack-action@v1
+        env:
+          STATUS: '{workflow} workflow <{run_url}|{status_message}> for commit'
+          COMMIT: '`<${{ secrets.COMMIT_URL }}|${{ secrets.COMMIT_SHA }}>`'
+          BRANCH: 'on branch `${{ secrets.BRANCH }}`'
+          SLACK_WEBHOOK_URL: '${{ secrets.SLACK_WEBHOOK_URL }}'
+        with:
+          status: ${{ steps.check.outputs.status }}
+          notification_title: ''
+          message_format: ${{ env.STATUS }} ${{ env.COMMIT }} ${{ env.BRANCH }}
+          footer: <{repo_url}|{repo}>
+          notify_when: success,warning,failure
