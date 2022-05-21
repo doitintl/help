@@ -13,7 +13,12 @@ In this article, we'll go over the types of aggregation options you have availab
 
 In the "Total" aggregation, your results will be displayed in absolute terms. A row and column, each titled "Totals", will be added at the end containing the sum of all of the results per row and column, respectively.
 
-![A screenshot showing a Total aggregation report](../../static/img/docs/cmp-report-aggregation-total.png)
+import Image from '@theme/IdealImage';
+
+<Image
+  alt="A screenshot showing a Total aggregation report"
+  img={require('../../static/img/docs/cmp-report-aggregation-total.png')}
+/>
 
 ## % of Total
 
@@ -21,22 +26,34 @@ In the "Total" aggregation, your results will be displayed in absolute terms. A 
 
 If you're viewing your results in a Table view, then a final column titled "Totals" will be added at the end containing the sum of all of the results per row, expressed as a percentage.
 
-![A screenshot showing a % of Total aggregation report](../../static/img/docs/cmp-report-aggregation-pct-total.png)
+<Image
+  alt="A screenshot showing a % of Total aggregation report"
+  img={require('../../static/img/docs/cmp-report-aggregation-pct-total.png')}
+/>
 
 ## % of Column
 
 "% of Column" aggregations display cell values as a percentage of its column, with each column being represented as 100% in totality.
 
-![A screenshot showing a & of Column aggregation report](../../static/img/docs/cmp-report-aggregation-pct-col.png)
+<Image
+  alt="A screenshot showing a & of Column aggregation report"
+  img={require('../../static/img/docs/cmp-report-aggregation-pct-col.png')}
+/>
 
 ## % of Row
 
 "% of Row" aggregations display cell values as a percentage of its row, with each row being represented as 100% in totality.
 
-![A screenshot showing a % of Row aggregation report](../../static/img/docs/cmp-report-aggregation-pct-row.png)
+<Image
+  alt="A screenshot showing a % of Row aggregation report"
+  img={require('../../static/img/docs/cmp-report-aggregation-pct-row.png')}
+/>
 
 ## Cost/Usage
 
 "Cost/Usage" aggregations are great for use cases requiring cost-per-unit pricing validation. In the example below, we are using this aggregation to examine BigQuery SKU costs per project.
 
-![A screenshot showing a Cost/Usage aggregation report](../../static/img/docs/cmp-report-aggregation-unit-cost.png)
+<Image
+  alt="A screenshot showing a Cost/Usage aggregation report"
+  img={require('../../static/img/docs/cmp-report-aggregation-unit-cost.png')}
+/>

@@ -210,7 +210,18 @@ const config = {
       },
       */
     }),
-  plugins: [],
+  plugins: [
+    [
+      'ideal-image',
+      /** @type {import('@docusaurus/plugin-ideal-image').PluginOptions} */
+      ({
+        max: 2560,
+        min: 640,
+        steps: 3,
+        disableInDev: true,
+      }),
+    ],
+  ],
   customFields: {
     ALGOLIA_API_KEY: process.env.ALGOLIA_API_KEY,
     ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID,

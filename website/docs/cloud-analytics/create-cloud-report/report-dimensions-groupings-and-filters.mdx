@@ -8,13 +8,21 @@ When creating reports in Cloud Analytics, you will have every billing dimension 
 
 When you first create a new report, you will see an interface like this:
 
-![A screenshot showing a Cloud Analytics report](../../../static/img/docs/cmp-new-report.png)
+import Image from '@theme/IdealImage';
+
+<Image
+  alt="A screenshot showing a Cloud Analytics report"
+  img={require('../../../static/img/docs/cmp-new-report.png')}
+/>
 
 **Dimensions** determine the fields along the X-axis of the chart and **"Group by"** determines the fields along the Y-axis of the chart.
 
 In the screenshot below you can see that projects are being grouped along the vertical axis, and project data is being displayed along the horizontal axis. The year, month and day have been added as "Dimensions" so the data/columns are displayed along the horizontal axis.
 
-![A screenshot showing a Cloud Analytics report](../../../static/img/docs/cmp-example-report-table.png)
+<Image
+  alt="A screenshot showing a Cloud Analytics report"
+  img={require('../../../static/img/docs/cmp-example-report-table.png')}
+/>
 
 **Filters** allow you to view more specific information. For example, if you only want to look at GCP, you can Filter on Cloud = GCP without having to show AWS on the chart.
 
@@ -82,7 +90,10 @@ In the screenshot below you can see that projects are being grouped along the ve
 
 > The Date/Time dimension is also linked to the display option "**Time Interval**", thus the selection here will add/remove a Date/Time dimension accordingly. For example, when Time Interval "Hour" is selected, "Hour" will also be automatically added to the dimensions.
 
-![A screenshot showing Hour in the list of report dimension](../../../static/img/docs/cmp-hour-report-dimension.png)
+<Image
+  alt="A screenshot showing Hour in the list of report dimension"
+  img={require('../../../static/img/docs/cmp-hour-report-dimension.png')}
+/>
 
 ## Labels
 
