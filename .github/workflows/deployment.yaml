@@ -48,7 +48,7 @@ jobs:
       - uses: martialonline/workflow-status@v2
         id: check
       - uses: ravsamhq/notify-slack-action@v1
-        if: env.BRANCH == 'main'
+        if: ${{ env.BRANCH }} == 'main'
         env:
           STATUS: '{workflow} workflow <{run_url}|{status_message}> for commit'
           COMMIT: '`<${{ env.COMMIT_URL }}|${{ env.COMMIT_SHA }}>`'
