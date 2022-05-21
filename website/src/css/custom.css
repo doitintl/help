@@ -80,6 +80,12 @@
   border-bottom: 1px solid var(--ifm-toc-border-color);
 }
 
+/* Ideal image CSS fix */
+
+article div div {
+  margin-bottom: var(--ifm-leading);
+}
+
 /* Footer colors */
 
 .footer {

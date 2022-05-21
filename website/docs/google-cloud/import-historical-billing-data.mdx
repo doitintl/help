@@ -25,7 +25,12 @@ Suppose you enable Cloud Billing data export to BigQuery for the first time whil
 
 Within the CMP, select the gear icon (_Settings_) from the top navigation bar, then select _Google Cloud_ under _Cloud settings_. The CMP will take you to the Google Cloud settings screen:
 
-![A screenshot showing the _Google Cloud_ settings screen](../../static/img/docs/cmp-google-cloud-settings.png)
+import Image from '@theme/IdealImage';
+
+<Image
+  alt="A screenshot showing the _Google Cloud_ settings screen"
+  img={require('../../static/img/docs/cmp-google-cloud-settings.png')}
+/>
 
 If you do not have a service account configured yet, you will need to [create a service account](connect-google-cloud-service-account.mdx) before you can continue.
 
@@ -47,7 +52,10 @@ You need to have the appropriate IAM role/permission in GCP to grant the require
 4. Click "**Add**"
 5. Click "**Done**"
 
-![A screenshot showing the location of the Share Dataset option](../../static/img/docs/gcp-share-dataset-button.png)
+<Image
+  alt="A screenshot showing the location of the Share Dataset option"
+  img={require('../../static/img/docs/gcp-share-dataset-button.png')}
+/>
 
 ![A screenshot showing the process of granting the BigQuery Data Viewer role](../../static/img/docs/gcp-grant-bigquery-role.png)
 
@@ -70,7 +78,10 @@ You need to have the appropriate IAM role/permission in GCP to grant the require
 
 ![A screenshot showing the location of the Edit Role option and the bigquery.jobs.create permission listing](../../static/img/docs/gcp-edit-role-permission-listing.png)
 
-![A screenshot showing the Add Permissions option, a list of permissions, and the Add button](../../static/img/docs/gcp-add-permissions.png)
+<Image
+  alt="A screenshot showing the Add Permissions option, a list of permissions, and the Add button"
+  img={require('../../static/img/docs/gcp-add-permissions.png')}
+/>
 
 ## Link your Google Cloud Direct Billing Account
 
@@ -84,13 +95,19 @@ Within the CMP, select _Billing_ from the top navigation bar and then select _As
 
 From the _Assets_ page, select _Google Cloud_ from the left-hand navigation to access the Google Cloud assets page:
 
-![A screenshot showing the Google Cloud assets page](../../static/img/docs/cmp-assets-google-cloud.png)
+<Image
+  alt="A screenshot showing the Google Cloud assets page"
+  img={require('../../static/img/docs/cmp-assets-google-cloud.png')}
+/>
 
 From the Google Cloud assets page, select arrow next to the _New Billing Account_ button, then select _Link Direct Account_ from the drop-down menu that appears. Finally, select the button a second time (which should now read _Link Direct Account_).
 
 The CMP will open a modal dialog:
 
-![A screenshot showing the _Link Direct Account_ modal dialog](../../static/img/docs/cmp-assets-google-cloud-link-direct-account.png)
+<Image
+  alt="A screenshot showing the _Link Direct Account_ modal dialog"
+  img={require('../../static/img/docs/cmp-assets-google-cloud-link-direct-account.png')}
+/>
 
 To import your historical billing data into the CMP, enter the following:
 

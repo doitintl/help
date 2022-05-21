@@ -12,7 +12,12 @@ If you're new to Cloud Reports and/or haven't created a Cloud Report yet, we rec
 
 An example cloud analytics report:
 
-![A screenshot showing and example report](../../static/img/docs/cmp-example-report.png)
+import Image from '@theme/IdealImage';
+
+<Image
+  alt="A screenshot showing and example report"
+  img={require('../../static/img/docs/cmp-example-report.png')}
+/>
 
 There are several types of edits you can make to a report like this:
 
@@ -112,13 +117,19 @@ Comparison mode is
 
 When selected _**we will automatically adjust your report**_, you will be warned of the changes and asked to confirm.
 
-![A screenshot of the Show Comparative Report modal dialog](../../static/img/docs/cmp-show-comparative-report-dialog.png)
+<Image
+  alt="A screenshot of the Show Comparative Report modal dialog"
+  img={require('../../static/img/docs/cmp-show-comparative-report-dialog.png')}
+/>
 
 Once enabled, you will see new columns in your table based view showing the &#x2206; between time intervals. This difference (&#x2206;) appears **after** the intervals compared.
 
 For example below: Months 07 (July) and 08 (August) show the % change after in the column &#x2206;08 (Change to August)
 
-![Report with highlighted comparison columns](../../static/img/docs/cmp-report-highlighted-columns.png)
+<Image
+  alt="Report with highlighted comparison columns"
+  img={require('../../static/img/docs/cmp-report-highlighted-columns.png')}
+/>
 
 _Note: Column headings will contain a % symbol when showing % change_
 
