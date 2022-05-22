@@ -53,7 +53,7 @@ const config = {
       },
       navbar: {
         title: 'Help Center',
-        hideOnScroll: false,
+        hideOnScroll: true,
         logo: {
           alt: 'DoiT International',
           src: 'img/doit-logo-black.svg',
@@ -209,6 +209,9 @@ const config = {
         indexName: process.env.INDEX_NAME,
       },
       */
+      zoom: {
+        selector: '.markdown img',
+      },
     }),
   plugins: [
     [
@@ -221,6 +224,7 @@ const config = {
         disableInDev: true,
       }),
     ],
+    require.resolve('docusaurus-plugin-image-zoom'),
   ],
   customFields: {
     ALGOLIA_API_KEY: process.env.ALGOLIA_API_KEY,

@@ -86,6 +86,13 @@ article div div {
   margin-bottom: var(--ifm-leading);
 }
 
+/* Zoom CSS fix */
+
+.medium-zoom-overlay,
+.medium-zoom-image {
+  z-index: 9999;
+}
+
 /* Footer colors */
 
 .footer {
