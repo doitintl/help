@@ -22,6 +22,10 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/doitintl/docops/devcontainer:main
+      env:
+        ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+        ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+        INDEX_NAME: ${{ secrets.INDEX_NAME }}
     steps:
       - uses: actions/checkout@v2
       # Silence warnings when Docusaurus tries to get last modified dates

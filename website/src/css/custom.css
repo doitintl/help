@@ -44,6 +44,7 @@
   background-color: var(--ifm-font-color-base);
   color: var(--ifm-color-black);
 }
+
 /* Announcement bar close button */
 
 [data-theme='light'] .close {
@@ -112,7 +113,7 @@ article div div {
 
 /* DocSearch */
 
-.DocSearch-Button {
+.DocSearch-Button:nth-child(2) {
   background: #ffffff !important;
   height: 70px !important;
   width: 90vw;
@@ -121,11 +122,11 @@ article div div {
   border-radius: 4px !important;
 }
 
-.DocSearch-Button-Placeholder {
+.DocSearch-Button:nth-child(2) .DocSearch-Button-Placeholder {
   font-size: 1.5rem !important;
 }
 
-.DocSearch-Button:active,
+.DocSearch-Button:nth-child(2) .DocSearch-Button:active,
 .DocSearch-Button:focus,
 .DocSearch-Button:hover {
   color: #969faf !important;
