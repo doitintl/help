@@ -94,6 +94,11 @@ article div div {
   z-index: 9999;
 }
 
+[data-rmiz-wrap='visible'],
+[data-rmiz-wrap='hidden'] {
+  display: inline !important;
+}
+
 /* Footer colors */
 
 .footer {
