@@ -26,18 +26,6 @@ jobs:
       - uses: actions/checkout@v2
       - run: make build
 
-  trigger-prod-build:
-    name: Trigger production build
-    needs:
-      - run-checks
-      - test-build
-    if: |
-      github.event_name != 'pull_request'
-      && github.ref_name == 'main'
-    runs-on: ubuntu-latest
-    steps:
-      - run: curl -X POST -d {} ${{ secrets.NETLIFY_BUILD_HOOK }}
-
   # TODO: Use custom Python script to handle repository notifications (with the
   # goal being to switch to a single updatable message per commit)
 
@@ -46,7 +34,6 @@ jobs:
     needs:
       - run-checks
       - test-build
-      - trigger-prod-build
     if: |
       always()
       && github.event_name != 'pull_request'
