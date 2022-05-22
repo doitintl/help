@@ -201,14 +201,11 @@ const config = {
         darkTheme: darkCodeTheme,
         additionalLanguages: ['shell-session', 'java'],
       },
-      /*
-      // Disabled until the index page search bar can be styled independently
       algolia: {
         appId: process.env.ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_API_KEY,
         indexName: process.env.INDEX_NAME,
       },
-      */
       zoom: {
         selector: '.markdown img',
       },
