@@ -217,7 +217,7 @@ const config = {
       ({
         max: 2560,
         min: 640,
-        steps: 3,
+        steps: 5,
         disableInDev: true,
       }),
     ],
