@@ -23,7 +23,7 @@ jobs:
       # Rebuild cache
       - run: make brok
       # Silence Git warning
-      - run: git config --add safe.directory .
+      - run: git config --global --add safe.directory /__w/help/help
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           file_pattern: .brokdb
