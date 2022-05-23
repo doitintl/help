@@ -21,7 +21,7 @@ IGNORE_FILE=.brokignore
 run_brok() {
     # Cache results for six days (518400000 milliseconds)
     # shellcheck disable=SC2046
-    fdfind --hidden --ignore-case --type f --print0 '\.md$$' |
+    fdfind --hidden --ignore-case --type f --print0 '\.mdx?$$' |
         xargs -0 brok \
             --check-certs \
             --only-failures \

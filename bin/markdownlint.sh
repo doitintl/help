@@ -15,7 +15,7 @@ export LC_ALL
 # -----------------------------------------------------------------------------
 
 find_md_files() {
-    fdfind -H -t f '\.md$' --print0
+    fdfind -H -t f '\.mdx?$' --print0
 }
 
 find_md_files | xargs -0 markdownlint
