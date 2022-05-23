@@ -90,6 +90,7 @@ kpis
 kubernetes
 lastword
 launchtemplate
+libimagequant
 lintspaces
 loglevel
 maci
