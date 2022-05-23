@@ -206,6 +206,15 @@ const config = {
         apiKey: process.env.ALGOLIA_API_KEY,
         indexName: process.env.INDEX_NAME,
       },
+      zoom: {
+        selector: '.markdown img',
+        background: {
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(50, 50, 50)',
+        },
+        // https://github.com/francoischalifour/medium-zoom#usage
+        config: {},
+      },
     }),
   plugins: [
     [
@@ -218,6 +227,7 @@ const config = {
         disableInDev: true,
       }),
     ],
+    require.resolve('docusaurus-plugin-image-zoom'),
   ],
   customFields: {
     ALGOLIA_API_KEY: process.env.ALGOLIA_API_KEY,
