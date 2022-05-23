@@ -27,19 +27,11 @@ Required Permission: _Manage Settings_
 
 Within the CMP, select the gear icon in the right-hand corner of the top menu bar, then select _Amazon Web Services_ from the drop-down menu that appears. The CMP will take you to the _Link Amazon Web Services_ page:
 
-import Image from '@theme/IdealImage';
-
-<Image
-  alt="A screenshot showing the location of the _Link Amazon Web Services_ button"
-  img={require('../assets/png/cmp-aws-link-account.png')}
-/>
+![A screenshot showing the location of the _Link Amazon Web Services_ button](../assets/png/cmp-aws-link-account.png)
 
 From the _Link Amazon Web Services_ page, select the _LINK ACCOUNT_ button in the top right-hand corner. The CMP will take you to a page that allows you to complete the process:
 
-<Image
-  alt="A screenshot showing the location of the _Link Amazon Web Services_ button"
-  img={require('../assets/png/cmp-aws-link-account-options.png')}
-/>
+![A screenshot showing the location of the _Link Amazon Web Services_ button](../assets/png/cmp-aws-link-account-options.png)
 
 To continue, follow the instructions in the following subsections to complete the linking process.
 
@@ -49,10 +41,7 @@ Select the _Create a role automatically_ radio button, then check the boxes next
 
 To explore what AWS policies each feature requires, click the _V_ button to the left of the feature name to expand the list of policies.
 
-<Image
-  alt="A screenshot showing an expanded feature section"
-  img={require('../assets/png/cmp-aws-link-account-features.png')}
-/>
+![A screenshot showing an expanded feature section](../assets/png/cmp-aws-link-account-features.png)
 
 There are two options for creating the role with this method:
 
@@ -63,10 +52,7 @@ There are two options for creating the role with this method:
 
 After selecting the features, select _LINK ACCOUNT_. The CMP will open a modal dialog asking you to confirm you want to proceed:
 
-<Image
-  alt="A screenshot of the AWS CloudFormation modal dialog"
-  img={require('../assets/png/cmp-aws-link-account-stack-creation-modal.png')}
-/>
+![A screenshot of the AWS CloudFormation modal dialog](../assets/png/cmp-aws-link-account-stack-creation-modal.png)
 
 After selecting _LINK ACCOUNT_ from the modal dialog, the CMP will open a preconfigured stack template with the necessary roles and permissions in a new AWS CloudFormation tab.
 
@@ -80,10 +66,7 @@ Within about 30 seconds of creating the stack, the CMP _Settings_ page will upda
 
 If you prefer to run the commands yourself in AWS CloudShell, select the _PREFER CLI?_ button instead. A pop-up will appear with the commands you should run to generate the role with the requisite policies for the features you selected. After running the command, it may take up to 30 seconds for the account to link to the CMP.
 
-<Image
-  alt="A screenshot CLI Instructions modal dialog"
-  img={require('../assets/png/cmp-aws-link-account-cli-modal.png')}
-/>
+![A screenshot CLI Instructions modal dialog](../assets/png/cmp-aws-link-account-cli-modal.png)
 
 Within about 30 seconds of creating the stack, the CMP _Settings_ page will update, showing your linked AWS account with a _Healthy_ status next to it if the link attempt was successful.
 
@@ -91,10 +74,7 @@ Within about 30 seconds of creating the stack, the CMP _Settings_ page will upda
 
 Select the _Create a role manually_ radio button, then make a note of the listed "AWS Account" and "External ID", as you'll need them for a later step.
 
-<Image
-  alt="A screenshot of the manual role creation form"
-  img={require('../assets/png/cmp-aws-link-account-manual-role.png')}
-/>
+![A screenshot of the manual role creation form](../assets/png/cmp-aws-link-account-manual-role.png)
 
 #### Creating an AWS IAM Role
 
@@ -102,17 +82,11 @@ In a separate tab, open the AWS Management Console. Then, go to _Security, Ident
 
 Next, select _Create Role_.
 
-<Image
-  alt="A screenshot showing the location of the Roles menu item"
-  img={require('../assets/png/aws-go-to-roles.png')}
-/>
+![A screenshot showing the location of the Roles menu item](../assets/png/aws-go-to-roles.png)
 
 Enter the AWS Account ID and External ID you've noted in the previous step. You might need to check the _Options_ checkbox for the External ID field to show up.
 
-<Image
-  alt="A screenshot of AWS IAM"
-  img={require('../assets/png/aws-linking-aws-5.png')}
-/>
+![A screenshot of AWS IAM](../assets/png/aws-linking-aws-5.png)
 
 Select the _Next: Permissions_ button to load a page where you can select built-in policies or create new ones.
 
@@ -128,10 +102,7 @@ For _Core_, you need to add three built-in policies to your role:
 
 To add permissions for other features, you'll need to create a new policy. If you wish to enable this feature, select _Create policy_.
 
-<Image
-  alt="A screenshot showing the location of the Create policy button"
-  img={require('../assets/png/aws-create-policy-in-role.png')}
-/>
+![A screenshot showing the location of the Create policy button](../assets/png/aws-create-policy-in-role.png)
 
 #### Creating new policies
 
@@ -175,19 +146,13 @@ A new tab will open for you to create the policy. Switch to the "JSON" tab and c
 }
 ```
 
-<Image
-  alt="A screenshot of the AWS _Create policy_ page"
-  img={require('../assets/png/aws-linking-aws-6.png')}
-/>
+![A screenshot of the AWS _Create policy_ page](../assets/png/aws-linking-aws-6.png)
 
 After the JSON for the new policy you want to create is pasted, click "**Next: Tags**". If you aren't adding tags to this role, then you may proceed by clicking on "**Next: Review**".
 
 Finally, give your policy an identifiable name, like "spotscaling_policy", and a description if necessary. Then click on "**Create Policy**".
 
-<Image
-  alt="A screenshot of the policy name"
-  img={require('../assets/png/aws-linking-8.png')}
-/>
+![A screenshot of the policy name](../assets/png/aws-linking-8.png)
 
 ##### [Quota Monitoring](aws-quotas.mdx)
 
@@ -226,17 +191,11 @@ A new tab will open for you to create the policy. Switch to the "JSON" tab and c
 
 After the JSON for the new policy you want to create is pasted, click "**Next: Tags**". If you aren't adding tags to this role, then you may proceed by clicking on "**Next: Review**"
 
-<Image
-  alt="A screenshot of the first step in the _Create policy_ flow"
-  img={require('../assets/png/aws-linking-8.png')}
-/>
+![A screenshot of the first step in the _Create policy_ flow](../assets/png/aws-linking-8.png)
 
 Give your policy an identifiable name, like "doit_intl_quotas" in the case of the Quota Monitoring feature, and a description if necessary. Then click on "**Create Policy**".
 
-<Image
-  alt="A screenshot of the third step in the AWS _Create policy_ flow"
-  img={require('../assets/png/aws-linking-9.png')}
-/>
+![A screenshot of the third step in the AWS _Create policy_ flow](../assets/png/aws-linking-9.png)
 
 If the policy was successfully created, you'll be taken to the IAM Policies page and see a success message at the top like the following:
 
@@ -250,40 +209,25 @@ Select all created policies for the features you want to enable in addition to t
 
 If you aren't adding tags to this role, then you may proceed by clicking on "**Next: Review**" from the "Add Tags" page.
 
-<Image
-  alt="A screenshot of the second step in the AWS _Create role_ flow"
-  img={require('../assets/png/aws-create-role-2.png')}
-/>
+![A screenshot of the second step in the AWS _Create role_ flow](../assets/png/aws-create-role-2.png)
 
 Give the Role an identifiable name (ex. 'doit-intl-cmp-role'), review the selected policies, and click on "**Create role**".
 
-<Image
-  alt="A screenshot of the fourth step in the AWS _Create role_ flow"
-  img={require('../assets/png/aws-create-role-4.png')}
-/>
+![A screenshot of the fourth step in the AWS _Create role_ flow](../assets/png/aws-create-role-4.png)
 
 If the role was created successfully, you'll be taken back to the main Roles page and see your Role in the list.
 
 After you have created the role, click on the role name to bring you to its summary page. Copy the value next to "**Role ARN**"
 
-<Image
-  alt="A screenshot of the AWS role summary page"
-  img={require('../assets/png/aws-roles-summary-screen.png')}
-/>
+![A screenshot of the AWS role summary page](../assets/png/aws-roles-summary-screen.png)
 
 Finally, copy and paste the Role ARN to the Cloud Management Platform and click 'Add'.
 
-<Image
-  alt="A screenshot highlighting the location to paste the _Role ARN_ value"
-  img={require('../assets/png/cmp-paste-role-arn-input.png')}
-/>
+![A screenshot highlighting the location to paste the _Role ARN_ value](../assets/png/cmp-paste-role-arn-input.png)
 
 If the status of your AWS account within the Cloud Management Platform appears as 'Healthy', it means the role was added successfully.
 
-<Image
-  alt="A screenshot highlighting the status of the AWS account"
-  img={require('../assets/png/cmp-aws-account-status.png')}
-/>
+![A screenshot highlighting the status of the AWS account](../assets/png/cmp-aws-account-status.png)
 
 ## Editing Linked Accounts
 
@@ -291,10 +235,7 @@ If the status of your AWS account within the Cloud Management Platform appears a
 
 If you want to unlink an account, click on the "Unlink" button in the row corresponding to the account.
 
-<Image
-  alt="A screenshot highlighting the location of the _Unlink_ button"
-  img={require('../assets/png/cmp-account-unlink-button.png')}
-/>
+![A screenshot highlighting the location of the _Unlink_ button](../assets/png/cmp-account-unlink-button.png)
 
 ### Modifying feature access
 
@@ -302,17 +243,11 @@ If you want to unlink an account, click on the "Unlink" button in the row corres
 
 If, after linking your AWS account, you'd like to update your role with additional permissions for a new feature, click on the "Edit" button in the row corresponding to the account.
 
-<Image
-  alt="A screenshot highlighting the location of the _Edit_ button"
-  img={require('../assets/png/cmp-account-edit-button.png')}
-/>
+![A screenshot highlighting the location of the _Edit_ button](../assets/png/cmp-account-edit-button.png)
 
 Then, check the box of any new feature(s) you'd like to add permissions for.
 
-<Image
-  alt="A screenshot showing a list of features"
-  img={require('../assets/png/cmp-add-feature-permissions.png')}
-/>
+![A screenshot showing a list of features](../assets/png/cmp-add-feature-permissions.png)
 
 There are two options for updating your role:
 

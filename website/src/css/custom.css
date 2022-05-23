@@ -81,10 +81,11 @@
   border-bottom: 1px solid var(--ifm-toc-border-color);
 }
 
-/* Ideal image CSS fix */
+/* Zoom CSS fix */
 
-article div div {
-  margin-bottom: var(--ifm-leading);
+.medium-zoom-overlay,
+.medium-zoom-image {
+  z-index: 9999;
 }
 
 /* Footer colors */
