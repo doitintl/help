@@ -35,8 +35,10 @@ start: install
 
 .PHONY: build # Bundle the website into static files for production
 build: install
-	rm -f $(BUILD_ERRORS)
 	yarn build
+
+optimize-build: build
+	../bin/optimize-build.sh
 
 .PHONY: serve # Serve the built website locally
 serve: install
