@@ -87,18 +87,6 @@ article div div {
   margin-bottom: var(--ifm-leading);
 }
 
-/* Zoom CSS fix */
-
-.medium-zoom-overlay,
-.medium-zoom-image {
-  z-index: 9999;
-}
-
-[data-rmiz-wrap='visible'],
-[data-rmiz-wrap='hidden'] {
-  display: inline !important;
-}
-
 /* Footer colors */
 
 .footer {
