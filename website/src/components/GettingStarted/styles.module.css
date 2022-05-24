@@ -1,14 +1,21 @@
 .cards_container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.getting_started {
-  margin-bottom: 40px;
+  padding: 0 20px;
 }
 
 .getting_started_container {
-  margin: 0 9%;
-  padding-top: 56px;
-  padding-bottom: 70px;
+  margin: 0 4%;
+  padding: 28px;
+}
+
+@media screen and (min-width: 996px) {
+  .cards_container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 56px;
+  }
+
+  .getting_started_container {
+    margin: 0 8%;
+    padding: 56px 0;
+  }
 }

@@ -38,7 +38,9 @@ const Feature = ({ title, description, link }) => (
   <div className={styles.feature}>
     <h3>{title}</h3>
     <p>{description}</p>
-    <a href={link.href}>{link.text}</a>
+    <p>
+      <a href={link.href}>{link.text}</a>
+    </p>
   </div>
 );
 
