@@ -26,6 +26,7 @@ cc'd
 ceval
 changefreq
 cicd
+cksh
 cloudaudit
 cloudhealth
 cloudreports
@@ -47,6 +48,7 @@ docsearch
 doesn't
 doit
 doitintl
+dpkg
 dryrun
 ecam
 editmsg
@@ -88,6 +90,7 @@ kpis
 kubernetes
 lastword
 launchtemplate
+libimagequant
 lintspaces
 loglevel
 maci
@@ -119,6 +122,7 @@ oxley
 partia
 patsubst
 pidof
+pngquant
 porta
 posix
 preconfigured

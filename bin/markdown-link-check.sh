@@ -24,7 +24,7 @@ RED='\x1b[1;31m'
 RESET='\x1b[0m'
 
 run_markdown_link_check() {
-    fdfind --hidden --ignore-case --type f --print0 '\.md$$' |
+    fdfind --hidden --ignore-case --type f --print0 '\.mdx?$$' |
         xargs -0 markdown-link-check \
             --config .markdown-link-check.json \
             --quiet \

@@ -18,10 +18,10 @@ RESET='[0m'
 
 REDIRECTS_FILE=website/static/_redirects
 
-temp_dir="$(mktemp -d)"
+tmp_dir="$(mktemp -d)"
 
 clean() {
-    rm -rf "${temp_dir}"
+    rm -rf "${tmp_dir}"
 }
 
 trap clean EXIT
@@ -34,21 +34,21 @@ print_errors() {
         <"${error_file}"
 }
 
-tmp_errors="${temp_dir}/errors"
+tmp_errors="${tmp_dir}/errors"
 if grep -n -E '^ ' "${REDIRECTS_FILE}" >"${tmp_errors}"; then
     print_errors "Leading whitespace" "${tmp_errors}"
     exit 1
 fi
 
 # Select the first column (with no filtering, to preserve line numbers)
-src_tmp="${temp_dir}/src"
+src_tmp="${tmp_dir}/src"
 awk '{print $1}' <"${REDIRECTS_FILE}" >"${src_tmp}"
 
 # Select the second column (with filtering, to match rules)
-dest_tmp="${temp_dir}/dest"
+dest_tmp="${tmp_dir}/dest"
 awk '{print $2}' <"${REDIRECTS_FILE}" | grep -E '^/' >"${dest_tmp}"
 
-tmp_errors="${temp_dir}/errors"
+tmp_errors="${tmp_dir}/errors"
 if grep -n -F -f "${dest_tmp}" "${src_tmp}" >"${tmp_errors}"; then
     print_errors "Chained redirects" "${tmp_errors}"
     exit 1

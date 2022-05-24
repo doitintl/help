@@ -25,6 +25,7 @@ RUN_CMD="$(command -v vale-server)"
 get_pid() {
     pidof "${RUN_CMD}"
 }
+
 if test -n "$(get_pid)"; then
     echo "ERROR: Vale Server is already running (PID $(get_pid))"
     exit 1

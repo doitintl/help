@@ -45,7 +45,7 @@ start:
 .PHONY: build # Build the Docusaurus website
 build:
 	$(call print-target)
-	@ $(MAKE) -C website $@
+	@ $(MAKE) -C website optimize-build
 
 .PHONY: serve # Serve the built website locally
 serve:

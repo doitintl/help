@@ -206,19 +206,13 @@ const config = {
         apiKey: process.env.ALGOLIA_API_KEY,
         indexName: process.env.INDEX_NAME,
       },
+      zoom: {
+        selector: '.markdown :not(em) > img',
+        // https://github.com/francoischalifour/medium-zoom#usage
+        config: {},
+      },
     }),
-  plugins: [
-    [
-      'ideal-image',
-      /** @type {import('@docusaurus/plugin-ideal-image').PluginOptions} */
-      ({
-        max: 2560,
-        min: 640,
-        steps: 5,
-        disableInDev: true,
-      }),
-    ],
-  ],
+  plugins: [require.resolve('docusaurus-plugin-image-zoom')],
   customFields: {
     ALGOLIA_API_KEY: process.env.ALGOLIA_API_KEY,
     ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID,
