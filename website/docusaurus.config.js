@@ -9,7 +9,7 @@ require('dotenv').config();
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'DoiT Help Center',
-  tagline: "How can we help?",
+  tagline: 'How can we help?',
   url: 'https://doitintl-help.netlify.app',
   baseUrl: '/',
   trailingSlash: false,
@@ -72,6 +72,11 @@ const config = {
             label: 'Developer Hub',
           },
           {
+            href: 'https://hello.doit-intl.com/',
+            position: 'right',
+            label: 'Log in to the CMP',
+          },
+          {
             href: 'https://github.com/doitintl/help',
             position: 'right',
             className: 'header-github-link',
@@ -96,74 +101,8 @@ const config = {
         copyright: `Copyright ${new Date().getFullYear()}, DoiT International. MIT License.`,
         links: [
           {
-            title: 'Support and consulting',
+            title: 'Additional information',
             items: [
-              {
-                label: 'Contact us',
-                href: 'https://www.doit-intl.com/contact/',
-              },
-              {
-                label: 'Feature requests',
-                href: 'https://feedback.doit-intl.com/',
-              },
-              {
-                label: 'Open a ticket',
-                href: 'https://support.doit-intl.com/login',
-              },
-              {
-                label: 'Log into your account',
-                href: 'https://hello.doit-intl.com/',
-              },
-              {
-                label: 'Technical support',
-                href: 'https://www.doit-intl.com/services/managed-support-msp/',
-              },
-              {
-                label: 'Technical consulting',
-                href: 'https://www.doit-intl.com/services/#cloud-consulting-engineering',
-              },
-              {
-                label: 'Support stats',
-                href: 'https://www.doit-intl.com/stats/',
-              },
-            ],
-          },
-          {
-            title: 'Discover',
-            items: [
-              {
-                label: 'Blog',
-                href: 'https://blog.doit-intl.com/',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/doitintl',
-              },
-              {
-                label: 'LinkedIn',
-                href: 'https://www.linkedin.com/company/doitintl',
-              },
-              {
-                label: 'YouTube',
-                href: 'https://www.youtube.com/c/MultiCloudEngineering',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/doitint',
-              },
-              {
-                label: 'Facebook',
-                href: 'https://www.facebook.com/DoIT.International/',
-              },
-            ],
-          },
-          {
-            title: 'Company',
-            items: [
-              {
-                label: 'Homepage',
-                href: 'https://www.doit-intl.com/',
-              },
               {
                 label: 'Vendor information',
                 to: '/docs/vendor-information/general-vendor-information',
@@ -191,6 +130,64 @@ const config = {
               {
                 label: 'Privacy policy',
                 href: 'https://www.doit-intl.com/privacy/',
+              },
+            ],
+          },
+          {
+            title: 'Support and consulting',
+            items: [
+              {
+                label: 'Feature requests',
+                href: 'https://feedback.doit-intl.com/',
+              },
+              {
+                label: 'Open a ticket',
+                href: 'https://support.doit-intl.com/login',
+              },
+              {
+                label: 'Technical support',
+                href: 'https://www.doit-intl.com/services/managed-support-msp/',
+              },
+              {
+                label: 'Technical consulting',
+                href: 'https://www.doit-intl.com/services/#cloud-consulting-engineering',
+              },
+              {
+                label: 'Support stats',
+                href: 'https://www.doit-intl.com/stats/',
+              },
+            ],
+          },
+          {
+            title: 'Discover',
+            items: [
+              {
+                label: 'Homepage',
+                href: 'https://www.doit-intl.com/',
+              },
+              {
+                label: 'Blog',
+                href: 'https://blog.doit-intl.com/',
+              },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/doitintl',
+              },
+              {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/company/doitintl',
+              },
+              {
+                label: 'YouTube',
+                href: 'https://www.youtube.com/c/MultiCloudEngineering',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/doitint',
+              },
+              {
+                label: 'Facebook',
+                href: 'https://www.facebook.com/DoIT.International/',
               },
             ],
           },
