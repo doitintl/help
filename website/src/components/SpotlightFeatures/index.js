@@ -2,8 +2,8 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
-import logoBlackUrl from '../../../static/img/doit-logo-black.png';
-import logoWhiteUrl from '../../../static/img/doit-logo-white.png';
+import logoBlackUrl from '../../../static/images/doit-logo-black.png';
+import logoWhiteUrl from '../../../static/images/doit-logo-white.png';
 
 import ThemedImage from '@theme/ThemedImage';
 

@@ -16,7 +16,7 @@ const config = {
   onBrokenLinks: 'error',
   onBrokenMarkdownLinks: 'error',
   onDuplicateRoutes: 'error',
-  favicon: 'img/favicon.ico',
+  favicon: 'favicon.ico',
   organizationName: 'doitintl',
   projectName: 'help',
 
@@ -44,7 +44,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/doit-logo-black-rect.png',
+      image: 'images/doit-logo-black-rect.png',
       // Disable dark mode switch
       colorMode: {
         defaultMode: 'light',
@@ -56,8 +56,8 @@ const config = {
         hideOnScroll: true,
         logo: {
           alt: 'DoiT International',
-          src: 'img/doit-logo-black.svg',
-          srcDark: 'img/doit-logo-white.svg',
+          src: 'images/doit-logo-black.svg',
+          srcDark: 'images/doit-logo-white.svg',
         },
         items: [
           {
@@ -94,7 +94,7 @@ const config = {
         style: 'dark',
         logo: {
           alt: 'DoiT',
-          src: 'img/doit-logo-white.svg',
+          src: 'images/doit-logo-white.svg',
           href: 'https://www.doit-intl.com/',
           width: 100,
         },
