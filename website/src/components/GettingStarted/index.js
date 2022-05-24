@@ -1,6 +1,6 @@
 import React from 'react';
 import IconCard from '../IconCard';
-import logoBlackUrl from '../../../static/img/doit-logo-black.png';
+import logoBlackUrl from '../../../static/images/doit-logo-black.png';
 import styles from './styles.module.css';
 
 // TODO: Resolve partial duplication of `navbar` configuration

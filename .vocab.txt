@@ -20,6 +20,7 @@ brockdb
 brok
 brokdb
 brokignore
+browserconfig
 browserslist
 budgetao
 cc'd
@@ -110,6 +111,8 @@ mixpanel
 mkdir
 mktemp
 mpas
+msapplication
+mstile
 mvdan
 ndash
 noempty
