@@ -5,7 +5,7 @@ const ContactSupport = () => {
   return (
     <section className={styles.contact_container}>
       <div className={styles.contact}>
-        <h1 className={styles.contact_title}>We're always here to help</h1>
+        <h1 className={styles.contact_title}>Get in touch</h1>
         <p>
           Our technical support team and cloud reliability engineers are
           standing by,{' '}
