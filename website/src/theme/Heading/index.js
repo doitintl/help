@@ -34,6 +34,18 @@ export default function HeadingWrapper(props) {
         <meta name="application-name" content="DoiT Help Center" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="theme-color" content="#ffffff" />
+        <meta property="og:image:width" content="1852" />
+        <meta property="og:image:height" content="970" />
+        <meta property="og:title" content="DoiT Help Center" />
+        <meta
+          property="og:description"
+          content="Product docs, user guides, how-tos, FAQs, and more."
+        />
+        <meta property="og:url" content="https://help.doit-intl.com/" />
+        <meta
+          property="og:image"
+          content="https://help.doit-intl.com/og-image.jpg"
+        />
       </Head>
     </>
   );

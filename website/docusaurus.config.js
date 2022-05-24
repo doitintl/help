@@ -44,7 +44,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'images/doit-logo-black-rect.png',
       // Disable dark mode switch
       colorMode: {
         defaultMode: 'light',
