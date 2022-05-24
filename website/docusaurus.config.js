@@ -98,7 +98,6 @@ const config = {
           href: 'https://www.doit-intl.com/',
           width: 100,
         },
-        copyright: `Copyright ${new Date().getFullYear()}, DoiT International. MIT License.`,
         links: [
           {
             title: 'Additional information',

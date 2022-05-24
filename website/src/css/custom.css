@@ -88,6 +88,64 @@
   z-index: 9999;
 }
 
+/*
+
+Fixes to match the CSS used to customize the front page
+
+TODO: We should probably fix our custom CSS to work with Infirma, which is what
+the default Docusaurus theme uses
+
+https://docusaurus.io/docs/styling-layout#styling-your-site-with-infima
+
+*/
+
+.footer {
+  padding: 0;
+  margin: 0;
+}
+
+.footer .container {
+  margin: 0 8%;
+  padding: 0;
+  width: auto;
+}
+
+.footer__links {
+  display: flex;
+  padding-top: 2rem;
+  margin: 0;
+}
+
+.footer__col {
+  margin: 0;
+  margin-bottom: var(--ifm-heading-margin-bottom);
+  padding: 0 5% 0 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto;
+}
+
+.footer__items {
+  margin-bottom: var(--ifm-heading-margin-bottom);
+}
+
+.footer__title,
+.footer__item {
+  white-space: nowrap;
+}
+
+.footer__bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 996px) {
+  .footer__col {
+    --ifm-col-width: 33%;
+  }
+}
+
 /* Footer colors */
 
 .footer {
@@ -106,6 +164,28 @@
 }
 
 /* DocSearch */
+
+.DocSearch-Modal {
+  --docsearch-modal-width: 90vw;
+  width: 90vw;
+  max-width: 750px !important;
+}
+
+@media screen and (min-width: 750px) {
+  .DocSearch-Modal {
+    margin: 85px auto auto !important;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .DocSearch-Modal {
+    position: fixed !important;
+  }
+}
+
+.DocSearch-Button {
+  padding: 0 20px !important;
+}
 
 .DocSearch-Button:nth-child(2) {
   background: #ffffff !important;

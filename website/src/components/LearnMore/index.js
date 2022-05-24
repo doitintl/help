@@ -10,10 +10,6 @@ const lists = [
         text: 'this is a on link list',
         href: '/test',
       },
-    ],
-  },
-  {
-    links: [
       {
         text: 'this is a on link list',
         href: '/test',
@@ -22,6 +18,22 @@ const lists = [
   },
   {
     links: [
+      {
+        text: 'this is a on link list',
+        href: '/test',
+      },
+      {
+        text: 'this is a on link list',
+        href: '/test',
+      },
+    ],
+  },
+  {
+    links: [
+      {
+        text: 'this is a on link list',
+        href: '/test',
+      },
       {
         text: 'this is a on link list',
         href: '/test',
