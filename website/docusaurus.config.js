@@ -9,7 +9,7 @@ require('dotenv').config();
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'DoiT Help Center',
-  tagline: "We're always here to help",
+  tagline: "How can we help?",
   url: 'https://doitintl-help.netlify.app',
   baseUrl: '/',
   trailingSlash: false,
