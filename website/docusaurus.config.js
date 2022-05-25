@@ -29,6 +29,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/doitintl/help/tree/main/website/docs',
           showLastUpdateTime: true,
+          breadcrumbs: false,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -71,7 +72,7 @@ const config = {
             label: 'Developer Hub',
           },
           {
-            href: 'https://hello.doit-intl.com/',
+            href: 'https://app.doit-intl.com/',
             position: 'right',
             label: 'Log in to the CMP',
           },
@@ -99,39 +100,6 @@ const config = {
         },
         links: [
           {
-            title: 'Additional information',
-            items: [
-              {
-                label: 'Vendor information',
-                to: '/docs/vendor-information/general-vendor-information',
-              },
-              {
-                label: 'Data access policy',
-                to: '/docs/vendor-information/security-and-data-access-policy-for-cloud-management-platform',
-              },
-              {
-                label: 'External services we use',
-                to: '/docs/vendor-information/external-services',
-              },
-              {
-                label: 'Exchange rates',
-                to: '/docs/vendor-information/exchange-rates',
-              },
-              {
-                label: 'Our subprocessors',
-                href: '/docs/vendor-information/subprocessors',
-              },
-              {
-                label: 'Compliance',
-                href: 'https://www.doit-intl.com/compliance/',
-              },
-              {
-                label: 'Privacy policy',
-                href: 'https://www.doit-intl.com/privacy/',
-              },
-            ],
-          },
-          {
             title: 'Support and consulting',
             items: [
               {
@@ -140,19 +108,19 @@ const config = {
               },
               {
                 label: 'Open a ticket',
-                href: 'https://support.doit-intl.com/login',
+                href: 'https://app.doit-intl.com/support',
               },
               {
                 label: 'Technical support',
-                href: 'https://www.doit-intl.com/services/managed-support-msp/',
+                href: 'https://doit-intl.com/services/managed-support-msp/',
               },
               {
                 label: 'Technical consulting',
-                href: 'https://www.doit-intl.com/services/#cloud-consulting-engineering',
+                href: 'https://doit-intl.com/services/#cloud-consulting-engineering',
               },
               {
                 label: 'Support stats',
-                href: 'https://www.doit-intl.com/stats/',
+                href: 'https://doit-intl.com/stats/',
               },
             ],
           },
@@ -161,7 +129,7 @@ const config = {
             items: [
               {
                 label: 'Homepage',
-                href: 'https://www.doit-intl.com/',
+                href: 'https://doit-intl.com/',
               },
               {
                 label: 'Blog',
@@ -186,6 +154,35 @@ const config = {
               {
                 label: 'Facebook',
                 href: 'https://www.facebook.com/DoIT.International/',
+              },
+            ],
+          },
+          {
+            title: 'Additional information',
+            items: [
+              {
+                label: 'Vendor information',
+                to: '/docs/vendor-information/general-vendor-information',
+              },
+              {
+                label: 'Data access policy',
+                to: '/docs/vendor-information/security-and-data-access-policy-for-cloud-management-platform',
+              },
+              {
+                label: 'External services we use',
+                to: '/docs/vendor-information/external-services',
+              },
+              {
+                label: 'Exchange rates',
+                to: '/docs/vendor-information/exchange-rates',
+              },
+              {
+                label: 'Our subprocessors',
+                href: '/docs/vendor-information/subprocessors',
+              },
+              {
+                label: 'Compliance',
+                href: 'https://doit-intl.com/compliance/',
               },
             ],
           },

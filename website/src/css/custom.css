@@ -1,36 +1,13 @@
-/* Primary color */
+/* Choose a darker variation of the default primary color */
 
 :root {
-  --ifm-color-primary: #2e4a99;
-  --ifm-color-primary-dark: #29438a;
-  --ifm-color-primary-darker: #273f82;
-  --ifm-color-primary-darkest: #20346b;
-  --ifm-color-primary-light: #3351a8;
-  --ifm-color-primary-lighter: #3555b0;
-  --ifm-color-primary-lightest: #3e61c5;
-}
-
-[data-theme='dark'] {
-  --ifm-color-primary: #9bd9fa;
-  --ifm-color-primary-dark: #74caf8;
-  --ifm-color-primary-darker: #61c3f7;
-  --ifm-color-primary-darkest: #27adf4;
-  --ifm-color-primary-light: #c2e8fc;
-  --ifm-color-primary-lighter: #d5effd;
-  --ifm-color-primary-lightest: #ffffff;
-}
-
-/* Boilerplate CSS */
-
-.docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.1);
-  display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding: 0 var(--ifm-pre-padding);
-}
-
-[data-theme='dark'] .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary-lightest: #2871e4;
+  --ifm-color-primary-lighter: #1a62d2;
+  --ifm-color-primary-light: #195dc9;
+  --ifm-color-primary: #1755b7;
+  --ifm-color-primary-dark: #154da5;
+  --ifm-color-primary-darker: #14489c;
+  --ifm-color-primary-darkest: #103b80;
 }
 
 /* Announcement bar */
@@ -66,13 +43,7 @@
   width: 24px;
   height: 24px;
   display: flex;
-  background: url(../../static/images/github.svg) no-repeat;
-}
-
-/* Document logo */
-
-#docs-logo {
-  margin-top: -5.3rem !important;
+  background: url(../../static/images/github-logo.svg) no-repeat;
 }
 
 /* Document tabs bar  */
@@ -88,51 +59,29 @@
   z-index: 9999;
 }
 
-/*
+/* Customizations for the front page grid */
 
-Fixes to match the CSS used to customize the front page
-
-TODO: We should probably fix our custom CSS to work with Infirma, which is what
-the default Docusaurus theme uses
-
-https://docusaurus.io/docs/styling-layout#styling-your-site-with-infima
-
-*/
-
-.container {
+#front-page .container,
+.footer .container {
   margin: 0 4%;
   padding: 1rem 0;
   width: auto;
 }
 
-.row {
+#front-page .row,
+.footer .row {
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
 }
 
-.col {
+#front-page .col,
+.footer .col {
   margin: 0;
   padding: 1rem;
   padding-left: 0;
   flex-grow: 1;
-}
-
-@media screen and (min-width: 996px) {
-  .container {
-    margin: 0 8%;
-    padding: 2rem 0;
-  }
-
-  .row {
-    flex-direction: row;
-  }
-
-  .col {
-    padding: 2rem;
-    padding-left: 0;
-  }
 }
 
 .footer {
@@ -141,19 +90,14 @@ https://docusaurus.io/docs/styling-layout#styling-your-site-with-infima
 }
 
 .footer__links {
-  display: flex;
   padding-top: 2rem;
   margin: 0;
 }
 
 .footer__col {
+  padding: 0;
   margin: 0;
   margin-bottom: var(--ifm-heading-margin-bottom);
-  padding: 0 5% 0 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-basis: auto;
 }
 
 .footer__items {
@@ -165,14 +109,36 @@ https://docusaurus.io/docs/styling-layout#styling-your-site-with-infima
   white-space: nowrap;
 }
 
-.footer__bottom {
-  display: flex;
-  flex-direction: column;
+@media screen and (min-width: 996px) {
+  #front-page .container,
+  .footer .container {
+    margin: 0 8%;
+    padding: 2rem 0;
+  }
+
+  #front-page .row,
+  .footer .row {
+    flex-direction: row;
+  }
+
+  #front-page .col,
+  .footer .col {
+    padding: 2rem;
+    padding-left: 0;
+  }
 }
 
-@media screen and (min-width: 996px) {
-  .footer__col {
-    --ifm-col-width: 33%;
+@media screen and (max-width: 995px) {
+  .footer .row {
+    float: left;
+  }
+
+  .footer__bottom {
+    float: right;
+  }
+
+  .footer__bottom img {
+    margin: 0;
   }
 }
 
@@ -195,9 +161,12 @@ https://docusaurus.io/docs/styling-layout#styling-your-site-with-infima
 
 /* DocSearch */
 
+:root {
+  --docsearch-primary-color: var(--ifm-color-primary);
+  --docsearch-modal-width: var(90vw);
+}
+
 .DocSearch-Modal {
-  --docsearch-modal-width: 90vw;
-  width: 90vw;
   max-width: 750px !important;
 }
 

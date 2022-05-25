@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <Layout>
       <Header />
-      <main className={styles.main}>
+      <main id="front-page" className={styles.main}>
         <GettingStarted />
         <SpotlightFeatures />
         <LearnMore />

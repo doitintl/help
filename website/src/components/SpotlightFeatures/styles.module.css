@@ -1,5 +1,5 @@
 .spotlight_features {
-  background-color: #fcfcfc;
+  background-color: rgba(0, 0, 0, 0.02);
 }
 
 .feature {
@@ -7,12 +7,10 @@
   padding-left: 0;
 }
 
-@media screen and (min-width: 996px) {
-  .feature {
-    width: 33%;
-  }
-}
-
 .feature h2 {
   white-space: nowrap;
+}
+
+.feature p:last-child {
+  margin-bottom: 0;
 }
