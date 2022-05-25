@@ -87,7 +87,6 @@ iframe
 ignorecase
 imgdup
 imgdupignore
-infirma
 iops
 kpis
 kubernetes
@@ -151,6 +150,7 @@ sameline
 sarbanes
 sarl
 savingsplans
+semibold
 serv
 serviceusage
 shellcheck

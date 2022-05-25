@@ -11,14 +11,16 @@ const ContactSupport = () => {
             <p>
               Our technical support team and cloud reliability engineers are
               standing by,{' '}
-              <a href="https://www.doit-intl.com/stats/" target="_blank">
+              <a href="https://doit-intl.com/stats/" target="_blank">
                 24 hours a day
               </a>
             </p>
             <p>
-              <button href="#" className={styles.contact_button}>
-                Open a ticket
-              </button>
+              <a href="https://app.doit-intl.com/support" target="_blank">
+                <button className={styles.contact_button}>
+                  Open a ticket
+                </button>
+              </a>
             </p>
           </div>
         </div>

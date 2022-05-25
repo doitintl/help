@@ -5,18 +5,10 @@ import styles from './styles.module.css';
 
 const IconCard = ({ card }) => (
   <div className={`col ${styles.icon_card}`}>
-    <div className={styles.icon_card_inner}>
-      <ThemedImage
-        alt={card.imageAlt}
-        height="81"
-        sources={{
-          light: card.image,
-        }}
-      />
-      <p className={styles.icon_card_title}>
-        <a href={card.href}>{card.title}</a>
-      </p>
-    </div>
+    <a href={card.href} className={styles.icon_card_inner}>
+      <card.image />
+      <p className={styles.icon_card_title}>{card.title}</p>
+    </a>
   </div>
 );
 

@@ -1,20 +1,19 @@
 import React from 'react';
 import IconCard from '../IconCard';
-import logoBlackUrl from '../../../static/images/doit-logo-black.png';
+import cmpIcon from '../../../static/images/cmp-icon.svg';
+import devHubIcon from '../../../static/images/dev-hub-icon.svg';
 import styles from './styles.module.css';
 
 // TODO: Resolve partial duplication of `navbar` configuration
 const cards = [
   {
     title: 'Cloud Management Platform',
-    image: logoBlackUrl,
-    imageAlt: '',
+    image: cmpIcon,
     href: '/docs/cmp',
   },
   {
     title: 'Developer Hub',
-    image: logoBlackUrl,
-    imageAlt: '',
+    image: devHubIcon,
     href: 'https://developer.doit-intl.com/',
   },
 ];

@@ -1,13 +1,5 @@
 .icon_card {
-  width: 100%;
   padding-left: 1rem !important;
-}
-
-@media screen and (min-width: 996px) {
-  .icon_card {
-    width: 50%;
-    padding-left: 2rem !important;
-  }
 }
 
 .icon_card_inner {
@@ -27,11 +19,39 @@
   border-radius: 4px;
 }
 
-.icon_card_inner img {
-  margin-top: 2rem;
+.icon_card_inner:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+  text-decoration: none;
+}
+
+.icon_card_inner svg {
+  margin-top: 1rem;
+}
+
+.icon_card_inner:hover svg {
+  filter: saturate(180%);
 }
 
 .icon_card_title {
-  margin: 1rem 0 2rem 0;
-  font-weight: var(--ifm-font-weight-bold);
+  margin: 0 0 1rem 0;
+  color: var(--ifm-font-color-base);
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.icon_card_inner:hover p {
+  color: var(--ifm-color-primary);
+}
+
+@media screen and (min-width: 996px) {
+  .icon_card {
+    padding-left: 2rem !important;
+  }
+
+  .icon_card_inner svg {
+    margin-top: 2rem;
+  }
+
+  .icon_card_title {
+    margin: 0 0 2rem 0;
+  }
 }
