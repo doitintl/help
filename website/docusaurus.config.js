@@ -10,7 +10,7 @@ require('dotenv').config();
 const config = {
   title: 'DoiT Help Center',
   tagline: 'How can we help?',
-  url: 'https://doitintl-help.netlify.app',
+  url: process.env.URL || 'http://localhost:3000',
   baseUrl: '/',
   trailingSlash: false,
   onBrokenLinks: 'error',

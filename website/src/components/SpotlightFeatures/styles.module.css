@@ -1,50 +1,18 @@
-.features_container {
+.spotlight_features {
   background-color: #fcfcfc;
-}
-
-.features_container_inner {
-  margin: 0 4%;
-  padding: 28px;
-}
-
-.features {
-  display: flex;
-  align-items: center;
-  padding: 1rem 0;
-  width: 100%;
 }
 
 .feature {
   width: 100%;
-  padding-right: 5%;
-}
-
-.feature h3 {
-  white-space: nowrap;
-}
-
-.featureSvg {
-  height: 200px;
-  width: 200px;
+  padding-left: 0;
 }
 
 @media screen and (min-width: 996px) {
-  .features_container_inner {
-    margin: 0 8%;
-    padding: 56px 0;
-  }
-
-  .features {
-    padding: 2rem 0;
-  }
-
   .feature {
     width: 33%;
   }
 }
 
-@media screen and (max-width: 996px) {
-  .features {
-    flex-direction: column;
-  }
+.feature h2 {
+  white-space: nowrap;
 }

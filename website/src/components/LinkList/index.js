@@ -4,14 +4,12 @@ import styles from './styles.module.css';
 
 const LinkList = ({ list }) => {
   const linkNodes = list.links.map((link, i) => (
-    <li>
-      <a key={i} href={link.href}>
-        {link.text}
-      </a>
+    <li key={i}>
+      <a href={link.href}>{link.text}</a>
     </li>
   ));
   return (
-    <div className={styles.link_list}>
+    <div className={`col ${styles.link_list}`}>
       <ul>{linkNodes}</ul>
     </div>
   );

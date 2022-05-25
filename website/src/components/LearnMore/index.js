@@ -8,23 +8,11 @@ const lists = [
     links: [
       {
         text: 'this is a on link list',
-        href: '/test',
+        href: '/test/foo',
       },
       {
         text: 'this is a on link list',
-        href: '/test',
-      },
-    ],
-  },
-  {
-    links: [
-      {
-        text: 'this is a on link list',
-        href: '/test',
-      },
-      {
-        text: 'this is a on link list',
-        href: '/test',
+        href: '/test/bar',
       },
     ],
   },
@@ -32,11 +20,23 @@ const lists = [
     links: [
       {
         text: 'this is a on link list',
-        href: '/test',
+        href: '/test/baz',
       },
       {
         text: 'this is a on link list',
-        href: '/test',
+        href: '/test/boz',
+      },
+    ],
+  },
+  {
+    links: [
+      {
+        text: 'this is a on link list',
+        href: '/test/boop',
+      },
+      {
+        text: 'this is a on link list',
+        href: '/test/beep',
       },
     ],
   },
@@ -44,14 +44,16 @@ const lists = [
 
 const LearnMore = () => {
   return (
-    <div className={styles.learn_more_wrapper}>
-      <h1>Learn more</h1>
-      <div className={styles.learn_more_container}>
-        {lists.map((list, i) => (
-          <LinkList key={i} list={list}></LinkList>
-        ))}
+    <section className={styles.learn_more}>
+      <div className="container">
+        <h1>Learn more</h1>
+        <div className="row">
+          {lists.map((list, i) => (
+            <LinkList key={i} list={list}></LinkList>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default LearnMore;

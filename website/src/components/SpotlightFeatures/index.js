@@ -35,8 +35,8 @@ const featureList = [
 ];
 
 const Feature = ({ title, description, link }) => (
-  <div className={styles.feature}>
-    <h3>{title}</h3>
+  <div className={`col ${styles.feature}`}>
+    <h2>{title}</h2>
     <p>{description}</p>
     <p>
       <a href={link.href}>{link.text}</a>
@@ -45,10 +45,10 @@ const Feature = ({ title, description, link }) => (
 );
 
 const SpotlightFeatures = () => (
-  <section className={styles.features_container}>
-    <div className={styles.features_container_inner}>
+  <section className={styles.spotlight_features}>
+    <div className="container">
       <h1>Spotlight features</h1>
-      <div className={styles.features}>
+      <div className="row">
         {featureList.map((props, idx) => (
           <Feature key={idx} {...props} />
         ))}

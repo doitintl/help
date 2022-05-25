@@ -20,12 +20,14 @@ const cards = [
 ];
 
 const GettingStarted = () => (
-  <section className={styles.getting_started_container}>
-    <h1 className={styles.getting_started}>Getting Started</h1>
-    <div className={styles.cards_container}>
-      {cards.map((card, i) => (
-        <IconCard key={i} card={card} />
-      ))}
+  <section className={styles.getting_started}>
+    <div className="container">
+      <h1>Getting Started</h1>
+      <div className="row">
+        {cards.map((card, i) => (
+          <IconCard key={i} card={card} />
+        ))}
+      </div>
     </div>
   </section>
 );

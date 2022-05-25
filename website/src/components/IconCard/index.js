@@ -4,8 +4,8 @@ import ThemedImage from '@theme/ThemedImage';
 import styles from './styles.module.css';
 
 const IconCard = ({ card }) => (
-  <div className={styles.icon_card_container}>
-    <div className={styles.icon_card}>
+  <div className={`col ${styles.icon_card}`}>
+    <div className={styles.icon_card_inner}>
       <ThemedImage
         alt={card.imageAlt}
         height="81"
