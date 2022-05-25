@@ -137,7 +137,7 @@ all: imgdup2go
 imgdup2go:
 	$(call print-target)
 	$(IMGDUP2GO) gitbook/cmp/.gitbook/assets
-	$(IMGDUP2GO) website/static/img/docs
+	$(IMGDUP2GO) website/docs/assets
 
 optipng-dry:
 check: optipng-dry

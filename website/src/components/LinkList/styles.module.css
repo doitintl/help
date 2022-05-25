@@ -1,6 +1,5 @@
 .link_list {
-  width: 100%;
-  padding-right: 5%;
+  padding-left: 0;
 }
 
 .link_list ul {
@@ -11,10 +10,4 @@
 .link_list li {
   list-style: none;
   line-height: 2;
-}
-
-@media screen and (min-width: 996px) {
-  .link_list {
-    width: 33%;
-  }
 }

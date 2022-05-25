@@ -29,6 +29,7 @@ ifeq ($(TERM_PROGRAM),vscode)
 YARN_START_OPTS = --no-open
 endif
 
+# Set the URL to mimic the Netlify deployment environment
 .PHONY: start # Start the development server
 start: install
 	yarn start $(YARN_START_OPTS)

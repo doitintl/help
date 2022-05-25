@@ -1,11 +1,14 @@
 import React from 'react';
-import Heading from '@theme-original/Heading';
+import Layout from '@theme-original/Layout';
 import Head from '@docusaurus/Head';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-export default function HeadingWrapper(props) {
+export default function LayoutWrapper(props) {
+  const {
+    siteConfig: { url, tagline },
+  } = useDocusaurusContext();
   return (
     <>
-      <Heading {...props} />
       <Head>
         <link
           rel="apple-touch-icon"
@@ -39,14 +42,12 @@ export default function HeadingWrapper(props) {
         <meta property="og:title" content="DoiT Help Center" />
         <meta
           property="og:description"
-          content="Product docs, user guides, how-tos, FAQs, and more."
+          content="User guides, how-tos, FAQs, and more"
         />
-        <meta property="og:url" content="https://help.doit-intl.com/" />
-        <meta
-          property="og:image"
-          content="https://help.doit-intl.com/og-image.jpg"
-        />
+        <meta property="og:url" content={url + '/'} />
+        <meta property="og:image" content={url + '/og-image.jpg'} />
       </Head>
+      <Layout {...props} />
     </>
   );
 }

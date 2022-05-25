@@ -1,23 +1,25 @@
-.contact_container {
+.contact_support {
   background: #fcfcfc;
-  padding: 1rem 0;
 }
 
-.contact {
-  display: flex;
-  align-items: center;
+.contact_support_cta {
   text-align: center;
-  flex-direction: column;
-  padding: 28px 0;
-  margin: 0 4%;
+  margin: auto;
 }
 
-.contact_title {
+@media screen and (max-width: 996px) {
+  .contact_support_cta {
+    max-width: 440px;
+  }
+}
+
+.contact_support_cta h1 {
   font-style: normal;
   font-weight: 500;
   font-size: 36px;
   line-height: 44px;
   letter-spacing: 0.25px;
+  text-align: center;
 }
 
 .contact_button {
@@ -32,22 +34,4 @@
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
-}
-
-@media screen and (min-width: 996px) {
-  .contact_container {
-    padding: 2rem 0;
-  }
-
-  .contact {
-    padding: 56px 0;
-    margin: 0 8%;
-  }
-}
-
-@media screen and (max-width: 996px) {
-  .contact {
-    max-width: 440px;
-    margin: auto;
-  }
 }
