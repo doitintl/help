@@ -1,0 +1,29 @@
+---
+sidebar_position: 2
+---
+
+# Get estimate
+
+To estimate your potential savings, Felxsave uses Google's [Recommender API](https://cloud.google.com/recommender/docs/reference/rpc/google.cloud.recommender.v1) to fetch the aggregated information of your last month’s compute usage.
+
+Every Flexsave standalone account has a dedicated Service Account (SA) created by DoiT. In this step, you need to grant necessary permissions to this SA at the organization level. The permissions will allow DoiT to fetch customer GCP recommendations.
+
+Refer to Google Cloud Docs for detailed instructions about [Getting your organization ID](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id).
+
+1. Create a custom role named `doit_flexsave_role` with DoiT specific permissions.
+
+2. Grant aceess to the dedicated DoiT service account.
+
+Required policies
+
+Granting IAM permissions to use the AWS Cost Explorer API
+An IAM user must be granted explicit permission to query the AWS Cost Explorer API. For the policy that grants the necessary permissions to an IAM user, see View costs and usage.
+
+3. Test the connection.
+
+4. Select VIEW MY ESTIMATE to see the final estimate.
+
+Note that the estimation is based on your last month's bill and the most common resources and regions. (the screen text says the most commonly used by our customers, so it's not related to this specific customer? shouldn't it be the most common resources in the customer's regions? Or we don't know the regions with organization ID only?)
+
+The estimatation is based on 0-5% annual growth.
+
