@@ -1,0 +1,46 @@
+---
+sidebar_position: 2
+---
+
+# Get estimate
+
+To calculate your potential savings, Flexsave uses Google's [Recommender API](https://cloud.google.com/recommender/docs/reference/rpc/google.cloud.recommender.v1) to fetch the aggregated information of your last month's compute usage. We do not collect information regarding your machines, resources or tags.
+
+Flexsave estimates your potential savings based on your last month's bill and the most commonly used resources and regions among DoiT customers.
+
+To estimate your potential savings, Flexsave uses Google's [Recommender API](https://cloud.google.com/recommender/docs/reference/rpc/google.cloud.recommender.v1) to fetch the aggregated information of your last month's compute usage.
+
+Every Flexsave standalone account has a dedicated Service Account (SA) created by DoiT. You need to grant necessary permissions to this SA at the organization level. The permissions will allow DoiT to fetch customer GCP recommendations.
+
+To generate recommendation and forecasting, the doiT role needs to get GCP recommendations for Savings Plans as well as customer spend.
+
+1. Fill in your organization ID to create custom code snippets.
+
+   Refer to Google Cloud Docs for how to [Get your organization ID](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id).
+
+1. Open Google Cloud shell.
+
+1. Copy the first gcloud command code snippet and run it Google Cloud shell.
+
+   ```
+   gcloud iam roles create doit_flexsave_role --organization=$ORG --title="DoiT Flexsave Role" --stage=GA --permissions=recommender.usageCommitmentRecommendations.list,compute.instances.list
+   ```
+
+   This will create a custom role named `doit_flexsave_role` with permissions to get GCP recommendations for Savings Plans as well as customer spend.
+
+1. Grant access to the dedicated DoiT service account.
+
+   ```
+   gcloud organizations add-iam-policy-binding $ORG --member=serviceAccount:<our service account email> --role=organizations/$ORG/roles/doit_flexsave_role
+   ```
+
+   Required policies
+
+   Granting IAM permissions to use the AWS Cost Explorer API
+   An IAM user must be granted explicit permission to query the AWS Cost Explorer API. For the policy that grants the necessary permissions to an IAM user, see View costs and usage.
+
+1. Verify the permissions.
+
+1. Select VIEW MY ESTIMATE to see the final estimate.
+
+The estimation is based on 0-5% annual growth.
