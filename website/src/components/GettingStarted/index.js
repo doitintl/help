@@ -23,7 +23,7 @@ const cards = [
 const GettingStarted = () => (
   <section className={styles.getting_started}>
     <div className="container">
-      <h1>Getting Started</h1>
+      <h2>Getting Started</h2>
       <div className="row">
         {cards.map((card, i) => (
           <IconCard key={i} card={card} />

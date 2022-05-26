@@ -60,7 +60,7 @@ const featureListRow2 = [
 
 const Feature = ({ title, description, link }) => (
   <div className={`col ${styles.feature}`}>
-    <h2>{title}</h2>
+    <h3>{title}</h3>
     <p>{description}</p>
     <p>
       <Link to={link}>Learn more&hellip;</Link>
@@ -71,7 +71,7 @@ const Feature = ({ title, description, link }) => (
 const SpotlightFeatures = () => (
   <section className={styles.spotlight_features}>
     <div className="container">
-      <h1>Spotlight features</h1>
+      <h2>Spotlight features</h2>
       <div className="row">
         {featureListRow1.map((props, idx) => (
           <Feature key={idx} {...props} />

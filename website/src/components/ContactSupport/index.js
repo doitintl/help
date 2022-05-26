@@ -8,19 +8,19 @@ const ContactSupport = () => {
       <div className="container">
         <div className="row">
           <div className={`col ${styles.contact_support_cta}`}>
-            <h1>Get in touch</h1>
+            <h2>Talk to an expert</h2>
             <p>
               Our technical support team and cloud reliability engineers are
-              standing by,{' '}
-              <Link to="https://doit-intl.com/stats/">24 hours a day</Link>
+              available 24 hours a day.
+              <wbr /> We publish our{' '}
+              <Link to="https://doit-intl.com/stats/">live stats</Link> so
+              you can see how we're doing.
             </p>
-            <p>
-              <Link to="https://app.doit-intl.com/support">
-                <button className={styles.contact_button}>
-                  Open a ticket
-                </button>
-              </Link>
-            </p>
+            <Link to="https://app.doit-intl.com/support">
+              <button className="clean-btn button button--primary">
+                OPEN A TICKET
+              </button>
+            </Link>
           </div>
         </div>
       </div>
