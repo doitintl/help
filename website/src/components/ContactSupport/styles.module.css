@@ -5,13 +5,13 @@
 .contact_support_cta {
   text-align: center;
   margin: auto !important;
-  padding-left: 1rem !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 @media screen and (max-width: 996px) {
   .contact_support_cta {
     max-width: 30em;
-    padding-left: 2rem !important;
   }
 }
 
