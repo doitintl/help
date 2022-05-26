@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './styles.module.css';
+import Link from '@docusaurus/Link';
 
 const ContactSupport = () => {
   return (
@@ -11,16 +12,14 @@ const ContactSupport = () => {
             <p>
               Our technical support team and cloud reliability engineers are
               standing by,{' '}
-              <a href="https://doit-intl.com/stats/" target="_blank">
-                24 hours a day
-              </a>
+              <Link to="https://doit-intl.com/stats/">24 hours a day</Link>
             </p>
             <p>
-              <a href="https://app.doit-intl.com/support" target="_blank">
+              <Link to="https://app.doit-intl.com/support">
                 <button className={styles.contact_button}>
                   Open a ticket
                 </button>
-              </a>
+              </Link>
             </p>
           </div>
         </div>

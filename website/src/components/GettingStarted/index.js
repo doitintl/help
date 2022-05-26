@@ -10,11 +10,13 @@ const cards = [
     title: 'Cloud Management Platform',
     image: cmpIcon,
     href: '/docs/cmp',
+    target: '',
   },
   {
     title: 'Developer Hub',
     image: devHubIcon,
     href: 'https://developer.doit-intl.com/',
+    target: '_blank',
   },
 ];
 
