@@ -7,10 +7,6 @@
   padding-left: 0;
 }
 
-.feature h2 {
-  white-space: nowrap;
-}
-
 .feature p:last-child {
   margin-bottom: 0;
 }

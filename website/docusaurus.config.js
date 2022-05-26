@@ -158,7 +158,7 @@ const config = {
             ],
           },
           {
-            title: 'Additional information',
+            title: 'Company',
             items: [
               {
                 label: 'Vendor information',

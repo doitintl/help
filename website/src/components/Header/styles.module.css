@@ -1,5 +1,5 @@
 .hero_banner {
-  padding: 4rem 0;
+  padding: var(--ifm-spacing-vertical-4x) 0;
   display: flex;
   flex-direction: column;
   text-align: center;

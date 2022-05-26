@@ -61,24 +61,33 @@
 
 /* Customizations for the front page grid */
 
+:root {
+  --ifm-spacing-vertical-2x: calc(var(--ifm-spacing-vertical) * 2);
+  --ifm-spacing-vertical-4x: calc(var(--ifm-spacing-vertical) * 4);
+}
+
 #front-page .container,
 .footer .container {
+  padding: var(--ifm-spacing-vertical-2x) 0;
   margin: 0 auto;
-  padding: 2rem 2rem;
+  transition: all var(--ifm-transition-fast)
+    var(--ifm-transition-timing-default);
+}
+
+#front-page .container h2 {
+  margin-bottom: var(--ifm-spacing-vertical-2x);
 }
 
 #front-page .row,
 .footer .row {
-  padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: column;
 }
 
 #front-page .col,
 .footer .col {
   margin: 0;
-  padding: 1rem 1rem 1rem 0;
+  padding: 0;
   flex-grow: 1;
 }
 
@@ -87,47 +96,83 @@
   margin: 0;
 }
 
-.footer__col {
-  padding-top: 0 !important;
-}
-
-.footer__items {
-  margin-bottom: var(--ifm-heading-margin-bottom);
-}
-
 .footer__title,
 .footer__item {
   white-space: nowrap;
 }
 
-@media screen and (min-width: 996px) {
+.footer__bottom > div {
+  margin: 0 !important;
+}
+
+.footer__bottom > div a {
+  display: block;
+  height: 100px;
+}
+
+.footer__bottom img {
+  margin: 0;
+}
+
+@media screen and (max-width: 995px) {
   #front-page .container,
   .footer .container {
-    padding: 2rem 4rem;
+    width: 90vw;
+    max-width: 750px;
   }
 
+  .footer .container {
+    overflow: hidden;
+  }
+
+  #front-page .row,
+  .footer .row {
+    flex-direction: column;
+  }
+
+  #front-page .row + .row,
+  .footer .row + .row {
+    margin-top: var(--ifm-spacing-vertical-2x);
+  }
+
+  #front-page .col + .col,
+  .footer .col + .col {
+    margin-top: var(--ifm-spacing-vertical-2x);
+  }
+
+  .footer .row {
+    float: left;
+  }
+
+  .footer__items {
+    margin-bottom: var(--ifm-heading-margin-bottom);
+  }
+
+  .footer__bottom {
+    float: right;
+    margin: 0 !important;
+  }
+}
+
+@media screen and (min-width: 996px) {
   #front-page .row,
   .footer .row {
     flex-direction: row;
   }
 
-  #front-page .col,
-  .footer .col {
-    padding: 2rem 2rem 2rem 0;
-  }
-}
-
-@media screen and (max-width: 995px) {
-  .footer .row {
-    float: left;
+  #front-page .row + .row,
+  .footer .row + div {
+    margin-top: var(--ifm-spacing-vertical-4x);
   }
 
-  .footer__bottom {
-    float: right;
+  #front-page .col + .col,
+  .footer .col + .col {
+    margin-left: var(--ifm-spacing-vertical-4x);
   }
 
-  .footer__bottom img {
-    margin: 0;
+  #front-page .container,
+  .footer .container {
+    padding: var(--ifm-spacing-vertical-2x) var(--ifm-spacing-vertical-4x);
   }
 }
 
@@ -151,8 +196,8 @@
 /* DocSearch */
 
 :root {
-  --docsearch-primary-color: var(--ifm-color-primary);
-  --docsearch-modal-width: var(90vw);
+  --docsearch-primary-color: var(--ifm-color-primary) !important;
+  --docsearch-modal-width: 90vw;
 }
 
 .DocSearch-Modal {
@@ -192,4 +237,15 @@
 .DocSearch-Button:focus,
 .DocSearch-Button:hover {
   color: #969faf !important;
+}
+
+/* We have a paid account and run the crawler ourselves, so we are not required
+to display the Algolia logo */
+
+.DocSearch-Footer {
+  flex-direction: row !important;
+}
+
+.DocSearch-Logo {
+  display: none;
 }

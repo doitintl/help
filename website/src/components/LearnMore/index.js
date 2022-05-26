@@ -46,7 +46,7 @@ const LearnMore = () => {
   return (
     <section className={styles.learn_more}>
       <div className="container">
-        <h1>Learn more</h1>
+        <h2>Learn more</h2>
         <div className="row">
           {lists.map((list, i) => (
             <LinkList key={i} list={list}></LinkList>
