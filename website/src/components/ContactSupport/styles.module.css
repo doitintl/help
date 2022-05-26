@@ -26,7 +26,7 @@
 
 .contact_button {
   cursor: pointer;
-  background-color: var(--ifm-color-primary-light);
+  background-color: var(--ifm-color-primary-lighter);
   color: var(--ifm-color-primary-contrast-background);
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
     0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
@@ -40,5 +40,5 @@
 }
 
 .contact_button:hover {
-  background-color: var(--ifm-color-primary-dark);
+  background-color: var(--ifm-color-primary);
 }
