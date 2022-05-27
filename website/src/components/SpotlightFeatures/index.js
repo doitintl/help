@@ -4,12 +4,12 @@ import Link from '@docusaurus/Link';
 
 const featureListRow1 = [
   {
-    title: 'Cloud analytics',
+    title: 'Cloud Analytics',
     description:
-      'Build your own cloud analytics reports and share them with your team. \
-      Group resources and their associated costs with custom attributions, \
-      detect and analyze trends, forecast your cloud spend, and manage your \
-      budgets.',
+      'Cloud Analytics allows you to build reports and share them with your \
+      team. Group resources and their associated costs with custom \
+      attributions, detect and analyze trends, forecast your cloud spend, and \
+      manage your budgets.',
     link: '/docs/cmp#cloud-analytics',
   },
   {
@@ -60,11 +60,10 @@ const featureListRow2 = [
 
 const Feature = ({ title, description, link }) => (
   <div className={`col ${styles.feature}`}>
-    <h3>{title}</h3>
+    <h3>
+      <Link to={link}>{title}</Link>
+    </h3>
     <p>{description}</p>
-    <p>
-      <Link to={link}>Read more&hellip;</Link>
-    </p>
   </div>
 );
 

@@ -165,7 +165,7 @@ const config = {
                 to: '/docs/vendor-information/general-vendor-information',
               },
               {
-                label: 'Data access policy',
+                label: 'Security and data access policy',
                 to: '/docs/vendor-information/security-and-data-access-policy-for-cloud-management-platform',
               },
               {
