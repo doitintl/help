@@ -12,6 +12,7 @@
 
 .contact_support_cta h2 {
   margin-bottom: var(--ifm-spacing-vertical) !important;
+  font-size: var(--ifm-h1-font-size);
   font-weight: var(--ifm-font-weight-normal);
   text-align: center;
 }
