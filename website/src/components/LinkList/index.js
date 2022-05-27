@@ -11,6 +11,7 @@ const LinkList = ({ list }) => {
   ));
   return (
     <div className={`col ${styles.link_list}`}>
+      <h4>{list.heading}</h4>
       <ul>{linkNodes}</ul>
     </div>
   );
