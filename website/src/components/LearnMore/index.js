@@ -59,7 +59,7 @@ const listsRow1 = [
     links: [
       {
         text: 'Create a Google Cloud billing account',
-        href: '/docs/google-cloud/create-google-cloud-billing-account',
+        href: 'docs/google-cloud/create-google-cloud-billing-account',
       },
       {
         text: 'Create an AWS account',
