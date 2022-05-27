@@ -3,40 +3,79 @@ import LinkList from '../LinkList';
 
 import styles from './styles.module.css';
 
-const lists = [
+const listsRow1 = [
   {
+    heading: 'Dashboards and widgets',
     links: [
       {
-        text: 'this is a on link list',
-        href: '/test/foo',
+        text: 'Widgets overview',
+        href: '/docs/dashboards/widgets-overview',
       },
       {
-        text: 'this is a on link list',
-        href: '/test/bar',
+        text: 'Adding reports to a dashboard',
+        href: '/docs/dashboards/add-reports-to-dashboards',
+      },
+      {
+        text: 'Customizing dashboards',
+        href: '/docs/dashboards/customizing-dashboards',
+      },
+      {
+        text: 'Creating a new dashboard',
+        href: '/docs/dashboards/creating-a-new-dashboard',
       },
     ],
   },
   {
+    heading: 'Services',
     links: [
       {
-        text: 'this is a on link list',
-        href: '/test/baz',
+        text: 'Consulting and support',
+        href: '/docs/services/consulting-support',
       },
       {
-        text: 'this is a on link list',
-        href: '/test/boz',
+        text: 'Shared Slack channel',
+        href: '/docs/services/consulting-support/shared-slack-channel',
+      },
+      {
+        text: 'Cloud incidents',
+        href: '/docs/services/consulting-support/cloud-incidents',
+      },
+      {
+        text: 'Training',
+        href: '/docs/services/training',
+      },
+      {
+        text: 'Professional services',
+        href: '/docs/services/proserv',
+      },
+      {
+        text: 'Perks',
+        href: '/docs/services/perks',
       },
     ],
   },
   {
+    heading: 'Asset management',
     links: [
       {
-        text: 'this is a on link list',
-        href: '/test/boop',
+        text: 'Create a Google Cloud billing account',
+        href: '/docs/google-cloud/create-google-cloud-billing-account',
       },
       {
-        text: 'this is a on link list',
-        href: '/test/beep',
+        text: 'Create an AWS account',
+        href: '/docs/amazon-web-services/create-an-aws-account',
+      },
+      {
+        text: 'Invite an existing AWS account',
+        href: '/docs/amazon-web-services/invite-existing-aws-account',
+      },
+      {
+        text: 'Purchasing G Suite licenses',
+        href: '/docs/g-suite-and-workspace/purchasing-g-suite-licenses',
+      },
+      {
+        text: 'Purchasing Office 365 licenses',
+        href: '/docs/microsoft-office-365/purchasing-office-365-licenses',
       },
     ],
   },
@@ -48,7 +87,7 @@ const LearnMore = () => {
       <div className="container">
         <h2>Learn more</h2>
         <div className="row">
-          {lists.map((list, i) => (
+          {listsRow1.map((list, i) => (
             <LinkList key={i} list={list}></LinkList>
           ))}
         </div>

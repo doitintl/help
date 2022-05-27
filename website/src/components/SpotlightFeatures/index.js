@@ -63,7 +63,7 @@ const Feature = ({ title, description, link }) => (
     <h3>{title}</h3>
     <p>{description}</p>
     <p>
-      <Link to={link}>Learn more&hellip;</Link>
+      <Link to={link}>Read more&hellip;</Link>
     </p>
   </div>
 );
