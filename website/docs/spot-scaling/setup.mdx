@@ -5,55 +5,50 @@ description: How to set up and implement Spot Scaling recommendations
 
 # Setting up Spot Scaling
 
-## Connect your AWS Accounts
+## Connect your AWS account
 
-To use Spot Scaling, you must provide access to your AWS account(s) to the CMP. [**Read this article**](https://help.doit-intl.com/amazon-web-services/add-your-amazon-web-services-iam-role) to see how to link your AWS account(s).
+To use Spot Scaling, you must provide access to your AWS account to the CMP.
 
-:::info
+If your account is not linked already, follow the instructions of [linking your AWS account](https://help.doit-intl.com/amazon-web-services/add-your-amazon-web-services-iam-role).
 
-If you've already linked your AWS account(s) to the CMP, go to [this step](#aws-account-previously-linked) instead.
+You also need to create an AWS IAM role and attach an IAM Policy with a requisite set of permissions. These permissions allow Spot Scaling to monitor your ASG behavior and make spot instance recommendations; they also allow you to implement the recommendations. Refer to [creating new policies: Spot Scaling](https://help.doit-intl.com/amazon-web-services/add-your-amazon-web-services-iam-role#spot-scaling) for details about the requisite permissions.
 
-:::
+### Add Spot Scaling to your account
 
-As part of linking your account, you will need to create an AWS IAM Role and attach an IAM Policy to it containing a requisite set of permissions. These permissions allow Spot Scaling to function &mdash; monitor your ASG behavior, make spot instance recommendations, and allow you to implement them from the CMP
+Once the account is linked, you need to update the role attached to your account with additional permissions for Spot Scaling by [adding a feature](https://help.doit-intl.com/amazon-web-services/add-your-amazon-web-services-iam-role#adding-a-feature).
 
-In the same article linked above, read the section on [**how to create a policy for Spot Scaling**](https://help.doit-intl.com/amazon-web-services/add-your-amazon-web-services-iam-role#spot-scaling) with the requisite permissions.
-
-### AWS Account previously linked
-
-If your account was already linked prior to enabling Spot Scaling functionality, you need to update the role attached to the account with the additional requisite permissions for Spot Scaling.
-
-**Follow** [these instructions](https://help.doit-intl.com/amazon-web-services/add-your-amazon-web-services-iam-role#adding-a-feature) **on adding a feature to an already-linked AWS account**. Be sure to check the box next to "Spot Scaling", as shown below.
+Make sure to select the checkbox of **Spot Scaling**, as shown below.
 
 ![A screenshot showing the checkbox next to Spot Scaling](../assets/png/cmp-spot-scaling-checkbox.png)
 
-## Implement Spot Scaling Recommendations
+## Spot Scaling Recommendations via CMP
+
+You can check the recommendations, modify them as needed, and apply the recommendations in the CMP.
 
 ### View Recommendations
 
-Spot Scaling recommendations can be found under 'Savings' in the top navigation.
+Open the Spot Scaling page under **Savings** in the top navigation.
 
-Once an AWS account is linked, any Auto Scaling Groups (ASGs) associated with it which aren't optimized will appear on your Spot Scaling page.
-
-These ASGs will have a value of "Not Optimized" under the "Optimization Status" column.
+Auto Scaling Groups (ASGs) associated with the linked AWS account will appear on your Spot Scaling page. ASGs not optimized will have a value of `Not Optimized` under the **Optimization Status** column.
 
 ![A screenshot showing the location of the 'Not Optimized' status](../assets/png/cmp-spot-scaling-not-optimized.png)
 
-Click on the ASG to view its Spot Scaling recommendation.
+Click an ASG to view its Spot Scaling recommendations.
 
 ![A screenshot showing the location of the ASG name](../assets/png/cmp-spot-scaling-asg.png)
 
-Your ASG's current configuration is displayed under the "Current Values" column. Spot Scaling's recommendations are displayed under the "Recommended Values" column.
+### Modify Recommendations
 
-### Apply Recommendations
+For an un-optimized ASG, you'll see the following:
 
-After selecting an un-optimized Auto Scaling Group, its current configuration will be displayed under the "Current Values" column. Spot Scaling's recommendations are displayed under the "Recommended Values" column.
+- **Current Values**: the ASG's current configuration
+- **Recommended Values**: Spot Scaling's recommendations
 
-You will also see the current on-demand costs and hours running for that Auto Scaling Group at the top-left corner.
+You'll also find the current on-demand costs and hours running for that ASG in the upper-left corner
 
 ![A screenshot showing the location of the Current Values and Recommended Values sections](../assets/png/cmp-current-values-recommended-values.png)
 
-Examine the recommendations. If needed, you can adjust several aspects of the recommendation to your liking. You may modify the following values of a recommendation:
+You can adjust the recommendations to your needs. You may modify the following values:
 
 - On-Demand Base Capacity
 - On-Demand Instances
@@ -61,31 +56,53 @@ Examine the recommendations. If needed, you can adjust several aspects of the re
 - Allowed Instance Types
 - Availability Zones
 
-If you want to edit values under "Allowed Instance Types" and "Availability Zones", click on the corresponding "EDIT" button.
+To edit the values of **Allowed Instance Types** and **Availability Zones**, click the corresponding **EDIT** button. Click **UPDATE** when you've made your changes.
 
-Then, once you've made your changes, click on "UPDATE"
+### Apply Recommendations
 
-Once the proposed changes seem satisfactory to you, click on "APPLY RECOMMENDATIONS" to reconfigure your ASG according to Spot Scaling's recommendations.
+To reconfigure your ASG according to Spot Scaling's recommendations, click **APPLY RECOMMENDATIONS**.
 
-Once you've applied the recommendation, the "Recommended Values" column will disappear.
+Once you've applied the recommendation, the **Recommended Values** column will disappear, the values under the **Current Values** column will be updated to reflect the changes, and the metrics displayed at the top will show the actual cost/hour breakdowns for on-demand and Spot, as well as the actual savings.
 
-The values under the "Current Values" column will update, reflecting the changes you made when applying the recommendation.
+You can adjust the time range for which the metrics are displayed by clicking the **Time Range** dropdown in the upper-right corner.
 
-Additionally, once you apply the recommendation, the metrics appearing at the top will instead show actual cost/hour breakdowns for on-demand and Spot, as well as actual savings.
+After applying the recommendation, your ASG will have a value of `Optimized` under the **Optimization Status** column.
 
-You can adjust the time range for which the metrics are displayed by clicking on the "Time Range" dropdown in the upper-right corner.
+### General Settings
 
-Finally, after applying a recommendation, your ASG will have a value of "Optimized" under the "Optimization Status" column.
+Spot Scaling provides two optional features:
 
-### Additional Spot Scaling Settings
+- **Keep my ASG up to date**: If selected, Spot Scaling will automatically update the ASG's configuration to continuously maximize system runtime and spot-related EC2 savings.
+- **Fallback to On-Demand**: If selected, when there are not enough EC2 instances available to meet the capacity demand for Spot instances, Spot Scaling will automatically fall back to on-demand instances.
 
-With Spot Scaling you have two optional features you can turn on when optimizing your ASG's configuration:
+## Spot Scaling auto-enrollment
 
-- **Keep my ASG up to date**: If turned on, Spot Scaling will automatically update the ASG's configuration to continuously maximize system runtime and spot-related EC2 savings.
-- **Fallback to On-Demand**: When there aren't where enough unused EC2 instances to meet demand for Spot instances, Spot Scaling will automatically fall back to on-demand instances.
+Spot Scaling auto-enrollment is a tool-agnostic solution that allows you to implement Spot Scaling recommendations using Infrastructure as Code (IaC) tools, for example, Terraform and AWS CloudFormation, instead of having to log in to the CMP.
 
-## Watch Spot Scaling Demo
+Spot Scaling auto-enrollment is ideal for DevOps or Platforms teams who prefer using IaC tools to deploy and maintain their cloud infrastructure.
 
-import LoomEmbed from '@site/src/components/LoomEmbed';
+### Enable Spot Scaling auto-enrollment via AWS ASG tags
 
-<LoomEmbed id="35dc27506b94413f941f5b364ed93096" />
+Spot Scaling auto-enrollment leverages AWS ASG tags.
+
+To enable auto-enrollment, use the following tags when creating your ASGs:
+
+- tag to apply Spot Scaling recommendations:
+
+  - **Key**: `doitintl:spotscaling:auto-enroll`
+  - **Value**:
+    - `Always`: Allows Spot Scaling to apply continuous recommendations by finding new savings opportunities when AWS modifies/updates their pricing for the spot market or when new resources are updated or released.
+    - `Never`: Stops Spot Scaling from applying recommendations.
+
+- tag to enable fallback to on-demand:
+  - **Key**: `doitintl:fallback-to-on-demand`
+  - **Value**:
+    - `True`: When there are not enough EC2 instances available to meet the capacity demand for Spot instances, Spot Scaling will automatically fall back to on-demand instances.
+    - `False`: Spot Scaling will not fall back to on-demand instances in case of [Spot Instance interruptions](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-interruptions.html).
+
+:::info
+
+The current implementation of auto-enrollment only allows the two tags mentioned above. Recommendations will be made based on 20% of desired capacity exists on-demand and 80% with spot instances. For the allowed instance type, the recommendations are similar machine types based on vCPUs and memory configuration.
+
+To adjust the recommendations, you need to log in to the CMP to [Modify Recommendations](#modify-recommendations).
+:::
