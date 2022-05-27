@@ -2,6 +2,7 @@
   // cspell: disable
   "recommendations": [
     "codezombiech.gitignore",
+    "david-reis.crashacters",
     "davidanson.vscode-markdownlint",
     "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
@@ -12,13 +13,17 @@
     "golang.go",
     "jounqin.vscode-mdx",
     "redhat.vscode-yaml",
+    "rvest.vs-code-prettier-eslint",
+    "sandcastle.whitespace",
+    "shardulm94.trailing-spaces",
     "shd101wyy.markdown-preview-enhanced",
     "silvenon.mdx",
+    "stkb.rewrap",
     "streetsidesoftware.code-spell-checker",
+    "timonwong.shellcheck",
     "tyriar.sort-lines",
     "vadistic.mdx-inline",
-    "xyc.vscode-mdx-preview",
-    "rvest.vs-code-prettier-eslint",
-    "timonwong.shellcheck"
+    "viktorzetterstrom.non-breaking-space-highlighter",
+    "xyc.vscode-mdx-preview"
   ]
 }
