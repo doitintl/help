@@ -12,6 +12,7 @@ assetlinks
 assumeable
 astra
 auths
+autoscaler
 autoscalers
 aviv
 awsops

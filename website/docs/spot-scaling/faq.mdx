@@ -4,48 +4,70 @@ sidebar_position: 3
 
 # Spot Scaling FAQ
 
-## What is a Spot instance?
+## What is a Spot Instance?
 
-Spot instances are spare EC2 capacity that can save you up to 90% off On-Demand prices that Amazon Web Services can interrupt with a 2-minute notification. Spot uses the same underlying EC2 instances as On-Demand and Reserved Instances and is best suited for fault-tolerant, flexible workloads. In addition, spot instances provide an additional option for obtaining compute capacity and can be used along with On-Demand and Reserved Instances.
+Spot Instances are spare EC2 capacity that can save you up to 90% off On-Demand prices that Amazon Web Services can interrupt with a two-minute notification. Spot uses the same underlying EC2 instances as On-Demand and Reserved Instances and is best suited for fault-tolerant, flexible workloads. In addition, spot instances provide an additional option for obtaining compute capacity and can be used along with On-Demand and Reserved Instances.
 
-## How is a Spot instance different from an On-Demand instance?
+## What are the differences between Spot Instances and On-Demand Instances?
 
-While running, Spot instances are the essentially the same as On-Demand. The main differences are that Spot instances typically offer a significant discount over On-Demand prices. The tradeoff is that your spot instances can be interrupted by Amazon EC2 for capacity requirements with just two minutes' notice. Spot prices adjust gradually based on long-term supply and demand for spare EC2 capacity. See [here](https://www.amazonaws.cn/en/ec2/spot-instances) for details.
+While running, Spot Instances are essentially the same as On-Demand Instances. The main differences are that Spot Instances typically offer a significant discount over On-Demand prices. The tradeoff is that your Spot Instances can be interrupted by Amazon EC2 for capacity requirements with a two-minute notification. Spot prices adjust gradually based on long-term supply and demand for spare EC2 capacity. See [Amazon EC2 Spot Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html) for more information.
 
-## When to Use Spot Instances?
+## When to use Spot Instances?
 
-Spot instances are most suitable for applications that have fault tolerance built in, are stateless, or perform data processing in large clusters (for example, Hadoop).
+Spot Instances are most suitable for applications that have fault tolerance built in, are stateless, or perform data processing in large clusters (for example, Hadoop).
 
 Additional use cases include:
 
-- **Batch processing** &mdash; you can use the AWS Batch service in combination with spot instances to run batch processing on spot instances that are currently available at a low cost. This can generate significant cost savings compared to running the same batch process using on-demand instances.
-- **Continuous integration** &mdash; development and testing are very common in a cloud environment. Dev/test tasks typically run on an irregular schedule, and because they are not production workloads, they can tolerate occasional interruptions.
-- **High Performance Computing (HPC)** &mdash; you can use spot instances to run massively parallel workloads like artificial intelligence analytics applications. These applications run on graphical processing units (GPUs), and since GPU instances are expensive, spot instances can be a big help.
+- **Batch processing** &mdash; you can use the AWS Batch service in combination with Spot Instances to run batch processing on Spot Instances that are currently available at a low cost. This can generate significant cost savings compared to running the same batch process using On-Demand Instances.
+- **Continuous integration** &mdash; development and testing are common in a cloud environment. Dev/test tasks typically run on an irregular schedule, and because they are not production workloads, they can tolerate occasional interruptions.
+- **High Performance Computing (HPC)** &mdash; you can use Spot Instances to run massively parallel workloads like artificial intelligence analytics applications. These applications run on graphical processing units (GPUs), and since GPU instances are expensive, Spot Instances can be a big help.
 
-## What are the best practices to use Spot instances?
+## What are the best practices to use Spot Instances?
 
-We highly recommend using more than one Availability Zone and be flexible about the instance types to maximize the amount of Spot capacity available to you. A Spot capacity pool is a set of unused EC2 instances with the same instance type, operating system, Availability Zone, and network platform (EC2-Classic or EC2-VPC).
+We recommend using more than one Availability Zone and be flexible about the instance types to maximize the amount of Spot capacity available to you. A Spot capacity pool is a set of unused EC2 instances with the same instance type, operating system, Availability Zone, and network platform (EC2-Classic or EC2-VPC).
 
-## What price will I pay for a Spot instance?
+## What price will I pay for a Spot Instance?
 
-With Spot Instances, you pay the Spot price that's in effect for the time period your instances are running. Spot Instance prices are set by Amazon EC2 and adjust gradually based on long-term trends in supply and demand for Spot Instance capacity. To learn more about please visit the AWS spot pricing [page](https://aws.amazon.com/ec2/spot/instance-advisor/).
+With Spot Instances, you pay the Spot price that's in effect for the time period your instances are running. Spot Instance prices are set by Amazon EC2 and adjust gradually based on long-term trends in supply and demand for Spot Instance capacity. For more information, refer to the AWS [Spot Instance advisor](https://aws.amazon.com/ec2/spot/instance-advisor/).
 
-## What happens if there are no available spot instances?
+## What if there are no available Spot Instances?
 
-Spot Scaling supports Fallback to on-demand for scenarios where there are no available spot instances to ensure your workload availability, and it reverts back to spot instances as soon as they available again.
+Spot Scaling supports fallback to On-Demand for scenarios where there are no available Spot Instances to ensure your workload availability, and it reverts back to Spot Instances as soon as they are available again.
 
-## How do you calculate the Potential Savings?
+## How does Spot Scaling calculate the potential savings?
 
-The potential saving calculation is based on the following inputs:
+The potential savings are calculated based on the following:
 
-1. The number of the desired instances in the Auto Scaling Group
-2. The diff between on-demand prices to spot prices per 1 hour
-3. The number of hours in a given month (approx 730 hours)
+- The number of the desired instances in the Auto Scaling Group
+- The difference between On-Demand prices and Spot prices per hour
+- The number of hours in a given month (approximately 730 hours)
 
-### **What if I want to control the proportion of the spot and on-demand instances?**
+## What is the proportion of the Spot and On-Demand Instances?
 
-By default Spot Scaling recommends 20% of desired capacity exists on-demand and 80% with spot instances. However, you can define the percentage split of On-Demand Instances and Spot Instances according to your use case.
+By default Spot Scaling recommends 20% of desired capacity exists On-Demand and 80% with Spot Instances. You can change the percentage split of On-Demand Instances and Spot Instances in the CMP. See [Modify Recommendations](setup.mdx#modify-recommendations).
 
-### **What if I want to control the Allowed Instances Type list?**
+## Can I change the allowed instances type list?
 
-With Spot Scaling you can easily exclude instance types that aren't fulfilling your workload requirements. Simply click on the Edit button and uncheck any instance you want to exclude.
+You can exclude instance types that aren't fulfilling your workload requirements in the CMP. See [Modify Recommendations](setup.mdx#modify-recommendations).
+
+## Does Spot Scaling support AWS EKS?
+
+Yes. Amazon EKS supports the Kubernetes [Cluster Autoscaler](https://docs.aws.amazon.com/eks/latest/userguide/autoscaling.html#cluster-autoscaler), which leverages AWS Autoscaling Groups.
+
+The Kubernetes Cluster Autoscaler is a core component of a Kubernetes control plane that automatically adjusts the number of nodes in your cluster when pods fail or are rescheduled onto other nodes. Applying Spot Scaling recommendations on your EKS environment allows you to generate savings by running Spot Instances.
+
+## What is Spot Scaling Auto-Enrollment?
+
+DevOps and Platform teams often prefer using infrastructure as code (IaC) tools to implement cloud infrastructure. IaC tools allow them to replace manual work required for IT resource management and provisioning cloud resources with simple lines of code. Auto-Enrollment is the feature that meets this need by leveraging AWS ASG Tags.
+
+See [Enable Spot Scaling Auto-Enrollment via AWS ASG tags](setup.mdx#enable-spot-scaling-auto-enrollment-via-aws-asg-tags) for more information.
+
+## What does it mean that Spot Scaling Auto-Enrollment is tool-agnostic?
+
+With IaC, configuration files are created containing the infrastructure specifications, making it easy to edit and distribute configurations. There are a variety of IaC tools available, for example, Terraform, AWS CloudFormation, Azure Resource Manager, and GCP Cloud Deployment Manager.
+
+Spot Scaling Auto-Enrollment is tool-agnostic in the sense that the tags you need (`doitintl:spotscaling:auto-enroll` and `and doitintl:fallback-to-on-demand`) are independent of the IaC tool you use.
+
+## What is the default behavior of Spot Scaling Auto-Enrollment?
+
+Spot Scaling Auto-Enrollment behaves the same as when you apply the recommendations in the CMP. By default Spot Scaling recommends 20% of desired capacity exists On-Demand and 80% with Spot Instances. The same for the allowed instance type, Spot Scaling recommends similar machine types based on vCPUs and memory configuration.
