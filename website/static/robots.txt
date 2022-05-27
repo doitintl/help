@@ -1,5 +1,1 @@
-User-agent: *
-Disallow: /
-
-User-agent: Algolia Crawler
-Disallow:
+Sitemap: https://help.doit-intl.com/sitemap.xml
