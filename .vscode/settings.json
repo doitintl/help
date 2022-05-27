@@ -1,5 +1,13 @@
 {
   // cspell: disable
+  "editor.formatOnSave": true,
+  "cSpell.language": "en-US",
+  "cSpell.diagnosticLevel": "Error",
+  "cSpell.files": ["**/*"],
+  "cSpell.allowCompoundWords": true,
+  "cSpell.enabledLanguageIds": [],
+  "prettier.printWidth": 79,
+  "prettier.requireConfig": true,
   "files.associations": {
     "cspell.json": "jsonc",
     "devcontainer.json": "jsonc",
