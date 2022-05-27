@@ -4,19 +4,20 @@ sidebar_position: 3
 
 # Flexsave security and compliance for GCP
 
-
 ## What security and compliance policies are Flexsave governed by?
 
 DoiT operates on the highest level of industry security standards, and Flexsave specifically is covered by the following security and compliance certifications:
 
-* ISO27001
-* SOC 2 Type II
-* SOC 3
-* GDPR
+- ISO27001
+- SOC 2 Type II
+- SOC 3
+- GDPR
 
 For a complete breakdown of compliance certifications and further information, please visit [https://www.doit-intl.com/compliance/](https://www.doit-intl.com/compliance/)
 
 ## What permissions are required for Flexsave to work?
+
+In the first step Flexsave needs permissions to get GCP recommendations for **Savings Plans** as well as customer spend to generate recommendation and forecasting.
 
 Getting started with Flexsave involves two stages with different permission levels:
 
@@ -28,9 +29,9 @@ Getting started with Flexsave involves two stages with different permission leve
 
    To turn on Flexsave, a new customer will create a policy which allows DoiT to share Savings Plans with the customer organization in AWS. This step allows for automated compute savings. This policy gives DoiT permissions to:
 
-   * View and download the contents of the S3 Bucket in which the CUR is kept
-   * View information about existing RIs and SPs
-   * Invite DoiT-controlled accounts to the organization, from which DoiT can share its inventory of Savings Plans. These accounts have no running resources and do not impact your existing accounts.
+   - View and download the contents of the S3 Bucket in which the CUR is kept
+   - View information about existing RIs and SPs
+   - Invite DoiT-controlled accounts to the organization, from which DoiT can share its inventory of Savings Plans. These accounts have no running resources and do not impact your existing accounts.
 
      Note: the ability to invite new accounts is the only area in which DoiT has edit access (as opposed to view or get access).
 
@@ -40,10 +41,10 @@ In the Savings Forecast stage, DoiT has view-only access to the data in the Cost
 
 After Onboarding and Enablement, DoiT will be able to see what is available in the CUR:
 
-* Zones and regions where instances are being run
-* Operating systems supported
-* Virtual machine types
-* Objects in the bucket where the CUR is stored
+- Zones and regions where instances are being run
+- Operating systems supported
+- Virtual machine types
+- Objects in the bucket where the CUR is stored
 
 In order to make specific optimization decisions in real time, DoiT will also require additional read-only access to details about a customer's RIs and SPs (beyond what's listed in the billing information).
 
@@ -51,12 +52,12 @@ In order to make specific optimization decisions in real time, DoiT will also re
 
 At no point during either stage will DoiT have access to sensitive customer information, including:
 
-* The entire AWS environment configuration
-* Personally Identifiable Information (PII)
-* IP addresses
-* Metadata
-* Network configs, instances or peering information
-* Security parameters, groups or keys
+- The entire AWS environment configuration
+- Personally Identifiable Information (PII)
+- IP addresses
+- Metadata
+- Network configs, instances or peering information
+- Security parameters, groups or keys
 
 **DoiT will also never have the ability to create or run new resources, or edit any existing instances.**
 
@@ -66,10 +67,10 @@ Access for the Savings Forecast need only last as long as it takes DoiT to gener
 
 Should you decide to become a customer, DoiT will have ongoing access to the following for as long as you remain a user of Flexsave:
 
-* Zones and regions where instances are being run
-* Operating systems supported
-* Virtual machine types
-* Objects in the bucket where the CUR is stored
+- Zones and regions where instances are being run
+- Operating systems supported
+- Virtual machine types
+- Objects in the bucket where the CUR is stored
 
 Please note that since these permissions are granted by the customer, any customer can disable these permissions by turning off Flexsave:
 
