@@ -49,7 +49,7 @@ dest_tmp="${tmp_dir}/dest"
 awk '{print $2}' <"${REDIRECTS_FILE}" | grep -E '^/' >"${dest_tmp}"
 
 tmp_errors="${tmp_dir}/errors"
-if grep -n -F -f "${dest_tmp}" "${src_tmp}" >"${tmp_errors}"; then
+if grep -n -F -x -f "${dest_tmp}" "${src_tmp}" >"${tmp_errors}"; then
     print_errors "Chained redirects" "${tmp_errors}"
     exit 1
 fi
