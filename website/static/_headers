@@ -1,6 +1,11 @@
 # Assets copied verbatim from the `static` directory
 
 # Cache for 1 day
+
+/.well-known/traffic-advice
+  Content-Type: application/trafficadvice+json
+  Cache-Control: public, max-age=88400
+
 /images/*
   Cache-Control: public, max-age=88400
 
