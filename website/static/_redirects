@@ -129,22 +129,39 @@
 /vendor-information/security-and-data-access-policy-for-cloud-management-platform                  /docs/vendor-information/security-and-data-access-policy-for-cloud-management-platform
 /vendor-information/subprocessors                                                                  /docs/vendor-information/subprocessors
 
-# Fixes for logged 404 errors (known location)
+# Fixes for logged 404 errors (misc)
 
 /assets-and-contracts/accessing-your-contracts-with-doit                                           /docs/assets-and-contracts/accessing-your-contracts-with-doit
-/assets-and-contracts/tag-assets                                                                   /docs/assets-and-contracts/tag-assets
 /assets-and-contracts/assign-assets-to-billing-profiles                                            /docs/assets-and-contracts/assign-assets-to-billing-profiles
 /assets-and-contracts/commitment-contracts                                                         /docs/assets-and-contracts/commitment-contracts
+/assets-and-contracts/tag-assets                                                                   /docs/assets-and-contracts/tag-assets
 /dashboards-and-widgets/accessing-a-public-dashboard                                               /docs/dashboards/accessing-a-public-dashboard
 /dashboards-and-widgets/add-reports-to-dashboards                                                  /docs/dashboards/add-reports-to-dashboards
 /dashboards-and-widgets/aws-lens                                                                   /docs/dashboards/aws-lens
 /dashboards-and-widgets/bigquery-lens                                                              /docs/dashboards/bigquery-lens
 /dashboards-and-widgets/creating-a-new-dashboard                                                   /docs/dashboards/creating-a-new-dashboard
+/dashboards-and-widgets/customizing-dashboards                                                     /docs/dashboards/customizing-dashboards
 /dashboards-and-widgets/rightsizing-for-google-cloud                                               /docs/dashboards/rightsizing-for-google-cloud
+/dashboards-and-widgets/widgets-overview                                                           /docs/dashboards/widgets-overview
+/flexsave-aws/flexri-regions                                                                       /docs/flexsave/aws
+
+# Fixes for logged 404 errors (old hc entries)
+
 /hc/en-us/articles/360032254732-Update-Payment-Method                                              /docs/invoices-and-payments/updating-your-payment-method
+/hc/en-us/articles/360034118632-Setup-ACH-Payments                                                 /docs/invoices-and-payments/setting-up-ach-payments
+/hc/en-us/articles/360036449891                                                                    /
+/hc/en-us/articles/360037219472-Create-An-AWS-Account-Video-                                       /docs/amazon-web-services/create-an-aws-account
+/hc/en-us/articles/360038098731-Upgrading-G-Suite-Edition-                                         /docs/g-suite-and-workspace/upgrading-your-g-suite-edition
+/hc/en-us/articles/360038122452-Transfer-Google-Cloud-Projects-                                    /docs/google-cloud/transfer-google-cloud-projects
+/hc/en-us/articles/360038791071                                                                    /docs/amazon-web-services/aws-quotas
+/hc/en-us/articles/360038791071-AWS-Service-Limits-Quotas-Alerts                                   /docs/amazon-web-services/aws-quotas
+/hc/en-us/articles/360040580752-superQuery-Dashboard                                               /docs/dashboards/bigquery-lens
+/hc/en-us/articles/360042369611-Configure-A-Policy-For-Sandbox-Accounts                            /docs/cloud-sandbox-management/configuring-a-policy-for-sandbox-accounts
+/hc/en-us/articles/360042612671                                                                    /
 /hc/en-us/articles/360045644211-Creating-a-Cloud-Report                                            /docs/cloud-analytics/create-cloud-report
 /hc/en-us/articles/360046375592-Clone-Customize-Cloud-Reports                                      /docs/cloud-analytics/cloning-and-or-customizing-cloud-reports
-
-# Fixes for logged 404 errors (unknown location)
-
 /hc/en-us/articles/360046378512                                                                    /
+
+# Bad requests (to reduce the 404 error log spam)
+
+/wp-login.php 400
