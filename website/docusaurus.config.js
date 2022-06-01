@@ -8,7 +8,7 @@ require('dotenv').config();
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'DoiT Help Center',
+  title: 'DoiT International Help Center',
   tagline: 'How can we help?',
   url: process.env.URL || 'http://localhost:3000',
   baseUrl: '/',
