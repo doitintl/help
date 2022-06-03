@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 description: How to set up and implement Spot Scaling recommendations
 ---
 
@@ -17,7 +17,7 @@ You also need to create an AWS IAM role and attach an IAM Policy with a requisit
 
 Once the account is linked, you need to update the role attached to your account with additional permissions for Spot Scaling by [adding a feature](https://help.doit-intl.com/amazon-web-services/add-your-amazon-web-services-iam-role#adding-a-feature).
 
-Make sure to select the checkbox of **Spot Scaling**, as shown below.
+Make sure to select the checkbox of _Spot Scaling_, as shown below.
 
 ![A screenshot showing the checkbox next to Spot Scaling](../assets/png/cmp-spot-scaling-checkbox.png)
 
@@ -27,13 +27,13 @@ You can check the recommendations, modify them as needed, and apply the recommen
 
 ### View Recommendations
 
-Open the Spot Scaling page under **Savings** in the top navigation.
+Open the Spot Scaling page under _Savings_ in the top navigation.
 
-Auto Scaling Groups (ASGs) associated with the linked AWS account will appear on your Spot Scaling page. ASGs not optimized will have a value of `Not Optimized` under the **Optimization Status** column.
+Auto Scaling Groups (ASGs) associated with the linked AWS account will appear on your Spot Scaling page. ASGs not optimized will have a value of `Not Optimized` under the _Optimization Status_ column.
 
 ![A screenshot showing the location of the 'Not Optimized' status](../assets/png/cmp-spot-scaling-not-optimized.png)
 
-Click an ASG to view its Spot Scaling recommendations.
+Select an ASG to view its Spot Scaling recommendations.
 
 ![A screenshot showing the location of the ASG name](../assets/png/cmp-spot-scaling-asg.png)
 
@@ -41,8 +41,8 @@ Click an ASG to view its Spot Scaling recommendations.
 
 For an un-optimized ASG, you'll see the following:
 
-- **Current Values**: the ASG's current configuration
-- **Recommended Values**: Spot Scaling's recommendations
+- _Current Values_ &mdash; the ASG's current configuration
+- _Recommended Values_ &mdash; Spot Scaling's recommendations
 
 You'll also find the current on-demand costs and hours running for that ASG in the upper-left corner
 
@@ -56,24 +56,24 @@ You can adjust the recommendations to your needs. You may modify the following v
 - Allowed Instance Types
 - Availability Zones
 
-To edit the values of **Allowed Instance Types** and **Availability Zones**, click the corresponding **EDIT** button. Click **UPDATE** when you've made your changes.
+To edit the values of _Allowed Instance Types_ and _Availability Zones_, select the corresponding _EDIT_ button. Select _UPDATE_ when you've made your changes.
 
 ### Apply Recommendations
 
-To reconfigure your ASG according to Spot Scaling's recommendations, click **APPLY RECOMMENDATIONS**.
+To reconfigure your ASG according to Spot Scaling's recommendations, select _APPLY RECOMMENDATIONS_.
 
-Once you've applied the recommendation, the **Recommended Values** column will disappear, the values under the **Current Values** column will be updated to reflect the changes, and the metrics displayed at the top will show the actual cost/hour breakdowns for on-demand and Spot, as well as the actual savings.
+Once you've applied the recommendation, the _Recommended Values_ column will disappear, the values under the _Current Values_ column will be updated to reflect the changes, and the metrics displayed at the top will show the actual cost/hour breakdowns for on-demand and Spot, as well as the actual savings.
 
-You can adjust the time range for which the metrics are displayed by clicking the **Time Range** dropdown in the upper-right corner.
+You can adjust the time range for which the metrics are displayed by selecting the _Time Range_ dropdown in the upper-right corner.
 
-After applying the recommendation, your ASG will have a value of `Optimized` under the **Optimization Status** column.
+After applying the recommendation, your ASG will have a value of `Optimized` under the _Optimization Status_ column.
 
 ### General Settings
 
 Spot Scaling provides two optional features:
 
-- **Keep my ASG up to date**: If selected, Spot Scaling will automatically update the ASG's configuration to continuously maximize system runtime and spot-related EC2 savings.
-- **Fallback to On-Demand**: If selected, when there are not enough EC2 instances available to meet the capacity demand for Spot instances, Spot Scaling will automatically fall back to on-demand instances.
+- _Keep my ASG up to date_ &mdash; If selected, Spot Scaling will automatically update the ASG's configuration to continuously maximize system runtime and spot-related EC2 savings.
+- _Fallback to On-Demand_ &mdash; If selected, when there are not enough EC2 instances available to meet the capacity demand for Spot instances, Spot Scaling will automatically fall back to on-demand instances.
 
 ## Spot Scaling auto-enrollment
 
@@ -87,16 +87,17 @@ Spot Scaling auto-enrollment leverages AWS ASG tags.
 
 To enable auto-enrollment, use the following tags when creating your ASGs:
 
-- tag to apply Spot Scaling recommendations:
+- Tag to apply Spot Scaling recommendations:
 
-  - **Key**: `doitintl:spotscaling:auto-enroll`
-  - **Value**:
+  - _Key_: `doitintl:spotscaling:auto-enroll`
+  - _Value_:
     - `Always`: Allows Spot Scaling to apply continuous recommendations by finding new savings opportunities when AWS modifies/updates their pricing for the spot market or when new resources are updated or released.
     - `Never`: Stops Spot Scaling from applying recommendations.
 
-- tag to enable fallback to on-demand:
-  - **Key**: `doitintl:fallback-to-on-demand`
-  - **Value**:
+- Tag to enable fallback to on-demand:
+
+  - _Key_: `doitintl:fallback-to-on-demand`
+  - _Value_:
     - `True`: When there are not enough EC2 instances available to meet the capacity demand for Spot instances, Spot Scaling will automatically fall back to on-demand instances.
     - `False`: Spot Scaling will not fall back to on-demand instances in case of [Spot Instance interruptions](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-interruptions.html).
 

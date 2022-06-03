@@ -1,0 +1,143 @@
+---
+description: autonomous cost optimization of EC2 fleets using Spot instances
+---
+
+# Spot Scaling
+
+## What is Spot Scaling?
+
+Spot Scaling proactively monitors your AWS [Auto-Scaling Groups (ASGs)](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html), intelligently replacing all or some of an ASG's on-demand EC2 instances with Spot instances using sophisticated AI-assisted analysis.
+
+By managing your ASGs, Spot Scaling takes care of your launch templates, configuration, mixed instances policies, and a myriad of other configuration settings so you can focus on core activities.
+
+## What are the benefits?
+
+- **Reliable & Safe** &mdash; Spot Scaling works with AWS native Auto Scaling Groups. Spot Scaling follows [Spot Instance Best Practices](https://docs.aws.amazon.com/whitepapers/latest/cost-optimization-leveraging-ec2-spot-instances/spot-best-practices.html) and supports fallback to on-demand.
+
+- **No cost overhead** &mdash; you get the full spot discount provided by AWS.
+
+- **Quick and Easy** &mdash; enable in less than 5 minutes with CloudFormation StackSets. After essentially two clicks, your Auto Scaling Group is Spot optimized.
+
+- **No vendor lock-in** &mdash; you can decide to stop using it at any time by [creating a new request](../services/consulting-support/index.mdx#create-a-new-request) for our support team and revert back to what your ASGs were configured as prior to enabling the features.
+
+## How does it work?
+
+### Analyze
+
+Spot Scaling runs in the background, integrating natively with your AWS Auto Scaling Groups, and monitors the configuration and potential savings within each group.
+
+### Recommend
+
+Spot Scaling recommends the most suitable configuration for your Auto Scaling Group to run reliably and cost-effectively while simultaneously presenting the associated monthly potential savings vs. on-demand. You can accept your recommendations as-is or modify them as you see fit.
+
+### Provision
+
+After you apply the recommendations, Spot Scaling updates your Auto Scaling Group to work in a [mixed instances policy](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_MixedInstancesPolicy.html). In addition, Spot Scaling replaces on-demand instances with spot instances according to the recommended settings (which you can change anytime in the CMP).
+
+When Spot Scaling cannot spin up Spot instances due to lack of spot capacity, it can be configured to automatically fall back to on-demand to ensure availability and revert to spot instances as soon as possible. As a result, the system uptime for your app(s) are maximized, while EC2 costs are minimized.
+
+### Monitor
+
+Spot Scaling continuously assesses your Auto Scaling Groups and presents important metrics such as:
+
+- Costs
+- Spot and On-Demand hours
+- Savings for the previous and current month.
+
+## Typical savings
+
+**Scenario:** 0 m5.xlarge instances; replacing 80% of on-demand instances with Spot instances
+
+|                   |             **Without Spot Scaling**              |                                                                     **With Spot Scaling**                                                                     |
+| ----------------- | :-----------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Monthly Cost      | 50 instances &times; $0.192 &times; 730h = $7,008 | 10 instances &times; $0.192 &times; 730h = $1,401<br/><br/>40 instances &times; $0.0399 &times; 730h = $1,165<br/><br/> Total cost = $1,401 + $1,165 = $2,566 |
+| Monthly Savings $ |                        $0                         |                                                                            $4,442                                                                             |
+| Monthly Savings % |                        0%                         |                                                                              63%                                                                              |
+
+## Video demo
+
+import LoomEmbed from '@site/src/components/LoomEmbed';
+
+<LoomEmbed id="35dc27506b94413f941f5b364ed93096" />
+
+## FAQ
+
+### What is a Spot instance?
+
+Spot instances are spare EC2 capacity that can save you up to 90% off On-Demand prices that Amazon Web Services can interrupt with a 2-minute notification. Spot uses the same underlying EC2 instances as On-Demand and Reserved Instances and is best suited for fault-tolerant, flexible workloads. In addition, spot instances provide an additional option for obtaining compute capacity and can be used along with On-Demand and Reserved Instances.
+
+### How is a Spot instance different from an On-Demand instance?
+
+While running, Spot instances are essentially the same as On-Demand instances. The main differences are that Spot instances typically offer a significant discount over On-Demand prices.
+
+The tradeoff is that your spot instances can be interrupted by Amazon EC2 for capacity requirements with two minutes' notice. Spot prices adjust gradually based on long-term supply and demand for spare EC2 capacity.
+
+:::note See also
+
+[AWS documentation: EC2 Spot Instances](https://aws.amazon.com/ec2/spot/)
+
+:::
+
+### When to Use Spot Instances?
+
+Spot instances are most suitable for applications that have fault tolerance built in, are stateless, or perform data processing in large clusters (for example, Hadoop).
+
+Additional use cases include:
+
+- **Batch processing** &mdash; you can use the AWS Batch service in combination with spot instances to run batch processing on spot instances that are currently available at a low cost. This can generate significant cost savings compared to running the same batch process using on-demand instances.
+- **Continuous integration** &mdash; development and testing are very common in a cloud environment. Dev/test tasks typically run on an irregular schedule, and because they are not production workloads, they can tolerate occasional interruptions.
+- **High Performance Computing (HPC)** &mdash; you can use spot instances to run massively parallel workloads like artificial intelligence analytics applications. These applications run on graphical processing units (GPUs), and since GPU instances are expensive, spot instances can be a big help.
+
+### What are the best practices to use Spot instances?
+
+We recommend using more than one Availability Zone and be flexible about the instance types to maximize the amount of Spot capacity available to you. A Spot capacity pool is a set of unused EC2 instances with the same instance type, operating system, Availability Zone, and network platform (EC2-Classic or EC2-VPC).
+
+### What price will I pay for a Spot instance?
+
+With Spot Instances, you pay the Spot price that's in effect for the time period your instances are running. Spot Instance prices are set by Amazon EC2 and adjust gradually based on long-term trends in supply and demand for Spot Instance capacity.
+
+:::note See also
+
+[AWS: Spot Instance advisor](https://aws.amazon.com/ec2/spot/instance-advisor/).
+
+:::
+
+### What happens if there are no available spot instances?
+
+Spot Scaling supports Fallback to on-demand for scenarios where there are no available spot instances to ensure your workload availability, and it reverts back to spot instances as soon as they available again.
+
+### How does Spot Scaling calculate the potential savings?
+
+The potential savings are calculated based on the following:
+
+- The number of the desired instances in the Auto Scaling Group
+- The difference between on-demand prices and spot prices per hour
+- The number of hours in a given month (approximately 730 hours)
+
+### What is Spot Scaling auto-enrollment?
+
+DevOps and Platform teams often prefer using infrastructure as code (IaC) tools to implement cloud infrastructure. IaC tools allow them to replace manual work required for IT resource management and provisioning cloud resources with simple lines of code. Auto-enrollment is the feature that meets this need by leveraging AWS ASG Tags.
+
+:::note See also
+
+[Enable Spot Scaling auto-enrollment via AWS ASG tags](setup.mdx#enable-spot-scaling-auto-enrollment-via-aws-asg-tags)
+
+:::
+
+### What does it mean that Spot Scaling auto-enrollment is tool-agnostic?
+
+With IaC, configuration files are created containing the infrastructure specifications, making it easy to edit and distribute configurations. There are a variety of IaC tools available, for example, Terraform, AWS CloudFormation, Azure Resource Manager, and GCP Cloud Deployment Manager.
+
+The Spot Scaling auto-enrollment is tool-agnostic in the sense that the tags you need (`doitintl:spotscaling:auto-enroll` and `and doitintl:fallback-to-on-demand`) stay the same, regardless of the IaC tool you chose.
+
+### What is the default behavior of Spot Scaling auto-enrollment?
+
+Spot Scaling auto-enrollment behaves the same as when you apply the recommendations in the CMP. By default Spot Scaling recommends 20% of desired capacity exists on-demand and 80% with spot instances. The same for the allowed instance type, Spot Scaling recommends similar machine types based on vCPUs and memory configuration.
+
+### What is the proportion of the spot and on-demand instances?
+
+By default Spot Scaling recommends 20% of desired capacity exists on-demand and 80% with spot instances. You can change the percentage split of On-Demand Instances and Spot Instances in the CMP. See [Modify Recommendations](setup.mdx#modify-recommendations).
+
+### Can I change the Allowed Instances Type list?
+
+You can exclude instance types that aren't fulfilling your workload requirements in the CMP. See [Modify Recommendations](setup.mdx#modify-recommendations).
