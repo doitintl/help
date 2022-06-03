@@ -1,3 +1,7 @@
+# Redirect spam requests to keep the 404 logs clean
+
+/wp-login.php / 302
+
 # GitBook restructuring, 2021
 
 /amazon-web-services/add-your-amazon-web-services-iam-role                                                 /docs/amazon-web-services/link-account
@@ -128,10 +132,6 @@
 /vendor-information/general-vendor-information                                                             /docs/vendor-information/general-vendor-information
 /vendor-information/security-and-data-access-policy-for-cloud-management-platform                          /docs/vendor-information/security-and-data-access-policy-for-cloud-management-platform
 /vendor-information/subprocessors                                                                          /docs/vendor-information/subprocessors
-
-# Bad requests (to reduce the 404 error log spam)
-
-/wp-login.php 400
 
 # Fixes for logged 404 errors (misc)
 
