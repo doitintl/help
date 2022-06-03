@@ -12,6 +12,23 @@
 
 /* Announcement bar */
 
+div[role='banner'] {
+  background: var(--ifm-color-content);
+}
+
+div[role='banner'] div {
+  color: var(--ifm-color-white);
+  font-weight: var(--ifm-font-weight-semibold);
+  max-width: 90vw !important;
+  margin: 0 auto;
+  white-space: nowrap;
+}
+
+.close {
+  color: var(--ifm-color-white);
+}
+
+/*
 [data-theme='light'] div[role='banner'] {
   background-color: var(--ifm-font-color-base);
   color: var(--ifm-color-white);
@@ -21,9 +38,11 @@
   background-color: var(--ifm-font-color-base);
   color: var(--ifm-color-black);
 }
+*/
 
 /* Announcement bar close button */
 
+/*
 [data-theme='light'] .close {
   color: var(--ifm-color-white);
 }
@@ -31,6 +50,7 @@
 [data-theme='dark'] .close {
   color: var(--ifm-color-black);
 }
+*/
 
 /* Navigation bar */
 
