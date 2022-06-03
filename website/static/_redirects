@@ -1,5 +1,8 @@
 # Redirect spam requests to keep the 404 logs clean
 
+/~/*          / 302
+/1.0.0/*      / 302
+/static/js/*  / 302
 /wp-login.php / 302
 
 # GitBook restructuring, 2021
@@ -132,6 +135,10 @@
 /vendor-information/general-vendor-information                                                             /docs/vendor-information/general-vendor-information
 /vendor-information/security-and-data-access-policy-for-cloud-management-platform                          /docs/vendor-information/security-and-data-access-policy-for-cloud-management-platform
 /vendor-information/subprocessors                                                                          /docs/vendor-information/subprocessors
+
+# Missing index pages
+
+/docs/amazon-web-services/                                                                                 /docs/amazon-web-services/invite-existing-aws-account
 
 # Fixes for logged 404 errors (misc)
 
