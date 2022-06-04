@@ -1,15 +1,8 @@
-.cache-loader
-.docusaurus
 .DS_Store
-.env
-.env.*
 *.err
 *.log
 *.out
 *.tmp
-build
-cache
-gh-pages
 node_modules
 npm-debug.*
 yarn-debug.*

@@ -18,12 +18,11 @@ rsync -qa . "${tmp_repo_copy}"
 make --no-print-directory -C "${tmp_repo_copy}" --silent clean
 
 rm -rf "${tmp_repo_copy}/.git"
-rm -rf "${tmp_repo_copy}/website/static/img"
-rm -rf "${tmp_repo_copy}/website/docs"
+rm -rf "${tmp_repo_copy}/gitbook/cmp/.gitbook/assets"
 
 tmp_errors="$(mktemp)"
 fdupes --quiet --recurse --order=name --noempty --sameline "${tmp_repo_copy}" |
-    grep -v './website/static/icons' |
+    grep -v '_category_.json' |
     sed "s,${tmp_repo_copy},.,g" |
     sed 's,^,Duplicates: ,' >>"${tmp_errors}"
 

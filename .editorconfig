@@ -32,7 +32,7 @@ max_line_length = off
 [docusaurus.config.js]
 max_line_length = off
 
-[_redirects]
+[website/redirects/*.txt]
 max_line_length = off
 
 [.brokdb]

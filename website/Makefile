@@ -9,6 +9,9 @@ LC_ALL = C
 
 .DEFAULT_GOAL = help
 
+TOP_DIR = $(patsubst %/,%,$(dir $(lastword $(MAKEFILE_LIST))))
+BIN_DIR = $(TOP_DIR)/bin
+
 .PHONY: help
 help:
 	@ printf '%s\n\n' "Usage: make [target]"
@@ -34,12 +37,16 @@ endif
 start: install
 	yarn start $(YARN_START_OPTS)
 
+.PHONY: pre-build
+pre-build:
+	$(BIN_DIR)/make-redirects.sh
+
 .PHONY: build # Bundle the website into static files for production
 build: install
 	yarn build
 
-optimize-build: build
-	../bin/optimize-build.sh
+post-build:
+	$(BIN_DIR)/optimize-build.sh
 
 .PHONY: serve # Serve the built website locally
 serve: install
