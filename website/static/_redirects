@@ -1,9 +1,10 @@
 # Redirect spam requests to keep the 404 logs clean
 
+/*.php        / 302
 /~/*          / 302
 /1.0.0/*      / 302
 /static/js/*  / 302
-/wp-login.php / 302
+/wp-*/*       / 302
 
 # GitBook restructuring, 2021
 
@@ -238,6 +239,7 @@
 /hc/en-us/categories/200035127-Cloud-Management-Platform                                                   /
 
 /hc/en-us/sections/360006079692-Manage-Assets-Licenses                                                     /docs/cmp#asset-management
+/hc/en-us/sections/360006391112-Customer-Support                                                           /docs/services/consulting-support
 /hc/en-us/sections/360006391152-Invoices-Payments                                                          /docs/cmp#advanced-billing
 /hc/en-us/sections/360006391192-Dashboards                                                                 /docs/dashboards/widgets-overview
 /hc/en-us/sections/360007135191-Connect-Your-Cloud                                                         /docs/cmp#asset-management
