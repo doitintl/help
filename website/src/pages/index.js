@@ -8,7 +8,7 @@ import LearnMore from '@site/src/components/LearnMore';
 import GettingStarted from '@site/src/components/GettingStarted';
 import Header from '@site/src/components/Header';
 
-export default function Home() {
+export default function homePage() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout>

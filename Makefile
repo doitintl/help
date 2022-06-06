@@ -34,18 +34,18 @@ help:
 		column -s '#' -t | \
 		sed -E "s,^([a-z]+),  \1,"
 
-.PHONY: check # Run all checks
-check:
-
 .PHONY: start # Start the Docusaurus development server
 start:
 	$(call print-target)
 	@ $(MAKE) -C website start
 
-.PHONY: build # Build the Docusaurus website
-build:
-	$(call print-target)
+.PHONY: pre-build
+pre-build:
 	@ $(MAKE) -C website pre-build
+
+.PHONY: build # Build the Docusaurus website
+build: pre-build
+	$(call print-target)
 	@ $(MAKE) -C website build
 	@ $(MAKE) -C website post-build
 
@@ -53,6 +53,9 @@ build:
 serve:
 	$(call print-target)
 	@ $(MAKE) -C website serve
+
+.PHONY: check # Run all checks
+check:
 
 .PHONY: clean # Remove build artifacts
 clean:
@@ -120,7 +123,7 @@ check: textlint-dry
 vale:
 check: vale
 
-redirects-lint:
+redirects-lint: pre-build
 check: redirects-lint
 
 markdown-link-check:

@@ -1,5 +1,5 @@
 bracketSameLine: true
-printWidth: 77 # Target value (Prettier may exceed this)
+printWidth: 76 # Target value (Prettier may exceed this)
 proseWrap: preserve
 semi: true
 singleQuote: true

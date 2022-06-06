@@ -27,7 +27,8 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/doitintl/help/tree/main/website/docs',
+          editUrl:
+            'https://github.com/doitintl/help/tree/main/website/docs',
           showLastUpdateTime: true,
           breadcrumbs: false,
         },
