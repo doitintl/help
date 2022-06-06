@@ -33,7 +33,10 @@ export default function LayoutWrapper(props) {
           href="/safari-pinned-tab.svg"
           color="#1a1c1e"
         />
-        <meta name="apple-mobile-web-app-title" content="DoiT Help Center" />
+        <meta
+          name="apple-mobile-web-app-title"
+          content="DoiT Help Center"
+        />
         <meta name="application-name" content="DoiT Help Center" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="theme-color" content="#ffffff" />
