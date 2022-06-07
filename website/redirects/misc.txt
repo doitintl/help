@@ -1,15 +1,26 @@
-/.well-known/ads.txt                     /cgi-bin/brew.pl 418
-/.well-known/app-ads.txt                 /cgi-bin/brew.pl 418
-/.well-known/apple-app-site-association  /cgi-bin/brew.pl 418
-/.well-known/assetlinks.json             /cgi-bin/brew.pl 418
-/.well-known/assetlinks.json             /cgi-bin/brew.pl 418
-/.well-known/gpc.json                    /cgi-bin/brew.pl 418
-/.well-known/openid-configuration        /cgi-bin/brew.pl 418
-/.well-known/robots.txt                  /robots.txt 200
-/.well-known/security.txt                /cgi-bin/brew.pl 418
-/.well-known/sellers.json                /cgi-bin/brew.pl 418
-/.well-known/trust.txt                   /cgi-bin/brew.pl 418
+/.well-known/ads.txt                     /cgi-bin/brew/_coffee.html 418
+/.well-known/app-ads.txt                 /cgi-bin/brew/_coffee.html 418
+/.well-known/apple-app-site-association  /cgi-bin/brew/_coffee.html 418
+/.well-known/assetlinks.json             /cgi-bin/brew/_coffee.html 418
+/.well-known/assetlinks.json             /cgi-bin/brew/_coffee.html 418
+/.well-known/gpc.json                    /cgi-bin/brew/_coffee.html 418
+/.well-known/openid-configuration        /cgi-bin/brew/_coffee.html 418
+/.well-known/robots.txt                  /robots.txt                200
+/.well-known/security.txt                /cgi-bin/brew/_coffee.html 418
+/.well-known/sellers.json                /cgi-bin/brew/_coffee.html 418
+/.well-known/trust.txt                   /cgi-bin/brew/_coffee.html 418
 /readme                                  /
-/static/js/*                             /cgi-bin/brew.pl 418
-/wp-admin/*                              /cgi-bin/brew.pl 418
-/wp-login.php                            /cgi-bin/brew.pl 418
+/wp-login.php                            /cgi-bin/brew/_coffee.html 418
+
+# Brew routes
+
+/cgi-bin                                 /cgi-bin/brew.pl           301
+/cgi-bin/brew.pl                         /cgi-bin/brew/_index.html  400
+/coffee                                  /cgi-bin/brew/_coffee.html 418
+/tea                                     /cgi-bin/brew/_tea.html    503
+
+# Splat rules come last to avoid overriding more specific rules
+
+/cgi-bin/*                               /cgi-bin/brew.pl
+/static/js/*                             /cgi-bin/brew/_coffee.html 418
+/wp-admin/*                              /cgi-bin/brew/_coffee.html 418

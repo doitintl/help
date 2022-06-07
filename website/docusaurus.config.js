@@ -9,6 +9,7 @@ require('dotenv').config();
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'DoiT International Help Center',
+
   tagline: 'How can we help?',
   url: process.env.URL || 'http://localhost:3000',
   baseUrl: '/',
@@ -67,8 +68,8 @@ const config = {
         hideOnScroll: true,
         logo: {
           alt: 'DoiT International',
-          src: 'images/doit-logo-black.svg',
-          srcDark: 'images/doit-logo-white.svg',
+          src: 'img/doit-logo-black.svg',
+          srcDark: 'img/doit-logo-white.svg',
         },
         items: [
           {
@@ -105,7 +106,7 @@ const config = {
         style: 'dark',
         logo: {
           alt: 'DoiT',
-          src: 'images/doit-logo-white.svg',
+          src: 'img/doit-logo-white.svg',
           href: 'https://www.doit-intl.com/',
           width: 100,
         },
@@ -217,6 +218,7 @@ const config = {
     }),
   plugins: [require.resolve('docusaurus-plugin-image-zoom')],
   customFields: {
+    shortTitle: 'DoiT Help Center',
     ALGOLIA_API_KEY: process.env.ALGOLIA_API_KEY,
     ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID,
     INDEX_NAME: process.env.INDEX_NAME,
