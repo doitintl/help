@@ -26,12 +26,20 @@ clean() {
 
 trap clean EXIT
 
-print_errors() {
+handle_errors() {
     error_message="${1}"
     error_file="${2}"
+    # TODO: Find a better way of allowing exceptions to the rule
+    sed -i '/brew.pl/d' "${error_file}"
+    sed -i '/coffee/d' "${error_file}"
+    if ! test -s "${error_file}"; then
+        exit 0
+    fi
     printf "\e%sERROR: %s\e%s\n\n" "${RED}" "${error_message}" "${RESET}"
     sed -E "s,([^:]+):(.*),\x1b${BLUE}${REDIRECTS_FILE}:\1:\x1b${RESET} \2," \
         <"${error_file}"
+    cat "${error_file}"
+    exit 1
 }
 
 tmp_errors="${tmp_dir}/errors"
@@ -46,10 +54,10 @@ awk '{print $1}' <"${REDIRECTS_FILE}" >"${src_tmp}"
 
 # Select the second column (with filtering, to match rules)
 dest_tmp="${tmp_dir}/dest"
-awk '{print $2}' <"${REDIRECTS_FILE}" | grep -E '^/' >"${dest_tmp}"
+awk '{print $2}' <"${REDIRECTS_FILE}" |
+    grep -E '^/' >"${dest_tmp}"
 
 tmp_errors="${tmp_dir}/errors"
 if grep -n -F -x -f "${dest_tmp}" "${src_tmp}" >"${tmp_errors}"; then
-    print_errors "Chained redirects" "${tmp_errors}"
-    exit 1
+    handle_errors "Chained redirects" "${tmp_errors}"
 fi

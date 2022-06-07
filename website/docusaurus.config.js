@@ -67,8 +67,8 @@ const config = {
         hideOnScroll: true,
         logo: {
           alt: 'DoiT International',
-          src: 'images/doit-logo-black.svg',
-          srcDark: 'images/doit-logo-white.svg',
+          src: 'img/doit-logo-black.svg',
+          srcDark: 'img/doit-logo-white.svg',
         },
         items: [
           {
@@ -105,7 +105,7 @@ const config = {
         style: 'dark',
         logo: {
           alt: 'DoiT',
-          src: 'images/doit-logo-white.svg',
+          src: 'img/doit-logo-white.svg',
           href: 'https://www.doit-intl.com/',
           width: 100,
         },
