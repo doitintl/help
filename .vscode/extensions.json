@@ -25,6 +25,7 @@
     "tyriar.sort-lines",
     "vadistic.mdx-inline",
     "viktorzetterstrom.non-breaking-space-highlighter",
-    "xyc.vscode-mdx-preview"
+    "xyc.vscode-mdx-preview",
+    "cssho.vscode-svgviewer"
   ]
 }

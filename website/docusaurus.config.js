@@ -4,22 +4,26 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-require('dotenv').config();
+const navbarItems = require('./navbar.items.js');
+const footerLinks = require('./footer.links.js');
+const pluginPwa = require('./plugin.pwa.js');
+
+const algoliaConfig = require('./config.algolia.js');
+const doitConfig = require('./config.doit.js');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'DoiT International Help Center',
-
-  tagline: 'How can we help?',
-  url: process.env.URL || 'http://localhost:3000',
+  title: doitConfig.siteTitleAbbrev,
+  tagline: doitConfig.tagLine,
+  url: doitConfig.helpUrl,
   baseUrl: '/',
   trailingSlash: false,
   onBrokenLinks: 'error',
   onBrokenMarkdownLinks: 'error',
   onDuplicateRoutes: 'error',
   favicon: 'favicon.ico',
-  organizationName: 'doitintl',
-  projectName: 'help',
+  organizationName: doitConfig.ghOrg,
+  projectName: doitConfig.ghProject,
 
   presets: [
     [
@@ -28,8 +32,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/doitintl/help/tree/main/website/docs',
+          editUrl: doitConfig.ghEditUrl,
           showLastUpdateTime: true,
           breadcrumbs: false,
         },
@@ -53,6 +56,26 @@ const config = {
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },
+      image: '/og-image.png',
+      metadata: [
+        { property: 'og:type', content: 'website' },
+        { name: 'description', content: doitConfig.defaultDesc },
+        { name: 'og:description', content: doitConfig.defaultDesc },
+        { property: 'og:image:alt', content: doitConfig.tagLine },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        {
+          name: 'twitter:site',
+          content: doitConfig.twitterUsername,
+        },
+        {
+          name: 'twitter:creator',
+          content: doitConfig.twitterUsername,
+        },
+        { name: 'twitter:domain', content: doitConfig.helpDomain },
+        { property: 'twitter:image:alt', content: doitConfig.tagLine },
+      ],
       announcementBar: {
         id: 'pride',
         content:
@@ -64,37 +87,14 @@ const config = {
         isCloseable: false,
       },
       navbar: {
-        title: 'Help Center',
+        title: doitConfig.siteName,
         hideOnScroll: true,
         logo: {
-          alt: 'DoiT International',
-          src: 'img/doit-logo-black.svg',
-          srcDark: 'img/doit-logo-white.svg',
+          alt: doitConfig.companyName,
+          src: 'doit-logo-black.svg',
+          srcDark: 'doit-logo-white.svg',
         },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'cmpSideBar',
-            position: 'left',
-            label: 'Cloud Management Platform',
-          },
-          {
-            href: 'https://developer.doit-intl.com/',
-            position: 'left',
-            label: 'Developer Hub',
-          },
-          {
-            href: 'https://app.doit-intl.com/',
-            position: 'right',
-            label: 'Log in to the CMP',
-          },
-          {
-            href: 'https://github.com/doitintl/help',
-            position: 'right',
-            className: 'header-github-link',
-            'aria-label': 'GitHub repository',
-          },
-        ],
+        items: navbarItems,
       },
       docs: {
         sidebar: {
@@ -105,123 +105,29 @@ const config = {
       footer: {
         style: 'dark',
         logo: {
-          alt: 'DoiT',
-          src: 'img/doit-logo-white.svg',
-          href: 'https://www.doit-intl.com/',
+          alt: doitConfig.companyName,
+          src: 'doit-logo-white.svg',
+          href: doitConfig.homeUrl,
           width: 100,
         },
-        links: [
-          {
-            title: 'Support and consulting',
-            items: [
-              {
-                label: 'Feature requests',
-                href: 'https://feedback.doit-intl.com/',
-              },
-              {
-                label: 'Open a ticket',
-                href: 'https://app.doit-intl.com/support',
-              },
-              {
-                label: 'Technical support',
-                href: 'https://doit-intl.com/services/managed-support-msp/',
-              },
-              {
-                label: 'Technical consulting',
-                href: 'https://doit-intl.com/services/#cloud-consulting-engineering',
-              },
-              {
-                label: 'Support stats',
-                href: 'https://doit-intl.com/stats/',
-              },
-            ],
-          },
-          {
-            title: 'Discover',
-            items: [
-              {
-                label: 'Homepage',
-                href: 'https://doit-intl.com/',
-              },
-              {
-                label: 'Blog',
-                href: 'https://blog.doit-intl.com/',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/doitintl',
-              },
-              {
-                label: 'LinkedIn',
-                href: 'https://www.linkedin.com/company/doitintl',
-              },
-              {
-                label: 'YouTube',
-                href: 'https://www.youtube.com/c/MultiCloudEngineering',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/doitint',
-              },
-              {
-                label: 'Facebook',
-                href: 'https://www.facebook.com/DoIT.International/',
-              },
-            ],
-          },
-          {
-            title: 'Company',
-            items: [
-              {
-                label: 'Vendor information',
-                to: '/docs/vendor-information/general-vendor-information',
-              },
-              {
-                label: 'Security and data access policy',
-                to: '/docs/vendor-information/security-and-data-access-policy-for-cloud-management-platform',
-              },
-              {
-                label: 'External services we use',
-                to: '/docs/vendor-information/external-services',
-              },
-              {
-                label: 'Exchange rates',
-                to: '/docs/vendor-information/exchange-rates',
-              },
-              {
-                label: 'Our subprocessors',
-                href: '/docs/vendor-information/subprocessors',
-              },
-              {
-                label: 'Compliance',
-                href: 'https://doit-intl.com/compliance/',
-              },
-            ],
-          },
-        ],
+        links: footerLinks,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
         additionalLanguages: ['shell-session', 'java'],
       },
-      algolia: {
-        appId: process.env.ALGOLIA_APP_ID,
-        apiKey: process.env.ALGOLIA_API_KEY,
-        indexName: process.env.INDEX_NAME,
-      },
+      algolia: algoliaConfig,
       zoom: {
         selector: '.markdown :not(em) > img',
         // https://github.com/francoischalifour/medium-zoom#usage
         config: {},
       },
     }),
-  plugins: [require.resolve('docusaurus-plugin-image-zoom')],
+  plugins: [require.resolve('docusaurus-plugin-image-zoom'), pluginPwa],
   customFields: {
-    shortTitle: 'DoiT Help Center',
-    ALGOLIA_API_KEY: process.env.ALGOLIA_API_KEY,
-    ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID,
-    INDEX_NAME: process.env.INDEX_NAME,
+    doitConfig: doitConfig,
+    algoliaConfig: algoliaConfig,
   },
 };
 

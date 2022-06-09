@@ -6,13 +6,13 @@ import '@docsearch/css';
 
 const Search = () => {
   const {
-    siteConfig: { customFields },
+    siteConfig: { themeConfig },
   } = useDocusaurusContext();
   return (
     <DocSearch
-      appId={customFields.ALGOLIA_APP_ID}
-      indexName={customFields.INDEX_NAME}
-      apiKey={customFields.ALGOLIA_API_KEY}
+      appId={themeConfig.algolia.appId}
+      indexName={themeConfig.algolia.indexName}
+      apiKey={themeConfig.algolia.apiKey}
       getMissingResultsUrl={({ query }) => {
         return `https://github.com/doitintl/help/issues/new?title=${query}`;
       }}
