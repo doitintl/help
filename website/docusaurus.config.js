@@ -93,6 +93,8 @@ const config = {
           alt: doitConfig.companyName,
           src: 'doit-logo-black.svg',
           srcDark: 'doit-logo-white.svg',
+          width: 32,
+          height: 32,
         },
         items: navbarItems,
       },
