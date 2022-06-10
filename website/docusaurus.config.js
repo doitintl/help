@@ -111,6 +111,7 @@ const config = {
           src: 'doit-logo-white.svg',
           href: doitConfig.homeUrl,
           width: 100,
+          height: 100,
         },
         links: footerLinks,
       },
