@@ -46,6 +46,7 @@
 /dashboards/add-reports-to-dashboards                                                            /docs/dashboards/add-reports-to-dashboards
 /dashboards/aws-finops-dashboard                                                                 /docs/dashboards/aws-lens
 /dashboards/aws-lens                                                                             /docs/dashboards/aws-lens
+/dashboards/bigquery-finops-dashboard                                                            /docs/dashboards/bigquery-lens
 /dashboards/bigquery-lens                                                                        /docs/dashboards/bigquery-lens
 /dashboards/creating-a-new-dashboard                                                             /docs/dashboards/creating-a-new-dashboard
 /dashboards/customizing-dashboards                                                               /docs/dashboards/customizing-dashboards

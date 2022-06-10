@@ -19,6 +19,7 @@
 /hc/en-us/articles/360033254031-User-Permissions                                                           /docs/user-management/user-permissions-explained
 /hc/en-us/articles/360033254111--Change-Invoice-Settings                                                   /docs/invoices-and-payments/changing-invoice-settings
 /hc/en-us/articles/360033488532-Access-Public-Dashboard                                                    /docs/dashboards/accessing-a-public-dashboard
+/hc/en-us/articles/360034118632                                                                            /docs/invoices-and-payments/setting-up-ach-payments
 /hc/en-us/articles/360034118632-Setup-ACH-Payments                                                         /docs/invoices-and-payments/setting-up-ach-payments
 /hc/en-us/articles/360034919292-Tag-Assets                                                                 /docs/assets-and-contracts/tag-assets
 /hc/en-us/articles/360035101912-Connect-Your-Google-Cloud-Organization                                     /docs/google-cloud/connect-google-cloud-service-account
@@ -47,6 +48,7 @@
 /hc/en-us/articles/360038791071-AWS-Service-Limits-Quotas-Alerts                                           /docs/amazon-web-services/aws-quotas
 /hc/en-us/articles/360038826252                                                                            /docs/cmp
 /hc/en-us/articles/360039630271                                                                            /docs/cmp
+/hc/en-us/articles/360040580752-BigQuery-FinOps-Dashboard                                                  /docs/dashboards/bigquery-lens
 /hc/en-us/articles/360040580752-superQuery-Dashboard                                                       /docs/dashboards/bigquery-lens
 /hc/en-us/articles/360042369611-Configure-A-Policy-For-Sandbox-Accounts                                    /docs/cloud-sandbox-management/configuring-a-policy-for-sandbox-accounts
 /hc/en-us/articles/360042612671                                                                            /docs/cloud-sandbox-management/create-gcp-sandbox-accounts
@@ -60,10 +62,12 @@
 /hc/en-us/articles/360046375592-Clone-Customize-Cloud-Reports                                              /docs/cloud-analytics/cloning-and-or-customizing-cloud-reports
 /hc/en-us/articles/360046378512                                                                            /docs/cmp
 /hc/en-us/articles/360046780572-Using-Aggregations-in-Cloud-Reports                                        /docs/cloud-analytics/using-aggregations-in-cloud-reports
+/hc/en-us/articles/360047018932-Supported-AWS-Cost-Allocation-Tags                                         /docs/amazon-web-services/supported-aws-cost-allocation-tags
 /hc/en-us/articles/360048197072-Connect-Google-Cloud-Service-Account                                       /docs/google-cloud/connect-google-cloud-service-account
 /hc/en-us/articles/360050404732-Managing-Alerts-in-Shared-Slack-Channels                                   /docs/services/consulting-support/shared-slack-channel
 /hc/en-us/categories/200035127-Cloud-Management-Platform                                                   /docs/cmp
 /hc/en-us/sections/360006079692-Manage-Assets-Licenses                                                     /docs/cmp#asset-management
+/hc/en-us/sections/360006391112-Customer-Support                                                           /docs/services/consulting-support
 /hc/en-us/sections/360006391112-Customer-Support                                                           /docs/services/consulting-support
 /hc/en-us/sections/360006391152-Invoices-Payments                                                          /docs/cmp#advanced-billing
 /hc/en-us/sections/360006391192-Dashboards                                                                 /docs/dashboards/widgets-overview
