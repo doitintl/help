@@ -1,0 +1,43 @@
+.idealImageContainer {
+  margin-bottom: var(--ifm-leading);
+}
+
+.idealImage {
+  width: fit-content !important;
+  display: grid;
+}
+
+.idealImage > svg {
+  max-width: 100%;
+  grid-column: 1;
+  grid-row: 1;
+  height: auto;
+}
+
+.idealImage div {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.idealImage img {
+  grid-column: 1;
+  grid-row: 1;
+  height: auto;
+}
+
+.idealImage div br {
+  display: none;
+}
+
+.idealImage div.interactive {
+  cursor: pointer !important;
+}

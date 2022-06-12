@@ -40,7 +40,7 @@ find . -type f -name '*.png' -print |
         sig_file="${OPTIPNG_LOCK_DIR}/${file}.md5sum"
         dirname="$(dirname "${sig_file}")"
         mkdir -p "${dirname}"
-        if md5sum --check --quiet "${sig_file}" 2>/dev/null; then
+        if md5sum --check --quiet "${sig_file}" >/dev/null 2>&1; then
             continue
         fi
         if test "${dry_run}" = 0; then

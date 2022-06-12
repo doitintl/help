@@ -19,7 +19,10 @@ Required Permissions: **Cloud Analytics**
 
 Select _Analytics_ from the top menu and then select _Attributions_ to access your attributions:
 
-![A screenshot of the Attributions screen](../assets/png/cmp-attributions-screen.png)
+<picture
+  img={require('../../assets/png/cmp-attributions-screen.png')}
+  alt="A screenshot of the Attributions screen"
+/>
 
 To create a new attribution, select the _NEW ATTRIBUTION_ button.
 
@@ -31,15 +34,24 @@ If you want to give even more context to your Attribution, you may give it a des
 
 Now it's time to configure the conditions, or the criteria, which will determine what falls under your Attribution. You have the option to either set as meet "**ALL**" or "**ANY**" of the conditions. This will switch between "AND" to "OR" relations.
 
-![A screenshot showing the location of the items listed above](../assets/png/cmp-all-any.png)
+<picture
+  img={require('../../assets/png/cmp-all-any.png')}
+  alt="A screenshot showing the location of the items listed above"
+/>
 
 You will have every cloud billing dimension to choose from; as well as any custom, project, and system labels. Select the field(s) you'd like to include as part of your Attribution from the dropdown:
 
-![A screenshot showing the dropdown menu](../assets/png/cmp-attributions.png)
+<picture
+  img={require('../../assets/png/cmp-attributions.png')}
+  alt="A screenshot showing the dropdown menu"
+/>
 
 From there, filter your selections either by keyword, exclusion, or regular expression just as you would do in Cloud Analytics reports. Continuing our example from above, let's filter for projects which the production team uses.
 
-![A screenshot showing the Filter Projects form](../assets/png/cmp-filter-projects-form.png)
+<picture
+  img={require('../../assets/png/cmp-filter-projects-form.png')}
+  alt="A screenshot showing the Filter Projects form"
+/>
 
 Finally, click "Save" to apply the filter on your condition.
 
@@ -57,11 +69,17 @@ You should **not** set multiple separate conditions with the same field &mdash; 
 
 Once attributions are configured you will have some additional options in the '3-dot' menu to the right of the list:
 
-![A screenshot of the attribution list with a 3-dot menu on each line](../assets/png/cmp-attribution-list-menu.png)
+<picture
+  img={require('../../assets/png/cmp-attribution-list-menu.png')}
+  alt="A screenshot of the attribution list with a 3-dot menu on each line"
+/>
 
 As the owner of an attribution you will see several option:
 
-![A screenshot of the 3-dot menu options](../assets/png/cmp-attribution-list-menu-options.png)
+<picture
+  img={require('../../assets/png/cmp-attribution-list-menu-options.png')}
+  alt="A screenshot of the 3-dot menu options"
+/>
 
 ### Subscribe to daily digest
 
@@ -79,7 +97,10 @@ Remove the attribution from the CMP
 
 In the settings panel you can enable Anomaly Detection for the scope defined by your attribution.
 
-![A screenshot of the Attributions Settings panel](../assets/png/cmp-attributions-settings.png)
+<picture
+  img={require('../../assets/png/cmp-attributions-settings.png')}
+  alt="A screenshot of the Attributions Settings panel"
+/>
 
 By enabling this monitor, the CMP will monitor the scope defined in your attribution for Cost anomalies.
 
@@ -95,7 +116,10 @@ In the event that you have many attributions, make sure to click on the Attribut
 
 In the example below, only the production, dev, and ops team attributions will be included in the report:
 
-![A screenshot showing the Filter attributions form](../assets/png/cmp-filter-attributions-form.png)
+<picture
+  img={require('../../assets/png/cmp-filter-attributions-form.png')}
+  alt="A screenshot showing the Filter attributions form"
+/>
 
 View the bite-sized video below for a closer look at Attributions and using them in your reports.
 

@@ -95,4 +95,5 @@ const LearnMore = () => {
     </section>
   );
 };
+
 export default LearnMore;

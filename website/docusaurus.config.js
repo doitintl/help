@@ -4,26 +4,27 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-const navbarItems = require('./navbar.items.js');
-const footerLinks = require('./footer.links.js');
-const pluginPwa = require('./plugin.pwa.js');
-
-const algoliaConfig = require('./config.algolia.js');
-const doitConfig = require('./config.doit.js');
+// Site configuration
+const doit = require('./doit.js');
+const algolia = require('./algolia.js');
+const metadata = require('./metadata.js');
+const navbar = require('./navbar.js');
+const footer = require('./footer.js');
+const plugins = require('./plugins.js');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: doitConfig.siteTitleAbbrev,
-  tagline: doitConfig.tagLine,
-  url: doitConfig.helpUrl,
+  title: doit.siteTitleAbbrev,
+  tagline: doit.tagLine,
+  url: doit.helpUrl,
   baseUrl: '/',
   trailingSlash: false,
   onBrokenLinks: 'error',
   onBrokenMarkdownLinks: 'error',
   onDuplicateRoutes: 'error',
   favicon: 'favicon.ico',
-  organizationName: doitConfig.ghOrg,
-  projectName: doitConfig.ghProject,
+  organizationName: doit.ghOrg,
+  projectName: doit.ghProject,
 
   presets: [
     [
@@ -32,7 +33,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: doitConfig.ghEditUrl,
+          editUrl: doit.ghEditUrl,
           showLastUpdateTime: true,
           breadcrumbs: false,
         },
@@ -57,25 +58,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       image: '/og-image.png',
-      metadata: [
-        { property: 'og:type', content: 'website' },
-        { name: 'description', content: doitConfig.defaultDesc },
-        { name: 'og:description', content: doitConfig.defaultDesc },
-        { property: 'og:image:alt', content: doitConfig.tagLine },
-        { property: 'og:image:width', content: '1200' },
-        { property: 'og:image:height', content: '630' },
-        { name: 'twitter:card', content: 'summary_large_image' },
-        {
-          name: 'twitter:site',
-          content: doitConfig.twitterUsername,
-        },
-        {
-          name: 'twitter:creator',
-          content: doitConfig.twitterUsername,
-        },
-        { name: 'twitter:domain', content: doitConfig.helpDomain },
-        { property: 'twitter:image:alt', content: doitConfig.tagLine },
-      ],
+      metadata: metadata,
       announcementBar: {
         id: 'pride',
         content:
@@ -86,51 +69,30 @@ const config = {
           '&#x1f3f3;&#xfe0f;&#x200d;&#x1f308;',
         isCloseable: false,
       },
-      navbar: {
-        title: doitConfig.siteName,
-        hideOnScroll: true,
-        logo: {
-          alt: doitConfig.companyName,
-          src: 'doit-logo-black.svg',
-          srcDark: 'doit-logo-white.svg',
-          width: 32,
-          height: 32,
-        },
-        items: navbarItems,
-      },
+      navbar: navbar,
       docs: {
         sidebar: {
           hideable: true,
           autoCollapseCategories: true,
         },
       },
-      footer: {
-        style: 'dark',
-        logo: {
-          alt: doitConfig.companyName,
-          src: 'doit-logo-white.svg',
-          href: doitConfig.homeUrl,
-          width: 100,
-          height: 100,
-        },
-        links: footerLinks,
-      },
+      footer: footer,
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
         additionalLanguages: ['shell-session', 'java'],
       },
-      algolia: algoliaConfig,
+      algolia: algolia,
       zoom: {
         selector: '.markdown :not(em) > img',
         // https://github.com/francoischalifour/medium-zoom#usage
         config: {},
       },
     }),
-  plugins: [require.resolve('docusaurus-plugin-image-zoom'), pluginPwa],
+  plugins: plugins,
   customFields: {
-    doitConfig: doitConfig,
-    algoliaConfig: algoliaConfig,
+    doitConfig: doit,
+    algoliaConfig: algolia,
   },
 };
 
