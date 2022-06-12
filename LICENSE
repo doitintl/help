@@ -22,7 +22,19 @@ SOFTWARE.
 
 ===============================================================================
 
-Some components of the project were derived from Docusaurus:
+Some parts of the project infrastructure (setup, build, testing, etc.) are
+derived from third-party work:
+
+  Copyright 2022, Naomi Rose and contributors
+
+  MIT License
+
+===============================================================================
+
+The website framework and some related components are derived from:
+
+  Docusaurus
+  https://github.com/facebook/docusaurus/
 
   Copyright (c) Facebook, Inc. and its affiliates.
 
@@ -30,8 +42,11 @@ Some components of the project were derived from Docusaurus:
 
 ===============================================================================
 
-Some components of the project were derived from third-party work:
+Some parts of the `IdealImage` component are derived from:
 
-  Copyright 2022, Naomi Rose and contributors
+  docusaurus-plugin-image-zoom
+  https://github.com/gabrielcsapo/docusaurus-plugin-image-zoom
+
+  Copyright (c) 2021 Gabriel Csapo
 
   MIT License

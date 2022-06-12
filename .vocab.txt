@@ -38,6 +38,7 @@ clsx
 cmp's
 cpus
 createrole
+csapo
 d'italie
 dach
 dataprep
@@ -59,6 +60,7 @@ editmsg
 elazar
 enablement
 endef
+endiliey
 escheck
 espa
 fargate
@@ -96,6 +98,7 @@ launchtemplate
 libimagequant
 lintspaces
 loglevel
+lqip
 maci
 mailto
 markdowncheck
@@ -107,6 +110,7 @@ mazars
 mbps
 mdash
 mdns
+mdxa
 mirrorings
 mixpanel
 mkdir
@@ -117,6 +121,7 @@ mstile
 mvdan
 ndash
 noempty
+noicon
 noindex
 oidc
 optimizely

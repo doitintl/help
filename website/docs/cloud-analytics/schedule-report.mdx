@@ -24,7 +24,10 @@ There are two ways to schedule emailed reports:
 
 Begin by opening a report that you have "Owner" access to. Then, click on the clock icon on the right-hand menu bar:
 
-![A screenshot showing an example report](../assets/png/cmp-example-report.png)
+<picture
+  img={require('../../assets/png/cmp-example-report.png')}
+  alt="A screenshot showing an example report"
+/>
 
 Next, configure the scheduled delivery:
 
@@ -32,11 +35,17 @@ Next, configure the scheduled delivery:
 - Optionally, update email's subject and the message to provide more context for recipients
 - Set up when you'd like to be delivered (using [cron syntax](https://crontab.guru))
 
-![A screenshot showing the Schedule Report Email Delivery modal dialog](../assets/png/cmp-schedule-report-email-dialog.png)
+<picture
+  img={require('../../assets/png/cmp-schedule-report-email-dialog.png')}
+  alt="A screenshot showing the Schedule Report Email Delivery modal dialog"
+/>
 
 If you've included someone who doesn't have access to the report, you will be asked to add that user to the report. You can choose whether to grant the "Viewer" or "Editor" access.
 
-![A screenshot showing the Some recipients need access to this report modal dialog](../assets/png/cmp-some-recipients-need-access-dialog.png)
+<picture
+  img={require('../../assets/png/cmp-some-recipients-need-access-dialog.png')}
+  alt="A screenshot showing the Some recipients need access to this report modal dialog"
+/>
 
 ## About Cron expressions
 
@@ -65,11 +74,17 @@ To create a schedule that repeats, use special characters to describe when that 
 
 Select the access level you'd like to give them, and click "Add" to give them access to the report and add them to the list of scheduled report recipients.
 
-![A screenshot showing the Some recipients need access to this report modal dialog](../assets/png/cmp-recipients-need-access-dialog.png)
+<picture
+  img={require('../../assets/png/cmp-recipients-need-access-dialog.png')}
+  alt="A screenshot showing the Some recipients need access to this report modal dialog"
+/>
 
 Your scheduled report will look something like the image below. From the email, you'll be able to preview the report and open an interactive report in Cloud Analytics, by using the "Open Live Report" button.
 
-![A screenshot showing the location of the Open Live Report button](../assets/png/cmp-open-live-report-button.png)
+<picture
+  img={require('../../assets/png/cmp-open-live-report-button.png')}
+  alt="A screenshot showing the location of the Open Live Report button"
+/>
 
 ### Scheduling via the Cloud Analytics page
 
@@ -77,7 +92,10 @@ You may also schedule emailed reports from the main Cloud Analytics page.
 
 First, find a report that you are the owner of. Then, select the horizontal ellipsis icon in the right-most table column, and select _Email Schedule_ from the drop-down menu.
 
-![A screenshot of the _Reports_ screen](../assets/png/cmp-analytics-reports.png)
+<picture
+  img={require('../../assets/png/cmp-analytics-reports.png')}
+  alt="A screenshot of the _Reports_ screen"
+/>
 
 From there, configure your report as described above, modifying the message and interval as well as the recipients.
 
@@ -95,7 +113,10 @@ Using the same methods as above, you can also subscribe to other people's schedu
 
 If you need to delete the scheduled report, please use the Delete button on the "Schedule Report Email Delivery" dialog.
 
-![A screenshot showing the Schedule Report Email Delivery dialog](../assets/png/cmp-schedule-report-delivery-dialog.png)
+<picture
+  img={require('../../assets/png/cmp-schedule-report-delivery-dialog.png')}
+  alt="A screenshot showing the Schedule Report Email Delivery dialog"
+/>
 
 ## Limitations
 

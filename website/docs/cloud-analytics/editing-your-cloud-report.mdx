@@ -12,7 +12,10 @@ If you're new to Cloud Analytics reports and/or haven't created a report yet, we
 
 An example cloud analytics report:
 
-![A screenshot showing and example report](../assets/png/cmp-example-report.png)
+<picture
+  img={require('../../assets/png/cmp-example-report.png')}
+  alt="A screenshot showing and example report"
+/>
 
 There are several types of edits you can make to a report like this:
 
@@ -67,13 +70,19 @@ Specify the frequency in which data is aggregated. For the time interval, you ha
 
 For the time range, the options are the following:
 
-![A screenshot showing you the options for Time Range](../assets/png/cmp-time-range-options.png)
+<picture
+  img={require('../../assets/png/cmp-time-range-options.png')}
+  alt="A screenshot showing you the options for Time Range"
+/>
 
 ### Exclude partial Intervals
 
 When looking at at a report the most current interval is always incomplete. If the report is **Daily** then the current day will always be collecting billing data throughout the day. By checking this checkbox, cloud analytics will remove any incomplete time interval from the data of the report.
 
-![A screenshot of the Time Range drop-down menu](../assets/png/cmp-time-range-menu.png)
+<picture
+  img={require('../../assets/png/cmp-time-range-menu.png')}
+  alt="A screenshot of the Time Range drop-down menu"
+/>
 
 This means that we will hide data for the current day for daily intervals, current week for monthly intervals, etc.
 
@@ -102,7 +111,10 @@ The **Compare Data** dropdown will automatically add either **% change** or **ac
 
 To enable Comparison mode select either **Show actuals** or **Show percentage** from the _Comparative data_ drop-down in Edit mode of Cloud Analytics reports:
 
-![A screenshot of the Comparative data drop-down menu](../assets/png/cmp-comparative-data-menu.png)
+<picture
+  img={require('../../assets/png/cmp-comparative-data-menu.png')}
+  alt="A screenshot of the Comparative data drop-down menu"
+/>
 
 Comparison mode is
 
@@ -112,13 +124,19 @@ Comparison mode is
 
 When selected _**we will automatically adjust your report**_, you will be warned of the changes and asked to confirm.
 
-![A screenshot of the Show Comparative Report modal dialog](../assets/png/cmp-show-comparative-report-dialog.png)
+<picture
+  img={require('../../assets/png/cmp-show-comparative-report-dialog.png')}
+  alt="A screenshot of the Show Comparative Report modal dialog"
+/>
 
 Once enabled, you will see new columns in your table based view showing the &delta; between time intervals. This difference (&delta;) appears **after** the intervals compared.
 
 For example below: Months 07 (July) and 08 (August) show the % change after in the column &delta;08 (Change to August)
 
-![Report with highlighted comparison columns](../assets/png/cmp-report-highlighted-columns.png)
+<picture
+  img={require('../../assets/png/cmp-report-highlighted-columns.png')}
+  alt="Report with highlighted comparison columns"
+/>
 
 _Note: Column headings will contain a % symbol when showing % change_
 
@@ -132,7 +150,10 @@ You may also exclude a selection of values, or limit results to a specific numbe
 
 Next, click "Save" in the lower-right corner of the popup modal.
 
-![A screenshot showing you the location of the Save button](../assets/png/cmp-cloudreports-filters.png)
+<picture
+  img={require('../../assets/png/cmp-cloudreports-filters.png')}
+  alt="A screenshot showing you the location of the Save button"
+/>
 
 :::tip
 
