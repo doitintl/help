@@ -26,6 +26,5 @@ If you would like to make changes directly, please feel free to [fork this repos
 
 [doit-org]: https://github.com/doitintl/
 [issues]: https://github.com/doitintl/cmp-docs/issues
-[markdown]: https://docs.gitbook.com/editing-content/markdown
 [fork]: https://docs.github.com/en/get-started/quickstart/fork-a-repo
 [pr]: https://docs.github.com/en/github/collaborating-with-pull-requests

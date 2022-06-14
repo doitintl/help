@@ -59,8 +59,6 @@ editmsg
 elazar
 enablement
 endef
-endembed
-endhint
 escheck
 espa
 fargate

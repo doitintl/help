@@ -87,14 +87,16 @@ check: shellcheck
 shfmt:
 check: shfmt
 
-good-filenames:
-check: good-filenames
+# TODO: Reimplement for Docusaurus
+# good-filenames:
+# check: good-filenames
 
 rm-unused-docs-dry:
 check: rm-unused-docs-dry
 
-rm-unused-assets-dry:
-check: rm-unused-assets-dry
+# TODO: Reimplement for Docusaurus
+# rm-unused-assets-dry:
+# check: rm-unused-assets-dry
 
 markdowncheck:
 check: markdownlint
@@ -141,7 +143,6 @@ all: imgdup2go
 .PHONY: imgdup2go
 imgdup2go:
 	$(call print-target)
-	$(IMGDUP2GO) gitbook/cmp/.gitbook/assets
 	$(IMGDUP2GO) website/docs/assets
 
 optipng-dry:

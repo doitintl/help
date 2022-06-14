@@ -18,7 +18,6 @@ rsync -qa . "${tmp_repo_copy}"
 make --no-print-directory -C "${tmp_repo_copy}" --silent clean
 
 rm -rf "${tmp_repo_copy}/.git"
-rm -rf "${tmp_repo_copy}/gitbook/cmp/.gitbook/assets"
 
 tmp_errors="$(mktemp)"
 fdupes --quiet --recurse --order=name --noempty --sameline "${tmp_repo_copy}" |

@@ -6,8 +6,7 @@
 # Usage: ./bin/rm-unused-assets.sh [--dry-run]
 
 # An asset (e.g., a PNG file or a CSV file) is considered to be unused if no
-# documents (i.e., Markdown files) in the GitBook space (i.e., the `docs`
-# directory) reference it.
+# documents (i.e., Markdown files) in the `docs` directory reference it.
 
 # POSIX locale
 LC_ALL=C
@@ -17,8 +16,8 @@ export LC_ALL
 RED='\x1b[1;31m'
 RESET='\x1b[0m'
 
-DOCS_DIR=gitbook/cmp
-ASSETS_DIR=.gitbook/assets
+DOCS_DIR=website/docs
+ASSETS_DIR=assets
 
 dry_run=0
 for arg in "$@"; do

@@ -13,7 +13,7 @@ export LC_ALL
 RED='\x1b[1;31m'
 RESET='\x1b[0m'
 
-ASSETS_DIR=gitbook/cmp/.gitbook/assets
+ASSETS_DIR=website/docs/assets
 
 # Markdown
 # -----------------------------------------------------------------------------
@@ -32,7 +32,8 @@ ALLOWED_SUFFIXES='\.(csv|gif|png)$'
 check_filename() {
     file="${1}"
     basename="$(basename "${file}")"
-    echo "${basename}" | grep -Eq "${ALLOWED_PREFIXES}" || echo 'prefix'
+    echo "${basename}" | grep -Eq "${ALLOWED_PREFIXES}" |
+        grep -vE '\.csv$' || echo 'prefix'
     echo "${basename}" | grep -Eq "${ALLOWED_CHARS}" || echo 'characters'
     echo "${basename}" |
         sed -E "${DISALLOWED_STEMS_FILTER}" |

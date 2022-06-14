@@ -6,7 +6,7 @@
 # Usage: ./bin/rm-unused-assets.sh [-d|--dry-run]
 
 # A document (i.e., a Markdown file) is considered unused if no other documents
-# in the GitBook space (i.e., the `docs` directory) reference it.
+# in the `docs` directory reference it.
 
 # POSIX locale
 LC_ALL=C
@@ -16,7 +16,7 @@ export LC_ALL
 RED='\x1b[1;31m'
 RESET='\x1b[0m'
 
-DOCS_DIR=gitbook/cmp
+DOCS_DIR=website/docs
 
 dry_run=0
 for arg in "$@"; do
