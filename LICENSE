@@ -50,3 +50,13 @@ Some parts of the `IdealImage` component are derived from:
   Copyright (c) 2021 Gabriel Csapo
 
   MIT License
+
+===============================================================================
+
+The `loading-icon.svg` file was derived from:
+
+  react-ideal-image
+  https://github.com/stereobooster/react-ideal-image
+
+  The MIT License (MIT)
+  Copyright (c) 2017 stereobooster

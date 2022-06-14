@@ -8,6 +8,7 @@ import MDXHeading from '@theme-original/MDXComponents/Heading';
 import MDXUl from '@theme-original/MDXComponents/Ul';
 import MDXImg from '@theme-original/MDXComponents/Img';
 import IdealImage from '@theme/IdealImage';
+import VideoEmbed from '@theme/VideoEmbed';
 const MDXComponents = {
   head: MDXHead,
   code: MDXCode,
@@ -17,6 +18,7 @@ const MDXComponents = {
   ul: MDXUl,
   img: MDXImg,
   picture: IdealImage,
+  video: VideoEmbed,
   h1: (props) => <MDXHeading as="h1" {...props} />,
   h2: (props) => <MDXHeading as="h2" {...props} />,
   h3: (props) => <MDXHeading as="h3" {...props} />,
