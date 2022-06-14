@@ -95,6 +95,7 @@ kpis
 kubernetes
 lastword
 launchtemplate
+lazyload
 libimagequant
 lintspaces
 loglevel
@@ -158,6 +159,7 @@ sameline
 sarbanes
 sarl
 savingsplans
+sddefault
 semibold
 serv
 serviceusage
@@ -170,6 +172,7 @@ smallhadroncollider
 spotscaling
 stax
 stefanzweifel
+stereobooster
 stopwords
 stra
 subnetworks

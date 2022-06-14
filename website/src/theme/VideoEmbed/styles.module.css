@@ -1,0 +1,30 @@
+.videoContainer {
+  background-color: var(--ifm-color-secondary);
+  background-image: url(/icon-loading.svg);
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: var(--ifm-leading);
+}
+
+.lazyLoad {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Standard YouTube aspect ratio */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.videoEmbed {
+  position: relative;
+  padding-bottom: 56.25%;
+  margin-bottom: var(--ifm-leading);
+  height: 0;
+}
+
+.videoEmbed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
