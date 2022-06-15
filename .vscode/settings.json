@@ -8,6 +8,7 @@
   "cSpell.enabledLanguageIds": [],
   "prettier.printWidth": 79,
   "prettier.requireConfig": true,
+  "markdown.experimental.validate.enabled": true,
   "files.associations": {
     "cspell.json": "jsonc",
     "devcontainer.json": "jsonc",
