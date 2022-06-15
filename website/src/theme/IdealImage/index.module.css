@@ -34,6 +34,10 @@
   height: auto;
 }
 
+.devImage {
+  height: auto;
+}
+
 .idealImage div br {
   display: none;
 }
