@@ -51,6 +51,7 @@
 /hc/en-us/articles/360040580752-BigQuery-FinOps-Dashboard                                                  /docs/dashboards/bigquery-lens
 /hc/en-us/articles/360040580752-superQuery-Dashboard                                                       /docs/dashboards/bigquery-lens
 /hc/en-us/articles/360042369611-Configure-A-Policy-For-Sandbox-Accounts                                    /docs/cloud-sandbox-management/configuring-a-policy-for-sandbox-accounts
+/hc/en-us/articles/360042369611-Configure-A-Policy-For-Sandbox-Accounts/subscription.html                  /docs/cloud-sandbox-management/configuring-a-policy-for-sandbox-accounts
 /hc/en-us/articles/360042612671                                                                            /docs/cloud-sandbox-management/create-gcp-sandbox-accounts
 /hc/en-us/articles/360042612671-Create-Google-Cloud-Sandbox-Accounts                                       /docs/cloud-sandbox-management/create-gcp-sandbox-accounts
 /hc/en-us/articles/360042647732-General-Vendor-Information                                                 /docs/vendor-information/general-vendor-information
@@ -61,6 +62,7 @@
 /hc/en-us/articles/360045700631-Share-Cloud-Reports                                                        /docs/cloud-analytics/sharing-cloud-reports
 /hc/en-us/articles/360046375592-Clone-Customize-Cloud-Reports                                              /docs/cloud-analytics/cloning-and-or-customizing-cloud-reports
 /hc/en-us/articles/360046378512                                                                            /docs/cmp
+/hc/en-us/articles/360046378512-Introduction-to-the-Cloud-Management-Platform                              /docs/cmp
 /hc/en-us/articles/360046780572-Using-Aggregations-in-Cloud-Reports                                        /docs/cloud-analytics/using-aggregations-in-cloud-reports
 /hc/en-us/articles/360047018932-Supported-AWS-Cost-Allocation-Tags                                         /docs/amazon-web-services/supported-aws-cost-allocation-tags
 /hc/en-us/articles/360048197072-Connect-Google-Cloud-Service-Account                                       /docs/google-cloud/connect-google-cloud-service-account
