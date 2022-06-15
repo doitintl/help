@@ -12,7 +12,7 @@
 
 /readme                                  /
 /og-image.jpg                            /og-image.png
-/apple-app-site-association              /.well-known/apple-app-site-association
+/apple-app-site-association              /cgi-bin/brew/_coffee.html 418
 
 /wp-login.php                            /cgi-bin/brew/_coffee.html 418
 
