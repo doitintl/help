@@ -102,7 +102,6 @@ class idealImageMod {
     if (this.alt) {
       node.setAttribute('title', this.alt);
     }
-
     const svg = node.parentNode.querySelector('svg');
     this.handleSvg(svg);
   }
@@ -183,7 +182,7 @@ function getFallbackPath(obj) {
 }
 
 export default function IdealImage(props) {
-  const { alt, className, img } = props;
+  const { alt, img } = props;
   const ref = React.createRef();
   const fallbackPath = getFallbackPath(img);
 
@@ -194,10 +193,17 @@ export default function IdealImage(props) {
 
     useEffect(() => {
       if (!ref.current) return;
+      const div = ref.current;
+      const img = div.querySelector(':scope img');
+      const scaledWidth = Math.round(img.naturalWidth / 2);
+      const scaledHeight = Math.round(img.naturalHeight / 2);
+      img.width = scaledWidth;
+      img.height = scaledHeight;
+      img.setAttribute('data-zooming-width', scaledWidth);
+      img.setAttribute('data-zooming-height', scaledHeight);
       if (!ref.current.zoom) {
-        ref.current.zoom = new Zooming(zoomingConfig);
-        const img = ref.current.querySelector(':scope img');
-        ref.current.zoom.listen(img);
+        div.zoom = new Zooming(zoomingConfig);
+        div.zoom.listen(img);
       }
     });
 
@@ -206,7 +212,7 @@ export default function IdealImage(props) {
         <img
           src={fallbackPath}
           alt={alt}
-          className={className}
+          className={styles.devImage}
           {...newProps}
         />
       </div>
