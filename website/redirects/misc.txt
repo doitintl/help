@@ -26,7 +26,7 @@
 # Splat rules come last to avoid overriding more specific rules
 
 /cgi-bin/*                               /cgi-bin/brew.pl
-/assets/*                                /cgi-bin/brew/_tea.html    503
+/assets/*                                /cgi-bin/brew/_tea.html    418
 /static/js/*                             /cgi-bin/brew/_coffee.html 418
 /wp-admin/*                              /cgi-bin/brew/_coffee.html 418
 /wp-content/*                            /cgi-bin/brew/_coffee.html 418
