@@ -5,67 +5,63 @@ description: Cloud cost anomaly detection offers end-to-end monitoring of spikes
 
 # View cost anomalies
 
-Cloud cost anomaly detection offers end-to-end monitoring of spikes in your Google Cloud or Amazon Web Services billing, seamlessly, across all your projects and services.
+Cloud cost anomaly detection offers end-to-end monitoring of spikes in your Google Cloud or Amazon Web Services billing across all your projects and services.
 
-At the core of our cost anomaly detection service is our machine-learning algorithm. It works by monitoring billing data and analyzing the trend of spending in your environment. In addition, the machine learning model identifies billing patterns across many customers, forecasting your cloud spending, and constantly improving itself to provide even more accurate results.
+At the core of our cost anomaly detection service is our machine learning algorithm. It monitors billing data and analyzes the trend of spending in your environment. In addition, the machine learning model identifies billing patterns across many customers, forecasting your cloud spending, and constantly improving itself to provide even more accurate results.
 
-Essentially, billing records that don't align with your anticipated spending behavior are identified for its deviation from the established patterns. You can also get insights into which resources are causing the anomalies and take corrective actions. Our anomaly detection engine is always running, however, you can opt to get email notifications, to get near-real-time email alerts on detected anomalies.
+Billing records that don't align with your anticipated spending behavior are identified for its deviation from the established patterns. You can also get insights into which resources are causing the anomalies and take corrective actions. The anomaly detection engine is always running. You can also choose email notifications for near-real-time email alerts on detected anomalies.
 
 ## Manage anomaly notifications
 
-To manage your notifications, select the _Settings_ icon (a gear) from the top menu, then select _Identity and access_.
+To manage your notifications:
 
-<picture
-  img={require('../../assets/png/cmp-iam-screen.png')}
-  alt="A screenshot showing the Identity and access screen"
-/>
+1. Select the _Settings_ icon (a gear) from the top menu, and then select **Identity and access**.
 
-On this screen, select your own user account.
+   ![A screenshot showing the Identity and access screen](../../assets/png/cmp-iam-screen.png)
 
-Then, on your user profile page, select _Notifications_ from the left-hand menu:
+2. Select your own user account.
 
-<picture
-  img={require('../../assets/png/cmp-notifications.png')}
-  alt="A screenshot showing the Notifications screen"
-/>
+3. On your user profile page, select **Notifications** from the left-hand menu.
 
-If you'd like to be notified of potential anomalies, check the _Cloud Cost Anomalies_ box and then set the minimum severity threshold you want to be alerted on. There are three levels of severity:
+   ![A screenshot showing the Notifications screen](../../assets/png/cmp-notifications.png)
 
-1. Information
-2. Warning
-3. Critical
+To be notified of potential anomalies, select the **Cloud Cost Anomalies** checkbox, and then set the minimum severity threshold you want to be alerted on. There are three levels of severity:
 
-By default, the threshold for email alerts is set to _Warning_ or higher (i.e., ">= Warning"). You can modify this value to increase or decrease the number of alerts you receive.
+- Information
+- Warning
+- Critical
+
+By default, the threshold for email alerts is set to _Warning_ or higher (i.e., `>= Warning`). You can modify this setting to increase or decrease the number of alerts you receive.
 
 :::caution
 
-We begin analyzing your data as soon as you sign up. However, we need to gather at least seven full days of reference data before we have enough information to detect anomalies. If anomaly detection is critical to your operation, we strongly recommend you wait this period out before making any significant changes to your cloud spend.
+The data analysis begins as soon as you sign up. However, for anomaly detection to work properly, we need to gather at least seven full days of reference data in a specific project.
+
+In case anomaly detection is critical to your operation, we strongly recommend you wait this _seven-day_ period out before making any significant changes to your cloud spending.
 
 :::
 
 ## Configure custom anomaly scopes
 
-If you would like to monitor a specific subset of costs within your accounts, you can use attributions to define a custom scope.
+To monitor a specific subset of costs within your accounts, you can use [attributions](../cloud-analytics/attributing-cloud-spend.mdx#edit-settings) to define a custom scope.
 
-[Read more about attributions here](../cloud-analytics/attributing-cloud-spend.mdx#edit-settings)
-
-For example, let's say you would like to create anomalies to only monitor your production infrastructure. You can accomplish this by creating an attribution defining your environment and then enabling it for monitoring.
+For example, to create anomalies to only monitor your production infrastructure, you can create an attribution to define your environment and then enable it for monitoring.
 
 ## View anomalies
 
-We store all detected cost anomalies, so you can always access them by selecting _Governance_ from the top menu bar, then selecting _Cost anomalies_ (see below).
+We store all the detected cost anomalies. You can access them at any time by selecting **Governance** from the top menu bar, then selecting **Cost anomalies**.
 
-## Investigate anomalies further
+### Investigate anomalies further
 
-If you'd like to dive deeper into an anomaly, select the _INVESTIGATE_ button in the top right-hand corner of the screen to launch a pre-configured Cloud Analytics Report. This feature allows you to zoom in on a specific anomaly and determine what any action (if any) is needed.
+To dive deeper into an anomaly, select the **INVESTIGATE** button in the top right-hand corner of the screen to launch a pre-configured Cloud Analytics Report. This allows you to zoom in on a specific anomaly and determine what action (if any) is needed.
 
-## Fine-tune alerts with direct feedback
+### Fine-tune alerts with direct feedback
 
-To reduce the number of false alerts, you can provide a thumbs-up or a thumbs-down for each alert. We use this information to fine-tune our anomaly detection algorithm and improve results.
+To reduce the number of false alerts, you can provide a thumbs-up or a thumbs-down for each alert. We use this information to fine-tune the anomaly detection algorithm and improve the results.
 
-## Anomalies Widget
+## Watch anomaly detection video
 
-View the bite-sized video below for a closer look at anomaly detection:
+Watch the video below for a closer look at anomaly detection:
 
 <video
   type="loom"
