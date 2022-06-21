@@ -59,7 +59,7 @@ const config = {
       },
       image: '/og-image.png',
       metadata: metadata,
-      announcementBar: {
+      /* announcementBar: {
         id: 'pride',
         content:
           '&#x1f3f3;&#xfe0f;&#x200d;&#x1f308; ' +
@@ -68,7 +68,7 @@ const config = {
           'Speaker Session with Briona Jenkins</a> on June 14th ' +
           '&#x1f3f3;&#xfe0f;&#x200d;&#x1f308;',
         isCloseable: false,
-      },
+      }, */
       navbar: navbar,
       docs: {
         sidebar: {
