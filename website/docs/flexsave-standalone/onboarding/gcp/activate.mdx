@@ -48,17 +48,17 @@ To proceed with Flexsave setup, make sure you read the DoiT International Flexsa
 
    1. Grant DoiT Flexsave Service Account `Data Viewer` permissions to the BigQuery dataset.
 
-   ```bash
-   bq show --format=prettyjson $DATASET_ID | jq '.access = .access + [{"role": "READER", "userByEmail": "$DoiT_service_account_email"}]' > permissions.json
+      ```bash
+      bq show --format=prettyjson $DATASET_ID | jq '.access = .access + [{"role": "READER", "userByEmail": "$DoiT_service_account_email"}]' > permissions.json
 
-   bq update --source permissions.json $DATASET_ID
-   ```
+      bq update --source permissions.json $DATASET_ID
+      ```
 
    1. Grant DoiT Flexsave Service Account permissions to attach/detach projects with optimal CUDs on organization level.
 
-   ```bash
-   gcloud iam roles update doit_flexsave_role --organization=$ORGANIZATION_ID --title="DoiT Flexsave Role" --stage=GA --add-permissions=bigquery.jobs.create,billing.resourceAssociations.create,resourcemanager.projects.createBillingAssignment
-   ```
+      ```bash
+      gcloud iam roles update doit_flexsave_role --organization=$ORG --title="DoiT Flexsave Role" --stage=GA --add-permissions=billing.accounts.get,bigquery.jobs.create,billing.resourceAssociations.create,resourcemanager.projects.createBillingAssignment
+      ```
 
 1. Select **ACTIVATE FLEXSAVE**.
 
