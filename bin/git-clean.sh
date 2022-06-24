@@ -10,7 +10,8 @@ LC_ALL=C
 export LC_ALL
 
 find_ignored() {
-    git check-ignore ./* ./* ./**/* ./**/.*
+    find . -type d -print0 | xargs -0 git check-ignore
+    find . -type f -print0 | xargs -0 git check-ignore
 }
 
 find_ignored | sort -n | while read -r path; do
