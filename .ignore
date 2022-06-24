@@ -9,5 +9,6 @@
 *.mp4
 *.png
 *.svg
+*.tar.gz
 build
 node_modules

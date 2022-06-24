@@ -28,9 +28,34 @@ for arg in "$@"; do
     esac
 done
 
-OPTIPNG_LOCK_DIR=.docops/lock/optipng
+OPTIPNG_DIR=optipng
+OPTIPNG_TGZ="${OPTIPNG_DIR}.tar.gz"
+LOCK_DIR=.docops/lock
+OPTIPNG_LOCK_DIR="${LOCK_DIR}/${OPTIPNG_DIR}"
 
-mkdir -p "${OPTIPNG_LOCK_DIR}"
+(
+    # Restore lock files
+    cd "${LOCK_DIR}"
+    if test -f "${OPTIPNG_TGZ}"; then
+        rm -rf "${OPTIPNG_DIR}"
+        tar -xzf "${OPTIPNG_TGZ}"
+        rm -f "${OPTIPNG_TGZ}"
+    else
+        mkdir -p "${OPTIPNG_DIR}"
+    fi
+)
+
+recompress() (
+    # Recompress the lock files
+    cd "${LOCK_DIR}"
+    rm -f "${OPTIPNG_TGZ}"
+    if test -d "${OPTIPNG_DIR}"; then
+        tar -czf "${OPTIPNG_TGZ}" "${OPTIPNG_DIR}"
+    fi
+    rm -rf "${OPTIPNG_DIR}"
+)
+
+trap recompress EXIT
 
 tmp_errors="$(mktemp)"
 find . -type f -name '*.png' -print |
