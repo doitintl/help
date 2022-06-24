@@ -1,0 +1,67 @@
+---
+sidebar_position: 2
+---
+
+# Get your estimate
+
+You need a DoiT account to get the Flexsave estimate.
+
+## Sign up for estimate
+
+To get started with Flexsave:
+
+1. Select the **Get your Flexsave estimate** button at https://www.doit.com/.
+
+1. Create a DoiT account by following the instructions on the sign up page.
+
+   You can use a Google account, a Microsoft account, or an email address and password to sign up for the estimate.
+
+   1. Select the checkbox of **I agree to the terms of the policy agreement**.
+
+   1. Select **Create Account**. You will receive an email with a link to verify the email address you provided.
+
+   1. Once the email is verified, you'll be directed to the sign in page of [DoiT's Cloud Management Platform](https://app.doit-intl.com/login).
+
+## Get your estimate
+
+After signing in, select **Google Cloud Platform** for your estimate.
+
+Every Flexsave standalone account has a dedicated service account created by DoiT. To calculate your potential savings, you need to grant permissions to this service account at the organization level for it to fetch GCP recommendations.
+
+1. Fill in your organization ID.
+
+   See Google Cloud Docs on [Getting your organization ID](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). The code snippet will be updated automatically with the organization ID.
+
+1. Open the Google Cloud Shell.
+
+1. Copy the command code snippet and run it in the cloud shell to create a custom role named `DoiT Flexsave Role` under your organization.
+
+   ```bash
+   gcloud iam roles create doit_flexsave_role --organization $ORGANIZATION_ID --title="DoiT Flexsave Role" --stage=GA --permissions=recommender.usageCommitmentRecommendations.list,compute.instances.list
+   ```
+
+   This custom role has the following permissions:
+
+   - `recommender.usageCommitmentRecommendations.list`: Allows to view resource-based committed use discount (CUD) recommendations using Google's [CUD recommender](https://cloud.google.com/docs/cuds-recommender)
+   - `compute.instances.list`: Allows to view compute instances (??? Why do we need this? Does this return compute instance under the customer's org?)
+
+1. Run the second code snippet to add an IAM policy binding, which grants the `doit_flexsave_role` to the service account.
+
+   ```
+   gcloud organizations add-iam-policy-binding {your_organization_id} --member=serviceAccount:{DoiT service account email} --role=organizations/{your_organization_id}/roles/doit_flexsave_role
+   ```
+
+1. Select **VIEW MY ESTIMATE** to see the estimation result.
+
+## Understand your estimate
+
+<picture
+  img={require('../../../assets/png/gcp-savings-estimation.png')}
+  alt="GCP savings estimate"
+/>
+
+The estimate is based on the following factors:
+
+- Your last month's cloud bill
+- The most commonly used resources and regions among DoiT customers
+- An assumed annual growth rate of 0-5%

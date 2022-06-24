@@ -1,0 +1,65 @@
+---
+sidebar_position: 3
+---
+
+# Activate Flexsave
+
+To activate Flexsave for GCP, you first need to set up your billing.
+
+## Provide payment information
+
+Provide the payment information as shown on the screen, including:
+
+- **Billing address**: Billing address of your organization
+- **Company details**: Company name and registration number (Tax ID)
+- **Contact details**: Accounts payable details
+- **Payments**: Payment method and currency
+
+Select **CONFIRM PAYMENT INFORMATION** to create your billing profile.
+
+Once the billing profile is created, select **SET UP FLEXSAVE** to continue.
+
+![Flexsave GCP landing page after creating billing profile](../../../assets/png/gcp-flexsave-landing-billing-done.png)
+
+## Confirm Flexsave Agreement
+
+To proceed with Flexsave setup, make sure you read the DoiT International Flexsave Agreement, select the checkboxes, and confirm the agreement.
+
+## Activate Flexsave for GCP
+
+1. Enable discount sharing from the Google Cloud console, and select the checkbox to confirm.
+
+   :::note
+
+   By default, committed use discounts are applied on the project level. Flexsave attaches projects with CUDs to your Cloud Billing account. In order to share the discount with your own projects, you need to [turn on committed use discount sharing](https://cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts#turning_on_committed_use_discount_sharing).
+
+   :::
+
+1. Provide the location of your billing data, including:
+
+   - **Organization ID**: See Google Cloud Docs on [Getting your organization ID](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id).
+   - **Project ID containing your BQ billing data**: See [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects).
+   - **Dataset ID containing your BQ billing data**: See [Getting dataset information](https://cloud.google.com/bigquery/docs/dataset-metadata#getting_dataset_information). Note that the dataset name is also referred to as the dataset ID.
+   - **Table ID containing your BQ billing data**: See [Get table information](https://cloud.google.com/bigquery/docs/tables#get_table_information). Note that the table name is also referred to as the table ID.
+
+   The code snippets will be updated automatically once the relevant information is provided.
+
+1. Open the Google CLoud Shell, copy the command code snippets and run them in sequence in the shell.
+
+   1. Grant DoiT Flexsave Service Account `Data Viewer` permissions to the BigQuery dataset.
+
+   ```bash
+   bq show --format=prettyjson $DATASET_ID | jq '.access = .access + [{"role": "READER", "userByEmail": "$DoiT_service_account_email"}]' > permissions.json
+
+   bq update --source permissions.json $DATASET_ID
+   ```
+
+   1. Grant DoiT Flexsave Service Account permissions to attach/detach projects with optimal CUDs on organization level.
+
+   ```bash
+   gcloud iam roles update doit_flexsave_role --organization=$ORGANIZATION_ID --title="DoiT Flexsave Role" --stage=GA --add-permissions=bigquery.jobs.create,billing.resourceAssociations.create,resourcemanager.projects.createBillingAssignment
+   ```
+
+1. Select **ACTIVATE FLEXSAVE**.
+
+Once activated, Flexsave will start processing your information and building an optimization plan. The whole process may take up to 24 hours. You'll be notified by email when it's done.
