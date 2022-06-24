@@ -8,6 +8,12 @@ const items = [
     label: 'Cloud Management Platform',
   },
   {
+    type: 'docSidebar',
+    sidebarId: 'flexsaveSideBar',
+    position: 'left',
+    label: 'Flexsave',
+  },
+  {
     href: doit.developerUrl,
     position: 'left',
     label: 'Developer Hub',
