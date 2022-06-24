@@ -1,8 +1,15 @@
+_*
+.cache-loader
+.docusaurus
 .DS_Store
+.env
+.env.*
 *.err
 *.log
 *.out
 *.tmp
+build
+cache
 node_modules
 npm-debug.*
 yarn-debug.*
