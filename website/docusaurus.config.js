@@ -59,16 +59,6 @@ const config = {
       },
       image: '/og-image.png',
       metadata: metadata,
-      /* announcementBar: {
-        id: 'pride',
-        content:
-          '&#x1f3f3;&#xfe0f;&#x200d;&#x1f308; ' +
-          'Celebrate Pride Month with DoiT: <wbr> Join our ' +
-          '<a href="https://resources.doit-intl.com/pride-at-doit-2022">' +
-          'Speaker Session with Briona Jenkins</a> on June 14th ' +
-          '&#x1f3f3;&#xfe0f;&#x200d;&#x1f308;',
-        isCloseable: false,
-      }, */
       navbar: navbar,
       docs: {
         sidebar: {
