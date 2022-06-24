@@ -12,46 +12,48 @@ To get started with Flexsave:
 
 1. Select the **Get your Flexsave estimate** button at [DoiT](https://app.doit-intl.com/signup/flexsave).
 
-1. Create a DoiT account by following the instructions on the sign up page.
+1. Follow the instructions on the sign up page to create a DoiT account.
 
    You can use a Google account, a Microsoft account, or an email address and password to sign up for the estimate.
 
-   1. Select the checkbox of **I agree to the terms of the policy agreement**.
+   1. Select the **I agree to the terms of the policy agreement** checkbox.
 
    1. Select **Create Account**. You will receive an email with a link to verify the email address you provided.
 
-   1. Once the email is verified, you'll be directed to the sign in page of [DoiT's Cloud Management Platform](https://app.doit-intl.com/login).
+   1. After verifying the email, you'll be directed to the sign in page of DoiT [Cloud Management Platform](https://app.doit-intl.com/login).
 
 ## Set up your estimate
 
-After signing in, select **Google Cloud Platform** for your estimate.
+Once signed in, select **Google Cloud Platform** for estimate.
 
-To calculate your potential savings, you need to grant permissions to the DoiT Flexsave service account at the organization level for it to fetch GCP recommendations.
+To calculate your potential savings, you need to grant certain permissions to the DoiT Flexsave service account, as explained below.
 
-1. Fill in your organization ID.
+1. Fill in your organization ID on the estimate screen.
 
-   See Google Cloud Docs for [Getting your organization ID](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). The code snippet will be updated automatically with the organization ID.
+   For how to find your organization ID, see [Google Cloud Docs](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id).
 
-1. Open the Google Cloud Shell.
+   The code snippets will be updated automatically once the organization ID is provided.
 
-1. Copy the command code snippet and run it in the cloud shell to create a custom role named `DoiT Flexsave Role` under your organization.
+1. Open the Google Cloud Shell, copy the command code snippets and run them in sequence in the shell.
 
-   ```bash
-   gcloud iam roles create doit_flexsave_role --organization $ORGANIZATION_ID --title="DoiT Flexsave Role" --stage=GA --permissions=recommender.usageCommitmentRecommendations.list,compute.instances.list
-   ```
+   1. Create a custom role named `DoiT Flexsave Role` in your organization.
 
-   This custom role has the following permissions:
+      ```bash
+      gcloud iam roles create doit_flexsave_role --organization $ORGANIZATION_ID --title="DoiT Flexsave Role" --stage=GA --permissions=recommender.usageCommitmentRecommendations.list,compute.instances.list
+      ```
 
-   - `recommender.usageCommitmentRecommendations.list`: Allows to view resource-based committed use discount (CUD) recommendations using Google's [CUD recommender](https://cloud.google.com/docs/cuds-recommender)
-   - `compute.instances.list`: Allows to view compute instances (??? Why do we need this? Does this return compute instance under the customer's org?)
+      The command above grants the custom role the following permissions:
 
-1. Run the second code snippet to add an IAM policy binding, which grants the `doit_flexsave_role` to the service account.
+      - `recommender.usageCommitmentRecommendations.list`: Allows to view resource-based committed use discount (CUD) recommendations using Google's [CUD recommender](https://cloud.google.com/docs/cuds-recommender)
+      - `compute.instances.list`: Allows to view compute instances (??? Why do we need this? Does this return compute instance under the customer's org?)
 
-   ```
-   gcloud organizations add-iam-policy-binding {your_organization_id} --member=serviceAccount:{DoiT service account email} --role=organizations/{your_organization_id}/roles/doit_flexsave_role
-   ```
+   1. Add an IAM policy binding to associate the `doit_flexsave_role` to the service account.
 
-1. Select **View my estimate** to see the estimation result.
+      ```bash
+      gcloud organizations add-iam-policy-binding $ORG_ID --member=serviceAccount:$DoiT_service_account_email --role=organizations/$ORG_ID/roles/doit_flexsave_role
+      ```
+
+1. Select the **View my estimate** button to see the estimation result.
 
 ## Understand your estimate
 
