@@ -10,7 +10,7 @@ You need a DoiT account to get the Flexsave estimate.
 
 To get started with Flexsave:
 
-1. Select the **Get your Flexsave estimate** button at [DoiT](https://www.doit.com/).(??? TBD).
+1. Select the **Get your Flexsave estimate** button at [DoiT](https://app.doit-intl.com/signup/flexsave).
 
 1. Create a DoiT account by following the instructions on the sign up page.
 
@@ -26,11 +26,11 @@ To get started with Flexsave:
 
 After signing in, select **Google Cloud Platform** for your estimate.
 
-Every Flexsave standalone account has a dedicated service account created by DoiT. To calculate your potential savings, you need to grant permissions to this service account at the organization level for it to fetch GCP recommendations.
+To calculate your potential savings, you need to grant permissions to the DoiT Flexsave service account at the organization level for it to fetch GCP recommendations.
 
 1. Fill in your organization ID.
 
-   See Google Cloud Docs on [Getting your organization ID](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). The code snippet will be updated automatically with the organization ID.
+   See Google Cloud Docs for [Getting your organization ID](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). The code snippet will be updated automatically with the organization ID.
 
 1. Open the Google Cloud Shell.
 
@@ -55,7 +55,10 @@ Every Flexsave standalone account has a dedicated service account created by Doi
 
 ## Understand your estimate
 
-![GCP savings estimate](../../../assets/png/gcp-savings-estimation.png)
+<picture
+  img={require('../../../assets/png/gcp-savings-estimation.png')}
+  alt="GCP savings estimate"
+/>
 
 The estimate is based on the following factors:
 

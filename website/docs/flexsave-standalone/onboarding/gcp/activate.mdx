@@ -19,7 +19,10 @@ Select **CONFIRM PAYMENT INFORMATION** to create your billing profile.
 
 Once the billing profile is created, select **SET UP FLEXSAVE** to continue.
 
-![Flexsave GCP landing page after creating billing profile](../../../assets/png/gcp-flexsave-landing-billing-done.png)
+<picture
+  img={require('../../../assets/png/gcp-flexsave-landing-billing-done.png')}
+  alt="Flexsave GCP landing page after creating billing profile"
+/>
 
 ## Confirm Flexsave Agreement
 
@@ -44,9 +47,9 @@ To proceed with Flexsave setup, make sure you read the DoiT International Flexsa
 
    The code snippets will be updated automatically once the relevant information is provided.
 
-1. Open the Google CLoud Shell, copy the command code snippets and run them in sequence in the shell.
+1. Open the Google Cloud Shell, copy the command code snippets and run them in sequence in the shell.
 
-   1. Grant DoiT Flexsave Service Account `Data Viewer` permissions to the BigQuery dataset.
+   1. Grant DoiT service account BigQuery `Data Viewer` role on the dataset that contains your billing data.
 
       ```bash
       bq show --format=prettyjson $DATASET_ID | jq '.access = .access + [{"role": "READER", "userByEmail": "$DoiT_service_account_email"}]' > permissions.json
@@ -54,11 +57,15 @@ To proceed with Flexsave setup, make sure you read the DoiT International Flexsa
       bq update --source permissions.json $DATASET_ID
       ```
 
-   1. Grant DoiT Flexsave Service Account permissions to attach/detach projects with optimal CUDs on organization level.
+   1. Grant DoiT service account permission to attach projects with optimal CUDs to your Cloud Billing account.
 
       ```bash
       gcloud iam roles update doit_flexsave_role --organization=$ORG --title="DoiT Flexsave Role" --stage=GA --add-permissions=billing.accounts.get,bigquery.jobs.create,billing.resourceAssociations.create,resourcemanager.projects.createBillingAssignment
       ```
+
+      - `billing.accounts.get`: Permission to fetch your billing account name.
+      - `bigquery.jobs.create`: Permission to import customer billing tables.
+      - `billing.resourceAssociations.create`, `resourcemanager.projects.createBillingAssignment`: Permission to link projects to your billing account.
 
 1. Select **ACTIVATE FLEXSAVE**.
 
