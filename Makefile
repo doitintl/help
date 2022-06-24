@@ -143,7 +143,7 @@ all: imgdup2go
 .PHONY: imgdup2go
 imgdup2go:
 	$(call print-target)
-	$(IMGDUP2GO) website/docs/assets
+	$(IMGDUP2GO)
 
 optipng-dry:
 check: optipng-dry
