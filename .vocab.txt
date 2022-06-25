@@ -22,7 +22,6 @@ brockdb
 brok
 brokdb
 brokignore
-browserconfig
 browserslist
 budgetao
 cc'd

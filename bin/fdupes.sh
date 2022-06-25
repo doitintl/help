@@ -22,7 +22,6 @@ rm -rf "${tmp_repo_copy}/.git"
 tmp_errors="$(mktemp)"
 fdupes --quiet --recurse --order=name --noempty --sameline "${tmp_repo_copy}" |
     grep -v '_category_.json' |
-    grep -v 'apple-touch-icon' |
     sed "s,${tmp_repo_copy},.,g" |
     sed 's,^,Duplicates: ,' >>"${tmp_errors}"
 

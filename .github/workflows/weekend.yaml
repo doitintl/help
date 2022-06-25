@@ -1,4 +1,4 @@
-name: Weekend
+name: Weekend jobs
 
 on:
   schedule:
