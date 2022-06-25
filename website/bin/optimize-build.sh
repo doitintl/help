@@ -33,9 +33,12 @@ PATH="${tmp_dir}/usr/bin:${PATH}"
 
 echo "Running pngquant..."
 
-du -cksh build | head -n1 | awk '{print "  Before: " $1}'
+find build/assets/ideal-img -name '*.png' -print0 |
+    xargs -0 du -cksh | tail -n1 | awk '{print "  Before: " $1}'
 
-find build -name '*.png' -print0 |
-    xargs -0 -n1 pngquant --ext .png --force --strip --quality 70-90
+find build/assets/ideal-img -name '*.png' -print0 |
+    xargs -0 -n4 -P2 \
+        pngquant --ext .png --force --strip --quality 85-95
 
-du -cksh build | head -n1 | awk '{print "  After:  " $1}'
+find build/assets/ideal-img -name '*.png' -print0 |
+    xargs -0 du -cksh | tail -n1 | awk '{print "  After: " $1}'

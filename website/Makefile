@@ -47,7 +47,7 @@ build: install
 	yarn build
 
 post-build:
-	$(BIN_DIR)/optimize-build.sh
+	nice -n 19 $(BIN_DIR)/optimize-build.sh
 
 .PHONY: serve # Serve the built website locally
 serve: install
