@@ -38,7 +38,7 @@
 # PWA service worker
 # -----------------------------------------------------------------------------
 
-# Force clients to revalidate (detect when we deploy a new version)
+# Clients must be able to detect when we deploy a new version
 
 /sw.js*
   Cache-Control: max-age=0, must-revalidate, public
