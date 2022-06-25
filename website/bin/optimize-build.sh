@@ -31,11 +31,18 @@ PATH="${tmp_dir}/usr/bin:${PATH}"
 # Run pngquant
 # -----------------------------------------------------------------------------
 
+# TODO: This whole section has been tuned for the fairly restrictive Netlify
+# build containers. After moving our build to GitHub Actions, we should
+# reconfigure for optimal performance.
+
 echo "Running pngquant..."
 
-du -cksh build | head -n1 | awk '{print "  Before: " $1}'
+find build/assets/ideal-img -name '*.png' -print0 |
+    xargs -0 du -cksh | tail -n1 | awk '{print "  Before: " $1}'
 
-find build -name '*.png' -print0 |
-    xargs -0 -n1 pngquant --ext .png --force --strip --quality 70-90
+find build/assets/ideal-img -name '*.png' -print0 |
+    xargs -0 -n4 -P4 \
+        pngquant --ext .png --force --strip --speed 6 --quality 85-95
 
-du -cksh build | head -n1 | awk '{print "  After:  " $1}'
+find build/assets/ideal-img -name '*.png' -print0 |
+    xargs -0 du -cksh | tail -n1 | awk '{print "  After: " $1}'
