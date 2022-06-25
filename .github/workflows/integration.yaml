@@ -1,4 +1,4 @@
-name: CI
+name: Integration
 
 on:
   pull_request:
@@ -15,6 +15,8 @@ jobs:
       image: ghcr.io/doitintl/docops/devcontainer:main
     steps:
       - uses: actions/checkout@v2
+      # Silence warnings when checks interact with a temporary Git clone
+      - run: git config --global --add safe.directory /__w/help/help
       - run: make check
 
   test-build:
