@@ -1,4 +1,5 @@
-_*
+_headers
+_redirects
 .cache-loader
 .docusaurus
 .DS_Store

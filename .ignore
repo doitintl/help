@@ -1,4 +1,5 @@
 # Files to ignore when searching for text files
+.docusaurus
 .git
 *.gif
 *.ico
