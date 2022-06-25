@@ -39,6 +39,7 @@ start: install
 
 .PHONY: pre-build
 pre-build:
+	$(BIN_DIR)/make-headers.sh
 	$(BIN_DIR)/make-redirects.sh
 
 .PHONY: build # Bundle the website into static files for production
