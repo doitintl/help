@@ -51,7 +51,7 @@ post-build:
 
 .PHONY: serve # Serve the built website locally
 serve: install
-	yarn serve
+	yarn serve $(YARN_START_OPTS)
 
 .PHONY: deploy # Publish the website to GitHub pages
 deploy: install
