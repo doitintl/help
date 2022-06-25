@@ -63,7 +63,7 @@ div[role='banner'] div {
   width: 24px;
   height: 24px;
   display: flex;
-  background: url(../../static/github-logo.svg) no-repeat;
+  background: url(../../static/assets/images/github-logo.svg) no-repeat;
 }
 
 /* Document tabs bar  */

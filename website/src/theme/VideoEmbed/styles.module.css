@@ -1,6 +1,6 @@
 .videoContainer {
   background-color: var(--ifm-color-secondary);
-  background-image: url(/icon-loading.svg);
+  background-image: url(loading.svg);
   background-size: 80px;
   background-repeat: no-repeat;
   background-position: center;

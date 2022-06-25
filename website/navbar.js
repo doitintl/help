@@ -30,8 +30,8 @@ const navbar = {
   hideOnScroll: true,
   logo: {
     alt: doit.companyName,
-    src: 'doit-logo-black.svg',
-    srcDark: 'doit-logo-white.svg',
+    src: 'assets/images/doit-logo-black.svg',
+    srcDark: 'assets/images/doit-logo-white.svg',
     width: 32,
     height: 32,
   },

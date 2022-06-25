@@ -98,7 +98,7 @@ const footer = {
   style: 'dark',
   logo: {
     alt: doit.companyName,
-    src: 'doit-logo-white.svg',
+    src: 'assets/images/doit-logo-white.svg',
     href: doit.homeUrl,
     width: 100,
     height: 100,

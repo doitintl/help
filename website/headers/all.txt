@@ -1,30 +1,48 @@
 # Header rules
 # =============================================================================
-
-# Assets copied verbatim from the `static` directory
+# Miscellaneous files
 # -----------------------------------------------------------------------------
 
-# Cache for 1 day
-
-/.well-known/*
-  Cache-Control: public, max-age=88400
+# Cache for one day
 
 /.well-known/traffic-advice
+  Cache-Control: public, max-age=88400
   Content-Type: application/trafficadvice+json
 
-/img/*
+/theme/*
   Cache-Control: public, max-age=88400
-
-/meta/*
-  Cache-Control: public, max-age=88400
-
-/meta/pwa/site.webmanifest
-  Content-Type: application/manifest+json
 
 /favicon.ico
   Cache-Control: public, max-age=88400
 
-# Generated files (with filename cache invalidation)
+/site.webmanifest
+  Cache-Control: public, max-age=88400
+  Content-Type: application/manifest+json
+
+/*.html
+  Cache-Control: public, max-age=88400
+
+/*.png
+  Cache-Control: public, max-age=88400
+
+/*.svg
+  Cache-Control: public, max-age=88400
+
+/*.txt
+  Cache-Control: public, max-age=88400
+
+/*.xml
+  Cache-Control: public, max-age=88400
+
+# PWA service worker
+# -----------------------------------------------------------------------------
+
+# Clients must be able to detect when we deploy a new version
+
+/sw.js*
+  Cache-Control: max-age=0, must-revalidate, public
+
+# Build files (with filename cache invalidation)
 # -----------------------------------------------------------------------------
 
 # Cache for 365 days
@@ -32,17 +50,21 @@
 /assets/*
   Cache-Control: public, max-age=31536000
 
-# Brew routes
+# Special routes
 # -----------------------------------------------------------------------------
 
 /cgi-bin/*
   X-Robots-Tag: noindex
-
-/cgi-bin/brew.pl
   X-Brew-Suggestion: /tea?opts=earl_gray,hot
 
-/tea
+/_*
+  X-Robots-Tag: noindex
+
+/.*
   X-Robots-Tag: noindex
 
 /coffee
+  X-Robots-Tag: noindex
+
+/tea
   X-Robots-Tag: noindex
