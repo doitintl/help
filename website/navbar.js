@@ -30,8 +30,9 @@ const navbar = {
   hideOnScroll: true,
   logo: {
     alt: doit.companyName,
-    src: 'assets/images/doit-logo-black.svg',
-    srcDark: 'assets/images/doit-logo-white.svg',
+    // TODO: Why can't we `require()` these files?
+    src: 'common/images/doit-logo-black.svg',
+    srcDark: 'common/images/doit-logo-white.svg',
     width: 32,
     height: 32,
   },

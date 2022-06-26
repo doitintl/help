@@ -9,7 +9,7 @@
   Cache-Control: public, max-age=88400
   Content-Type: application/trafficadvice+json
 
-/theme/*
+/common/*
   Cache-Control: public, max-age=88400
 
 /favicon.ico
@@ -37,9 +37,13 @@
 # PWA service worker
 # -----------------------------------------------------------------------------
 
-# Clients must be able to detect when we deploy a new version
+# Cliemts must always revalidate (so they can detect when we deploy a new
+# version)
 
-/sw.js*
+/*.js
+  Cache-Control: max-age=0, must-revalidate, public
+
+/*.js.map
   Cache-Control: max-age=0, must-revalidate, public
 
 # Build files (with filename cache invalidation)

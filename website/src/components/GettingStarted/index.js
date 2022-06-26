@@ -1,7 +1,7 @@
 import React from 'react';
 import IconCard from '../IconCard';
-import cmpIcon from '../../../static/assets/images/cmp-icon.svg';
-import devHubIcon from '../../../static/assets/images/dev-hub-icon.svg';
+import cmpIcon from '../../../static/common/images/cmp-icon.svg';
+import devHubIcon from '../../../static/common/images/dev-hub-icon.svg';
 import styles from './styles.module.css';
 
 // TODO: Resolve partial duplication of `navbar` configuration
