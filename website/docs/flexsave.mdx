@@ -3,16 +3,16 @@ sidebar_position: 1
 description: A fundamentally new way to save money on your cloud compute workloads without making long-term commitments
 ---
 
-# Flexsave overview
+# Flexsave
 
 Flexsave is your cloud co-pilot, dynamically maximizing your cloud-compute discounts for [Amazon Web Services](https://aws.amazon.com) (AWS) and [Google Compute Platform](https://cloud.google.com) (GCP) without any of the risks or limitations of long-term use commitments.
 
-In most cases, save [the equivalent of a 1-year commitment discount](overview.mdx#how-much-can-i-save) on your cloud-compute spend with on-demand access to DoiT International's wholesale inventory of AWS [Savings Plans](https://aws.amazon.com/savingsplans/) (SPs), AWS [EC2 Reserved Instances](https://aws.amazon.com/ec2/pricing/reserved-instances/) (RIs), and GCP [Committed Use Discounts](https://cloud.google.com/docs/cuds) (CUDs).
+In most cases, save [the equivalent of a 1-year commitment discount](#how-much-can-i-save) on your cloud-compute spend with on-demand access to DoiT International's wholesale inventory of AWS [Savings Plans](https://aws.amazon.com/savingsplans/) (SPs), AWS [EC2 Reserved Instances](https://aws.amazon.com/ec2/pricing/reserved-instances/) (RIs), and GCP [Committed Use Discounts](https://cloud.google.com/docs/cuds) (CUDs).
 
 :::info See also
 
-- [Flexsave for AWS](aws.mdx)
-- [Flexsave for GCP](gcp.mdx)
+- [Flexsave for AWS](flexsave/aws.mdx)
+- [Flexsave for GCP](flexsave/gcp.mdx)
 
 :::
 
@@ -35,14 +35,14 @@ Flexsave uses your GCP and AWS billing data to track your on-demand resource uti
 
 Flexsave will attach the ideal blend of DoiT International's wholesale SPs, RIs, and CUDs to your billing account. As your resource utilization changes, Flexsave will continually readjust the configuration of attached SPs, RIs, and CUDs to maximize your potential savings.
 
-We will automatically convert your Flexsave savings to account credits and [deduct them from your monthly invoice](overview.mdx#invoicing).
+We will automatically convert your Flexsave savings to account credits and [deduct them from your monthly invoice](#invoicing).
 
 ## Start saving
 
 Within the CMP, select _Savings_ from the top menu bar, then select _Flexsave_ from the drop-down menu. If Flexsave isn't active, the CMP will take you to the Flexsave start page:
 
 <picture
-  img={require('../../assets/png/cmp-flexsave-start-saving.png')}
+  img={require('../assets/png/cmp-flexsave-start-saving.png')}
   alt="A screenshot of the Flexsave dashboard inviting you to start saving"
 />
 
@@ -56,12 +56,12 @@ To enable Flexsave, select the _START SAVING_ button on the bottom left-hand cor
 
 :::note
 
-Required permissions: [Flexsave Admin](../user-management/user-permissions-explained.mdx#flexsave-admin)
+Required permissions: [Flexsave Admin](user-management/user-permissions-explained.mdx#flexsave-admin)
 
 Default roles with this permission:
 
-- [Power User](../user-management/manage-roles.mdx#power-user)
-- [Admin](../user-management/manage-roles.mdx#admin)
+- [Power User](user-management/manage-roles.mdx#power-user)
+- [Admin](user-management/manage-roles.mdx#admin)
 
 :::
 
@@ -69,9 +69,9 @@ Default roles with this permission:
 
 Customers should expect to see some changes in their AWS Console or Google Cloud Console after enabling Flexsave:
 
-- AWS customers with dedicated billing accounts will see AWS accounts with 3-year Saving Plans and names like `fs-xxxxx` attached to your AWS organization. See the [AWS FAQ](aws.mdx#what-changes-should-i-expect-to-see-in-my-aws-console) for more information.
+- AWS customers with dedicated billing accounts will see AWS accounts with 3-year Saving Plans and names like `fs-xxxxx` attached to your AWS organization. See the [AWS FAQ](flexsave/aws.mdx#what-changes-should-i-expect-to-see-in-my-aws-console) for more information.
 
-- GCP customers will see projects with 3-year committed use discounts and names like `doitintl-fs-xxxxxxx` attached to your billing account. See the [GCP FAQ](gcp.mdx#what-changes-should-i-expect-to-see-in-my-google-cloud-console) for more information.
+- GCP customers will see projects with 3-year committed use discounts and names like `doitintl-fs-xxxxxxx` attached to your billing account. See the [GCP FAQ](flexsave/gcp.mdx#what-changes-should-i-expect-to-see-in-my-google-cloud-console) for more information.
 
 :::
 
@@ -80,7 +80,7 @@ Customers should expect to see some changes in their AWS Console or Google Cloud
 Within the CMP, select _Savings_ from the top menu bar, then select _Flexsave_ from the drop-down menu. If Flexsave is active, the CMP will take you to the Flexsave dashboard:
 
 <picture
-  img={require('../../assets/png/cmp-flexsave.png')}
+  img={require('../assets/png/cmp-flexsave.png')}
   alt="An example screenshot of the Flexsave dashboard"
 />
 
@@ -127,8 +127,8 @@ These frequently asked questions (FAQs) apply to Flexsave in general.
 
 For general platform-specific information, see:
 
-- [Flexsave for AWS: FAQs](aws.mdx#faqs)
-- [Flexsave for GCP: FAQs](gcp.mdx#faqs)
+- [Flexsave for AWS: FAQs](flexsave/aws.mdx#faqs)
+- [Flexsave for GCP: FAQs](flexsave/gcp.mdx#faqs)
 
 :::
 
@@ -159,12 +159,12 @@ At this time, we only support Flexsave for AWS customers with billing accounts [
 
 #### Can I turn off Flexsave?
 
-You can disable Flexsave at any time. If you want to disable Flexsave, please [create a new request](../services/consulting-support/index.mdx#create-a-new-request) for our support team.
+You can disable Flexsave at any time. If you want to disable Flexsave, please [create a new request](services/consulting-support/index.mdx#create-a-new-request) for our support team.
 
 ### Contact us
 
 :::tip
 
-If you have additional questions about Flexsave, please [contact our support team](../services/consulting-support/index.mdx).
+If you have additional questions about Flexsave, please [contact our support team](services/consulting-support/index.mdx).
 
 :::
