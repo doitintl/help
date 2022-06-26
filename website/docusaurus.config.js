@@ -33,6 +33,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          sidebarCollapsed: true,
           editUrl: doit.ghEditUrl,
           showLastUpdateTime: true,
           breadcrumbs: false,
@@ -63,7 +64,7 @@ const config = {
       docs: {
         sidebar: {
           hideable: true,
-          autoCollapseCategories: true,
+          autoCollapseCategories: false,
         },
       },
       footer: footer,
