@@ -34,6 +34,7 @@ cloudhealth
 cloudreports
 clsx
 cmp's
+cpulimit
 cpus
 createrole
 csapo
@@ -44,6 +45,7 @@ dces
 deandra
 debussylaan
 deleter
+deps
 devcontainer
 docops
 docsbot
@@ -61,6 +63,7 @@ endef
 endiliey
 escheck
 espa
+ESRCH
 fargate
 fdfind
 fdupes
@@ -73,6 +76,7 @@ fssa
 fullstory
 gcloud
 geneve
+Giampaolo
 gitbook
 googleapis
 haverstock
@@ -132,6 +136,8 @@ oxley
 partia
 patsubst
 pidof
+pids
+pkgs
 pngquant
 porta
 posix
@@ -153,6 +159,7 @@ rechtsanwaltsgesellschaft
 resourcemanager
 rhel
 roadmap
+Rodolà
 sameline
 sarbanes
 sarl
@@ -163,10 +170,14 @@ serv
 serviceusage
 shellcheck
 shfmt
+sigcont
 signcl
+sigstop
 skus
 sles
 smallhadroncollider
+spawnlp
+spawnlpe
 spotscaling
 stax
 stefanzweifel

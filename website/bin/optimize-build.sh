@@ -5,28 +5,15 @@
 
 # Usage: ./bin/optimize-build.sh
 
-# Temporary install that doesn't require superuser privileges
+# Check prerequisites
 # -----------------------------------------------------------------------------
 
-UBUNTU_UNIVERSE=http://archive.ubuntu.com/ubuntu/pool/universe
-PNGQUANT_DEB="${UBUNTU_UNIVERSE}/p/pngquant/pngquant_2.12.2-1_amd64.deb"
+IMG_DIR=build/assets/ideal-img
 
-tmp_dir="$(mktemp -d)"
-
-clean() {
-    rm -rf "${tmp_dir}"
-}
-
-trap clean EXIT
-
-(
-    cd "${tmp_dir}"
-    echo "Making a temporary pngquant installation..."
-    wget "${PNGQUANT_DEB}"
-    dpkg-deb -x pngquant* .
-)
-
-PATH="${tmp_dir}/usr/bin:${PATH}"
+if ! test -d "${IMG_DIR}"; then
+    echo "ERROR: Build directory does not exist: ${IMG_DIR}"
+    exit 1
+fi
 
 # Run pngquant
 # -----------------------------------------------------------------------------
@@ -41,8 +28,8 @@ find build/assets/ideal-img -name '*.png' -print0 |
     xargs -0 du -cksh | tail -n1 | awk '{print "  Before: " $1}'
 
 find build/assets/ideal-img -name '*.png' -print0 |
-    xargs -0 -n4 -P2 \
-        pngquant --ext .png --force --strip --speed 6 --quality 85-95
+    xargs -0 -n1 -P2 \
+        cpulimit -q -l 10 -- pngquant --ext .png --force --strip --speed 10 --quality 85-95
 
 find build/assets/ideal-img -name '*.png' -print0 |
     xargs -0 du -cksh | tail -n1 | awk '{print "  After: " $1}'

@@ -12,6 +12,9 @@ LC_ALL = C
 TOP_DIR = $(patsubst %/,%,$(dir $(lastword $(MAKEFILE_LIST))))
 BIN_DIR = $(TOP_DIR)/bin
 
+TMP_DEPS_DIR = tmp-deps
+PATH := $(TMP_DEPS_DIR)/usr/bin:$(PATH)
+
 .PHONY: help
 help:
 	@ printf '%s\n\n' "Usage: make [target]"
@@ -39,6 +42,8 @@ start: install
 
 .PHONY: pre-build
 pre-build:
+pre-build:
+	$(BIN_DIR)/install-deps.sh
 	$(BIN_DIR)/make-headers.sh
 	$(BIN_DIR)/make-redirects.sh
 
