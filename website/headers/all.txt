@@ -37,7 +37,7 @@
 # PWA service worker
 # -----------------------------------------------------------------------------
 
-# Cliemts must always revalidate (so they can detect when we deploy a new
+# Cliemts must always revalidate ETag (so they can detect when we deploy a new
 # version)
 
 /*.js
