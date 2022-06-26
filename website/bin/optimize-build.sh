@@ -42,7 +42,7 @@ find build/assets/ideal-img -name '*.png' -print0 |
 
 find build/assets/ideal-img -name '*.png' -print0 |
     xargs -0 -n4 -P2 \
-        pngquant --ext .png --force --strip --quality 85-95
+        pngquant --ext .png --force --strip --speed 6 --quality 85-95
 
 find build/assets/ideal-img -name '*.png' -print0 |
     xargs -0 du -cksh | tail -n1 | awk '{print "  After: " $1}'
