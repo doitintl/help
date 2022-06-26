@@ -31,6 +31,10 @@ PATH="${tmp_dir}/usr/bin:${PATH}"
 # Run pngquant
 # -----------------------------------------------------------------------------
 
+# TODO: This whole section has been tuned for the fairly restrictive Netlify
+# build containers. After moving our build to GitHub Actions, we should
+# reconfigure for optimal performance.
+
 echo "Running pngquant..."
 
 find build/assets/ideal-img -name '*.png' -print0 |
