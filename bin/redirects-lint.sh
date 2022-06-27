@@ -18,6 +18,12 @@ RESET='[0m'
 
 REDIRECTS_FILE=website/static/_redirects
 
+(
+    # Generate the redirects file in case it does not already exist
+    cd website
+    ./bin/make-redirects.sh
+)
+
 tmp_dir="$(mktemp -d)"
 
 clean() {

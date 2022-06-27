@@ -39,15 +39,10 @@ start:
 	$(call print-target)
 	@ $(MAKE) -C website start
 
-.PHONY: pre-build
-pre-build:
-	@ $(MAKE) -C website pre-build
-
 .PHONY: build # Build the Docusaurus website
-build: pre-build
+build:
 	$(call print-target)
 	@ $(MAKE) -C website build
-	@ $(MAKE) -C website post-build
 
 .PHONY: serve # Serve the built website locally
 serve:
@@ -125,7 +120,7 @@ check: textlint-dry
 vale:
 check: vale
 
-redirects-lint: pre-build
+redirects-lint:
 check: redirects-lint
 
 markdown-link-check:

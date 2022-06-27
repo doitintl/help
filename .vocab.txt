@@ -133,6 +133,7 @@ partia
 patsubst
 pidof
 pngquant
+pngs
 porta
 posix
 preconfigured

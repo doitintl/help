@@ -12,6 +12,35 @@ LC_ALL = C
 TOP_DIR = $(patsubst %/,%,$(dir $(lastword $(MAKEFILE_LIST))))
 BIN_DIR = $(TOP_DIR)/bin
 
+# Setup
+# =============================================================================
+
+# The webpack image loader consumes a lot of memory while generating image
+# variants in the `build/assets/ideal-img` directory. If we don't cap memory
+# usage, running `yarn build` can fail on smaller systems by exhausting all
+# available system memory.
+
+# Get total system memory in megabytes
+SYSTEM_MEM=$(shell free -m | grep 'Mem' | awk '{print $$2}')
+
+$(info Available system memory: $(SYSTEM_MEM) MB)
+
+# Set memory percentage
+# https://nodejs.org/api/cli.html#--max-old-space-sizesize-in-megabytes
+SYSTEM_PCT=0.75
+
+# Calculate a safe heap size
+NODE_MEM=$(shell python3 -c 'print(round($(SYSTEM_MEM) * $(SYSTEM_PCT)))')
+
+# Export for all child processes
+NODE_OPTIONS="--max-old-space-size=$(NODE_MEM)"
+
+# Print outcome
+$(info Set V8 heap size: $(NODE_MEM) MB)
+
+# Targets
+# =============================================================================
+
 .PHONY: help
 help:
 	@ printf '%s\n\n' "Usage: make [target]"
@@ -37,17 +66,21 @@ endif
 start: install
 	yarn start $(YARN_START_OPTS)
 
-.PHONY: pre-build
-pre-build:
+.PHONY: _pre-build
+_pre-build: install
 	$(BIN_DIR)/make-headers.sh
 	$(BIN_DIR)/make-redirects.sh
 
-.PHONY: build # Bundle the website into static files for production
-build: install
-	yarn build
+.PHONY: _build
+_build: _pre-build
+	nice -n 19 yarn build
 
-post-build:
+.PHONY: _post-build
+_post-build: _build
 	nice -n 19 $(BIN_DIR)/optimize-build.sh
+
+.PHONY: build # Bundle the website into static files for production
+build: _post-build
 
 .PHONY: serve # Serve the built website locally
 serve: install
