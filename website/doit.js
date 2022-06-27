@@ -27,7 +27,7 @@ doit.ghOrg = 'doitintl';
 doit.ghOrgUrl = 'https://github.com/' + doit.ghOrg;
 doit.ghProject = 'help';
 doit.ghProjectUrl = doit.ghOrgUrl + '/' + doit.ghProject;
-doit.ghEditUrl = doit.ghProjectUrl + '/tree/main/website/docs';
+doit.ghEditUrl = doit.ghProjectUrl + '/tree/main/website';
 doit.linkedInUrl = 'https://www.linkedin.com/company/doitintl';
 doit.youTubeUrl = 'https://www.youtube.com/c/MultiCloudEngineering';
 // cspell:disable-next-line
