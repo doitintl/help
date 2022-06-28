@@ -13,8 +13,8 @@ jobs:
     if: github.event.action == 'deploy_succeeded'
     runs-on: ubuntu-latest
     env:
-      DEPLOY_URL: ${{ github.event.client_payload.deploy_url }}
-      BRANCH: ${{ github.event.client_payload.branch }}
+      DEPLOY_URL: '${{ github.event.client_payload.deploy_url }}'
+      BRANCH: '${{ github.event.client_payload.branch }}'
     steps:
       - uses: actions/checkout@v2
       - run: |
@@ -44,7 +44,7 @@ jobs:
       && github.event.client_payload.branch == 'main'
     runs-on: ubuntu-latest
     env:
-      DEPLOY_URL: ${{ github.event.client_payload.deploy_url }}
+      DEPLOY_URL: '${{ github.event.client_payload.deploy_url }}'
     steps:
       - uses: actions/checkout@v2
       - uses: martialonline/workflow-status@v2
