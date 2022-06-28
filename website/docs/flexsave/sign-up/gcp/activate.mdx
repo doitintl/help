@@ -4,11 +4,17 @@ sidebar_position: 2
 
 # Activate Flexsave
 
-To activate Flexsave for GCP, you first need to set up your billing.
+There are three steps in activating Flexsave:
+
+1. [Provide payment information](#provide-payment-information)
+2. [Confirm Flexsave Agreement](#confirm-flexsave-agreement)
+3. [Activate Flexsave for GCP](#activate-flexsave-for-gcp)
 
 ## Provide payment information
 
-1. Provide the payment information as shown on the screen, including:
+To activate Flexsave for GCP, you first need to set up your billing:
+
+1. Provide the payment information as indicated on the page, including:
 
    - **Billing address**: Billing address of your organization.
    - **Company details**: Company name and registration number (Tax ID).
@@ -31,9 +37,11 @@ To activate Flexsave for GCP, you first need to set up your billing.
 
 ## Confirm Flexsave Agreement
 
-To proceed with Flexsave activation, make sure you read the DoiT International Flexsave Agreement, select the checkboxes, and confirm the agreement.
+To proceed with Flexsave activation, make sure you read the DoiT International Flexsave Agreement, select the checkboxes at the bottom of the agreement, and confirm the agreement.
 
 ## Activate Flexsave for GCP
+
+Perform the following tasks to complete the activation:
 
 1. Enable discount sharing from the Google Cloud console, and then select the corresponding checkbox to confirm.
 
@@ -47,8 +55,8 @@ To proceed with Flexsave activation, make sure you read the DoiT International F
 
    - **Organization ID**: See Google Cloud Docs for [Getting your organization ID](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id).
    - **Project ID containing your BQ billing data**: See [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects).
-   - **Dataset ID containing your BQ billing data**: See [Getting dataset information](https://cloud.google.com/bigquery/docs/dataset-metadata#getting_dataset_information). Note that the dataset name is also referred to as the dataset ID.
-   - **Table ID containing your BQ billing data**: See [Get table information](https://cloud.google.com/bigquery/docs/tables#get_table_information). Note that the table name is also referred to as the table ID.
+   - **Dataset ID containing your BQ billing data**: See [Getting dataset information](https://cloud.google.com/bigquery/docs/dataset-metadata#getting_dataset_information). The dataset name is also referred to as the dataset ID.
+   - **Table ID containing your BQ billing data**: See [Get table information](https://cloud.google.com/bigquery/docs/tables#get_table_information). The table name is also referred to as the table ID.
 
    The code snippets will be updated automatically once the relevant information is provided.
 
@@ -68,10 +76,12 @@ To proceed with Flexsave activation, make sure you read the DoiT International F
       gcloud iam roles update doit_flexsave_role --organization=$ORG_ID --title="DoiT Flexsave Role" --stage=GA --add-permissions=billing.accounts.get,bigquery.jobs.create,billing.resourceAssociations.create,resourcemanager.projects.createBillingAssignment
       ```
 
-      - `billing.accounts.get`: Permission to fetch your billing account name.
-      - `bigquery.jobs.create`: Permission to import customer billing tables.
-      - `billing.resourceAssociations.create`, `resourcemanager.projects.createBillingAssignment`: Permission to attach projects to your billing account.
+      The command above updates the `DoiT Flexsave Role`, which was created when [setting up your estimate](get-estimate.mdx#set-up-your-estimate) and is associated with the DoiT service account, to add the following permissions:
+
+      - `billing.accounts.get`: Allows to fetch your billing account name.
+      - `bigquery.jobs.create`: Allows to import your billing tables.
+      - `billing.resourceAssociations.create`, `resourcemanager.projects.createBillingAssignment`: Allows to attach projects to your billing account.
 
 1. Select **ACTIVATE FLEXSAVE**.
 
-Once activated, Flexsave will start processing your information and building an optimization plan. The whole process may take up to 24 hours. You'll be notified by email when it's done.
+Once activated, Flexsave will start processing your information and building an optimization plan. The whole process may take up to 24 hours. You'll be notified by email when it's completed.

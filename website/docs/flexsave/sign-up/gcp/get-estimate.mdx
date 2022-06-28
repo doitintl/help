@@ -28,11 +28,9 @@ Once signed in, select **Google Cloud Platform** for estimate.
 
 To calculate your potential savings, you need to grant certain permissions to the DoiT Flexsave service account, as explained below.
 
-1. Fill in your organization ID on the estimate screen.
+1. Fill in your organization ID on the estimate page.
 
-   See [Google Cloud Docs](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id) for help finding your organization ID.
-
-   The code snippets will be updated automatically once the organization ID is provided.
+   See [Google Cloud Docs](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id) for help finding your organization ID. The code snippets will be updated automatically once the organization ID is provided.
 
 1. Open the Google Cloud Shell, copy the command code snippets and run them in sequence in the shell.
 
@@ -44,7 +42,7 @@ To calculate your potential savings, you need to grant certain permissions to th
 
       The command above grants the custom role the following permissions:
 
-      - `recommender.usageCommitmentRecommendations.list`: Allows to view resource-based committed use discount (CUD) recommendations using Google's [CUD recommender](https://cloud.google.com/docs/cuds-recommender).
+      - `recommender.usageCommitmentRecommendations.list`: Allows to view resource-based committed use discount recommendations using Google's [CUD recommender](https://cloud.google.com/docs/cuds-recommender).
       - `compute.instances.list`: Allows to view compute instances.
 
    1. Add an IAM policy binding to associate the `doit_flexsave_role` role to the service account.
