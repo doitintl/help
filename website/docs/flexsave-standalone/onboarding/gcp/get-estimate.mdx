@@ -1,12 +1,12 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Get your estimate
 
 You need a DoiT account to get the Flexsave estimate.
 
-## Sign up for estimate
+## Sign up
 
 To get started with Flexsave:
 
@@ -22,7 +22,7 @@ To get started with Flexsave:
 
    1. After verifying the email, you'll be directed to the sign in page of DoiT [Cloud Management Platform](https://app.doit-intl.com/login).
 
-## Set up your estimate
+## Connect with GCP
 
 Once signed in, select **Google Cloud Platform** for estimate.
 
@@ -30,7 +30,7 @@ To calculate your potential savings, you need to grant certain permissions to th
 
 1. Fill in your organization ID on the estimate screen.
 
-   See [Google Cloud Docs](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id) for help finding your organization ID.
+   For how to find your organization ID, see [Google Cloud Docs](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id).
 
    The code snippets will be updated automatically once the organization ID is provided.
 
@@ -44,10 +44,10 @@ To calculate your potential savings, you need to grant certain permissions to th
 
       The command above grants the custom role the following permissions:
 
-      - `recommender.usageCommitmentRecommendations.list`: Allows to view resource-based committed use discount (CUD) recommendations using Google's [CUD recommender](https://cloud.google.com/docs/cuds-recommender).
-      - `compute.instances.list`: Allows to view compute instances.
+      - `recommender.usageCommitmentRecommendations.list`: Allows to view resource-based committed use discount (CUD) recommendations using Google's [CUD recommender](https://cloud.google.com/docs/cuds-recommender)
+      - `compute.instances.list`: Allows to view compute instances (??? Why do we need this? Does this return compute instance under the customer's org?)
 
-   1. Add an IAM policy binding to associate the `doit_flexsave_role` role to the service account.
+   1. Add an IAM policy binding to associate the `doit_flexsave_role` to the service account.
 
       ```bash
       gcloud organizations add-iam-policy-binding $ORG_ID --member=serviceAccount:$DoiT_service_account_email --role=organizations/$ORG_ID/roles/doit_flexsave_role
@@ -64,6 +64,6 @@ To calculate your potential savings, you need to grant certain permissions to th
 
 The estimate is based on the following factors:
 
-- Your last month's cloud bill.
-- The most commonly used resources and regions among DoiT customers.
-- An assumed annual growth rate of 0-5%.
+- Your last month's cloud bill
+- The most commonly used resources and regions among DoiT customers
+- An assumed annual growth rate of 0-5%
