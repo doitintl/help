@@ -1,0 +1,48 @@
+# =============================================================================
+# Go links
+# =============================================================================
+
+# Flexsave sign-up, June 2020
+# =============================================================================
+
+# Learn more about Flexsave
+/go/flexsave/sign-up                                             /blank.txt 200
+
+# GCP setup estimate
+# -----------------------------------------------------------------------------
+
+# Learn about how Flexsave works
+/go/flexsave/sign-up/gcp/estimate/how-it-works                   /blank.txt 200
+
+# Learn about required policies
+/go/flexsave/sign-up/gcp/estimate/policies                       /blank.txt 200
+
+# Review our data compliance information
+/go/flexsave/sign-up/gcp/compliance                              /blank.txt 200
+
+# AWS setup estimate
+# -----------------------------------------------------------------------------
+
+# Learn about how Flexsave works
+/go/flexsave/sign-up/aws/estimate/how-it-works                   /blank.txt 200
+
+# Learn about required policies
+/go/flexsave/sign-up/aws/estimate/policies                       /blank.txt 200
+
+# Review our data compliance information
+/go/flexsave/sign-up/aws/compliance                              /blank.txt 200
+
+# GCP activation
+# -----------------------------------------------------------------------------
+
+# Learn about required policies
+/go/flexsave/sign-up/gcp/activate/policies                       /blank.txt 200
+
+# AWS Activation
+# -----------------------------------------------------------------------------
+
+# Find your S3 bucket URL and CUR path
+/go/flexsave/sign-up/aws/activate/cost-usage-report              /blank.txt 200
+
+# Learn about required policies
+/go/flexsave/sign-up/aws/activate/policies                       /blank.txt 200
