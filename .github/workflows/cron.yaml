@@ -35,8 +35,7 @@ jobs:
 
   notification:
     name: Notification
-    needs:
-      - run
+    needs: link-check
     if: always()
     runs-on: ubuntu-latest
     steps:
