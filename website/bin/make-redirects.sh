@@ -8,6 +8,7 @@
 cat redirects/zendesk.txt \
     redirects/gitbook.txt \
     redirects/docusaurus.txt \
+    redirects/go.txt \
     redirects/misc.txt |
     grep -E '^/' |
     sed -E 's, +, ,g' \
