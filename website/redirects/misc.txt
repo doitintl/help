@@ -21,7 +21,7 @@
 /cgi-bin                                 /cgi-bin/brew.pl           301
 /cgi-bin/brew.pl                         /cgi-bin/brew/_index.html  400
 /coffee                                  /cgi-bin/brew/_coffee.html 418
-/tea                                     /cgi-bin/brew/_tea.html    503
+/tea                                     /cgi-bin/brew/_tea.html    403
 
 # Splat rules come last to avoid overriding more specific rules
 
