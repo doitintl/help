@@ -1,5 +1,6 @@
 # Header rules
 # =============================================================================
+
 # Miscellaneous files
 # -----------------------------------------------------------------------------
 
@@ -37,7 +38,7 @@
 # PWA service worker
 # -----------------------------------------------------------------------------
 
-# Clients must be able to detect when we deploy a new version
+# Force clients to revalidate (detect when we deploy a new version)
 
 /sw.js*
   Cache-Control: max-age=0, must-revalidate, public
