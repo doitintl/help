@@ -5,5 +5,5 @@
 
 # Usage: ./bin/create-headers.sh
 
-cat headers/all.txt \
+cat headers/default.txt \
     >static/_headers

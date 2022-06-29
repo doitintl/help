@@ -1,4 +1,16 @@
-/.well-known/robots.txt                  /robots.txt                200
+# Misdirected requests
+
+/.well-known/robots.txt                  /robots.txt
+/og-image.jpg                            /og-image.png
+/readme                                  /
+
+# Expired resources (i.e., previous deployments)
+
+/assets/*                                /_empty.txt 410
+/static/*                                /_empty.txt 410
+
+# Ignored requests
+
 /.well-known/ads.txt                     /cgi-bin/brew/_coffee.html 418
 /.well-known/app-ads.txt                 /cgi-bin/brew/_coffee.html 418
 /.well-known/apple-app-site-association  /cgi-bin/brew/_coffee.html 418
@@ -9,24 +21,32 @@
 /.well-known/security.txt                /cgi-bin/brew/_coffee.html 418
 /.well-known/sellers.json                /cgi-bin/brew/_coffee.html 418
 /.well-known/trust.txt                   /cgi-bin/brew/_coffee.html 418
-
-/readme                                  /
-/og-image.jpg                            /og-image.png
 /apple-app-site-association              /cgi-bin/brew/_coffee.html 418
 
-/wp-login.php                            /cgi-bin/brew/_coffee.html 418
-
-# Brew routes
+# Brew setup
 
 /cgi-bin                                 /cgi-bin/brew.pl           301
 /cgi-bin/brew.pl                         /cgi-bin/brew/_index.html  400
+/cgi-bin/*                               /cgi-bin/brew.pl
 /coffee                                  /cgi-bin/brew/_coffee.html 418
 /tea                                     /cgi-bin/brew/_tea.html    403
 
-# Splat rules come last to avoid overriding more specific rules
+# Malicious requests
 
-/cgi-bin/*                               /cgi-bin/brew.pl
-/assets/*                                /cgi-bin/brew/_tea.html    418
-/static/js/*                             /cgi-bin/brew/_coffee.html 418
-/wp-admin/*                              /cgi-bin/brew/_coffee.html 418
-/wp-content/*                            /cgi-bin/brew/_coffee.html 418
+/.*                                      /cgi-bin/brew/_coffee.html 418
+/admin/*                                 /cgi-bin/brew/_coffee.html 418
+/carbon/*                                /cgi-bin/brew/_coffee.html 418
+/dashboard/*                             /cgi-bin/brew/_coffee.html 418
+/fpui/*                                  /cgi-bin/brew/_coffee.html 418
+/index.php                               /cgi-bin/brew/_coffee.html 418
+/jmx-console/*                           /cgi-bin/brew/_coffee.html 418
+/login                                   /cgi-bin/brew/_coffee.html 418
+/login.*                                 /cgi-bin/brew/_coffee.html 418
+/mifs/*                                  /cgi-bin/brew/_coffee.html 418
+/owa/*                                   /cgi-bin/brew/_coffee.html 418
+/sftp-config.json                        /cgi-bin/brew/_coffee.html 418
+/solr/*                                  /cgi-bin/brew/_coffee.html 418
+/status.htm                              /cgi-bin/brew/_coffee.html 418
+/WebInterface/*                          /cgi-bin/brew/_coffee.html 418
+/wp-*                                    /cgi-bin/brew/_coffee.html 418
+/zdm/*                                   /cgi-bin/brew/_coffee.html 418
