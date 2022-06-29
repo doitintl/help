@@ -52,6 +52,7 @@
 /dashboards/customizing-dashboards                                                               /docs/dashboards/customizing-dashboards
 /dashboards/rightsizing-for-google-cloud                                                         /docs/dashboards/rightsizing-for-google-cloud
 /dashboards/widgets-overview                                                                     /docs/dashboards/widgets-overview
+/docs/dashboards/                                                                                /docs/dashboards/customizing-dashboards
 /flexible-reservations/flexri                                                                    /docs/flexsave/aws
 /flexible-reservations/flexri-faq                                                                /docs/flexsave/aws#faqs
 /flexible-reservations/flexri-regions                                                            /docs/flexsave/aws#supported-regions
