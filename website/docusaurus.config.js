@@ -14,7 +14,7 @@ const plugins = require('./plugins.js');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: doit.siteTitleAbbrev,
+  title: doit.siteTitle,
   tagline: doit.tagLine,
   url: doit.helpUrl,
   baseUrl: '/',
