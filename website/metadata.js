@@ -2,6 +2,7 @@ const doit = require('./doit.js');
 
 const metadata = [
   { property: 'og:type', content: 'website' },
+  { property: 'og:site_name', content: doit.siteTitle },
   { name: 'description', content: doit.defaultDesc },
   { name: 'og:description', content: doit.defaultDesc },
   { property: 'og:image:alt', content: doit.tagLine },
