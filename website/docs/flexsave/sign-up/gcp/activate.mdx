@@ -36,13 +36,21 @@ To proceed with Flexsave activation, you must read the agreement text in full, c
 
 Perform the following tasks to complete the activation:
 
-1. Enable discount sharing from the Google Cloud console, and then select the corresponding checkbox to confirm.
+1. [Enable discount sharing](https://cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts#turning_on_committed_use_discount_sharing) from the Google Cloud console.
 
    :::note
 
    By default, committed use discounts are applied at the project level. Flexsave works by attaching projects with CUDs to your Cloud Billing account. For Flexsave to be able to share the discount with your own projects, you need to [turn on committed use discount sharing](https://cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts#turning_on_committed_use_discount_sharing).
 
    :::
+
+   :::info important
+
+   It can take up to 24 hours for a new commitment scope to take effect. Flexsave will wait for the new commitment scope to take effect before attaching any CUDs.
+
+   :::
+
+1. When you return to the Flexsave sign-up flow, be sure to select the **I have confirm that I have enabled discount sharing** checkbox.
 
 1. Provide the location of your billing data, including:
 
