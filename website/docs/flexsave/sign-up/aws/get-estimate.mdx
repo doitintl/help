@@ -3,25 +3,26 @@ sidebar_label: Get your savings estimate
 sidebar_position: 1
 ---
 
+import CommonHook from '../_common/_hook.mdx';
+import CommonCreateAccount from '../_common/_create-account.mdx';
+import CommonEstimatePreamble from '../_common/_estimate-preamble.mdx';
+import CommonEstimateDesc from '../_common/_estimate-desc.mdx';
+
+import FlexsaveEstimateYAML from './_flexsave_create_role_N_policies.yml.mdx';
+
 # Get your savings estimate for Amazon Web Services
 
-import Hook from '../_hook.mdx';
+<CommonHook name="Amazon Web Services" abbr="AWS" />
 
-<Hook name="Amazon Web Services" abbr="AWS" />
+Flexsave is your cloud co-pilot, dynamically maximizing your cloud-compute discounts for [Amazon Web Services](https://aws.amazon.com) (AWS) without any of the risks or limitations of long-term use commitments.
 
-import Preamble from '../../_aws-preamble.mdx';
+Flexsave delivers [the equivalent savings of a 1-year commitment](../../index.mdx#how-much-can-i-save) &mdash; _without the commitment!_ There's no reservation management needed, no costs to enable, and guaranteed savings on all covered workloads.
 
-<Preamble indexHref={require('../../index.mdx')} />
-
-import CreateAccount from '../_create-account.mdx';
-
-<CreateAccount />
+<CommonCreateAccount />
 
 ## Create your savings estimate
 
-import EstimatePreamble from '../_estimate-preamble.mdx';
-
-<EstimatePreamble csp="Amazon Web Services" />
+<CommonEstimatePreamble csp="Amazon Web Services" />
 
 ### Create a CloudFormation stack
 
@@ -56,9 +57,7 @@ You can [download the YAML file][cost-explorer-yaml] using the displayed _Templa
 
 The YAML file looks like this:
 
-import YAML from './_flexsave_create_role_N_policies.yml.mdx';
-
-<YAML />
+<FlexsaveEstimateYAML />
 
 In summary, this stack creates:
 
@@ -103,9 +102,7 @@ After your CloudFormation stack is created and we have successfully fetched your
   frame="drop-shadow"
 />
 
-import EstimateDesc from '../_estimate-desc.mdx';
-
-<EstimateDesc />
+<CommonEstimateDesc />
 
 When you're ready, select **RETURN TO HOME** to review the steps needed to [activate
 Flexsave](activate.mdx).
