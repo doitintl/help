@@ -1,13 +1,23 @@
-# Misdirected requests
+# Malformed or misdirected requests
 
 /.well-known/robots.txt                  /robots.txt
 /og-image.jpg                            /og-image.png
 /readme                                  /
+/start.html                              /
 
 # Expired resources (i.e., previous deployments)
 
 /assets/*                                /_empty.txt 410
 /static/*                                /_empty.txt 410
+/attachments/token/*                     /_empty.txt 410
+
+# Brew setup
+
+/cgi-bin                                 /cgi-bin/brew.pl           301
+/cgi-bin/brew.pl                         /cgi-bin/brew/_index.html  400
+/cgi-bin/*                               /cgi-bin/brew.pl
+/coffee                                  /cgi-bin/brew/_coffee.html 418
+/tea                                     /cgi-bin/brew/_tea.html    403
 
 # Ignored requests
 
@@ -23,17 +33,12 @@
 /.well-known/trust.txt                   /cgi-bin/brew/_coffee.html 418
 /apple-app-site-association              /cgi-bin/brew/_coffee.html 418
 
-# Brew setup
-
-/cgi-bin                                 /cgi-bin/brew.pl           301
-/cgi-bin/brew.pl                         /cgi-bin/brew/_index.html  400
-/cgi-bin/*                               /cgi-bin/brew.pl
-/coffee                                  /cgi-bin/brew/_coffee.html 418
-/tea                                     /cgi-bin/brew/_tea.html    403
-
 # Malicious requests
 
+# cspell:disable
+
 /.*                                      /cgi-bin/brew/_coffee.html 418
+/2019/wp-*                               /cgi-bin/brew/_coffee.html 418
 /admin/*                                 /cgi-bin/brew/_coffee.html 418
 /carbon/*                                /cgi-bin/brew/_coffee.html 418
 /dashboard/*                             /cgi-bin/brew/_coffee.html 418
@@ -46,7 +51,12 @@
 /owa/*                                   /cgi-bin/brew/_coffee.html 418
 /sftp-config.json                        /cgi-bin/brew/_coffee.html 418
 /solr/*                                  /cgi-bin/brew/_coffee.html 418
+/sphider/*                               /cgi-bin/brew/_coffee.html 418
+/sql.php                                 /cgi-bin/brew/_coffee.html 418
+/sslmgr                                  /cgi-bin/brew/_coffee.html 418
 /status.htm                              /cgi-bin/brew/_coffee.html 418
+/status.php                              /cgi-bin/brew/_coffee.html 418
+/test/wp-*                               /cgi-bin/brew/_coffee.html 418
 /WebInterface/*                          /cgi-bin/brew/_coffee.html 418
 /wp-*                                    /cgi-bin/brew/_coffee.html 418
 /zdm/*                                   /cgi-bin/brew/_coffee.html 418
