@@ -3,27 +3,26 @@ sidebar_label: Get your savings estimate
 sidebar_position: 1
 ---
 
+import Link from '@docusaurus/Link';
+
+import CommonHook from '../_common/_hook.mdx';
+import CommonCreateAccount from '../_common/_create-account.mdx';
+import CommonEstimatePreamble from '../_common/_estimate-preamble.mdx';
+import CommonEstimateDesc from '../_common/_estimate-desc.mdx';
+
 # Get your savings estimate for Google Cloud Platform
 
-import Hook from '../_hook.mdx';
+<CommonHook csp="Google Cloud Platform" abbr="GCP" />
 
-<Hook csp="Google Cloud Platform" abbr="GCP" />
+Flexsave is your cloud co-pilot, dynamically maximizing your cloud-compute discounts for [Google Cloud Platform](https://cloud.google.com/) (GCP) without any of the risks or limitations of long-term use commitments.
 
-import Preamble from '../../_gcp-preamble.mdx';
+Flexsave delivers [the equivalent savings of a 1-year commitment](../../index.mdx#how-much-can-i-save) &mdash; _without the commitment!_ There's no reservation management needed, no costs to enable, and guaranteed savings on all covered workloads.
 
-<Preamble indexHref={require('../../index.mdx')} />
-
-import CreateAccount from '../_create-account.mdx';
-
-<CreateAccount />
+<CommonCreateAccount />
 
 ## Create your savings estimate
 
-import EstimatePreamble from '../_estimate-preamble.mdx';
-
-<EstimatePreamble csp="Google Cloud Platform" />
-
-import Link from '@docusaurus/Link';
+<CommonEstimatePreamble csp="Google Cloud Platform" />
 
 1. Fill in your organization ID on the estimate page.
 
@@ -78,9 +77,7 @@ import Link from '@docusaurus/Link';
   frame="drop-shadow"
 />
 
-import EstimateDesc from '../_estimate-desc.mdx';
-
-<EstimateDesc />
+<CommonEstimateDesc />
 
 When you're ready, select **RETURN TO HOME** to review the steps needed to [activate
 Flexsave](activate.mdx).
