@@ -18,7 +18,7 @@ jobs:
         with:
           token: ${{ secrets.DOCSBOT_PAT }}
       # Invalidate cache
-      - run: rm .brockdb
+      - run: rm -f .brockdb
       # Rebuild cache
       - run: make brok
       # Silence Git warning
