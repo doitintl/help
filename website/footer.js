@@ -98,10 +98,10 @@ const footer = {
   style: 'dark',
   logo: {
     alt: doit.companyName,
-    src: '/brand/logo-white.svg',
+    src: '/logo-white.png',
     href: doit.homeUrl,
-    width: 100,
-    height: 100,
+    width: 160,
+    height: 75.5,
   },
   links: [colSupport, colDiscover, colCompany],
 };

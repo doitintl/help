@@ -54,11 +54,6 @@ div[role='banner'] div {
 
 /* Navigation bar */
 
-.navbar__logo img {
-  width: 67.75px;
-  height: 32px;
-}
-
 .header-github-link:hover {
   opacity: 0.6;
 }
@@ -144,13 +139,14 @@ div[role='banner'] div {
 
 .footer__bottom > div a {
   display: block;
-  height: 100px;
 }
 
 .footer__bottom img {
   margin: 0;
-  width: 160px;
-  height: 100px;
+}
+
+.footer_logo {
+  max-width: 160px;
 }
 
 @media screen and (max-width: 995px) {

@@ -36,10 +36,9 @@ const navbar = {
   hideOnScroll: true,
   logo: {
     alt: doit.companyName,
-    src: 'brand/logo-hero.svg',
-    srcDark: 'brand/logo-white.svg',
-    width: 32,
+    src: '/logo-hero.png',
     height: 32,
+    width: 67.5,
   },
   items: items,
 };
