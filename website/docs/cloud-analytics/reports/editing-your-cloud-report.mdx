@@ -1,0 +1,195 @@
+---
+sidebar_position: 2
+---
+
+# Edit reports
+
+You can edit a report if you are its owner or have the _Editor_ permission.
+
+## Overview
+
+There are multiple types of changes you can make to a report. Depending on the nature of the change, you may need to rerun the report.
+
+### Real-time updates
+
+Changes that don't alter the results themselves will be reflected in the report instantly. This includes changes made to:
+
+- Metric by which your dimensions are being measured
+- Chart type (visualization)
+- Sorting of results
+- ML features: [Trend Analysis](trend-analysis.mdx), [Forecasting](forecasting.mdx)
+
+### Changes requiring rerun
+
+Changes that require you to rerun the report include:
+
+- Adding additional dimensions
+- Modifying the time interval/range
+- Filtering dimensions
+- [Filtering metrics](metric-filters.mdx)
+
+In the following sections we're going to explain the usage of common report settings.
+
+## Metric
+
+CMP supports two categories of metrics: _basic metrics_ and _[custom metrics](../custom-metrics.mdx)_.
+
+Basic metrics include:
+
+- **Cost:** Analyze your reports on a basis of how much your selected dimensions cost you.
+
+- **Usage**: Analyze your reports and selected dimensions on a usage basis. Make sure to pair this with the Unit chip as a Breakdown Dimension.
+
+- **Savings:** Analyze your reports and selected dimensions on a savings basis. These savings come as a result of your commercial agreement with Google Cloud and the agreed-upon discount between your company and DoiT International.
+
+:::note
+
+The discount is not available for: Google Maps APIs, Google Support, Looker, Preemptible VMs (compute engine), third-party GCP Marketplace services, or Premium OS Images.
+
+:::
+
+:::info
+
+For using filters on metrics, see [Metric Filters](metric-filters.mdx) and [Top/bottom results](#topbottom-results).
+
+:::
+
+## Aggregation
+
+Use [aggregations](https://help.doit-intl.com/cloud-analytics/using-aggregations-in-cloud-reports) to summarize how you view your reports.
+
+## ML Features
+
+Perform advanced analysis in your reports, including:
+
+- [Trend Analysis](https://help.doit-intl.com/cloud-analytics/trend-analysis)
+- [Forecasting](https://help.doit-intl.com/cloud-analytics/forecasting)
+
+## Time Interval and Time Range
+
+Specify the frequency in which data is aggregated.
+
+- **Time Interval**: Choose from _Hour_, _Day_, _Week_, _Month_, _Quarter_, and _Year_.
+
+- **Time Range**: Choose a pre-defined time range or define your own custom range.
+
+### Exclude partial Intervals
+
+When looking at a report, the most current interval is always incomplete. For example, if the report is **Daily** then the current day will always be collecting billing data throughout the day.
+
+Selecting the **Exclude partial Intervals** checkbox will remove any incomplete time interval from the data of the report, which means the Analytics will hide data for the current day for daily intervals, current week for monthly intervals, etc.
+
+This option is convenient when performing comparative reports, for example, Month over Month analysis, or Week over Week analysis. It can also help to improve the accuracy of the heatmap views by removing outliers, as partial intervals tend to skew trends by representing incomplete periods.
+
+## Promotional credits
+
+Promotional credits, including migration credits, commitment related credits, vendor program credits, and others, are applied to monthly invoices. By default, they are _not_ included in the reports.
+
+For reports with **Time interval** set to _Month_ or greater, you can select the **Include promotional credits** checkbox to list them in the report, thus to have a more transparent view of the cost breakdown.
+
+<picture
+  img={require('../../../assets/png/cmp-report-promotional-credits.png')}
+  alt="A screenshot highlighting the Include promotional credits checkbox"
+  frame="drop-shadow"
+/>
+
+## View as
+
+This is where you select how your report is visualized. For example, you can choose to view your report as _Table_, _Heatmap_, _Column Chart_, _Bar Chart_, _Treemap_, _Stacked Area_, and other visualizations.
+
+## View data as (Comparative report)
+
+The **Compare Data** dropdown will automatically add either **% change** or **actual difference** between two time intervals in a report.
+
+To view a comparative report:
+
+1. Enter the Edit mode of the report.
+
+2. Select an option from the **View data as** dropdown list:
+
+   <picture
+     img={require('../../../assets/png/cmp-comparative-data-menu.png')}
+     alt="A screenshot of the Comparative data drop-down menu"
+     frame="drop-shadow"
+   />
+
+3. When being prompted, select **Show report** to allow CMP to make adjustments necessary to enable the Comparative Report mode.
+
+   <picture
+     img={require('../../../assets/png/cmp-comparative-report-prompt.png')}
+     alt="A screenshot of the warning message"
+     frame="drop-shadow"
+   />
+
+4. Once enabled, you will see new columns in your table based view showing the &Delta; between time intervals. This difference (&Delta;) appears **after** the intervals compared.
+
+   In the example below, there are new columns in the report showing the _Percentage Change_ (&Delta;%) between time intervals. The percentage change between months 04 (April) and 05 (May) is shown in the column _05 &Delta;%_.
+
+   <picture
+     img={require('../../../assets/png/cmp-comparative-report.png')}
+     alt="A screenshot of the comparative report"
+     frame="drop-shadow"
+   />
+
+## Currency
+
+Currency that the billing data is reported in (**Metric** must be _Cost_).
+
+## Filtering dimension values
+
+To view a subset of a [dimension](report-dimensions-groupings-and-filters.mdx)'s values:
+
+1. Select the chip of the dimension of interest
+
+2. Configure the filter.
+
+   <picture
+     img={require('../../../assets/png/cmp-cloudreports-filters.png')}
+     alt="A screenshot showing the filter options"
+     frame="drop-shadow"
+   />
+
+   There are two additional options:
+
+   - **Exclude selection**: To exclude a selection of values.
+   - **Advanced**: To filter services using regular expressions.
+
+3. Select **Save**.
+
+4. Re-run the report to apply the filters you've configured.
+
+:::info
+
+Dimension chips with and without configured filters are shown in different colors.
+
+You can use the _Expand_ button (**|<**) in the lower-right corner of the report page to display the configured filters.
+
+:::
+
+## Top/bottom results
+
+When performing analysis, it is often helpful to hide values below or above certain thresholds.
+
+The _Top/bottom results_ option allows you to limit the number of results for fields displayed along the Y-axis (vertical) of the chart (the _Group by_ dimensions).
+
+1. Select the **&#43; Add Filter** chip.
+
+2. Select **Top/bottom results**.
+
+   <picture
+     img={require('../../../assets/png/cmp-metric-top-bottom.png')}
+     alt="A screenshot of the Metric filter chip"
+     frame="drop-shadow"
+   />
+
+3. Specify the filter settings, including:
+
+   - **Limit to**: Top or Bottom results.
+   - **Number**: The number of results to display.
+   - **Metric**: The metric by which the field is measured.
+
+   <picture
+     img={require('../../../assets/png/cmp-report-top-bottom-results.png')}
+     alt="A screenshot of the top/bottom results window"
+     frame="drop-shadow"
+   />

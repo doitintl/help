@@ -1,0 +1,103 @@
+---
+description: Understand your Google Cloud or Amazon Web Services Cost or Usage data
+---
+
+# Reports
+
+Cloud Analytics reports give you instant visibility into your Google Cloud or AWS costs without spending hours scanning through vendor's bills. With Cloud Analytics reports, you'll be able to slice and dice your cloud spend and reveal cost and performance optimization opportunities for your organization.
+
+:::note
+
+Required Permissions: **Cloud Analytics**
+
+:::
+
+:::info
+
+Connect your [Google Cloud Organization](../../google-cloud/connect-google-cloud-service-account.mdx) or [Amazon Web Services](../../amazon-web-services/invite-existing-aws-account.mdx) to the Cloud Management Platform (CMP) to get all available features.
+
+:::
+
+## Access reports
+
+To access Analytics reports, select **Analytics** from the top navigation bar, and then select **Reports**.
+
+<picture
+  img={require('../../../assets/png/cmp-analytics-reports.png')}
+  alt="A screenshot of the _Reports_ screen"
+  frame="drop-shadow"
+/>
+
+There are two types of reports: _Preset reports_, and _Custom reports_.
+
+### Preset reports
+
+By default, CMP provided several preset reports, which are built-in reports for you to get started. Depending on the cloud services and CMP features you are using, you'll be presented with the relevant reports, including:
+
+- BigQuery Spend by SKU
+- CLoud SQL CUD Eligible Consumption
+- Cloud Run CUD Eligible Consumption
+- Cost By Scope
+- Cost By Top AWS account
+- Cost by region
+- Cost by service
+- Flexsave Google Cloud Eligible
+- GCP Compute CUD Coverage
+- Historical Costs & Forecast
+- Monthly Cost by Service 12mo
+- Monthly Credits History 12mo
+- Services Breakdown
+- This Month vs. Last
+- Trending services
+
+### Custom reports
+
+You can create your own custom report based on an existing report, or completely from scratch. Read more at [Create reports](create-report.mdx).
+
+## View reports
+
+Select a report name on the main Reports screen to view the report.
+
+<picture
+  img={require('../../../assets/png/cmp-example-report.png')}
+  alt="A screenshot showing an example report"
+  frame="drop-shadow"
+/>
+
+:::tip
+
+To display the configuration of a report, select the _Expand_ button (**|<**) in the lower-right corner of the report page.
+
+:::
+
+## FAQ
+
+### When are the metric amounts (Cost, Usage, etc) for a day counted as "final"?
+
+You can consider numbers "final" for 3 days after the date. With that in mind, there is really no SLA for this and numbers can change any time if there are corrections or delays that needs to be applied.
+
+### Are the reports back-filled/updated, and at what frequency?
+
+Cloud Analytics data is updated hourly.
+
+### What timezone are Cloud Analytics reports based on?
+
+Data from Google Cloud is based on Pacific time, while data from AWS is based on Coordinated Universal Time (UTC).
+
+You can [configure a default timezone for new Cloud Analytics reports](../../general/general-settings.mdx).
+
+Timezone used to aggregate the time interval in your report.
+
+:::note
+
+If you modify your timezone to reflect your local or company time, the totals will not reflect the invoices.
+
+:::
+
+## Watch a demo
+
+<video
+  type="loom"
+  id="3bb89b9c624a4a52a2ecfbb61a56b4b8"
+  thumb="-full-1605722125651.jpg"
+/>

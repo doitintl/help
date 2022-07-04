@@ -1,0 +1,62 @@
+---
+sidebar_position: 4
+description: Filter on included metrics to provide additional focus in your reports
+---
+
+# Metric filters
+
+Metric Filters allow you to filter the data in your report at query time.
+
+## Add a metric filter
+
+You can add a metric filter using either one of the following methods:
+
+- Select the **Metric filter** link below the **Metric** dropdown.
+- Select the **&#43; Add Filter** chip.
+
+<picture
+  img={require('../../../assets/png/cmp-report-metric-filter.png')}
+  alt="A screenshot showing how to add the metric filter"
+  frame="drop-shadow"
+/>
+
+Select the metric to filter, the operator, and the value.
+
+<picture
+  img={require('../../../assets/png/cmp-metric-configuration-window.png')}
+  alt="Metric Configuration Window"
+  frame="drop-shadow"
+/>
+
+:::tip
+
+You can filter on a Metric different from the one used in the report. For example, you can chart **Usage** while filter any interval with a **Cost $lt; $50**
+
+:::
+
+The CMP supports the following operators:
+
+- Greater than (>)
+- Less than (<)
+- Greater than or equals (>=)
+- Less than or equals (<=)
+- Between
+- Not Between
+- Equals (=)
+- Not equals (&#8800;)
+
+When applied a filter chip will appear in the metric bar:
+
+<picture
+  img={require('../../../assets/png/cmp-operators-menu.png')}
+  alt="A screenshot of the operators drop-down menu"
+  frame="drop-shadow"
+/>
+
+This chip will be _blue_ when applied to the currently shown metric, and _white_ while filtering a metric not currently shown:
+
+<picture
+  img={require('../../../assets/png/cmp-metric-filter-chip.png')}
+  alt="A screenshot of the Metric filter chip"
+  frame="drop-shadow"
+/>
