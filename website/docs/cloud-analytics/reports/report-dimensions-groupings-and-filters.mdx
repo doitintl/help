@@ -1,33 +1,41 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 ---
 
-# Report Dimensions, Group by, and Filters
+# Dimensions, Group by, and Filters
 
 When creating a report, you can choose from a variety of billing dimensions, including custom, project, and system labels, to build a detailed view of your cloud spend. You can also further customize your reports by grouping or filtering using these dimensions.
 
 ## Overview
 
-Below is the screen you'll see when creating a new report:
+Below is the screen you'll see when [creating a new report from scratch](create-report.mdx#create-a-report-from-scratch):
 
 <picture
   img={require('../../../assets/png/cmp-new-report.png')}
   alt="A screenshot showing a Cloud Analytics report"
+  frame="drop-shadow"
 />
 
-You can select the following buttons to build the report:
+You can select the following chips to build the report:
 
 - **&#43; Add Dimension**: Add fields along the X-axis (horizontal) of the chart.
 
 - **&#43; Add Grouping**: Add fields along the Y-axis (vertical) of the chart.
 
-- **&#43; Add Filter**: View specific information. For example, if you only want to check entries related to one cloud provider, you can select this button, choose _Cloud_, and then specify the cloud provider of interest.
+- **&#43; Add Filter**: Use [standard dimensions](#standard-dimensions), [labels](#labels), or tags as filters to view specific information. For example, if you only want to check entries related to one cloud provider, you can select this button, choose _Cloud_, and then specify the cloud provider of interest. See [Filtering dimension values](editing-your-cloud-report.mdx#filtering-dimension-values) for more information.
+
+  :::info
+
+  For the filter options in the _Metric_ category, see [Metric filters](metric-filters.mdx).
+
+  :::info
 
 In the example screenshot below, projects are grouped along the Y-axis, and project data is displayed along the X-axis. The year, month and day have been added as **Dimensions** so the data/columns are displayed along the X-axis.
 
 <picture
   img={require('../../../assets/png/cmp-example-report-table.png')}
   alt="A screenshot showing a Cloud Analytics report"
+  frame="drop-shadow"
 />
 
 ## Date/Time dimensions
@@ -39,6 +47,7 @@ The Date/Time dimensions are connected with the display option **Time Interval**
 <picture
   img={require('../../../assets/png/cmp-hour-report-dimension.png')}
   alt="A screenshot showing Hour in the list of report dimension"
+  frame="drop-shadow"
 />
 
 ## Standard dimensions
@@ -162,4 +171,5 @@ Below is a sample report snippet with a full breakdown of the four GKE dimension
 <picture
   img={require('../../../assets/png/cmp-report-snippet.png')}
   alt="A screenshot of a report snippet"
+  frame="drop-shadow"
 />

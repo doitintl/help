@@ -1,11 +1,11 @@
 ---
-sidebar_position: 12
+sidebar_position: 11
 description: Send periodically Cloud Analytics reports by setting up an email delivery schedule
 ---
 
 # Schedule report email delivery
 
-You can send a copy of your Cloud Analytics report to yourself and your stakeholders on a regular basis by setting up an email delivery schedule.
+You can send a copy of your Cloud Analytics report to yourself or your stakeholders on a regular basis by setting up an email delivery schedule.
 
 :::note
 
@@ -20,13 +20,14 @@ There are two ways to schedule emailed reports:
 - Via a specific Report's page
 - Via the main Cloud Analytics page
 
-### Scheduling via a report s page
+### Scheduling via a report's page
 
-Begin by opening a report that you have "Owner" access to. Then, click on the clock icon on the right-hand menu bar:
+Begin by opening a report that you have "Owner" access to. Then, click the clock icon on the right-hand menu bar:
 
 <picture
-  img={require('../../assets/png/cmp-example-report.png')}
+  img={require('../../../assets/png/cmp-example-report.png')}
   alt="A screenshot showing an example report"
+  frame="drop-shadow"
 />
 
 Next, configure the scheduled delivery:
@@ -36,15 +37,17 @@ Next, configure the scheduled delivery:
 - Set up when you'd like to be delivered (using [cron syntax](https://crontab.guru))
 
 <picture
-  img={require('../../assets/png/cmp-schedule-report-email-dialog.png')}
+  img={require('../../../assets/png/cmp-schedule-report-email-dialog.png')}
   alt="A screenshot showing the Schedule Report Email Delivery modal dialog"
+  frame="drop-shadow"
 />
 
 If you've included someone who doesn't have access to the report, you will be asked to add that user to the report. You can choose whether to grant the "Viewer" or "Editor" access.
 
 <picture
-  img={require('../../assets/png/cmp-some-recipients-need-access-dialog.png')}
+  img={require('../../../assets/png/cmp-some-recipients-need-access-dialog.png')}
   alt="A screenshot showing the Some recipients need access to this report modal dialog"
+  frame="drop-shadow"
 />
 
 ## About Cron expressions
@@ -75,15 +78,17 @@ To create a schedule that repeats, use special characters to describe when that 
 Select the access level you'd like to give them, and click "Add" to give them access to the report and add them to the list of scheduled report recipients.
 
 <picture
-  img={require('../../assets/png/cmp-recipients-need-access-dialog.png')}
+  img={require('../../../assets/png/cmp-recipients-need-access-dialog.png')}
   alt="A screenshot showing the Some recipients need access to this report modal dialog"
+  frame="drop-shadow"
 />
 
 Your scheduled report will look something like the image below. From the email, you'll be able to preview the report and open an interactive report in Cloud Analytics, by using the "Open Live Report" button.
 
 <picture
-  img={require('../../assets/png/cmp-open-live-report-button.png')}
+  img={require('../../../assets/png/cmp-open-live-report-button.png')}
   alt="A screenshot showing the location of the Open Live Report button"
+  frame="drop-shadow"
 />
 
 ### Scheduling via the Cloud Analytics page
@@ -93,8 +98,9 @@ You may also schedule emailed reports from the main Cloud Analytics page.
 First, find a report that you are the owner of. Then, select the horizontal ellipsis icon in the right-most table column, and select _Email Schedule_ from the drop-down menu.
 
 <picture
-  img={require('../../assets/png/cmp-analytics-reports.png')}
+  img={require('../../../assets/png/cmp-analytics-reports.png')}
   alt="A screenshot of the _Reports_ screen"
+  frame="drop-shadow"
 />
 
 From there, configure your report as described above, modifying the message and interval as well as the recipients.
@@ -114,8 +120,9 @@ Using the same methods as above, you can also subscribe to other people's schedu
 If you need to delete the scheduled report, please use the Delete button on the "Schedule Report Email Delivery" dialog.
 
 <picture
-  img={require('../../assets/png/cmp-schedule-report-delivery-dialog.png')}
+  img={require('../../../assets/png/cmp-schedule-report-delivery-dialog.png')}
   alt="A screenshot showing the Schedule Report Email Delivery dialog"
+  frame="drop-shadow"
 />
 
 ## Limitations
@@ -123,7 +130,7 @@ If you need to delete the scheduled report, please use the Delete button on the 
 A few limitations exist for scheduled reports:
 
 - Each report can only have a single email delivery schedule
-- Preset reports cannot be scheduled. You can [clone](cloning-and-or-customizing-cloud-reports.mdx#clone-reports) the report though and schedule it.
+- Preset reports cannot be scheduled. You can [clone](editing-your-cloud-report.mdx#clonecustomize-from-the-report-page) the report though and schedule it.
 - The person who scheduled the report is always included in the email
 - You can't schedule a report to be delivered more than once a day.
 - Only chart-based reports can be scheduled (i.e. no tables or heat maps at this time)
