@@ -1,13 +1,55 @@
 /* Choose a darker variation of the default primary color */
 
 :root {
-  --ifm-color-primary-lightest: #2871e4;
-  --ifm-color-primary-lighter: #1a62d2;
-  --ifm-color-primary-light: #195dc9;
-  --ifm-color-primary: #1755b7;
-  --ifm-color-primary-dark: #154da5;
-  --ifm-color-primary-darker: #14489c;
-  --ifm-color-primary-darkest: #103b80;
+  --ifm-color-primary-lightest: #6a6ece;
+  --ifm-color-primary-lighter: #4f53c5;
+  --ifm-color-primary-light: #454bc3;
+  --ifm-color-primary: #3b40b5;
+  --ifm-color-primary-dark: #353aa3;
+  --ifm-color-primary-darker: #32369a;
+  --ifm-color-primary-darkest: #292d7f;
+  --ifm-color-primary-contrast-background: #e9eafc;
+  --ifm-color-primary-contrast-foreground: #07081d;
+
+  --ifm-color-success-lightest: #6ace6a;
+  --ifm-color-success-lighter: #45c345;
+  --ifm-color-success-light: #45c345;
+  --ifm-color-success: #3bb53b;
+  --ifm-color-success-dark: #6ace6a;
+  --ifm-color-success-darker: #329a32;
+  --ifm-color-success-darkest: #297f29;
+  --ifm-color-success-contrast-background: #e9fce9;
+  --ifm-color-success-contrast-foreground: #071d07;
+
+  --ifm-color-info-lightest: #53d5d9;
+  --ifm-color-info-lighter: #37ced3;
+  --ifm-color-info-light: #2eccd0;
+  --ifm-color-info: #2ab9bd;
+  --ifm-color-info-dark: #26a7aa;
+  --ifm-color-info-darker: #249da1;
+  --ifm-color-info-darkest: #1d8284;
+  --ifm-color-info-contrast-background: #e9fcfc;
+  --ifm-color-info-contrast-foreground: #071c1d;
+
+  --ifm-color-warning-lightest: #fddf8a;
+  --ifm-color-warning-lighter: #fddf8a;
+  --ifm-color-warning-light: #fcce4f;
+  --ifm-color-warning: #fcc631;
+  --ifm-color-warning-dark: #fcbe13;
+  --ifm-color-warning-darker: #fbba04;
+  --ifm-color-warning-darkest: #d09903;
+  --ifm-color-warning-contrast-background: #fcf7e9;
+  --ifm-color-warning-contrast-foreground: #1d1707;
+
+  --ifm-color-danger-lightest: #fd8aa8;
+  --ifm-color-danger-lighter: #fd5e86;
+  --ifm-color-danger-light: #fd5e86;
+  --ifm-color-danger: #fc3165;
+  --ifm-color-danger-dark: #fc134f;
+  --ifm-color-danger-darker: #fb0444;
+  --ifm-color-danger-darkest: #d00337;
+  --ifm-color-danger-contrast-background: #fce9ed;
+  --ifm-color-danger-contrast-foreground: #1d070c;
 }
 
 /* Announcement bar */
