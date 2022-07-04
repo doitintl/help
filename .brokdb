@@ -194,3 +194,5 @@ https://doit-cmp-ops-pub.s3.amazonaws.com/prod/flexsave_create_policies.yml 1656
 https://doit-cmp-ops-pub.s3.amazonaws.com/prod/flexsave_create_role_N_policies.yml 1656575022
 https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetCostAndUsage.html 1656575022
 https://cloud.google.com/bigquery/pricing#analysis_pricing_models 1656665964
+https://cloud.google.com/docs/cuds#spend_based_commitments 1656937311
+https://cloud.google.com/billing/docs/how-to/reports#filtering_and_grouping 1656938759
