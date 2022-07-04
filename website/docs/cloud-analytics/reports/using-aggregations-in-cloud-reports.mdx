@@ -1,11 +1,11 @@
 ---
-sidebar_position: 7
+sidebar_position: 5
 description: Cloud Management Platform provides a rich array of data aggregation functions, useful for various cost or spend analysis tasks.
 ---
 
-# Understanding aggregations
+# Aggregations
 
-Before you can properly control and optimize your Google Cloud costs, you need to understand where costs originated within your organization. Aggregations in [Cloud Analytics reports](create-cloud-report/index.mdx) help you summarize patterns so you can more quickly identify the source of potential issues.
+Before you can properly control and optimize your Google Cloud costs, you need to understand where costs originated within your organization. Aggregations in [Cloud Analytics reports](index.mdx) help you summarize patterns so you can more quickly identify the source of potential issues.
 
 In this article, we'll go over the types of aggregation options you have available in Cloud Analytics reports. For consistency's sake, we'll be showing how each aggregation looks in a Table view. However, these aggregations can also be useful in other Chart types and may behave differently as a result.
 
@@ -14,7 +14,7 @@ In this article, we'll go over the types of aggregation options you have availab
 In the "Total" aggregation, your results will be displayed in absolute terms. A row and column, each titled "Totals", will be added at the end containing the sum of all of the results per row and column, respectively.
 
 <picture
-  img={require('../../assets/png/cmp-report-aggregation-total.png')}
+  img={require('../../../assets/png/cmp-report-aggregation-total.png')}
   alt="A screenshot showing a Total aggregation report"
 />
 
@@ -25,7 +25,7 @@ In the "Total" aggregation, your results will be displayed in absolute terms. A 
 If you're viewing your results in a Table view, then a final column titled "Totals" will be added at the end containing the sum of all of the results per row, expressed as a percentage.
 
 <picture
-  img={require('../../assets/png/cmp-report-aggregation-pct-total.png')}
+  img={require('../../../assets/png/cmp-report-aggregation-pct-total.png')}
   alt="A screenshot showing a % of Total aggregation report"
 />
 
@@ -34,7 +34,7 @@ If you're viewing your results in a Table view, then a final column titled "Tota
 "% of Column" aggregations display cell values as a percentage of its column, with each column being represented as 100% in totality.
 
 <picture
-  img={require('../../assets/png/cmp-report-aggregation-pct-col.png')}
+  img={require('../../../assets/png/cmp-report-aggregation-pct-col.png')}
   alt="A screenshot showing a & of Column aggregation report"
 />
 
@@ -43,7 +43,7 @@ If you're viewing your results in a Table view, then a final column titled "Tota
 "% of Row" aggregations display cell values as a percentage of its row, with each row being represented as 100% in totality.
 
 <picture
-  img={require('../../assets/png/cmp-report-aggregation-pct-row.png')}
+  img={require('../../../assets/png/cmp-report-aggregation-pct-row.png')}
   alt="A screenshot showing a % of Row aggregation report"
 />
 
@@ -52,6 +52,6 @@ If you're viewing your results in a Table view, then a final column titled "Tota
 "Cost/Usage" aggregations are great for use cases requiring cost-per-unit pricing validation. In the example below, we are using this aggregation to examine BigQuery SKU costs per project.
 
 <picture
-  img={require('../../assets/png/cmp-report-aggregation-unit-cost.png')}
+  img={require('../../../assets/png/cmp-report-aggregation-unit-cost.png')}
   alt="A screenshot showing a Cost/Usage aggregation report"
 />
