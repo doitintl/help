@@ -13,37 +13,62 @@ const pluginPwa = [
       'queryString',
       // Activates for mobile users (width <= 996px)
       // 'mobile',
-      // // activates for users with `navigator.connection.saveData === true`
+      // activates for users with `navigator.connection.saveData === true`
       // 'saveData'
+      // Activates for all users
+      'always',
     ],
+    injectManifestConfig: {
+      globIgnores: [
+        'assets/css/*',
+        'assets/files/*',
+        'assets/ideal-img/*',
+        'assets/images/*',
+        'assets/js/*',
+        'cgi-bin/*',
+        'cgi-bin/**/*',
+        'docs/*',
+        'docs/**/*',
+        '*.ico',
+        '*.png',
+        '*.svg',
+      ],
+    },
     pwaHead: [
       {
         tagName: 'link',
         rel: 'icon',
+        href: '/favicon.ico',
         type: 'image/png',
         sizes: '48x48',
-        href: '/favicon.ico',
       },
       {
         tagName: 'link',
         rel: 'icon',
+        href: '/favicon-16x16.png',
+        type: 'image/png',
+        sizes: '16x16',
+      },
+      {
+        tagName: 'link',
+        rel: 'icon',
+        href: '/favicon-32x32.png',
         type: 'image/png',
         sizes: '32x32',
-        href: '/favicon-32x32.png',
       },
       {
         tagName: 'link',
         rel: 'icon',
+        href: '/icon-192x192.png',
         type: 'image/png',
         sizes: '192x192',
-        href: '/icon-192x192.png',
       },
       {
         tagName: 'link',
         rel: 'icon',
+        href: '/icon-512x512.png',
         type: 'image/png',
         sizes: '512x512',
-        href: '/icon-512x512.png',
       },
       {
         tagName: 'link',
@@ -85,17 +110,17 @@ const pluginPwa = [
       {
         tagName: 'meta',
         name: 'apple-mobile-web-app-status-bar-style',
-        content: '#000000',
-      },
-      {
-        tagName: 'meta',
-        name: 'msapplication-TileColor',
-        content: '2b5797',
+        content: 'default',
       },
       {
         tagName: 'meta',
         name: 'msapplication-TileImage',
         content: '/mstile-144x144.png',
+      },
+      {
+        tagName: 'meta',
+        name: 'msapplication-TileColor',
+        content: '#ffffff',
       },
     ],
   },
@@ -113,6 +138,6 @@ const pluginIdealImage = [
   },
 ];
 
-const plugins = [pluginIdealImage, pluginPwa];
+const plugins = [pluginPwa]; // pluginIdealImage
 
 module.exports = plugins;
