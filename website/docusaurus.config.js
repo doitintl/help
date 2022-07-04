@@ -58,7 +58,7 @@ const config = {
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },
-      image: '/og-image.png',
+      image: '/preview.png',
       metadata: metadata,
       navbar: navbar,
       docs: {

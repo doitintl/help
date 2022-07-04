@@ -36,6 +36,13 @@ const pluginPwa = [
         rel: 'icon',
         type: 'image/png',
         sizes: '192x192',
+        href: '/favicon-194x194.png',
+      },
+      {
+        tagName: 'link',
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '192x192',
         href: '/icon-192x192.png',
       },
       {
@@ -64,13 +71,13 @@ const pluginPwa = [
         tagName: 'link',
         rel: 'apple-touch-icon',
         sizes: '180x180',
-        href: '/apple-touch-icon.png',
+        href: '/icon-180x180.png',
       },
       {
         tagName: 'link',
         rel: 'mask-icon',
         href: '/safari-pinned-tab.svg',
-        color: '#1a1c1e',
+        color: '#fc2a5a',
       },
       {
         tagName: 'meta',
@@ -85,12 +92,17 @@ const pluginPwa = [
       {
         tagName: 'meta',
         name: 'apple-mobile-web-app-status-bar-style',
-        content: '#000000',
+        content: '#ffffff',
+      },
+      {
+        tagName: 'meta',
+        name: 'msapplication-config',
+        content: '/browserconfig.xml',
       },
       {
         tagName: 'meta',
         name: 'msapplication-TileColor',
-        content: '2b5797',
+        content: 'fc2a5a',
       },
       {
         tagName: 'meta',
