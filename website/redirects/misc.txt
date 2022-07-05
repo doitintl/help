@@ -4,7 +4,6 @@
 /apple-touch-icon.png                    /icon-180x180.png
 /brand/logo-hero.svg                     /logo-hero.png
 /brand/logo-white.svg                    /logo-white.png
-/og-image.jpg                            /og-image.png
 /og-image.png                            /preview.png
 /readme                                  /
 /start.html                              /
@@ -12,10 +11,11 @@
 # Expired resources (i.e., previous deployments, older versions of the website)
 
 /~/*                                     /_empty.txt 410
+/assets/                                 /_empty.txt 410
 /assets/*                                /_empty.txt 410
-/attachments/token/*                     /_empty.txt 410
+/attachments/*                           /_empty.txt 410
+/static/                                 /_empty.txt 410
 /static/*                                /_empty.txt 410
-
 # Brew setup
 
 /cgi-bin                                 /cgi-bin/brew.pl           301
@@ -54,7 +54,9 @@
 /login.*                                 /cgi-bin/brew/_coffee.html 418
 /mifs/*                                  /cgi-bin/brew/_coffee.html 418
 /owa/*                                   /cgi-bin/brew/_coffee.html 418
+/sessions/*                              /cgi-bin/brew/_coffee.html 418
 /sftp-config.json                        /cgi-bin/brew/_coffee.html 418
+/sitecore/*                              /cgi-bin/brew/_coffee.html 418
 /solr/*                                  /cgi-bin/brew/_coffee.html 418
 /sphider/*                               /cgi-bin/brew/_coffee.html 418
 /sql.php                                 /cgi-bin/brew/_coffee.html 418
