@@ -1,5 +1,6 @@
 /hc                                                                                                        /
 /hc/en-us                                                                                                  /
+/hc/en-us/articles/360031902452-Update-Company-Name                                                        /docs/invoices-and-payments/changing-your-company-name
 /hc/en-us/articles/360032246812-Add-New-G-Suite-Subscription-                                              /docs/g-suite-and-workspace/add-a-new-g-suite-subscription
 /hc/en-us/articles/360032246892-Invite-Existing-AWS-Account                                                /docs/amazon-web-services/invite-existing-aws-account
 /hc/en-us/articles/360032246932-Access-An-Existing-Support-Request                                         /docs/services/consulting-support#view-tickets

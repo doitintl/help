@@ -1,15 +1,20 @@
 # Malformed or misdirected requests
 
 /.well-known/robots.txt                  /robots.txt
+/apple-touch-icon.png                    /icon-180x180.png
+/brand/logo-hero.svg                     /logo-hero.png
+/brand/logo-white.svg                    /logo-white.png
 /og-image.jpg                            /og-image.png
+/og-image.png                            /preview.png
 /readme                                  /
 /start.html                              /
 
-# Expired resources (i.e., previous deployments)
+# Expired resources (i.e., previous deployments, older versions of the website)
 
+/~/*                                     /_empty.txt 410
 /assets/*                                /_empty.txt 410
-/static/*                                /_empty.txt 410
 /attachments/token/*                     /_empty.txt 410
+/static/*                                /_empty.txt 410
 
 # Brew setup
 
