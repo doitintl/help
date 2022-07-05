@@ -2,147 +2,160 @@
 sidebar_position: 1
 ---
 
-# Report Dimensions, Group By, and Filters
+# Report Dimensions, Group by, and Filters
 
-When creating reports in Cloud Analytics, you will have every billing dimension to choose from, including any custom, project, and system labels for a detailed view of your cloud spend. You can also further customize your reports by grouping or filtering these dimensions.
+When creating a report, you can choose from a variety of billing dimensions, including custom, project, and system labels, to build a detailed view of your cloud spend. You can also further customize your reports by grouping or filtering using these dimensions.
 
-When you first create a new report, you will see an interface like this:
+## Overview
+
+Below is the screen you'll see when creating a new report:
 
 <picture
   img={require('../../../assets/png/cmp-new-report.png')}
   alt="A screenshot showing a Cloud Analytics report"
 />
 
-**Dimensions** determine the fields along the X-axis of the chart and **"Group by"** determines the fields along the Y-axis of the chart.
+You can select the following buttons to build the report:
 
-In the screenshot below you can see that projects are being grouped along the vertical axis, and project data is being displayed along the horizontal axis. The year, month and day have been added as "Dimensions" so the data/columns are displayed along the horizontal axis.
+- **&#43; Add Dimension**: Add fields along the X-axis (horizontal) of the chart.
+
+- **&#43; Add Grouping**: Add fields along the Y-axis (vertical) of the chart.
+
+- **&#43; Add Filter**: View specific information. For example, if you only want to check entries related to one cloud provider, you can select this button, choose _Cloud_, and then specify the cloud provider of interest.
+
+In the example screenshot below, projects are grouped along the Y-axis, and project data is displayed along the X-axis. The year, month and day have been added as **Dimensions** so the data/columns are displayed along the X-axis.
 
 <picture
   img={require('../../../assets/png/cmp-example-report-table.png')}
   alt="A screenshot showing a Cloud Analytics report"
 />
 
-**Filters** allow you to view more specific information. For example, if you only want to look at GCP, you can Filter on Cloud = GCP without having to show AWS on the chart.
+## Date/Time dimensions
 
-## Standard Dimensions
+When creating a new report, the **Year**, **Month**, and **Day** dimensions are added by default.
 
-> **Account**
->
-> This dimension refers to the "Billing Account" in CMP &mdash; Assets for Google Cloud; Cloud health account ID and Cloud Health name for AWS
-
-> **Cloud**
->
-> This reflects the cloud provider either "Google Cloud" or "Amazon Web Services"
-
-> **Cost Type**
->
-> The Cost Type dimension helps to identify the type of charge covered for a specific charge item. For example with AWS this helps distinguish between RI fees, usage fees, saving plan fees, taxes (if applicable) and so on.
-
-> **Credit**
->
-> A credit is usually a cloud provider's way of implementing discounts such as Committed Use Discount or Sustained Use Discount or free-tier usage of a service
-
-> **Folder**
->
-> Folder can contain projects, other folders, or a combination of both. For example, your organization might contain multiple departments, each with its own set of Google Cloud resources. folders allow you to group these resources on a per-department basis.
-
-> **Operation**
->
-> The specific AWS operation covered by this line item. This describes the specific usage of the line item. For example, a value of `RunInstances` indicates the operation of an Amazon EC2 instance.
-
-> **Project**
->
-> This dimension refers to the AWS Account ID; whereas for Google Cloud this identifies the Project ID
-
-> **Region, Country, Zone**
->
-> These dimensions refer to the cloud location specific to the Region, Country, or Zone where resources are deployed.
->
-> [Google Cloud Locations &mdash; Regions & Zones](https://cloud.google.com/about/locations/)
->
-> [AWS Regions and Availability Zones](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
-
-> **Resource**
->
-> At the lowest level, resources are the fundamental components that make up all Google Cloud services. Examples of resources include Compute Engine Virtual Machines (VMs), Pub/Sub topics, Cloud Storage buckets, App Engine instances. All these lower level resources can only be parented by projects, which represent the first grouping mechanism of the Google Cloud resource hierarchy.
-
-> **Service**
->
-> A service is the high-level "type" of cloud technology that can be broken down into SKUs. A SKU is the resource itself for which there's a given price per unit.
-
-> **SKU**
->
-> The ID of the resource used by the service. For the full list of SKUs, see the [Pricing table report](https://cloud.google.com/billing/docs/how-to/pricing-table).
-
-> **Unit**
->
-> The "Unit" dimension corresponds to the "Usage" Metric. This varies by service but generally refers to their unit of measure. e.g. Core - "hour"; Ram - "gigabyte hour"; EC2 - "vCPU-Hours"
-
-## Date / Time
-
-> **Year | Month | Day**
->
-> By default, when you create a new report, the "**Year**", "**Month**", and "**Day**" dimensions would already be added as shown on the example image below.
-
-<picture
-  img={require('../../../assets/png/cmp-date-time-dimensions-widget.png')}
-  alt="A screenshot showing the date and time dimensions input widget"
-/>
-
-> The Date/Time dimension is also linked to the display option "**Time Interval**", thus the selection here will add/remove a Date/Time dimension accordingly. For example, when Time Interval "Hour" is selected, "Hour" will also be automatically added to the dimensions.
+The Date/Time dimensions are connected with the display option **Time Interval**. Changing the time interval will affect the Date/Time dimensions accordingly. For example, selecting the Time Interval _Hour_ will result in _Hour_ being automatically added to the dimensions.
 
 <picture
   img={require('../../../assets/png/cmp-hour-report-dimension.png')}
   alt="A screenshot showing Hour in the list of report dimension"
 />
 
+## Standard dimensions
+
+- **Attribution**: Choose one or more existing [attributions](../attributing-cloud-spend.mdx) to build your report.
+
+- **Billing Account**: This dimension refers to the _Billing Account_ in CMP &mdash; _Assets_ for Google Cloud; _Cloud health account ID_ and _Cloud Health name_ for AWS.
+
+- **Cloud**: This reflects the cloud provider either _Google Cloud_ or _Amazon Web Services_ or both.
+
+- **Cost Type**: The Cost Type dimension helps to identify the type of charge covered for a specific billing item. For example, with AWS this helps to distinguish between RI fees, usage fees, saving plan fees, and taxes (if applicable).
+
+- **Country**, **Region**, **Zone**: These dimensions refer to the cloud location where resources are deployed. See [Google Cloud Locations &mdash; Regions & Zones](https://cloud.google.com/about/locations/) and [AWS Regions and Availability Zones](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/).
+
+- **Credit**: A credit is usually a cloud provider's way of implementing discounts such as committed use discounts, sustained use discounts, or free-tier usage of a service.
+
+- **Folder**: Folder can contain projects, other folders, or a combination of both. For example, your organization might contain multiple departments, each with its own set of Google Cloud resources. folders allow you to group these resources on a per-department basis.
+
+- **GCP Marketplace**: This dimension helps to distinguish between services from Google Cloud Marketplace and Google Cloud itself.
+
+- **Global Resource**: A globally unique Google Cloud service identifier for the resource that generated relevant usage.
+
+- **Operation**: A specific AWS operation that generated relevant usage. For example, a value of `RunInstances` indicates the operation of an Amazon EC2 instance.
+
+- **Resource**: An identifier for the resource that generated relevant usage. Available for both AWS and Google Cloud.
+
+- **SKU**: The ID of the resource used by the service. For the full list of SKUs, see the [Pricing table report](https://cloud.google.com/billing/docs/how-to/pricing-table).
+
+- **Scope (Project/Account)**: This dimension refers to the AWS Account ID; whereas for Google Cloud this identifies the Project ID
+
+- **Service**: A service is the high-level _type_ of cloud technology that can be broken down into SKUs. A SKU is the resource itself for which there's a given price per unit.
+
+- **Unit**: This dimension corresponds to the **Usage** Metric. It varies by service but generally refers to their unit of measure. For example, Core &mdash; _hour_; Ram &mdash; _gibibyte hour_; EC2 &mdash; _vCPU-Hours_.
+
 ## Labels
 
-Labels are key-value pairs that are used for identifying, organizing and grouping resources which helps with tracking cloud spend. They can be either user-defined or generated by the cloud provider or DoiT.
+Labels are key-value pairs that are used for identifying, organizing, and grouping resources to help tracking cloud spend. They can be either user-defined or generated by the cloud provider or DoiT.
 
-For added granularity, when creating reports in CMP, you will see labels dimension in different categories:
+When creating reports in CMP, you will see label dimensions in different categories:
 
-"**Labels**" in general refer to the cost allocation tags for AWS and labels for Google Cloud as assigned to resources
+- **Labels**: In general refer to the cost allocation tags for AWS and labels for Google Cloud as assigned to resources.
 
-"**Project Labels**" are specific to Google Cloud for labels that were set on the project level
+- **Project Labels**: Specific to Google Cloud for labels set on the project level.
 
-"**System Labels**" refer to labels that were systematically generated by DoiT or AWS and Google Cloud
-
-:::info
-
-For AWS, not all cost allocation tags are automatically imported in CMP. Please submit a [support request](../../services/consulting-support/index.mdx) if you have any new tags that needs to be added in your reports.
-
-:::
-
-"**System Labels**" become available only when [GKE Cost Analytics](../gke-cost-analytics.mdx) has been successfully configured. These are [labels applied at the cluster level](https://cloud.google.com/kubernetes-engine/docs/how-to/creating-managing-labels#about_labeling_clusters) and propagates to all of the cluster's individual resources (such as nodes and persistent disks).
+- **System Labels**: Label systematically generated by DoiT, AWS, or Google Cloud. Read more at [System labels](#system-labels).
 
 :::note
 
-You cannot combine both Google Cloud Labels and GKE Labels in the same report.
+Not all [AWS cost allocation tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) are automatically imported into CMP. If you need new tags for your reports, please submit a [support request](../../services/consulting-support/index.mdx).
 
 :::
 
-## GKE Dimensions
+:::info
 
-If [GKE Cost Analytics](https://help.doit-intl.com/cloud-analytics/gke-cost-analytics) has been configured, additional dimensions will be available in Cloud Analytics reports for reporting on GKE spend.
+Google's GKE cost allocation feature will add the `goog-k8s-cluster-name`, `goog-k8s-namespace`, and `k8s-label/<label_key>` to the regular Labels section. For more information, refer to [Google Cloud Docs](https://cloud.google.com/kubernetes-engine/docs/how-to/cost-allocations#view_breakdown).
 
-The four GKE dimensions \[Namespace, Cluster, Region, and Resource] add levels of granularity to the report which helps you better understand the real costs of running Kubernetes-based workloads on Google Kubernetes Engine.
+:::
 
-> **GKE Namespace**
->
-> The Kubernetes namespace from which the usage is generated.
+### System labels
 
-> **GKE Cluster**
->
-> A cluster is the foundation of Google Kubernetes Engine (GKE): the Kubernetes objects that represent your containerized applications all run on top of a **cluster**.
+System Labels are systematically generated by DoiT, AWS, or Google Cloud. Usually you can tell which label is created by whom from the prefix of the label. For example, labels generated by DoiT starts with `cmp`, while labels generated by Google starts with `compute.googleapis.com`.
 
-> **GKE Region**
->
-> The Google cloud region in which the GKE nodes are running at/resides
+:::info
 
-> **GKE Resource**
->
-> The GKE resource in use, such as "cpu", "memory", and "storage".
+For the sake of simplicity, once you selected a system label generated by DoiT or Google, it will be replaced with a short name or alias. Note that due to the large amount of AMS labels, they are not assigned any alias and thus will stay the same whether selected or not.
+
+:::
+
+Below are the full lists of system labels generated by DoiT and Google Cloud.
+
+#### By DoiT
+
+- **cmp/eligible_for_commitment** (alias: `CUD Eligible`): Workloads eligible for [committed use discounts (CUDs)](https://cloud.google.com/docs/cuds).
+
+- **cmp/commitment_type** (alias: `CUD Type`): Commitment types. Examples: General purpose N1 commitments, Compute-optimized C2 commitments.
+
+- **cmp/machine_type** (alias: `Machine Type`): Machine types. Examples: C2 Compute-optimized, E2 General-purpose.
+
+- **cmp/memory_to_core_ratio** (alias: `GB/CPU`): The amount of memory (RAM) per CPU core.
+
+- **cmp/compute_resource_name** (alias: `GCE Resource`): Google Compute Engine resource names. Examples: cpu, memory, extended memory
+
+#### By Google Cloud
+
+- **compute.googleapis.com/cores** (alias: `Cores`): The number of visible CPU cores.
+
+- **compute.googleapis.com/memory** (alias: `Memory`): The amount of memory (GB).
+
+- **compute.googleapis.com/machine_spec** (alias: `Machine Spec`): The machine types for your VMs.
+
+- **compute.googleapis.com/is_unused_reservation** (alias: `Unused Reservation`): Unused reservations.
+
+## GKE reports fields
+
+If you have successfully configured [GKE Cost Analytics](https://help.doit-intl.com/cloud-analytics/gke-cost-analytics), additional sections named **Google Kubernetes Engine dimensions** and **GKE Labels** will be available for reporting on GKE spend.
+
+### GKE labels
+
+GKE labels are [labels for working with Kubernetes objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/). Only labels from Pod and PersistentVolumeClaim objects are tracked by usage reporting (see [Google Cloud Docs](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering#limitations)).
+
+:::note
+
+You cannot use both Google Cloud labels and GKE labels in the same report.
+
+:::
+
+### Google Kubernetes Engine dimensions
+
+You can use the four GKE dimensions to understand the real costs of running Kubernetes-based workloads on Google Kubernetes Engine.
+
+- **GKE Cluster**: A cluster is the foundation of Google Kubernetes Engine (GKE). The Kubernetes objects that represent your containerized applications all run on top of a **cluster**.
+
+- **GKE Namespace**: The Kubernetes namespace where the usage is generated.
+
+- **GKE Region**: The Google Cloud region where the GKE nodes reside.
+
+- **GKE Resource**: The GKE resource in use, for example, _cpu_, _memory_, and _storage_.
 
 Below is a sample report snippet with a full breakdown of the four GKE dimensions:
 
