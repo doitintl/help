@@ -127,6 +127,7 @@ noempty
 noicon
 noindex
 oidc
+okta
 optimizely
 optipng
 orgs
