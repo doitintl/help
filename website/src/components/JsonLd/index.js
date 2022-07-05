@@ -21,7 +21,7 @@ export default function JsonLd() {
       doitConfig.feedbackUrl,
     ],
     url: doitConfig.homeUrl,
-    logo: doitConfig.helpUrl + '/favicon-194x194.png',
+    logo: doitConfig.helpUrl + '/logo-512x512.png',
   };
 
   const websiteJson = {

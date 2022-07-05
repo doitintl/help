@@ -36,13 +36,6 @@ const pluginPwa = [
         rel: 'icon',
         type: 'image/png',
         sizes: '192x192',
-        href: '/favicon-194x194.png',
-      },
-      {
-        tagName: 'link',
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '192x192',
         href: '/icon-192x192.png',
       },
       {
