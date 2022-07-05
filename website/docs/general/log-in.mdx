@@ -56,8 +56,6 @@ If you do not have a CMP account, you can create one by selecting _SIGN UP_ and 
 
 If your organization (as determined by your email address) is already using the CMP, you can sign up without [being invited](../user-management/creating-a-new-user.mdx#inviting-new-users).
 
-However, if you sign up without being invited, your user account will be assigned your organization's [default role](../user-management/manage-roles.mdx#setting-a-default-role) (or the [Basic Role](../user-management/manage-roles.mdx#basic-role) if no default is configured).
-
 :::
 
 :::tip
@@ -76,41 +74,10 @@ After selecting _CONTINUE_, the CMP will send you an email with further instruct
 
 ## FAQ
 
-### Can I limit access to a single log-in method?
+### Can I limit access to a single authentication method?
 
-Yes, you can.
+Yes. See the [Auth method](../user-management/authentication.mdx#auth-provider) section for more information.
 
-Please create a [support request](../services/consulting-support/index.mdx), tell us which log-in method your organization uses, and we will disable the other options.
+### Can I use my own Single Sign-On provider?
 
-### Can I use my own _Single Sign-On_ (SSO) provider?
-
-Yes, you can.
-
-Please create a [support request](../services/consulting-support/index.mdx), and we will configure access via your organization's _Identity Provider_ (IdP) provider.
-
-We will need the following information:
-
-| SAML providers | OIDC providers  |
-| -------------- | --------------- |
-| _Entity ID_    | _Client ID_     |
-| _SSO URL_      | _Issuer (URL)_  |
-| _Certificate_  | _Client Secret_ |
-
-You can provide this information in the support request, or we can set up a configuration session with you.
-
-:::tip
-
-You can configure most IdPs to assign a `role_name` to anyone who signs up for a CMP account using SSO. The `role_name` is managed internally by your IdP.
-
-When a user signs up for a CMP account, the CMP will look for an IdP `role_name` and, if found, will assign the matching [CMP Role](../user-management/manage-roles.mdx) to the user's CMP account. For this to work, the `role_name` must exactly match the name of a CMP Role.
-
-However, if you [invite a user](../user-management/creating-a-new-user.mdx) and pre-assign a CMP Role to them, the CMP will ignore the `role_name` for that user.
-
-:::
-
-:::note See also
-
-- [Google Workspace: Set up your own custom SAML application](https://support.google.com/a/answer/6087519?hl=en)
-- [Okta: Get started with app integrations](https://help.okta.com/oie/en-us/Content/Topics/Apps/apps-overview-get-started.htm)
-
-:::
+Yes. See the [Single Sign-on](../user-management/authentication.mdx#single-sign-on) section for more information.

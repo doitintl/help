@@ -1,0 +1,166 @@
+---
+sidebar_position: 5
+---
+
+# Authentication
+
+To configure authentication for your organization, select the gear icon from the top navigation bar of the _Cloud Management Platform_ (CMP), then select **Authentication**:
+
+<picture
+  img={require('../../assets/png/cmp-settings-auth.png')}
+  alt="A screenshot of the Authentication screen"
+  frame="drop-shadow"
+/>
+
+From here, you can configure two aspects of authentication:
+
+- **Single Sign-On**: Use your own _Single Sign-On_ (SSO) application
+- **Auth provider**: Allow [user log-ins](../general/log-in.mdx) via Google Workspace, Microsoft Office 365, or both
+
+## Single Sign-On
+
+The CMP supports the following SSO application protocols:
+
+- _Security Assertion Markup Language_ (SAML)
+- _OpenID Connect_ (OIDC)
+
+:::info See also
+
+- [Okta: What's the Difference Between OAuth, OpenID Connect, and SAML?](https://www.okta.com/uk/identity-101/whats-the-difference-between-oauth-openid-connect-and-saml/)
+
+:::
+
+You can configure the **SAML** or **OIDC** protocols from the **Single Sign-On** screen by selecting the corresponding **Configure** link.
+
+:::note
+
+You must configure **SAML** or **OIDC** before you can enable SSO with the **Enable SSO** radio button.
+
+:::
+
+### Configure SAML
+
+If your SSO application uses SAML, you must configure your chosen _Identity Provider_ (IdP) with the values displayed in the form field on the **Authentication** screen. For example:
+
+<picture
+  img={require('../../assets/png/cmp-settings-auth-saml-values.png')}
+  alt="A screenshot of the SAML form field with example information"
+  frame="drop-shadow"
+/>
+
+After selecting **Configure**, the CMP will present the following form:
+
+<picture
+  img={require('../../assets/png/cmp-settings-auth-saml.png')}
+  alt="A screenshot of the SAML protocol configuration form"
+  frame="drop-shadow"
+/>
+
+To configure the SAML protocol, enter the following information, provided to you by your IdP:
+
+- **Entity ID**: Your application's _Entity ID_ (aka _Audience URI_)
+- **SSO URL**: Your application's _SSO URL_ (aka the _Destination URL_)
+- **Certificate**: Your application's X.509 signing certificate
+
+The CMP will prompt you to confirm the operation when you select the **Save** button. If you select **Confirm**, the CMP will automatically enable SSO:
+
+<picture
+  img={require('../../assets/png/cmp-settings-auth-sso-saml.png')}
+  alt="A screenshot of the Authentication screen with SSO enabled and SAML configured"
+  frame="drop-shadow"
+/>
+
+:::info See also
+
+- [Okta: Create SAML app integrations using AIW](https://help.okta.com/oie/en-us/Content/Topics/Apps/Apps_App_Integration_Wizard_SAML.htm)
+- [Google Workspace: Set up your own custom SAML application](https://support.google.com/a/answer/6087519?hl=en)
+- [Microsoft: SAML authentication with Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/auth-saml)
+
+:::
+
+### Configure OIDC
+
+If your SSO application uses OIDC, you must configure your chosen _Identity Provider_ (IdP) with the values displayed in the form field on the **Authentication** screen. For example:
+
+<picture
+  img={require('../../assets/png/cmp-settings-auth-oidc-values.png')}
+  alt="A screenshot of the OIDC form field with example information"
+  frame="drop-shadow"
+/>
+
+After selecting **Configure**, the CMP will present the following form:
+
+<picture
+  img={require('../../assets/png/cmp-settings-auth-oidc.png')}
+  alt="A screenshot of the SAML protocol configuration form"
+  frame="drop-shadow"
+/>
+
+To configure the SAML protocol, enter the following information, provided to you by your IdP:
+
+- **Client ID**: Your application's _Client ID_
+- **Issuer URL**: Your application's _Issuer URL_ (aka the metadata _Discovery URL_)
+- **Client secret**: Your application's _Client Secret_
+
+The CMP will prompt you to confirm the operation when you select the **Save** button. If you select **Confirm**, the CMP will automatically enable SSO:
+
+<picture
+  img={require('../../assets/png/cmp-settings-auth-sso-oidc.png')}
+  alt="A screenshot of the Authentication screen with SSO enabled and OIDC configured"
+  frame="drop-shadow"
+/>
+
+:::info See also
+
+- [Okta: Create OIDC app integrations using AIW](https://help.okta.com/oie/en-us/Content/Topics/Apps/Apps_App_Integration_Wizard_OIDC.htm)
+- [Microsoft: OpenID Connect authentication with Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/auth-oidc)
+
+:::
+
+### Change protocols
+
+If you have configured both **SAML** and **OIDC**, you can change the protocol by selecting the corresponding radio button. The CMP will prompt you to confirm the change:
+
+<picture
+  img={require('../../assets/png/cmp-settings-auth-sso-change.png')}
+  alt="A screenshot of the Auth provider screen"
+  frame="drop-shadow"
+/>
+
+### User roles
+
+You can configure CMP user roles via your Identity Provider (IdP) by setting the custom `doit_platform_role_id` attribute on a user-by-user basis.
+
+If your IdP provides a `doit_platform_role_id` value for a user, the CMP will assign the corresponding role to that user. For this to work, the value should exactly match the _Role ID_ corresponding to [the desired CMP user role](../user-management/manage-roles.mdx).
+
+To find the correct _Role ID_, navigate to **Identity and access** screen from the gear icon in the top right-hand corner of the CMP. Then, navigate to the **Roles** page and select the role you want to assign. From the role details page, select the **Copy Role ID** button in the top right-hand corner:
+
+<picture
+  img={require('../../assets/png/cmp-iam-roles-role-id.png')}
+  alt="A screenshot of the role detail page with the Copy Role ID button highlighted"
+  frame="drop-shadow"
+/>
+
+:::note
+
+If your IdP does not provide a value for `doit_platform_role_id`, the CMP will assign the [default role](../user-management/manage-roles.mdx#setting-a-default-role) configured for your organization.
+
+:::
+
+## Auth provider
+
+By default, we allow users to log in to the CMP via Google Workspace or Microsoft Office 365.
+
+:::info See also
+
+[General: Log in to the CMP](../general/log-in.mdx)
+
+:::
+
+If you would like to restrict authentication providers, select **Auth provider** from the left-hand menu on the **Authentication** screen and choose the corresponding option:
+
+<picture
+  img={require('../../assets/png/cmp-settings-auth-provider.png')}
+  alt="A screenshot of the Auth provider screen"
+  frame="drop-shadow"
+/>
