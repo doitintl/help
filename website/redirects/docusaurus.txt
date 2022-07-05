@@ -1,6 +1,8 @@
 /docs/amazon-web-services/                  /docs/amazon-web-services/invite-existing-aws-account
 /docs/flexsave/aws                          /docs/flexsave/csp/aws
+/docs/flexsave/AWS                          /docs/flexsave/csp/aws
 /docs/flexsave/gcp                          /docs/flexsave/csp/gcp
+/docs/flexsave/GCP                          /docs/flexsave/csp/gcp
 /docs/flexsave/onboarding/aws               /docs/flexsave/sign-up/aws/get-estimate
 /docs/flexsave/onboarding/aws/activate      /docs/flexsave/sign-up/aws/activate
 /docs/flexsave/onboarding/aws/get-estimate  /docs/flexsave/sign-up/aws/get-estimate
