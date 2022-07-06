@@ -1,0 +1,20 @@
+name: Review
+
+on:
+  pull_request:
+
+jobs:
+  fixes:
+    name: Suggest fixes
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/doitintl/docops/devcontainer:main
+    steps:
+      - uses: actions/checkout@v2
+      - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      # This command will make fixes to local files
+      - run: make fixes
+      # This action will suggest the fixes as comments on the PR
+      - uses: reviewdog/action-suggester@v1
+        with:
+          github_token: ${{ secrets.DOCSBOT_PAT }}

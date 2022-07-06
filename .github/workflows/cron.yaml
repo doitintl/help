@@ -18,12 +18,12 @@ jobs:
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.DOCSBOT_PAT }}
+      - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       # Invalidate cache
       - run: rm -f .brockdb
       # Rebuild cache
       - run: make brok
       # Silence Git warning
-      - run: git config --global --add safe.directory /__w/help/help
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           file_pattern: .brokdb

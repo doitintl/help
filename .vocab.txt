@@ -155,6 +155,7 @@ ravsamhq
 rbac
 rechtsanwaltsgesellschaft
 resourcemanager
+reviewdog
 rhel
 roadmap
 sameline

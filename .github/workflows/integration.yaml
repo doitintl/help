@@ -30,11 +30,10 @@ jobs:
         INDEX_NAME: ${{ secrets.INDEX_NAME }}
     steps:
       - uses: actions/checkout@v2
+      - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       # Temporary bodge (until this change lands in the devcontainer)
       - run: apt-get update
       - run: apt-get install libimagequant0
-      # Silence warnings when Docusaurus tries to get last modified dates
-      - run: git config --global --add safe.directory /__w/help/help
       - run: make build
 
   # TODO: Use custom Python script to handle repository notifications (with the
