@@ -1,4 +1,5 @@
 name: Cron
+
 on:
   schedule:
     # Run at 06:00 every Saturday
