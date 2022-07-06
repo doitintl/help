@@ -8,14 +8,13 @@
 /readme                                  /
 /start.html                              /
 
-# Expired resources (i.e., previous deployments, older versions of the website)
+# Expired resources (i.e., previous deployments)
 
-/~/*                                     /_empty.txt 410
 /assets/                                 /_empty.txt 410
 /assets/*                                /_empty.txt 410
-/attachments/*                           /_empty.txt 410
 /static/                                 /_empty.txt 410
 /static/*                                /_empty.txt 410
+
 # Brew setup
 
 /cgi-bin                                 /cgi-bin/brew.pl           301
@@ -38,13 +37,15 @@
 /.well-known/trust.txt                   /cgi-bin/brew/_coffee.html 418
 /apple-app-site-association              /cgi-bin/brew/_coffee.html 418
 
-# Malicious requests
+# Malicious (or invalid) requests
 
 # cspell:disable
 
 /.*                                      /cgi-bin/brew/_coffee.html 418
+/~/*                                     /cgi-bin/brew/_coffee.html 418
 /2019/wp-*                               /cgi-bin/brew/_coffee.html 418
 /admin/*                                 /cgi-bin/brew/_coffee.html 418
+/attachments/*                           /cgi-bin/brew/_coffee.html 418
 /carbon/*                                /cgi-bin/brew/_coffee.html 418
 /clientscript/*                          /cgi-bin/brew/_coffee.html 418
 /CoreCode/*                              /cgi-bin/brew/_coffee.html 418
