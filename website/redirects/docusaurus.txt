@@ -10,6 +10,8 @@
 /docs/flexsave/onboarding/gcp/activate      /docs/flexsave/sign-up/gcp/activate
 /docs/flexsave/onboarding/gcp/get-estimate  /docs/flexsave/sign-up/gcp/get-estimate
 /docs/flexsave/overview                     /docs/flexsave
+/flexsave-aws/overview                      /docs/flexsave/csp/aws
+/flexsave-gcp/overview                      /docs/flexsave/csp/gcp
 /flexsave/aws                               /docs/flexsave/csp/aws
 /flexsave/gcp                               /docs/flexsave/csp/gcp
 /flexsave/overview                          /docs/flexsave
