@@ -35,6 +35,7 @@ cloudhealth
 cloudreports
 clsx
 cmp's
+codeql
 cpus
 createrole
 csapo
