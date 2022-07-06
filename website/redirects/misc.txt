@@ -46,10 +46,13 @@
 /2019/wp-*                               /cgi-bin/brew/_coffee.html 418
 /admin/*                                 /cgi-bin/brew/_coffee.html 418
 /carbon/*                                /cgi-bin/brew/_coffee.html 418
+/clientscript/*                          /cgi-bin/brew/_coffee.html 418
+/CoreCode/*                              /cgi-bin/brew/_coffee.html 418
 /dashboard/*                             /cgi-bin/brew/_coffee.html 418
 /fpui/*                                  /cgi-bin/brew/_coffee.html 418
 /index.php                               /cgi-bin/brew/_coffee.html 418
 /jmx-console/*                           /cgi-bin/brew/_coffee.html 418
+/language/*                              /cgi-bin/brew/_coffee.html 418
 /login                                   /cgi-bin/brew/_coffee.html 418
 /login.*                                 /cgi-bin/brew/_coffee.html 418
 /mifs/*                                  /cgi-bin/brew/_coffee.html 418
