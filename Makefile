@@ -52,6 +52,9 @@ serve:
 .PHONY: check # Run all checks
 check:
 
+.PHONY: fixes # Write suggested fixes to local files (potentially destructive)
+fixes:
+
 .PHONY: clean # Remove build artifacts
 clean:
 
@@ -79,8 +82,9 @@ check: yamllint
 shellcheck:
 check: shellcheck
 
-shfmt:
-check: shfmt
+shfmt-dry:
+check: shfmt-dry
+fixes: shfmt
 
 # TODO: Reimplement for Docusaurus
 # good-filenames:
@@ -88,6 +92,7 @@ check: shfmt
 
 rm-unused-docs-dry:
 check: rm-unused-docs-dry
+fixes: rm-unused-docs
 
 # TODO: Reimplement for Docusaurus
 # rm-unused-assets-dry:
@@ -107,6 +112,7 @@ check: eslint
 
 update-vocab-dry:
 check: update-vocab-dry
+fixes: update-vocab
 
 cspell:
 check: cspell
@@ -116,6 +122,7 @@ check: misspell
 
 textlint-dry:
 check: textlint-dry
+fixes: textlint
 
 vale:
 check: vale
@@ -128,6 +135,7 @@ check: markdown-link-check
 
 brok:
 check: brok
+fixes: brok
 
 fdupes:
 check: fdupes
@@ -142,6 +150,7 @@ imgdup2go:
 
 optipng-dry:
 check: optipng-dry
+fixes: optipng
 
 # check
 # -----------------------------------------------------------------------------
