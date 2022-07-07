@@ -20,7 +20,7 @@
     "@docusaurus/plugin-ideal-image": "^2.0.0-beta.21",
     "@docusaurus/plugin-pwa": "^2.0.0-beta.21",
     "@docusaurus/preset-classic": "^2.0.0-beta.21",
-    "@mdx-js/react": "^1.6.22",
+    "@mdx-js/react": "^2.1.2",
     "@types/react": ">= 16.8.0 < 18.0.0",
     "clsx": "^1.2.1",
     "dotenv": "^16.0.1",
