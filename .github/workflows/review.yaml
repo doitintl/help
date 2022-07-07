@@ -16,5 +16,5 @@ jobs:
       - run: make fixes
       # This action will suggest the fixes as comments on the PR
       - uses: reviewdog/action-suggester@v1
-        with:
-          github_token: ${{ secrets.DOCSBOT_PAT }}
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.DOCSBOT_PAT }}
