@@ -47,7 +47,7 @@ jobs:
       DEPLOY_URL: '${{ github.event.client_payload.deploy_url }}'
     steps:
       - uses: actions/checkout@v2
-      - uses: martialonline/workflow-status@v2
+      - uses: martialonline/workflow-status@v3
         id: check
       - uses: ravsamhq/notify-slack-action@v1
         env:
