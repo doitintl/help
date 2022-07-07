@@ -32,7 +32,7 @@ run_brok() {
 
 tmp_errors="$(mktemp)"
 status_code=0
-if ! run_brok 2>"${tmp_errors}"; then
+if ! run_brok >"${tmp_errors}" 2>&1; then
     sed '/^$/d' <"${tmp_errors}" |
         sed -E "s,\[(.*)\],${BLUE}\1${RESET}," |
         sed -E "s,.+\((.+)\): (.+),  ${RED}HTTP \1: \2 ${RESET},"
