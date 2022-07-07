@@ -15,7 +15,8 @@ RESET='\x1b[0m'
 
 tmp_repo_copy="$(mktemp -d)"
 rsync -qa . "${tmp_repo_copy}"
-make --no-print-directory -C "${tmp_repo_copy}" --silent clean
+git config --add safe.directory "${tmp_repo_copy}"
+make --no-print-directory -C "${tmp_repo_copy}" clean >/dev/null
 
 rm -rf "${tmp_repo_copy}/.git"
 
