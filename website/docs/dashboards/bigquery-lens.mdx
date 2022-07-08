@@ -45,6 +45,12 @@ Before diving into the widgets, have a look at the options provided in the two d
   alt="A partial screenshot of the BigQuery Lens dashboard"
 />
 
+:::info
+
+Except [BigQuery Spend by SKU](#bigquery-spend-by-sku-widget), all other widgets on the BigQuery Lens dashboard are updated daily at 1:00 AM UTC.
+
+:::
+
 ### Recommendations widget
 
 Comprehensive recommendations with details about how to act on each suggestion.
@@ -72,7 +78,17 @@ Select a table type to see the most frequently scanned tables of that type.
 
 BigQuery costs broken down per SKU.
 
-Select _View more_ in the upper-right corner of the widget to view a more detailed report with more configuration options.
+You can select the three dots menu (**&#8942**) in the upper-right corner of the widget for two additional options;
+
+- **Refresh**: By default, the BigQuery Spend by SKU widget is updated twice per day. You can use the _Refresh_ option to fetch the latest billing data from Google.
+
+  :::note
+
+  The information shown here is when CMP retrieves the billing data, while the timeliness of the data itself is decided by Google Cloud's [frequency of data loads](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#data-loads).
+
+  :::
+
+- **Open full report**: Opens the [report](../cloud-analytics/create-cloud-report/index.mdx) that generates the visualization in this widget.
 
 ## Recommendation types
 
