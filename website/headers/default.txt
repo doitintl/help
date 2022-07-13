@@ -58,12 +58,6 @@
   X-Robots-Tag: noindex
   X-Brew-Suggestion: /tea?opts=earl_gray,hot
 
-/_*
-  X-Robots-Tag: noindex
-
-/.*
-  X-Robots-Tag: noindex
-
 /coffee
   X-Robots-Tag: noindex
 
