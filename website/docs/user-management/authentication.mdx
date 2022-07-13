@@ -12,14 +12,14 @@ To configure authentication for your organization, select the gear icon from the
   frame="drop-shadow"
 />
 
-From here, you can configure two types of authentication flow:
+From here, you can configure two aspects of authentication:
 
 - **Single Sign-On**: Use your own _Single Sign-On_ (SSO) application
 - **Auth provider**: Allow [user log-ins](../general/log-in.mdx) via Google Workspace, Microsoft Office 365, or both
 
 ## Single Sign-On
 
-The CMP supports the following _Identity Provider_ (IdP) protocols for connecting with your SSO application:
+The CMP supports the following SSO application protocols:
 
 - _Security Assertion Markup Language_ (SAML)
 - _OpenID Connect_ (OIDC)
@@ -40,7 +40,7 @@ You must configure **SAML** or **OIDC** before you can enable SSO with the **Ena
 
 ### Configure SAML
 
-If your SSO application uses SAML, you must configure your chosen _Service Provider_ (SP) with the values displayed in the form field on the **Authentication** screen. For example:
+If your SSO application uses SAML, you must configure your chosen _Identity Provider_ (IdP) with the values displayed in the form field on the **Authentication** screen. For example:
 
 <picture
   img={require('../../assets/png/cmp-settings-auth-saml-values.png')}
@@ -56,7 +56,7 @@ After selecting **Configure**, the CMP will present the following form:
   frame="drop-shadow"
 />
 
-To configure the SAML protocol, enter the following information, provided to you by your SP:
+To configure the SAML protocol, enter the following information, provided to you by your IdP:
 
 - **Entity ID**: Your application's _Entity ID_ (aka _Audience URI_)
 - **SSO URL**: Your application's _SSO URL_ (aka the _Destination URL_)
@@ -80,7 +80,7 @@ The CMP will prompt you to confirm the operation when you select the **Save** bu
 
 ### Configure OIDC
 
-If your SSO application uses OIDC, you must configure your chosen _Service Provider_ (SP) with the values displayed in the form field on the **Authentication** screen. For example:
+If your SSO application uses OIDC, you must configure your chosen _Identity Provider_ (IdP) with the values displayed in the form field on the **Authentication** screen. For example:
 
 <picture
   img={require('../../assets/png/cmp-settings-auth-oidc-values.png')}
@@ -96,7 +96,7 @@ After selecting **Configure**, the CMP will present the following form:
   frame="drop-shadow"
 />
 
-To configure the SAML protocol, enter the following information, provided to you by your SP:
+To configure the SAML protocol, enter the following information, provided to you by your IdP:
 
 - **Client ID**: Your application's _Client ID_
 - **Issuer URL**: Your application's _Issuer URL_ (aka the metadata _Discovery URL_)
@@ -129,11 +129,11 @@ If you have configured both **SAML** and **OIDC**, you can change the protocol b
 
 ### User roles
 
-You can configure user roles via your Identity Provider (IdP) or [directly from within the CMP](../user-management/manage-roles.mdx).
+You can configure CMP user roles via your Identity Provider (IdP) by setting the custom `doit_platform_role_id` attribute on a user-by-user basis.
 
-If set, the CMP will assign roles to users based on the `doit_platform_role_id` attribute, as provided by your IdP. The value of this attribute should exactly match the _Role ID_ corresponding to [the desired CMP user role](../user-management/manage-roles.mdx).
+If your IdP provides a `doit_platform_role_id` value for a user, the CMP will assign the corresponding role to that user. For this to work, the value should exactly match the _Role ID_ corresponding to [the desired CMP user role](../user-management/manage-roles.mdx).
 
-To find the _Role ID_, navigate to **Identity and access** screen from the gear icon in the top right-hand corner of the CMP. Then, navigate to the **Roles** page and select the role you want to assign. From the role details page, select the **Copy Role ID** button in the top right-hand corner:
+To find the correct _Role ID_, navigate to **Identity and access** screen from the gear icon in the top right-hand corner of the CMP. Then, navigate to the **Roles** page and select the role you want to assign. From the role details page, select the **Copy Role ID** button in the top right-hand corner:
 
 <picture
   img={require('../../assets/png/cmp-iam-roles-role-id.png')}
@@ -141,7 +141,11 @@ To find the _Role ID_, navigate to **Identity and access** screen from the gear 
   frame="drop-shadow"
 />
 
-If your IdP does not provide a `doit_platform_role_id` attribute, the CMP will assign users the [default role](../user-management/manage-roles.mdx#setting-a-default-role) configured for your organization.
+:::note
+
+If your IdP does not provide a value for `doit_platform_role_id`, the CMP will assign the [default role](../user-management/manage-roles.mdx#setting-a-default-role) configured for your organization.
+
+:::
 
 ## Auth provider
 
