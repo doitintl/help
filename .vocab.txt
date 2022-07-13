@@ -155,6 +155,7 @@ quis
 rarr
 ravsamhq
 rbac
+rebalance
 rechtsanwaltsgesellschaft
 resourcemanager
 reviewdog

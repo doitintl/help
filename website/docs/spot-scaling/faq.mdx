@@ -54,11 +54,34 @@ By default Spot Scaling recommends 20% of desired capacity exists On-Demand and 
 
 You can exclude instance types that aren't fulfilling your workload requirements in the CMP. See [Modify Recommendations](setup.mdx#modify-recommendations).
 
-### Does Spot Scaling support AWS EKS?
+### What AWS technologies does Spot Scaling work with?
 
-Yes. Amazon EKS supports the Kubernetes [Cluster Autoscaler](https://docs.aws.amazon.com/eks/latest/userguide/autoscaling.html#cluster-autoscaler), which leverages AWS Autoscaling Groups.
+Spot Scaling works with any AWS technology that uses [_Auto Scaling Groups_](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html) (ASGs) to function.
+
+### Does Spot Scaling support Amazon ECS?
+
+Spot Scaling supports the [_AWS Elastic Container Service_](https://aws.amazon.com/ecs/) (Amazon ECS) with the [EC2 launch type](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html#launch-type-ec2), which, in turn, uses ASGs to function ([see above](#what-aws-technologies-does-spot-scaling-work-with)).
+
+However, Spot Scaling does not support Amazon ECS with the [Fargate launch type](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html#launch-type-fargate), because AWS Fargate does not use ASGs.
+
+### Does Spot Scaling support Amazon EKS?
+
+Yes. [_Amazon Elastic Kubernetes Service_](https://aws.amazon.com/eks/) (Amazon EKS) supports the Kubernetes [Cluster Autoscaler](https://docs.aws.amazon.com/eks/latest/userguide/autoscaling.html#cluster-autoscaler), which, in turn, uses ASGs to function ([see above](#what-aws-technologies-does-spot-scaling-work-with)).
 
 The Kubernetes Cluster Autoscaler is a core component of a Kubernetes control plane that automatically adjusts the number of nodes in your cluster when pods fail or are rescheduled onto other nodes. Applying Spot Scaling recommendations on your EKS environment allows you to generate savings by running Spot Instances.
+
+:::tip
+
+You can use the [AWS Node Termination Handler](https://github.com/aws/aws-node-termination-handler), an open-source project maintained by Amazon, to ensure "that the Kubernetes control plane responds appropriately to events that can cause your EC2 instance to become unavailable, such as EC2 maintenance events, EC2 Spot interruptions, ASG Scale-In, ASG AZ Rebalance, and EC2 Instance Termination via the API or Console."
+
+:::
+
+:::note See also
+
+- [AWS: Building for Cost optimization and Resilience for EKS with Spot Instances](https://aws.amazon.com/blogs/compute/cost-optimization-and-resilience-eks-with-spot-instances/)
+- [EKS Workshop: Using Spot Instances with EKS](https://www.eksworkshop.com/beginner/150_spotnodegroups/)
+
+:::
 
 ## Spot Scaling Auto-Enrollment
 
