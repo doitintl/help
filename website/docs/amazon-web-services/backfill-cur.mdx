@@ -1,0 +1,64 @@
+---
+sidebar_position: 5
+description: How to backfill historical CUR
+---
+
+# Backfill historical CUR
+
+:::note
+
+We support backfill of historical data with the following constraints:
+
+- You must be on a dedicated payer account (i.e., non-consolidated).
+
+- The CUR files are no older than one year.
+
+:::
+
+## Add CUR files to S3 bucket
+
+The CMP automatically discovers CUR files in the Amazon S3 bucket under your dedicated payer account.
+
+To backfill data from historical CUR files which do not exist in the bucket, you have to add them manually into the bucket:
+
+1. Sign in to your AWS [Billing & Cost Management console](https://console.aws.amazon.com/billing/home#/).
+
+2. Select **Cost & Usage Reports** on the navigation pane, verify that [cost and usage reports](https://docs.aws.amazon.com/cur/latest/userguide/cur-create.html) are enabled.
+
+3. Find the S3 bucket for your dedicated payer account.
+
+4. Use the following path structure and naming convention to add your historical CUR files.
+
+   ```
+   <base-CUR-path>/yyyymmdd-yyyymmdd/<manifest-file>-Manifest.json
+   ```
+
+   - `base-CUR-path`: The base path of the CUR file (each payer has its own base folder path).
+
+   - `yyyymmdd-yyyymmdd`: The billing month notation. For example: `20210101-20210201` for the billing month of January 2021.
+
+   - `<manifest-file>-Manifest.json`: This manifest file is the map of the CUR files related to that billing month. In each folder there must be such a file with its name ending in `-Manifest.json`.
+
+5. Make sure that you have granted the CMP access to the S3 bucket.
+
+:::info
+
+Once you uploaded the files, they will be discovered by the CMP in about six hours.
+
+:::
+
+## CUR files
+
+The CUR files must follow the AWS standard:
+
+- The format of the billing files is CSV.
+
+- The billing files are compressed using `zip` or `gz`.
+
+All the CUR files have to be in the folder specified in the `%-Manifest.json` file under `reportKeys`. Below is an example from a manifest file:
+
+```
+reportKeys:
+  0:      "ch/cloudhealth-hourly-cur/20190301-20190401/3d4115f5-cbe4-4e76-b480-c116dc632458/cloudhealth-hourly-cur-1.csv.gz"
+  1:      "ch/cloudhealth-hourly-cur/20190301-20190401/3d4115f5-cbe4-4e76-b480-c116dc632458/cloudhealth-hourly-cur-2.csv.gz"
+```

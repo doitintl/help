@@ -11,133 +11,118 @@ You can add existing AWS accounts to DoiT International's consolidated billing u
 
 Required Permission: **Licenses Manager**
 
-You must be assigned access to the specific Billing Profile under which the domain is managed in order to invite an existing account.
+You need access to the [Billing Profile](../invoices-and-payments/setting-up-a-new-billing-profile.mdx) which manages the domain.
 
 :::
 
-Within the CMP, select _Billing_ from the top navigation bar and then select _Assets_. The CMP will take you to the _Assets_ page.
+## Invite an existing account
 
-From the _Assets_ page, select _Amazon Web Services_ from the left-hand menu:
+To invite an existing account:
 
-<picture
-  img={require('../../assets/png/cmp-assets-aws.png')}
-  alt="A screenshot showing the Amazon Web Services assets page"
-/>
+1. Log in to the CMP, select **Billing** from the top navigation bar, and then select **Assets**.
 
-From the Amazon Web Services assets page, select the _Invite Account_ button.
+2. Select **Amazon Web Services** from the **Assets** list.
 
-The CMP will open a modal dialog:
+   <picture
+     img={require('../../assets/png/cmp-assets-aws.png')}
+     alt="A screenshot showing the Amazon Web Services assets page"
+     frame="drop-shadow"
+   />
 
-<picture
-  img={require('../../assets/png/cmp-assets-aws-invite-account-modal.png')}
-  alt="A screenshot showing the _Invite Account_ modal dialog"
-/>
+3. Select **Invite account** and provide the necessary information.
 
-Then:
+   - Select the billing profile you would like to invite.
 
-1. Select the billing profile you would like to invite
-2. Enter the 12-digit AWS Account ID
-3. Add invitation notes (optional)
+   - Enter the 12-digit AWS Account ID.
 
-When you are done, select _Invite_.
+   - Add invitation notes (optional).
 
-You should then receive an email from Amazon Web Services with a link to accept the invitation:
+   <picture
+     img={require('../../assets/png/cmp-assets-aws-invite-account-modal.png')}
+     alt="A screenshot showing the _Invite Account_ modal dialog"
+     frame="drop-shadow"
+   />
 
-<picture
-  img={require('../../assets/png/email-invite-existing-3.png')}
-  alt="A screenshot of an email sent by DoiT"
-/>
+4. Select **Invite**.
 
-If you haven't received the above email within five minutes, please re-enter your AWS Account ID in the DoiT Cloud Management Platform and send the invite again.
+   You should then receive an email from Amazon Web Services with a link to accept the invitation. If you haven't received the email in five minutes, re-enter your AWS Account ID in the CMP and send the invitation again.
 
-To complete the process, sign in to the [AWS Organizations Console](https://console.aws.amazon.com/organizations/). On the Invitations page in the console, you can see your open invitations to join organizations:
+To complete the process:
 
-<picture
-  img={require('../../assets/png/aws-invite-4.png')}
-  alt="A screenshot of the AWS _Invitations_ screen"
-/>
+1. Sign in to the [AWS Organizations Console](https://console.aws.amazon.com/organizations/).
 
-Finally, select the _Accept_ button to accept the invitation.
+   Your open invitations to join organizations are shown on the **Invitations** page.
 
-Afterward, you will be redirected to the _Organization overview_ page that provides details about the organization that your account has joined. You can view the organization's ID and the owner's email address.
+   <picture
+     img={require('../../assets/png/aws-invite-4.png')}
+     alt="A screenshot of the AWS _Invitations_ screen"
+     frame="drop-shadow"
+   />
 
-## Multiple Accounts Under a Master Organization
+2. Accept the invitation.
 
-In the event that you have multiple accounts under a Master account / organization, you will get an error trying to accept the invitation.
+   You will be redirected to the **Organization overview** page with details about the organization that your account has joined, including the organization's ID and the owner's email address.
 
-In order to successfully accept the invitation, you must remove each linked AWS account from your master account.
+### Multiple accounts under a management account
 
-:::note
+If you have multiple accounts under a management account (formerly known as master account), you will get an error trying to accept the invitation. To solve the problem, you need to remove the linked AWS accounts from your management account (see [AWS documentation](https://aws.amazon.com/organizations/faqs/) for more information).
 
-This will prompt you to input payment details for each linked account if you didn't do so while initially creating them.
+For each linked account:
 
-:::
+1. Leave the organization (no new invitation will appear before you finish this step).
 
-For each account you must:
+   :::note
 
-1. "Leave" the Organization (no new invites will appear before you do this)
-2. Accept the invite from DoiT International in each linked account
+   You'll be prompted to enter payment details for the account if you haven't done so.
 
-## Completing IAM Access for CloudHealth
+   :::
 
-After signing in to the AWS Console and accepting the invitation, a final email will be sent instructing how to complete the IAM access for CloudHealth.
+2. Accept the invitation from DoiT International.
 
-<picture
-  img={require('../../assets/png/email-invite-5.png')}
-  alt="A screenshot of an email sent by DoiT"
-/>
+### Complete IAM Access for CloudHealth
 
-## Frequently asked questions
+After accepting the invitation in the AWS Console, you'll receive a final email about how to complete the IAM access for CloudHealth. See also [Set up CloudHealth](set-up-cloudhealth.mdx).
+
+## FAQ
 
 ### Why should I use the CMP for cost analytics when Amazon provides the AWS Cost Explorer?
 
-When you consolidate with the DoiT International billing organization, the [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/) can only report on [blended rates and costs](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/con-bill-blended-rates.html#Blended_CB). On the other hand, the CMP's reporting and analytics features work directly with your non-blended cost data.
+When you consolidate with the DoiT International billing organization, the [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/) can only report on [blended rates and costs](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/con-bill-blended-rates.html#Blended_CB), while the CMP's reporting and analytics features work directly with your non-blended cost data.
 
 If you have a dedicated billing account (i.e., non-consolidated), you can use the AWS Cost Explorer with un-blended costs. However, we still recommend that you refer to the CMP for a fully integrated reporting and analytics experience.
 
-### I've performed all the requested steps. I have spends on my AWS billing account, but my information is still not there. What could be the reason?
+### I've performed all the requested steps and have spends on my AWS billing account, why my information is still not there?
 
-Once successfully completed it takes 24&ndash;72 hours for the data to start flowing through from AWS, then our Cloud Management Platform will update.
+It takes 24&ndash;72 hours for the data to start flowing through from AWS, then our Cloud Management Platform will update.
 
-### I have not received any invitation email. What could have gone wrong?
+### I haven't received any invitation email. What could have gone wrong?
 
-On your organization's page, check if you can see the invite:
+Sign in to the [AWS Organizations Console](https://console.aws.amazon.com/organizations/), see if there are invitations on your organization's page.
 
-<picture
-  img={require('../../assets/png/aws-invite-6.png')}
-  alt="A screenshot of the _AWS Organizations_ page"
-/>
+- If there are no invitations, check if your account have left your organization as described at [Multiple accounts under a management account](#multiple-accounts-under-a-management-account).
 
-If you can't see that invite, check if you have left your organization as specified in the above "Multiple Accounts Under a Master Organization" steps.
+- If you can see the invitation on the organization's page, consider the following:
 
-If you can see the invite on the organization's page, consider the following:
+  - Is the invitation in your spam folder?
+  - Did you enter the correct AWS account ID when inviting the account?
 
-Is the invite in your spam folder? Did you enter the correct AWS account ID when inviting the account?
-
-If you are still having issues, you can [open a support ticket](https://hello.doit-intl.com/support).
+If you still have issues, please [open a support ticket](https://hello.doit-intl.com/support).
 
 ### My payer account is showing as N/A or my CloudHealth status shows as "critical" or "unknown". What does that mean?
 
-<picture
-  img={require('../../assets/png/cmp-cloudhealth-status-unknown.png')}
-  alt="CloudHealth Status: Unknown"
-/>
+It means that your CloudHealth is not configured properly, which has the following consequences:
 
-It means that your CloudHealth configuration was not done properly.
+- The CMP is not able to properly reflect your reservation data, and you cannot use the Flexsave and Spot Scaling services.
+- You will not be able to run reports on this asset due to the fact that no data is flowing to the CMP.
 
-**Actions to take:** please [open a support ticket](https://hello.doit-intl.com/support) if you see the CloudHealth status as "critical" or "unknown", or if you see Payer Account: N/A.
+Please [open a support ticket](https://hello.doit-intl.com/support).
 
-**The consequences are the following:**
+### I've invited an existing AWS account. When will it appear in the CMP?
 
-- Our Cloud Management Platform is not able to properly reflect your reservation data, and you cannot use the Flexsave and Spot Scaling services.
-- It also means you will not be able to run reports on this asset, the reason being that the data is not flowing to our platform.
+The account will appear in the CMP after the DoiT operations team finishes onboarding the account in DoiT systems, and the account needs to have at least one resource with some spend.
+
+It usually takes 24&ndash;48 hours for the account to appear in the CMP.
 
 ### I want historical backfill. What should I do?
 
-If you would like historical backfill so that your data prior to joining DoiT is shown, please follow these steps:
-
-1. Verify that [cost and usage reports](https://docs.aws.amazon.com/cur/latest/userguide/cur-create.html) are enabled by visiting your AWS [Billing & Cost Management Dashboard](https://console.aws.amazon.com/billing/home#/), then selecting _Cost & Usage Reports_ from the left-hand menu.
-
-   You must have an existing report configured under _Cost and Usage Reports_ before we can backfill your data.
-
-2. Within the CMP, please open a [support request](../services/consulting-support/index.mdx) requesting that we backfill your data. You will need to provide access to the S3 buckets where the cost and usage report files are stored along with the associated `manifest.json` file.
+We support backfill of historical data on dedicated payer accounts. See [Backfill historical CUR](backfill-cur.mdx) for details.
