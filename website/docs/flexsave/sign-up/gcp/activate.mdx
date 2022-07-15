@@ -72,7 +72,7 @@ Perform the following tasks to complete the activation:
           --organization=$ORG_ID \
           --title="DoiT Flexsave Role" \
           --stage=GA \
-          --add-permissions=billing.accounts.get,bigquery.jobs.create,billing.resourceAssociations.create,resourcemanager.projects.createBillingAssignment
+          --add-permissions=billing.accounts.get,bigquery.jobs.create,billing.resourceAssociations.create
       ```
 
       The command above updates the `DoiT Flexsave Role`, which was created when [setting up your estimate](get-estimate.mdx#set-up-your-estimate) and is associated with the DoiT service account, to add the following permissions:
@@ -87,8 +87,7 @@ Perform the following tasks to complete the activation:
         </dt>
         <dd> Allows to import your billing tables</dd>
         <dt>
-          <code>billing.resourceAssociations.create</code>,{' '}
-          <code>resourcemanager.projects.createBillingAssignment</code>
+          <code>billing.resourceAssociations.create</code>
         </dt>
         <dd>Allows to attach projects to your billing account</dd>
       </dl>

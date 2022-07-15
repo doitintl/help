@@ -37,10 +37,10 @@ Flexsave delivers [the equivalent savings of a 1-year commitment](../../index.md
           --organization $ORGANIZATION_ID \
           --title="DoiT Flexsave Role" \
           --stage=GA \
-          --permissions=recommender.usageCommitmentRecommendations.list,compute.instances.list
+          --permissions=recommender.usageCommitmentRecommendations.list
       ```
 
-      This command grants the custom role the following permissions:
+      This command grants the custom role the following permission:
 
       <dl>
         <dt>
@@ -53,10 +53,6 @@ Flexsave delivers [the equivalent savings of a 1-year commitment](../../index.md
             CUD recommender
           </Link>
         </dd>
-        <dt>
-          <code>compute.instances.list</code>
-        </dt>
-        <dd>Allows to view compute instances</dd>
       </dl>
 
    1. Add an IAM policy binding to associate the `doit_flexsave_role` role to the service account.
