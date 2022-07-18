@@ -5,45 +5,49 @@ description: Create new AWS account/s with preconfigured consolidated billing di
 
 # Create an AWS account
 
-As a customer, you can create a new AWS account directly from the Cloud Management Platform.
+As a customer, you can create a new AWS account directly from the _Cloud Management Platform_ (CMP).
 
 :::note
 
-You must be assigned access to the specific Billing Profile under which the domain is managed in order to create a new account.
+You must be assigned access to the specific _Billing Profile_ under which the domain is managed in order to create a new account.
 
 :::
 
-:::caution
+Within the CMP, select **Billing** from the top navigation bar and then select **Assets**. The CMP will take you to the **Assets** page.
 
-You will see an **OrganizationAccountAccessRole** in the new AWS account. This role is created by AWS and links back to the parent account. When creating the account we will use this role to [create the CloudHealth IAM Role](https://help.doit-intl.com/amazon-web-services/set-up-cloudhealth). The CMP or DoiT International will not use this role afterwards and you will have to **manually remove this role from your account**
-
-:::
-
-Within the CMP, select _Billing_ from the top navigation bar and then select _Assets_. The CMP will take you to the _Assets_ page.
-
-From the _Assets_ page, select _Amazon Web Services_ from the left-hand menu:
+From the **Assets** page, select **Amazon Web Services** from the left-hand menu:
 
 <picture
-  img={require('../../assets/png/cmp-assets-aws.png')}
+  img={require('../../assets/png/cmp-billing-assets-aws.png')}
   alt="A screenshot showing the Amazon Web Services assets page"
+  frame="drop-shadow"
 />
 
-From the Amazon Web Services assets page, select the arrow next to the _Invite Account_ button, then select _Create Account_ from the drop-down menu that appears. Finally, select the button a second time (which should now read _Create Account_).
-
-The CMP will open a modal dialog:
+From the Amazon Web Services assets page, select the **Create account** button in the upper-right corner. The CMP will open a dialog:
 
 <picture
-  img={require('../../assets/png/cmp-assets-aws-create-account-modal.png')}
-  alt="A screenshot showing the _Create Account__ modal dialog"
+  img={require('../../assets/png/cmp-billing-assets-aws-create.png')}
+  alt="A screenshot showing the Create account modal dialog"
+  frame="drop-shadow"
 />
 
 Then:
 
-1. Choose the billing profile for the account
-2. Chose a name for the account
-3. Set the _root email_
+1. Choose the billing profile for the account.
+2. Chose a name for the account.
+3. Set the root email.
+4. Optionally, clear the **Delete AWS Organization role** checkbox.
 
-When you are done, select _Create_.
+   :::tip
+
+   When you create a new account in an organization, AWS automatically creates an IAM role named `OrganizationAccountAccessRole`.
+   This role has full administrative permissions in the new account, and the organization can assume this role to access your account.
+
+   Keep this checkbox selected if you wish to delete this role and prevent access from the organization's account.
+
+   :::
+
+When you are done, select **Create**.
 
 The CMP will display a confirmation message:
 
@@ -57,14 +61,6 @@ The CMP will send you an email with further instructions. For example:
 <picture
   img={require('../../assets/png/email-aws-create-2.png')}
   alt="A screenshot of a _New Account_ email"
-/>
-
-The following video walks you through the whole process:
-
-<video
-  type="loom"
-  id="f92b0a76aa884a52ad9281f0736f44a1"
-  thumb="-00001.gif"
 />
 
 Please [get in touch with our support team](https://support.doit-intl.com) if you require further assistance.
