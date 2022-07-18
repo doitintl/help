@@ -1,8 +1,8 @@
 plugins:
   '@textlint/markdown':
     extensions:
-    - .md
-    - .mdx
+      - .md
+      - .mdx
 
 filters:
   # https://github.com/textlint/textlint-filter-rule-allowlist
