@@ -111,7 +111,7 @@ const pluginIdealImage = [
   {
     min: 320,
     max: 2560,
-    steps: 8,
+    steps: 4,
     background: '#ffffff',
     placeholder: true,
     disableInDev: true,
