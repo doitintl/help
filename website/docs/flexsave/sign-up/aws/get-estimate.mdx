@@ -34,9 +34,9 @@ Follow the instructions on screen to create your CloudFormation stack.
 
 DoiT uses the [Cost Explorer API][cost-explorer-api] to fetch aggregated information about your spend with AWS. This information doesn't contain names of your machines, buckets or tags. This information will enable the calculation of your potential savings with Flexsave.
 
-To use the Cost Explorer API, we have prepared a template [CloudFormation stack][cloudformation stack] stack that creates a [Cross-Account role][cross-account-role] that grants DoiT International limited read-only permissions to query your AWS account (see below for details).
+To use the Cost Explorer API, we have prepared a template [CloudFormation stack][cloudformation-stack] stack that creates a [Cross-Account role][cross-account-role] that grants DoiT International limited read-only permissions to query your AWS account (see below for details).
 
-To create the CloudFormation stack, select the _OPEN AWS CLOUDFORMATION CONSOLE_ button. The browser will open a window prompting you to log into your AWS console.
+To create the CloudFormation stack, select the <!-- textlint-disable terminology -->_OPEN AWS CLOUDFORMATION CONSOLE_<!-- textlint-enable --> button. The browser will open a window prompting you to log into your AWS console.
 
 :::warning
 
@@ -128,7 +128,7 @@ After reviewing your personalized savings estimation, you can [activate Flexsave
 --->
 
 [cost-explorer-api]: https://docs.aws.amazon.com/cost-management/latest/userguide/ce-api.html
-[cloudformation stack]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html
+[cloudformation-stack]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html
 [cost-explorer-yaml]: https://doit-cmp-ops-pub.s3.amazonaws.com/prod/flexsave_create_role_N_policies.yml
 [management-account]: https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#account
 [consolidated-billing]: https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html

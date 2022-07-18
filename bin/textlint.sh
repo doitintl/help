@@ -33,7 +33,7 @@ for arg in "$@"; do
 done
 
 run_fdfind() {
-    fdfind -H -t f --print0 '\.md$$'
+    fdfind -H -t f --print0 '\.mdx$$'
 }
 
 run_textlint() {
