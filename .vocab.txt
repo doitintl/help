@@ -103,7 +103,6 @@ loglevel
 lqip
 maci
 mailto
-markdowncheck
 markdownlint
 martialonline
 matchdotfiles

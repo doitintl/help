@@ -60,8 +60,8 @@ rules:
   # https://github.com/textlint-rule/textlint-rule-proselint
 
   # https://github.com/azu/textlint-rule-en-max-word-count
-  en-max-word-count:
-    max: 40
+  # en-max-word-count:
+  #   max: 40
 
   # https://github.com/sapegin/textlint-rule-diacritics
   diacritics: true
@@ -74,9 +74,7 @@ rules:
   # exclude": []
 
   # https://github.com/textlint-rule/textlint-rule-en-capitalization
-  en-capitalization:
-    allowWords:
-      - superQuery
+  en-capitalization: true
 
   # https://github.com/io-monad/textlint-rule-common-misspellings
   common-misspellings:
@@ -191,7 +189,6 @@ rules:
       - SPs
       - SSD
       - SSDs
-      - superQuery
       - SuSe
       - SuSe Enterprise Linux
       - TCO
