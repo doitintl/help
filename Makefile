@@ -98,7 +98,7 @@ fixes: rm-unused-docs
 # rm-unused-assets-dry:
 # check: rm-unused-assets-dry
 
-markdowncheck:
+markdownlint:
 check: markdownlint
 
 html-entities:
