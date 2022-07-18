@@ -47,7 +47,6 @@ const config = {
               'hint',
               'tip',
               'important',
-              'info', // TODO: Temporary, remove
               'note',
               'seealso',
             ],

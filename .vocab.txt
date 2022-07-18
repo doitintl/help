@@ -50,6 +50,7 @@ devcontainer
 docops
 docsbot
 docsearch
+docutils
 doesn't
 doit
 doitintl

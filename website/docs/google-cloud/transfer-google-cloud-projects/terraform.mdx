@@ -8,7 +8,7 @@ To switch billing for projects that are managed via Terraform, you will have to 
 
 ## Grant permission
 
-:::note
+:::important
 
 To add the Terraform service account as Billing User, you should be a Billing Account Administrator for the DoiT Billing Account.
 
@@ -61,9 +61,9 @@ To grant permission for projects that are managed by Terraform, follow these ste
      alt="A screenshot of the Add principals and roles form"
    />
 
-:::info Default Billing Account
+:::attention Default Billing Account
 
-If an identity (in this case the terraform service account) only has access to a single billing account, GCP will use that as the default \*\*`billing_account`\*\*value in Terraform. You could use this behavior to ensure DoiT Billing Account is selected as the default by removing the Terraform service account's permission to any other billing accounts and/or explicitly set the DoiT Billing Account ID on your Terraform script. See steps below.
+If an identity (in this case the terraform service account) only has access to a single billing account, GCP will use that as the default `billing_account` value in Terraform. You could use this behavior to ensure DoiT Billing Account is selected as the default by removing the Terraform service account's permission to any other billing accounts and/or explicitly set the DoiT Billing Account ID on your Terraform script. See steps below.
 
 :::
 
