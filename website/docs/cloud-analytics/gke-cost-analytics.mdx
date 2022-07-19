@@ -1,123 +1,154 @@
 ---
 sidebar_position: 14
-description: How to unlock Google Kubernetes Engine cost data and make it available in Cloud Analytics
+description: Unlock Google Kubernetes Engine cost data and make it available in Cloud Analytics
 ---
 
 # GKE Cost Analytics
 
-GKE Cost Analytics in the CMP helps you demystify your Google Kubernetes Engine (GKE) spend. With real-time visibility into GKE spend, you'll be able to:
+GKE Cost Analytics in the CMP helps you demystify your Google Kubernetes Engine (GKE) spend.
 
-- Accurately track TCO of Kubernetes-based workloads across teams, product lines, etc.
-- Plan better with realistic Kubernetes-based [budgets](manage-budgets.mdx)
-- [Forecast](reports/forecasting.mdx) and [identify trends](reports/trend-analysis.mdx) across any/all K8s primitives in one click.
+## Overview
 
-Enabling GKE Cost Analytics involves three main steps:
+With real-time visibility into GKE spend, you'll be able to:
 
-1. Connect your Google Cloud Organization by uploading a service account
-2. Enable GKE Usage Metering for your GKE clusters in the Google Cloud console or CloudSDK
-3. Grant the "BigQuery Data Viewer" role to the service account (generated in step 1)
+- Accurately track the total cost of ownership (TCO) of Kubernetes-based workloads across teams or product lines.
 
-:::caution
+- Plan better with realistic Kubernetes-based [budgets](manage-budgets.mdx).
 
-You may have already executed some or all of these steps. However, unless ALL steps have been taken, the GKE Cost Analytics feature will not function correctly in the DoiT CMP.
+- [Forecast](reports/forecasting.mdx) and [identify trends](reports/trend-analysis.mdx) across Kubernetes primitives in one click.
+
+:::info
+
+GKE Cost Analytics is not applicable to **Autopilot clusters**, which do not support usage metering (see [Google Cloud Docs](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview#unsupported_cluster_features)).
 
 :::
+
+## Set up GKE Cost Analytics
 
 :::note
 
-GKE Cost Analytics is not applicable to **Autopilot clusters** because they currently do not support Usage Metering feature as noted [here](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview#unsupported_cluster_features).
+For the GKE Cost Analytics feature to function properly, you need to complete all the steps below.
 
 :::
 
-## Step 1 &mdash; Enable the GKE Cost Analytics
+### Step 1 &mdash; Enable GKE Cost Analytics
 
-In order to do this, you will need to [connect your Google Cloud Organization](../google-cloud/connect-google-cloud-service-account.mdx) to the CMP. Please navigate to the Settings page via the gear icon in your left-hand navigation panel.
+To enable GKE Cost Analytics, you need to [connect your Google Cloud Organization](../google-cloud/connect-google-cloud-service-account.mdx) and grant the required permissions to the CMP.
 
-Then check the box(es) of the additional features you'd like to enable, making sure to select "GKE Cost Analytics" here.
+1. To check the status of your service account, log in to the CMP, select the _Settings_ icon (a gear) from the top menu bar, and then select **Google Cloud**.
 
-<picture
-  img={require('../../assets/png/cmp-gke-cost-analytics-enable.png')}
-  alt="A screenshot showing you the location of the location of the Upload Key button"
-/>
+2. Select the **GKE Cost Analytics** checkbox to enable the feature.
 
-Click on the "Create Service Account" button. This will display all of the Google SDK ([gcloud](https://cloud.google.com/sdk)) commands you need to run sequentially to create the service account that contains the permissions for all of the features you checked.
+   <picture
+     img={require('../../assets/png/cmp-gke-cost-analytics-enable.png')}
+     alt="A screenshot highlighting the GKE Cost Analytics feature"
+     frame="drop-shadow"
+   />
 
-Finally, once you've executed all of the commands, select the _UPLOAD KEY_ button to upload the service account to the CMP.
+3. Select **Update role**.
 
-:::tip
+   A slide-out will appear containing the `gcloud` commands you need to run to update your service account's role.
 
-Remember the service account email you created in this step. You will need it for step three.
+### Step 2 &mdash; Enable the Kubernetes Engine API
 
-:::
+1. In the Google Cloud console, on the project selector page, select the project where you created the service account.
 
-## Step 2 &mdash; Enable GKE Usage Metering in the Google Cloud Console
+2. Enable the Google Kubernetes Engine APIs.
 
-First, you will need to create a BigQuery dataset in the Google Cloud console, and then configure your clusters to export their resource usage to it.
+See [Google Cloud Docs](https://cloud.google.com/kubernetes-engine/docs/deploy-app-cluster#before-you-begin) for details.
 
-After that, you can enable GKE usage metering on a new or existing cluster, using either the [`gcloud`](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering#gcloud) command or the [Cloud Console](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering#console).
+### Step 3 &mdash; Enable GKE usage metering
 
-You can find a more detailed description of these steps in the Google Kubernetes Engine [documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering#enabling).
+In this step, you enable GKE usage metering for your GKE clusters:
+
+1. Create a BigQuery dataset. You can use [Google Cloud console](https://cloud.google.com/bigquery/docs/datasets#console) or [Terraform](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/bigquery_dataset).
+
+2. Configure your clusters to export their resource usage to the newly created BigQuery dataset by enabling GKE usage metering on new or existing clusters.
+
+   You can use the following methods:
+
+   - Google Cloud console: See [Google Cloud Docs](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering#console).
+
+   - gcloud command: Run the following command to create a cluster with GKE usage metering enabled (see [Google Cloud Docs](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering#gcloud) for more information).
+
+     ```bash
+     gcloud container clusters create $CLUSTER_NAME \
+     --resource-usage-bigquery-dataset $RESOURCE_USAGE_DATASET
+     ```
+
+   - [Terraform Kubernetes Engine Module](https://registry.terraform.io/modules/terraform-google-modules/kubernetes-engine/google/latest): Set `enable_resource_consumption_export = true` to enable resource consumption metering on the cluster. When enabled, a table will be created in the resource export BigQuery dataset to store resource consumption data.
 
 :::note
 
-- You can set multiple clusters in your project to write to the same BigQuery dataset
-- Clusters can export usage data only to BigQuery datasets in the same project
+- It's possible to have multiple clusters in one project writing to the same BigQuery dataset.
+
+- Clusters can export usage data only to the BigQuery datasets in the same project.
 
 :::
 
-## Step 3 &mdash; Grant the "BigQuery Data Viewer" role
+### Step 4 &mdash; Grant the BigQuery Data Viewer role
 
-In order to do this for each GKE usage dataset you've created, you will need to ensure this role is assigned to the Service Account email created in [Step 1](gke-cost-analytics.mdx#step-1-enable-the-gke-cost-analytics-feature-in-the-doit-cmp) above.
+You can grant the _BigQuery Data Viewer_ role to the service account for each GKE usage dataset by using the Google Cloud console or the Google Cloud Shell.
 
-First, navigate to the BigQuery console and locate the dataset you chose from [Step 2](gke-cost-analytics.mdx#step-2-enable-gke-usage-metering-in-the-google-cloud-console) to store the cluster usage information.
+#### Use the Google Cloud console
 
-From there, select "Share Dataset"
+1. Navigate to the BigQuery console and locate the dataset created in [Step 3](#step-3--enable-gke-usage-metering).
+
+2. Select **Share Dataset**.
+
+   <picture
+     img={require('../../assets/png/gcp-share-dataset-button.png')}
+     alt="A screenshot showing you the location of the Share Dataset button"
+   />
+
+3. In the **Add members** field, enter the email address of the service account configured in [Step 1](#step-1--enable-gke-cost-analytics).
+
+4. Grant the service account the _BigQuery Data Viewer_ role, select **Add**, and then select **Done** to apply the changes.
+
+   <picture
+     img={require('../../assets/png/gcp-grant-bigquery-data-view-role.png')}
+     alt="A screenshot showing how to grant the BigQuery Data Viewer role"
+     frame="drop-shadow"
+   />
+
+#### Use the Google Cloud Shell
+
+Copy the command code snippets below and run them in sequence in the Google Cloud Shell.
+
+```bash
+gcloud config set project $customer_billing_project_id
+
+bq show --format=prettyjson $DATASET_ID |
+  jq '.access = .access + [{"role": "READER", "userByEmail": "$customer_service_account' \
+  >permissions.json
+
+bq update --source permissions.json $DATASET_ID
+```
+
+#### Verify the access
+
+Check that the access to the _BigQuery Data Viewer_ role has been granted.
+
+Datasets with missing permissions are listed in the **Features** widget. They are not available in the GKE Cost Analytics feature.
 
 <picture
-  img={require('../../assets/png/gcp-share-dataset-button.png')}
-  alt="A screenshot showing you the location of the Share Dataset button"
+  img={require('../../assets/png/cmp-gke-dataset-permission.png')}
+  alt="A screenshot showing datasets with missing permissions"
+  frame="drop-shadow"
 />
 
-Then enter the service account email in the "Add members" field. Finally, grant this email the "BigQuery Data Viewer" role and click "Add", then "Done" to apply the changes.
+## Analyze GKE cost
 
-<picture
-  img={require('../../assets/png/gcp-grant-bigquery-data-view-role.png')}
-  alt="A screenshot showing how to grant the BigQuery Data Viewer role"
-/>
+Once you've set up GKE Cost Analytics, additional Google Kubernetes Engine dimensions and GKE Labels will be available in [Cloud Analytics Reports](reports/index.mdx).
 
-:::note
+You can drag a GKE chip or a GKE label chip into the **Group by** or **Dimensions** section to start understanding the real costs of running Kubernetes-based workloads on GKE. See [Dimensions, Group by, and Filters](reports/report-dimensions-groupings-and-filters.mdx) for more information.
 
-Datasets to which the Service Account email is not granted this permission will not be available in the GKE Cost Analytics feature of the DoiT CMP.
+## Limitations
 
-:::
+- GKE reports only show data from the day when all the steps were completed. If you need to load historical data (i.e. _backfill_), please contact DoiT support team to file a backfill request.
 
-## Step 4 &mdash; Make sure you have the Kubernetes Engine API enabled
+- If you never enabled _GKE usage metering_ in the Google Cloud Console before setting up GKE Cost Analytics, we will not be able to show historical data in GKE reports.
 
-If you created the CMP service account in `Project A`, then "Kubernetes Engine API" needs to be enabled in the project in which you created the CMP service account, `Project A.`
+- After you complete all the steps, it usually takes around four hours for you to be able to use GKE reports in Cloud Analytics.
 
-## Analyzing GKE Cost Data in the CMP
-
-Once everything is set up, your team's GKE metering data can be analyzed using the CMP's [Cloud Analytics](reports/index.mdx) functionality.
-
-To start, open a new Report. You should see new GKE dimensions appear alongside your other billing dimensions, as highlighted below.
-
-<picture
-  img={require('../../assets/png/cmp-gke-dimensions.png')}
-  alt="A screenshot showing the GKE dimensions"
-/>
-
-You will also find any GKE labels in the Labels chip, under the "GKE Labels" header in the dropdown.
-
-<picture
-  img={require('../../assets/png/cmp-gke-labels-dropdown.png')}
-  alt="A screenshot showing the GKE Labels dropdown"
-/>
-
-Drag a GKE chip or a GKE label chip into the "Group By" or "Dimensions" section to start understanding the real costs of running Kubernetes-based workloads on Google Kubernetes Engine.
-
-## Current Limitations
-
-- GKE reports will only show data from the day that all of the steps were completed. We may be able to load historical data upon request (i.e. "backfill"). Please contact support to file a backfill request.
-- If you did not have "GKE Usage Metering" enabled until now, we will not be able to show historical data for GKE reports.
-- It will take a few hours from the moment you complete all steps until you will be able to use GKE reports in Cloud Analytics. Usually, this process will take around 4 hours.
-- GKE reports are not compatible with some of the dimensions. For example, you will not be able to create a report that is based on the "GKE Cluster" field and the "Zone" field. You also cannot combine both Google Cloud Labels and GKE Labels in the same report.
+- GKE reports are not compatible with some of the dimensions. For example, you will not be able to create a report that is based on the _GKE Cluster_ field and the _Zone_ field. You also cannot combine Google Cloud Labels and GKE Labels in the same report.
