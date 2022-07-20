@@ -5,5 +5,3 @@
 *.py
 sphinx/cmp/docs
 build
-# TODO: Remove this (only needed for one temporary commit)
-website/src/theme/*/*.js
