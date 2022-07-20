@@ -14,7 +14,7 @@
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "dependencies": {
-    "@algolia/client-search": "^4.14.0",
+    "@algolia/client-search": "^4.14.1",
     "@docsearch/react": "3",
     "@docusaurus/core": "^2.0.0-rc.1",
     "@docusaurus/plugin-ideal-image": "^2.0.0-rc.1",
