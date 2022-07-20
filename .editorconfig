@@ -32,6 +32,10 @@ max_line_length = off
 [docusaurus.config.js]
 max_line_length = off
 
+# TODO: Remove this (only needed for one temporary commit)
+[website/src/theme/*/*.js]
+max_line_length = off
+
 [website/redirects/*.txt]
 max_line_length = off
 

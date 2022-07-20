@@ -90,6 +90,7 @@ iframe
 ignorecase
 imgdup
 imgdupignore
+infima
 iops
 jsonld
 kpis
@@ -165,6 +166,7 @@ sarbanes
 sarl
 savingsplans
 sddefault
+seealso
 semibold
 serv
 serviceusage

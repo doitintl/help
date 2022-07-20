@@ -1,14 +1,18 @@
 import React from 'react';
-import MDXHead from '@theme-original/MDXComponents/Head';
-import MDXCode from '@theme-original/MDXComponents/Code';
-import MDXA from '@theme-original/MDXComponents/A';
-import MDXPre from '@theme-original/MDXComponents/Pre';
-import MDXDetails from '@theme-original/MDXComponents/Details';
-import MDXHeading from '@theme-original/MDXComponents/Heading';
-import MDXUl from '@theme-original/MDXComponents/Ul';
-import MDXImg from '@theme-original/MDXComponents/Img';
+import MDXHead from '@theme/MDXComponents/Head';
+import MDXCode from '@theme/MDXComponents/Code';
+import MDXA from '@theme/MDXComponents/A';
+import MDXPre from '@theme/MDXComponents/Pre';
+import MDXDetails from '@theme/MDXComponents/Details';
+import MDXHeading from '@theme/MDXComponents/Heading';
+import MDXUl from '@theme/MDXComponents/Ul';
+import MDXImg from '@theme/MDXComponents/Img';
+import Admonition from '@theme/Admonition';
+
+// Custom components
 import IdealImage from '@theme/IdealImage';
 import VideoEmbed from '@theme/VideoEmbed';
+
 const MDXComponents = {
   head: MDXHead,
   code: MDXCode,
@@ -25,5 +29,6 @@ const MDXComponents = {
   h4: (props) => <MDXHeading as="h4" {...props} />,
   h5: (props) => <MDXHeading as="h5" {...props} />,
   h6: (props) => <MDXHeading as="h6" {...props} />,
+  admonition: Admonition,
 };
 export default MDXComponents;

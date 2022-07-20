@@ -37,6 +37,21 @@ const config = {
           editUrl: doit.ghEditUrl,
           showLastUpdateTime: true,
           breadcrumbs: false,
+          admonitions: {
+            keywords: [
+              'danger',
+              'error',
+              'warning',
+              'caution',
+              'attention',
+              'hint',
+              'tip',
+              'important',
+              'info', // TODO: Temporary, remove
+              'note',
+              'seealso',
+            ],
+          },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
