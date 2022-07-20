@@ -69,7 +69,7 @@ const AdmonitionConfigs = {
   seealso: {
     infimaClassName: 'secondary',
     iconComponent: NoteIcon,
-    label: 'see also'
+    label: 'see also',
   },
   tip: {
     infimaClassName: 'success',
@@ -151,7 +151,9 @@ function extractMDXAdmonitionTitle(children) {
   };
 }
 function processAdmonitionProps(props) {
-  const { mdxAdmonitionTitle, rest } = extractMDXAdmonitionTitle(props.children);
+  const { mdxAdmonitionTitle, rest } = extractMDXAdmonitionTitle(
+    props.children,
+  );
   return {
     ...props,
     title: props.title ?? mdxAdmonitionTitle,
@@ -159,7 +161,12 @@ function processAdmonitionProps(props) {
   };
 }
 export default function Admonition(props) {
-  const { children, type, title, icon: iconProp } = processAdmonitionProps(props);
+  const {
+    children,
+    type,
+    title,
+    icon: iconProp,
+  } = processAdmonitionProps(props);
   const typeConfig = getAdmonitionConfig(type);
   const titleLabel = title ?? typeConfig.label;
   const { iconComponent: IconComponent } = typeConfig;

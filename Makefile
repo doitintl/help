@@ -73,8 +73,8 @@ check: ec
 lintspaces:
 check: lintspaces
 
-prettier:
-check: prettier
+prettier-dry:
+check: prettier-dry
 
 yamlcheck:
 check: yamllint
