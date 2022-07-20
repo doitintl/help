@@ -4,11 +4,11 @@ sidebar_position: 1
 
 # Transfer Google Cloud projects manually
 
-Please follow the below steps to switch your Google Cloud projects to use DoiT-provided billing account.
+You can transfer your Google Cloud projects manually by using the Google Cloud console or the gcloud CLI.
 
 :::note
 
-Please mind the Google Marketplace [note](index.mdx).
+Make sure you have read all the sections at [Before you start](index.mdx).
 
 :::
 
@@ -19,63 +19,155 @@ To follow this tutorial, your Google Cloud account must have the following permi
 - [Project Owner](https://cloud.google.com/iam/docs/understanding-roles)
 - [Billing Account Administrator](https://cloud.google.com/iam/docs/understanding-roles)
 
-Please get in touch with your organization's Google Cloud administrator for help with your account permissions.
+Get in touch with your organization's Google Cloud administrator if you need help with permissions.
 
 :::
 
-## The steps
+## Use the Google Cloud console
 
-- Go to [https://console.cloud.google.com/billing](https://console.cloud.google.com/billing)
-- Make sure your organization is selected and then click on your the billing account from the list
+1. Sign in to the [Manage billing accounts](https://console.cloud.google.com/billing) page in the Google Cloud console.
 
-<picture
-  img={require('../../../assets/png/gcp-organization-menu-billing-account-list.png')}
-  alt="A screenshot showing you the organization selection menu and the billing account list"
-/>
+2. Select your organization, and then select your billing account from the list.
 
-- Click on Manage
+   <picture
+     img={require('../../../assets/png/gcp-organization-menu-billing-account-list.png')}
+     alt="A screenshot showing the organization selection menu and the billing account list"
+     frame="drop-shadow"
+   />
 
-<picture
-  img={require('../../../assets/png/gcp-manager-option.png')}
-  alt="A screenshot showing the location of the Manager option"
-/>
+3. Select **Manage**.
 
-- The list of your Google Cloud projects currently linked to this billing account will be displayed. For each of the projects, click on the three-dots menu and select "Change billing"
+   <picture
+     img={require('../../../assets/png/gcp-manager-option.png')}
+     alt="A screenshot showing the location of the Manage option"
+     frame="drop-shadow"
+   />
 
-<picture
-  img={require('../../../assets/png/gcp-change-billing-option.png')}
-  alt="A screenshot showing the location of the Change Billing option"
-/>
+4. Change the billing account for all the linked Google Cloud projects. You need to perform the following tasks for each project.
 
-- In the popup modal, please select the new billing account provided to you by DoiT International
+   1. Select the three dots menu and then select **Change billing**.
 
-<picture
-  img={require('../../../assets/png/gcp-billing-account-menu.png')}
-  alt="A screenshot showing you the billing account dropdown menu"
-/>
+      <picture
+        img={require('../../../assets/png/gcp-change-billing-option.png')}
+        alt="A screenshot showing the location of the Change Billing option"
+        frame="drop-shadow"
+      />
 
-- Repeat for each projects on the list
+   2. In the popup window, select the new billing account provided by DoiT International.
 
-Within an hour, your transferred projects will appear in DoiT [Cloud Management Platform](https://hello.doit-intl.com).
+## Use the `gcloud` tool
+
+### Link one project
+
+The `gcloud` CLI tool has a (beta) [billing project link](https://cloud.google.com/sdk/gcloud/reference/beta/billing/projects/link) command, which you can use to link a project to a billing account.
+
+For example:
+
+```shell
+gcloud beta \
+    billing projects link MY_PROJECT_ID --billing-account 0X0X0X-0X0X0X-0X0X0X
+```
+
+Here, replace `MY_PROJECT_ID` with the Google Cloud project ID and replace `0X0X0X-0X0X0X-0X0X0X` with the billing account ID provided by DoiT
+
+### Link multiple projects
+
+It's also possible to link multiple projects to a billing account using one `gcloud` command.
+
+import Link from '@docusaurus/Link';
+
+1. Run the command below to perform a dry-run of the `gcloud beta billing project link` command for every Google Cloud project you have access to (i.e., have at least _one_ permission).
+
+   ```shell
+   gcloud projects list --format="value(project_id)" |
+   # highlight-next-line
+       xargs -I {} echo \
+           gcloud beta \
+               billing projects link {} --billing-account 0X0X0X-0X0X0X-0X0X0X
+   ```
+
+   Like before, replace `0X0X0X-0X0X0X-0X0X0X` with the billing account ID provided by DoiT.
+
+   Notice the highlighted line showing the `echo` command is used to print the `gcloud` command that _would_ be run instead of running it (i.e., performs a dry run).
+
+   Here's what the rest of the command does:
+
+   <dl>
+     <dt>
+       <code>--format="value(project_id)"</code>
+     </dt>
+     <dd>
+       <Link to="https://cloud.google.com/sdk/gcloud/reference#--format">
+         Formats the result
+       </Link>{' '}
+       to return the project ID.
+     </dd>
+     <dt>
+       <code>|</code>
+     </dt>
+     <dd>
+       Pipes the result of the left side of the pipe (<code>|</code>) into
+       the right side of the pipe.
+     </dd>
+     <dt>
+       <code>xargs</code>
+     </dt>
+     <dd>Builds and executes command lines from standard input.</dd>
+     <dt>
+       <code>-I {'{}'}</code>
+     </dt>
+     <dd>
+       Replaces occurrences of <code>{'{}'}</code> in the initial arguments
+       with names read from standard input.
+     </dd>
+   </dl>
+
+2. Run the same command without the `echo` to actually run the `gcloud beta billing project link` command for every project you have access to:
+
+   ```shell
+   gcloud projects list --format="value(project_id)" |
+   # highlight-next-line
+       xargs -I {} \
+           gcloud beta \
+               billing projects link {} --billing-account 0X0X0X-0X0X0X-0X0X0X
+   ```
+
+   :::attention
+
+   Running this command will link all your Google Cloud projects to the specified billing account ID provided by DoiT.
+
+   :::
+
+   :::note
+
+   You can only link projects if you have the Owner permission.
+
+   :::
+
+## Verify the transfer
+
+Once you completed the transfer, the transferred projects will appear in DoiT [Cloud Management Platform](https://app.doit-intl.com) within an hour.
 
 <picture
   img={require('../../../assets/png/gcp-access-transferred-projects.png')}
-  alt="A screenshot showing you how to access the list of transferred projects"
+  alt="A screenshot showing how to access the list of transferred projects"
+  frame="drop-shadow"
 />
 
 ## Troubleshooting
 
-### I can't change billing for the projects listed
+### I can't change the billing account for the projects
 
-To change billing account for a project you need to have proper permissions on the project itself. Usually having Billing Account Administrator on your whole Google Cloud Organization or the project in question is enough.
+To change billing account for a project, you need to have proper permissions on the project itself. Usually having Billing Account Administrator on your whole Google Cloud Organization or the project in question is enough.
 
-### While trying to select a new Billing Account no DoiT billing accounts appear on the list
+### While trying to select a new Billing Account, no DoiT billing accounts appear on the list
 
-Make sure you have access to the target Billing Account. To verify, please go to hello.doit-intl.com and check if your name is on the list:
+Make sure that you have access to the target Billing Account.
+
+To verify, log in to the CMP and check if your email address is on the list of Billing Admins:
 
 <picture
   img={require('../../../assets/png/cmp-verify-access-billing-account.png')}
-  alt="A screenshot showing you how to verify you have access to the billing account"
+  alt="A screenshot showing how to verify you have access to the billing account"
+  frame="drop-shadow"
 />
-
-If it's not, please contact one of the persons who are on the list to add you.
