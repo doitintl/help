@@ -1,8 +1,10 @@
 import React from 'react';
 import IconCard from '../IconCard';
-import cmpIcon from './cmp-icon.svg';
-import devHubIcon from './dev-hub-icon.svg';
 import styles from './styles.module.css';
+
+import cmpIcon from '../../../static/assets/icons/cmp.svg';
+import flexsaveIcon from '../../../static/assets/icons/flexsave.svg';
+import devHubIcon from '../../../static/assets/icons/dev-hub.svg';
 
 // TODO: Resolve partial duplication of `navbar` configuration
 const cards = [
@@ -11,6 +13,12 @@ const cards = [
     image: cmpIcon,
     href: '/docs/cmp',
     target: '',
+  },
+  {
+    title: 'Flexsave',
+    image: flexsaveIcon,
+    href: '/docs/flexsave',
+    target: '_blank',
   },
   {
     title: 'Developer Hub',

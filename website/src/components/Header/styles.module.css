@@ -5,12 +5,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(
-    83.73deg,
-    rgba(252, 49, 101, 0.96) -12.1%,
-    rgba(59, 64, 181, 0.96) 58.08%,
-    rgba(42, 185, 189, 0.96) 99.18%
-  );
+  background: var(--ifm-font-color-base);
 }
 
 .hero_title {

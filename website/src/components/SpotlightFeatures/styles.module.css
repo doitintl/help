@@ -1,5 +1,5 @@
 .spotlight_features {
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: var(--doit-color-off-white);
 }
 
 .feature {

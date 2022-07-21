@@ -1,7 +1,14 @@
 .icon_card {
-  margin: 0 !important;
-  padding: var(--ifm-spacing-vertical) !important;
+  padding-top: var(--ifm-spacing-vertical) !important;
+  padding-bottom: var(--ifm-spacing-vertical) !important;
+  width: 100%;
 }
+
+/*
+.icon_card, .icon_card {
+  padding-left: var(--ifm-spacing-vertical-x4) !important;
+}
+*/
 
 .icon_card_inner {
   display: flex;
@@ -11,30 +18,49 @@
   justify-content: center;
   width: auto;
   margin: auto;
+  background-color: var(--doit-color-off-white);
+  /* filter: opacity(90%); */
   box-shadow: 4px 32px 13px rgba(152, 165, 189, 0.01),
     2px 18px 11px rgba(152, 165, 189, 0.05),
     1px 8px 8px rgba(152, 165, 189, 0.09),
     0px 2px 4px rgba(152, 165, 189, 0.1),
     0px 0px 0px rgba(152, 165, 189, 0.1);
   border-radius: 4px;
+  /* editorconfig-checker-disable-next-line */
+  transition: all var(--ifm-transition-fast)
+    var(--ifm-transition-timing-default);
 }
 
 .icon_card_inner:hover {
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: var(--doit-color-off-white-lighter);
+  /* filter: opacity(100%); */
+  box-shadow: 4px 32px 13px rgba(152, 165, 189, 0.02),
+    2px 18px 11px rgba(152, 165, 189, 0.1),
+    1px 8px 8px rgba(152, 165, 189, 0.18),
+    0px 2px 4px rgba(98, 102, 109, 0.2),
+    0px 0px 0px rgba(152, 165, 189, 0.2);
   text-decoration: none;
+  transform: scale(1.02);
+}
+
+.icon_card_inner svg {
+  width: 106px;
+  height: 106px;
+}
+
+.icon_card_inner svg {
+  --svg-color-base: var(--doit-color-primary-ink) !important;
+  --svg-color-accent: var(--doit-color-primary-spark) !important;
 }
 
 .icon_card_inner:hover svg {
-  filter: saturate(180%);
+  --svg-color-base: var(--doit-color-primary-ink) !important;
+  --svg-color-accent: var(--doit-color-primary-spark) !important;
 }
 
 .icon_card_title {
-  color: var(--ifm-font-color-base);
-  font-weight: var(--ifm-font-weight-semibold);
-}
-
-.icon_card_inner:hover p {
-  color: var(--ifm-color-primary);
+  font-weight: var(--ifm-font-weight-bold);
+  color: var(--doit-color-primary-ink);
 }
 
 @media screen and (max-width: 995px) {
@@ -43,6 +69,7 @@
   }
 
   .icon_card_title {
+    margin-top: calc(var(--ifm-spacing-vertical) / 2);
     margin-bottom: var(--ifm-spacing-vertical);
   }
 }
@@ -53,6 +80,7 @@
   }
 
   .icon_card_title {
+    margin-top: var(--ifm-spacing-vertical);
     margin-bottom: var(--ifm-spacing-vertical-2x);
   }
 }

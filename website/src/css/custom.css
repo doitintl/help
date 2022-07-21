@@ -1,24 +1,19 @@
-/* Choose a darker variation of the default primary color */
-
 /* DoiT brand design system colors */
 
 :root {
-
-  --ifm-color-primary: #3B40B5;
-  --ifm-color-primary-light: #7679CB;
-  --ifm-color-primary-dark: #292D7F;
-  --ifm-color-primary-contrast-text: #FFFFFF;
-  --ifm-color-primary-content: #1E205B;
+  --ifm-color-primary: #3b40b5;
+  --ifm-color-primary-light: #7679cb;
+  --ifm-color-primary-dark: #292d7f;
+  --ifm-color-primary-contrast-text: #ffffff;
+  --ifm-color-primary-content: #1e205b;
   --ifm-color-primary-background: #9da0da;
   --ifm-color-primary-background-hover: #3b40b514;
   --ifm-color-primary-border: #3b40b57f;
-
 }
 
 /* Infirma framework configuration */
 
 :root {
-
   --ifm-color-primary: none;
   --ifm-color-primary-dark: none;
   --ifm-color-primary-darker: none;
@@ -111,6 +106,108 @@
   --ifm-color-content-secondary: none;
 }
 
+/* Old attempt at trying to configure both at once */
+:root {
+  --doit-color-primary-ink: #000433;
+  --doit-color-primary-spark: #fc3165;
+  --doit-color-primary-violet: #3b40b5;
+  --doit-color-primary-teal: #2ab9bd;
+
+  --doit-color-secondary-ink: #272f75;
+  --doit-color-secondary-ink-pastel: #bee1f5;
+  --doit-color-secondary-spark: #f14271;
+  --doit-color-secondary-spark-pastel: #f2c7cf;
+  --doit-color-secondary-teal: #43efde;
+  --doit-color-secondary-violet: #6b6ecc;
+  --doit-color-secondary-violet-saturated: #852dd3;
+  --doit-color-secondary-violet-desaturated: #a398de;
+
+  --doit-color-neutrals-gray-darkest: #0e1721;
+  --doit-color-neutrals-gray-dark: #555759;
+  --doit-color-neutrals-gray-midtone: #76787a;
+  --doit-color-neutrals-gray-light: #95999c;
+  --doit-color-neutrals-gray-lightest: #b1b2b3;
+
+  --doit-color-off-white: #f8f8f8;
+  --doit-color-off-white-lighter: #fcfcfc;
+
+  /* Infirma color customizations */
+
+  --ifm-font-color-base: var(--doit-color-primary-ink);
+
+  --ifm-color-primary-lightest: #6a6ece;
+  --ifm-color-primary-lighter: #4f53c5;
+  --ifm-color-primary-light: #454bc3;
+  --ifm-color-primary: var(--doit-color-primary-violet);
+  --ifm-color-primary-dark: #353aa3;
+  --ifm-color-primary-darker: #32369a;
+  --ifm-color-primary-darkest: #292d7f;
+  --ifm-color-primary-contrast-background: #e9eafc;
+  --ifm-color-primary-contrast-foreground: #07081d;
+
+  --ifm-color-success-lightest: #6ace6a;
+  --ifm-color-success-lighter: #45c345;
+  --ifm-color-success-light: #45c345;
+  --ifm-color-success: #3bb53b;
+  --ifm-color-success-dark: #6ace6a;
+  --ifm-color-success-darker: #329a32;
+  --ifm-color-success-darkest: #297f29;
+  --ifm-color-success-contrast-background: #e9fce9;
+  --ifm-color-success-contrast-foreground: #071d07;
+
+  --ifm-color-info-lightest: #53d5d9;
+  --ifm-color-info-lighter: #37ced3;
+  --ifm-color-info-light: #2eccd0;
+  --ifm-color-info: var(--doit-color-primary-teal);
+  --ifm-color-info-dark: #26a7aa;
+  --ifm-color-info-darker: #249da1;
+  --ifm-color-info-darkest: #1d8284;
+  --ifm-color-info-contrast-background: #e9fcfc;
+  --ifm-color-info-contrast-foreground: #071c1d;
+
+  --ifm-color-warning-lightest: #fddf8a;
+  --ifm-color-warning-lighter: #fddf8a;
+  --ifm-color-warning-light: #fcce4f;
+  --ifm-color-warning: #fcc631;
+  --ifm-color-warning-dark: #fcbe13;
+  --ifm-color-warning-darker: #fbba04;
+  --ifm-color-warning-darkest: #d09903;
+  --ifm-color-warning-contrast-background: #fcf7e9;
+  --ifm-color-warning-contrast-foreground: #1d1707;
+
+  --ifm-color-danger-lightest: #fd8aa8;
+  --ifm-color-danger-lighter: #fd5e86;
+  --ifm-color-danger-light: #fd5e86;
+  --ifm-color-danger: var(--doit-color-primary-spark);
+  --ifm-color-danger-dark: #fc134f;
+  --ifm-color-danger-darker: #fb0444;
+  --ifm-color-danger-darkest: #d00337;
+  --ifm-color-danger-contrast-background: #fce9ed;
+  --ifm-color-danger-contrast-foreground: #1d070c;
+}
+
+/*
+Experiments using spark as a primary color in some contexts...
+
+:root {
+  --ifm-navbar-link-hover-color: var(--doit-color-primary-spark);
+}
+
+:where(.button--primary) {
+  --ifm-button-background-color: var(--doit-color-primary-spark);
+  --ifm-button-border-color: var(--doit-color-primary-spark)
+}
+
+:where(.button--primary):not(.button--outline):hover {
+  --ifm-button-background-color: var(--doit-color-primary-spark);
+  --ifm-button-border-color: var(--doit-color-primary-spark)
+}
+
+.pagination-nav a {
+  color: var(--doit-color-primary-spark);
+}
+*/
+
 /* Announcement bar */
 
 div[role='banner'] {
@@ -155,23 +252,99 @@ div[role='banner'] div {
 
 /* Navigation bar */
 
-.header-github-link:hover {
-  opacity: 0.6;
+/*
+.header-github-link {
+  editorconfig-checker-disable-next-line
+  transition: all var(--ifm-transition-fast) var(--ifm-transition-timing-default);
 }
+
+.header-github-link:hover {
+  transform: scale(1.1);
+}
+*/
 
 .header-github-link::before {
   content: '';
   width: 24px;
   height: 24px;
   display: flex;
-  background: url(./github-logo.svg) no-repeat;
+  background: url(/assets/logos/github.svg) no-repeat;
 }
+
+.navbar__logo img,
+.theme-doc-sidebar-container a img {
+  /* editorconfig-checker-disable-next-line */
+  transition: all var(--ifm-transition-fast)
+    var(--ifm-transition-timing-default);
+}
+
+.navbar__logo img:hover,
+.theme-doc-sidebar-container a img:hover {
+  transform: scale(1.1);
+}
+
+.navbar__brand:hover {
+  color: var(--ifm-font-color-base);
+}
+
+.navbar__link {
+  white-space: nowrap;
+}
+
+.docs-doc-page .navbar {
+  border: none;
+}
+
+.hero,
+.footer {
+  border-width: 4px 0;
+  border-style: solid;
+  /* editorconfig-checker-disable-next-line */
+  border-image: linear-gradient(
+      90deg,
+      rgb(59, 64, 181) 0.8%,
+      rgb(213, 26, 78) 99.1%
+    )
+    1 / 1 / 0 stretch;
+}
+
+.footer {
+  border-bottom: 0;
+}
+
+/*
+background: linear-gradient(
+  83.73deg,
+  rgba(252, 49, 101, 0.96) -12.1%,
+  rgba(59, 64, 181, 0.96) 58.08%,
+  rgba(42, 185, 189, 0.96) 99.18%
+);
+*/
+
+/* TOC */
+
+/*
+[class*="docs-doc-id-flexsave"] .theme-doc-toc-desktop {
+  background-image: url(/img/icons/flexsave.svg);
+  background-repeat: no-repeat;
+  background-position: top right 10px;
+  background-size: 53px 53px;
+}
+*/
 
 /* Document tabs bar  */
 
 .tabs {
   border-bottom: 1px solid var(--ifm-toc-border-color);
 }
+
+/* Markdown */
+
+/*
+.markdown a {
+  text-decoration: underline;
+}
+*/
 
 /* Zoom CSS fix */
 
@@ -184,13 +357,23 @@ div[role='banner'] div {
 
 .drop-shadow img {
   /*
+
   TODO: Figure out how to emulate existing images
 
   margin-left: 2rem;
   margin-right: 3rem;
+
   */
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
+
+/* Pagination */
+
+/*
+.pagination-nav__link {
+  color: var(--doit-color-primary-spark);
+}
+*/
 
 /* Customizations for the front page grid */
 
@@ -203,7 +386,9 @@ div[role='banner'] div {
 .footer .container {
   padding: var(--ifm-spacing-vertical-2x) 0;
   margin: 0 auto;
-  transition: all var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+  /* editorconfig-checker-disable-next-line */
+  transition: all var(--ifm-transition-fast)
+    var(--ifm-transition-timing-default);
 }
 
 #front-page .container h2 {
@@ -233,12 +418,18 @@ div[role='banner'] div {
   white-space: nowrap;
 }
 
-.footer__bottom>div {
+.footer__bottom > div {
   margin: 0 !important;
 }
 
-.footer__bottom>div a {
+.footer__bottom > div a {
   display: block;
+}
+
+.footer__bottom a {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .footer__bottom img {
@@ -250,7 +441,6 @@ div[role='banner'] div {
 }
 
 @media screen and (max-width: 995px) {
-
   #front-page .container,
   .footer .container {
     width: 90vw;
@@ -266,13 +456,13 @@ div[role='banner'] div {
     flex-direction: column;
   }
 
-  #front-page .row+.row,
-  .footer .row+.row {
+  #front-page .row + .row,
+  .footer .row + .row {
     margin-top: var(--ifm-spacing-vertical-2x);
   }
 
-  #front-page .col+.col,
-  .footer .col+.col {
+  #front-page .col + .col,
+  .footer .col + .col {
     margin-top: var(--ifm-spacing-vertical-2x);
   }
 
@@ -291,19 +481,18 @@ div[role='banner'] div {
 }
 
 @media screen and (min-width: 996px) {
-
   #front-page .row,
   .footer .row {
     flex-direction: row;
   }
 
-  #front-page .row+.row,
-  .footer .row+div {
+  #front-page .row + .row,
+  .footer .row + div {
     margin-top: var(--ifm-spacing-vertical-4x);
   }
 
-  #front-page .col+.col,
-  .footer .col+.col {
+  #front-page .col + .col,
+  .footer .col + .col {
     margin-left: var(--ifm-spacing-vertical-4x);
   }
 
@@ -334,7 +523,8 @@ div[role='banner'] div {
 
 :root {
   --docsearch-primary-color: var(--ifm-color-primary) !important;
-  --docsearch-modal-width: 90vw;
+  --docsearch-muted-color: var(--ifm-color-emphasis-700) !important;
+  --docsearch-modal-width: 90vw !important;
 }
 
 .DocSearch-Modal {
@@ -353,26 +543,37 @@ div[role='banner'] div {
   }
 }
 
-.DocSearch-Button {
+.hero .DocSearch-Button {
   padding: 0 20px !important;
-}
-
-.DocSearch-Button:nth-child(2) {
-  background: #ffffff !important;
   height: 70px !important;
   width: 90vw;
-  max-width: 750px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
   border-radius: 4px !important;
+  max-width: 750px;
+  background: var(--doit-color-off-white) !important;
 }
 
-.DocSearch-Button:nth-child(2) .DocSearch-Button-Placeholder {
+.hero .DocSearch-Button:hover {
+  color: var(--docsearch-muted-color) !important;
+  box-shadow: none !important;
+}
+
+.hero .DocSearch-Button .DocSearch-Button-Placeholder {
   font-size: 1.5rem !important;
 }
 
-.DocSearch-Button:nth-child(2) .DocSearch-Button:active,
-.DocSearch-Button:focus,
-.DocSearch-Button:hover {
+.hero .DocSearch-Search-Icon {
+  height: 25px;
+  width: 25px;
+}
+
+.hero .DocSearch-Button-Key {
+  height: 25px;
+  width: 25px;
+}
+
+.navbar .DocSearch-Button:active,
+.navbar .DocSearch-Button:focus,
+.navbar .DocSearch-Button:hover {
   color: #969faf !important;
 }
 
