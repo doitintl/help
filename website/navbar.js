@@ -36,7 +36,7 @@ const navbar = {
   hideOnScroll: true,
   logo: {
     alt: doit.companyName,
-    src: '/logo-hero.png',
+    src: '/assets/logos/doit-nav.png',
     height: 32,
     width: 67.5,
   },

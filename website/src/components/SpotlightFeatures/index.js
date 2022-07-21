@@ -13,6 +13,14 @@ const featureListRow1 = [
     link: '/docs/cmp#cloud-analytics',
   },
   {
+    title: 'Spot scaling',
+    description:
+      "Spot Scaling proactively monitors your AWS Auto-Scaling Groups (ASGs), \
+      and uses sophisticated machine learning to replace some or all of an \
+      ASG's on-demand EC2 instances with Spot Instances.",
+    link: '/docs/spot-scaling/overview',
+  },
+  {
     title: 'Rightsizing for Google Cloud',
     description:
       'Rightsizing for Google Cloud monitors resources across all of your \
@@ -20,14 +28,6 @@ const featureListRow1 = [
       deal with idle VMs in two clicks. Never pay for underutilized instances \
       again.',
     link: '/docs/dashboards/rightsizing-for-google-cloud',
-  },
-  {
-    title: 'Flexsave',
-    description:
-      'Flexsave is your cloud co-pilot, dynamically maximizing your \
-      cloud-compute discounts for AWS and Google Cloud without any of the \
-      risks or limitations of long-term use commitments.',
-    link: '/docs/flexsave',
   },
 ];
 
@@ -49,12 +49,12 @@ const featureListRow2 = [
     link: '/docs/dashboards/aws-lens',
   },
   {
-    title: 'Spot scaling',
+    title: 'GKE Cost Analytics',
     description:
-      "Spot Scaling proactively monitors your AWS Auto-Scaling Groups (ASGs), \
-      and uses sophisticated machine learning to replace some or all of an \
-      ASG's on-demand EC2 instances with Spot Instances.",
-    link: '/docs/spot-scaling/overview',
+      'GKE Cost Analytics demystifies your Google Kubernetes Engine (GKE) \
+      spend and Total Cost of Ownership (TCO) with real-time reporting, \
+      tracking, budgets, forecasting, and trend-analysis.',
+    link: '/docs/cloud-analytics/gke-cost-analytics',
   },
 ];
 

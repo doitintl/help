@@ -46,6 +46,7 @@ dces
 deandra
 debussylaan
 deleter
+desaturated
 devcontainer
 docops
 docsbot
@@ -92,6 +93,7 @@ ignorecase
 imgdup
 imgdupignore
 infima
+infirma
 iops
 jsonld
 kpis
@@ -114,6 +116,7 @@ mbps
 mdash
 mdns
 mdxa
+midtone
 mifs
 mirrorings
 mixpanel

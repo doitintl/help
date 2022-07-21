@@ -3,7 +3,10 @@
 }
 
 .admonitionHeading {
-  font: var(--ifm-heading-font-weight) var(--ifm-h5-font-size) / var(--ifm-heading-line-height) var(--ifm-heading-font-family);
+  font-family: var(--ifm-heading-font-family);
+  font-weight: var(--ifm-heading-font-weight);
+  font-size: var(--ifm-h5-font-size);
+  line-height: var(--ifm-heading-line-height);
   margin-bottom: 0.3rem;
 }
 
@@ -23,9 +26,8 @@
   width: 1.2em;
   fill: var(--ifm-alert-border-color);
   filter: brightness(1);
-  ;
 }
 
-.admonitionContent> :last-child {
+.admonitionContent > :last-child {
   margin-bottom: 0;
 }
