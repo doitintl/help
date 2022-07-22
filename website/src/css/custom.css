@@ -1,55 +1,114 @@
 /* Choose a darker variation of the default primary color */
 
+/* DoiT brand design system colors */
+
 :root {
-  --ifm-color-primary-lightest: #6a6ece;
-  --ifm-color-primary-lighter: #4f53c5;
-  --ifm-color-primary-light: #454bc3;
-  --ifm-color-primary: #3b40b5;
-  --ifm-color-primary-dark: #353aa3;
-  --ifm-color-primary-darker: #32369a;
-  --ifm-color-primary-darkest: #292d7f;
-  --ifm-color-primary-contrast-background: #e9eafc;
-  --ifm-color-primary-contrast-foreground: #07081d;
 
-  --ifm-color-success-lightest: #6ace6a;
-  --ifm-color-success-lighter: #45c345;
-  --ifm-color-success-light: #45c345;
-  --ifm-color-success: #3bb53b;
-  --ifm-color-success-dark: #6ace6a;
-  --ifm-color-success-darker: #329a32;
-  --ifm-color-success-darkest: #297f29;
-  --ifm-color-success-contrast-background: #e9fce9;
-  --ifm-color-success-contrast-foreground: #071d07;
+  --ifm-color-primary: #3B40B5;
+  --ifm-color-primary-light: #7679CB;
+  --ifm-color-primary-dark: #292D7F;
+  --ifm-color-primary-contrast-text: #FFFFFF;
+  --ifm-color-primary-content: #1E205B;
+  --ifm-color-primary-background: #9da0da;
+  --ifm-color-primary-background-hover: #3b40b514;
+  --ifm-color-primary-border: #3b40b57f;
 
-  --ifm-color-info-lightest: #53d5d9;
-  --ifm-color-info-lighter: #37ced3;
-  --ifm-color-info-light: #2eccd0;
-  --ifm-color-info: #2ab9bd;
-  --ifm-color-info-dark: #26a7aa;
-  --ifm-color-info-darker: #249da1;
-  --ifm-color-info-darkest: #1d8284;
-  --ifm-color-info-contrast-background: #e9fcfc;
-  --ifm-color-info-contrast-foreground: #071c1d;
+}
 
-  --ifm-color-warning-lightest: #fddf8a;
-  --ifm-color-warning-lighter: #fddf8a;
-  --ifm-color-warning-light: #fcce4f;
-  --ifm-color-warning: #fcc631;
-  --ifm-color-warning-dark: #fcbe13;
-  --ifm-color-warning-darker: #fbba04;
-  --ifm-color-warning-darkest: #d09903;
-  --ifm-color-warning-contrast-background: #fcf7e9;
-  --ifm-color-warning-contrast-foreground: #1d1707;
+/* Infirma framework configuration */
 
-  --ifm-color-danger-lightest: #fd8aa8;
-  --ifm-color-danger-lighter: #fd5e86;
-  --ifm-color-danger-light: #fd5e86;
-  --ifm-color-danger: #fc3165;
-  --ifm-color-danger-dark: #fc134f;
-  --ifm-color-danger-darker: #fb0444;
-  --ifm-color-danger-darkest: #d00337;
-  --ifm-color-danger-contrast-background: #fce9ed;
-  --ifm-color-danger-contrast-foreground: #1d070c;
+:root {
+
+  --ifm-color-primary: none;
+  --ifm-color-primary-dark: none;
+  --ifm-color-primary-darker: none;
+  --ifm-color-primary-darkest: none;
+  --ifm-color-primary-light: none;
+  --ifm-color-primary-lighter: none;
+  --ifm-color-primary-lightest: none;
+  --ifm-color-primary-contrast-background: none;
+  --ifm-color-primary-contrast-foreground: none;
+
+  --ifm-color-secondary: none;
+  --ifm-color-secondary-dark: none;
+  --ifm-color-secondary-darker: none;
+  --ifm-color-secondary-darkest: none;
+  --ifm-color-secondary-light: none;
+  --ifm-color-secondary-lighter: none;
+  --ifm-color-secondary-lightest: none;
+  --ifm-color-secondary-contrast-background: none;
+  --ifm-color-secondary-contrast-foreground: none;
+
+  --ifm-color-success: none;
+  --ifm-color-success-dark: none;
+  --ifm-color-success-darker: none;
+  --ifm-color-success-darkest: none;
+  --ifm-color-success-light: none;
+  --ifm-color-success-lighter: none;
+  --ifm-color-success-lightest: none;
+  --ifm-color-success-contrast-background: none;
+  --ifm-color-success-contrast-foreground: none;
+
+  --ifm-color-info: none;
+  --ifm-color-info-dark: none;
+  --ifm-color-info-darker: none;
+  --ifm-color-info-darkest: none;
+  --ifm-color-info-light: none;
+  --ifm-color-info-lighter: none;
+  --ifm-color-info-lightest: none;
+  --ifm-color-info-contrast-background: none;
+  --ifm-color-info-contrast-foreground: none;
+
+  --ifm-color-warning: none;
+  --ifm-color-warning-dark: none;
+  --ifm-color-warning-darker: none;
+  --ifm-color-warning-darkest: none;
+  --ifm-color-warning-light: none;
+  --ifm-color-warning-lighter: none;
+  --ifm-color-warning-lightest: none;
+  --ifm-color-warning-contrast-background: none;
+  --ifm-color-warning-contrast-foreground: none;
+
+  --ifm-color-danger: none;
+  --ifm-color-danger-dark: none;
+  --ifm-color-danger-darker: none;
+  --ifm-color-danger-darkest: none;
+  --ifm-color-danger-light: none;
+  --ifm-color-danger-lighter: none;
+  --ifm-color-danger-lightest: none;
+  --ifm-color-danger-contrast-background: none;
+  --ifm-color-danger-contrast-foreground: none;
+
+  --ifm-color-white: #fff;
+  --ifm-color-black: #000;
+
+  --ifm-color-gray-0: var(--ifm-color-white);
+  --ifm-color-gray-100: none;
+  --ifm-color-gray-200: none;
+  --ifm-color-gray-300: none;
+  --ifm-color-gray-400: none;
+  --ifm-color-gray-500: none;
+  --ifm-color-gray-600: none;
+  --ifm-color-gray-700: none;
+  --ifm-color-gray-800: none;
+  --ifm-color-gray-900: none;
+  --ifm-color-gray-1000: var(--ifm-color-black);
+
+  --ifm-color-emphasis-0: var(--ifm-color-gray-0);
+  --ifm-color-emphasis-100: var(--ifm-color-gray-100);
+  --ifm-color-emphasis-200: var(--ifm-color-gray-200);
+  --ifm-color-emphasis-300: var(--ifm-color-gray-300);
+  --ifm-color-emphasis-400: var(--ifm-color-gray-400);
+  --ifm-color-emphasis-500: var(--ifm-color-gray-500);
+  --ifm-color-emphasis-600: var(--ifm-color-gray-600);
+  --ifm-color-emphasis-700: var(--ifm-color-gray-700);
+  --ifm-color-emphasis-800: var(--ifm-color-gray-800);
+  --ifm-color-emphasis-900: var(--ifm-color-gray-900);
+  --ifm-color-emphasis-1000: var(--ifm-color-gray-1000);
+
+  --ifm-color-content: var(--ifm-color-emphasis-900);
+  --ifm-color-content-inverse: var(--ifm-color-emphasis-0);
+  --ifm-color-content-secondary: none;
 }
 
 /* Announcement bar */
@@ -144,8 +203,7 @@ div[role='banner'] div {
 .footer .container {
   padding: var(--ifm-spacing-vertical-2x) 0;
   margin: 0 auto;
-  transition: all var(--ifm-transition-fast)
-    var(--ifm-transition-timing-default);
+  transition: all var(--ifm-transition-fast) var(--ifm-transition-timing-default);
 }
 
 #front-page .container h2 {
@@ -175,11 +233,11 @@ div[role='banner'] div {
   white-space: nowrap;
 }
 
-.footer__bottom > div {
+.footer__bottom>div {
   margin: 0 !important;
 }
 
-.footer__bottom > div a {
+.footer__bottom>div a {
   display: block;
 }
 
@@ -192,6 +250,7 @@ div[role='banner'] div {
 }
 
 @media screen and (max-width: 995px) {
+
   #front-page .container,
   .footer .container {
     width: 90vw;
@@ -207,13 +266,13 @@ div[role='banner'] div {
     flex-direction: column;
   }
 
-  #front-page .row + .row,
-  .footer .row + .row {
+  #front-page .row+.row,
+  .footer .row+.row {
     margin-top: var(--ifm-spacing-vertical-2x);
   }
 
-  #front-page .col + .col,
-  .footer .col + .col {
+  #front-page .col+.col,
+  .footer .col+.col {
     margin-top: var(--ifm-spacing-vertical-2x);
   }
 
@@ -232,18 +291,19 @@ div[role='banner'] div {
 }
 
 @media screen and (min-width: 996px) {
+
   #front-page .row,
   .footer .row {
     flex-direction: row;
   }
 
-  #front-page .row + .row,
-  .footer .row + div {
+  #front-page .row+.row,
+  .footer .row+div {
     margin-top: var(--ifm-spacing-vertical-4x);
   }
 
-  #front-page .col + .col,
-  .footer .col + .col {
+  #front-page .col+.col,
+  .footer .col+.col {
     margin-left: var(--ifm-spacing-vertical-4x);
   }
 
