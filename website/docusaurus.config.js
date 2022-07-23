@@ -56,7 +56,7 @@ const config = {
           customCss: [
             require.resolve('./src/css/doit-light.css'),
             require.resolve('./src/css/infirma.css'),
-            require.resolve('./src/css/custom.css')
+            require.resolve('./src/css/custom.css'),
           ],
         },
         sitemap: {

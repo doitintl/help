@@ -166,7 +166,8 @@ div[role='banner'] div {
 .navbar__logo img,
 .theme-doc-sidebar-container a img {
   /* editorconfig-checker-disable-next-line */
-  transition: all var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+  transition: all var(--ifm-transition-fast)
+    var(--ifm-transition-timing-default);
 }
 
 .navbar__logo img:hover,
@@ -191,9 +192,12 @@ div[role='banner'] div {
   border-width: 4px 0;
   border-style: solid;
   /* editorconfig-checker-disable-next-line */
-  border-image: linear-gradient(90deg,
+  border-image: linear-gradient(
+      90deg,
       rgb(59, 64, 181) 0.8%,
-      rgb(213, 26, 78) 99.1%) 1 / 1 / 0 stretch;
+      rgb(213, 26, 78) 99.1%
+    )
+    1 / 1 / 0 stretch;
 }
 
 .footer {
@@ -227,6 +231,15 @@ background: linear-gradient(
 }
 
 /* Markdown */
+
+.overflow_container {
+  overflow: scroll;
+}
+
+.overflow_content {
+  width: -moz-fit-content;
+  width: fit-content;
+}
 
 /*
 .markdown a {
@@ -275,7 +288,8 @@ background: linear-gradient(
   padding: var(--ifm-spacing-vertical-2x) 0;
   margin: 0 auto;
   /* editorconfig-checker-disable-next-line */
-  transition: all var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+  transition: all var(--ifm-transition-fast)
+    var(--ifm-transition-timing-default);
 }
 
 #front-page .container h2 {
@@ -305,11 +319,11 @@ background: linear-gradient(
   white-space: nowrap;
 }
 
-.footer__bottom>div {
+.footer__bottom > div {
   margin: 0 !important;
 }
 
-.footer__bottom>div a {
+.footer__bottom > div a {
   display: block;
 }
 
@@ -328,7 +342,6 @@ background: linear-gradient(
 }
 
 @media screen and (max-width: 995px) {
-
   #front-page .container,
   .footer .container {
     width: 90vw;
@@ -344,13 +357,13 @@ background: linear-gradient(
     flex-direction: column;
   }
 
-  #front-page .row+.row,
-  .footer .row+.row {
+  #front-page .row + .row,
+  .footer .row + .row {
     margin-top: var(--ifm-spacing-vertical-2x);
   }
 
-  #front-page .col+.col,
-  .footer .col+.col {
+  #front-page .col + .col,
+  .footer .col + .col {
     margin-top: var(--ifm-spacing-vertical-2x);
   }
 
@@ -369,19 +382,18 @@ background: linear-gradient(
 }
 
 @media screen and (min-width: 996px) {
-
   #front-page .row,
   .footer .row {
     flex-direction: row;
   }
 
-  #front-page .row+.row,
-  .footer .row+div {
+  #front-page .row + .row,
+  .footer .row + div {
     margin-top: var(--ifm-spacing-vertical-4x);
   }
 
-  #front-page .col+.col,
-  .footer .col+.col {
+  #front-page .col + .col,
+  .footer .col + .col {
     margin-left: var(--ifm-spacing-vertical-4x);
   }
 
