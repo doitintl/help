@@ -1,103 +1,6 @@
-/* Old attempt at trying to configure both at once */
-:root {
-  --doit-color-primary-ink: #000433;
-  --doit-color-primary-spark: #fc3165;
-  --doit-color-primary-violet: #3b40b5;
-  --doit-color-primary-teal: #2ab9bd;
-
-  --doit-color-secondary-ink: #272f75;
-  --doit-color-secondary-ink-pastel: #bee1f5;
-  --doit-color-secondary-spark: #f14271;
-  --doit-color-secondary-spark-pastel: #f2c7cf;
-  --doit-color-secondary-teal: #43efde;
-  --doit-color-secondary-violet: #6b6ecc;
-  --doit-color-secondary-violet-saturated: #852dd3;
-  --doit-color-secondary-violet-desaturated: #a398de;
-
-  --doit-color-neutrals-gray-darkest: #0e1721;
-  --doit-color-neutrals-gray-dark: #555759;
-  --doit-color-neutrals-gray-midtone: #76787a;
-  --doit-color-neutrals-gray-light: #95999c;
-  --doit-color-neutrals-gray-lightest: #b1b2b3;
-
-  --doit-color-off-white: #f8f8f8;
-  --doit-color-off-white-lighter: #fcfcfc;
-
-  /* Infirma color customizations */
-
-  --ifm-font-color-base: var(--doit-color-primary-ink);
-
-  --ifm-color-primary-lightest: #6a6ece;
-  --ifm-color-primary-lighter: #4f53c5;
-  --ifm-color-primary-light: #454bc3;
-  --ifm-color-primary: var(--doit-color-primary-violet);
-  --ifm-color-primary-dark: #353aa3;
-  --ifm-color-primary-darker: #32369a;
-  --ifm-color-primary-darkest: #292d7f;
-  --ifm-color-primary-contrast-background: #e9eafc;
-  --ifm-color-primary-contrast-foreground: #07081d;
-
-  --ifm-color-success-lightest: #6ace6a;
-  --ifm-color-success-lighter: #45c345;
-  --ifm-color-success-light: #45c345;
-  --ifm-color-success: #3bb53b;
-  --ifm-color-success-dark: #6ace6a;
-  --ifm-color-success-darker: #329a32;
-  --ifm-color-success-darkest: #297f29;
-  --ifm-color-success-contrast-background: #e9fce9;
-  --ifm-color-success-contrast-foreground: #071d07;
-
-  --ifm-color-info-lightest: #53d5d9;
-  --ifm-color-info-lighter: #37ced3;
-  --ifm-color-info-light: #2eccd0;
-  --ifm-color-info: var(--doit-color-primary-teal);
-  --ifm-color-info-dark: #26a7aa;
-  --ifm-color-info-darker: #249da1;
-  --ifm-color-info-darkest: #1d8284;
-  --ifm-color-info-contrast-background: #e9fcfc;
-  --ifm-color-info-contrast-foreground: #071c1d;
-
-  --ifm-color-warning-lightest: #fddf8a;
-  --ifm-color-warning-lighter: #fddf8a;
-  --ifm-color-warning-light: #fcce4f;
-  --ifm-color-warning: #fcc631;
-  --ifm-color-warning-dark: #fcbe13;
-  --ifm-color-warning-darker: #fbba04;
-  --ifm-color-warning-darkest: #d09903;
-  --ifm-color-warning-contrast-background: #fcf7e9;
-  --ifm-color-warning-contrast-foreground: #1d1707;
-
-  --ifm-color-danger-lightest: #fd8aa8;
-  --ifm-color-danger-lighter: #fd5e86;
-  --ifm-color-danger-light: #fd5e86;
-  --ifm-color-danger: var(--doit-color-primary-spark);
-  --ifm-color-danger-dark: #fc134f;
-  --ifm-color-danger-darker: #fb0444;
-  --ifm-color-danger-darkest: #d00337;
-  --ifm-color-danger-contrast-background: #fce9ed;
-  --ifm-color-danger-contrast-foreground: #1d070c;
-}
-
 /*
-Experiments using spark as a primary color in some contexts...
-
-:root {
-  --ifm-navbar-link-hover-color: var(--doit-color-primary-spark);
-}
-
-:where(.button--primary) {
-  --ifm-button-background-color: var(--doit-color-primary-spark);
-  --ifm-button-border-color: var(--doit-color-primary-spark)
-}
-
-:where(.button--primary):not(.button--outline):hover {
-  --ifm-button-background-color: var(--doit-color-primary-spark);
-  --ifm-button-border-color: var(--doit-color-primary-spark)
-}
-
-.pagination-nav a {
-  color: var(--doit-color-primary-spark);
-}
+@import url(./doit-light.css);
+@import url(./infirma-light.css);
 */
 
 /* Announcement bar */
@@ -278,11 +181,6 @@ background: linear-gradient(
 
 /* Customizations for the front page grid */
 
-:root {
-  --ifm-spacing-vertical-2x: calc(var(--ifm-spacing-vertical) * 2);
-  --ifm-spacing-vertical-4x: calc(var(--ifm-spacing-vertical) * 4);
-}
-
 #front-page .container,
 .footer .container {
   padding: var(--ifm-spacing-vertical-2x) 0;
@@ -405,28 +303,11 @@ background: linear-gradient(
 
 /* Footer colors */
 
-.footer {
-  --ifm-footer-background-color: var(--ifm-font-color-base);
-  --ifm-footer-color: var(--ifm-color-white);
-  --ifm-footer-link-color: var(--ifm-color-white);
-  --ifm-footer-title-color: var(--ifm-color-white);
-}
-
 .footer a:hover {
   color: var(--ifm-footer-link-color);
 }
 
-[data-theme='dark'] .footer {
-  --ifm-footer-background-color: var(--ifm-navbar-background-color);
-}
-
 /* DocSearch */
-
-:root {
-  --docsearch-primary-color: var(--ifm-color-primary) !important;
-  --docsearch-muted-color: var(--ifm-color-emphasis-700) !important;
-  --docsearch-modal-width: 90vw !important;
-}
 
 .DocSearch-Modal {
   max-width: 750px !important;

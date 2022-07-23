@@ -55,7 +55,8 @@ const config = {
         theme: {
           customCss: [
             require.resolve('./src/css/doit-light.css'),
-            require.resolve('./src/css/infirma.css'),
+            require.resolve('./src/css/infirma-light.css'),
+            require.resolve('./src/css/docsearch.css'),
             require.resolve('./src/css/custom.css'),
           ],
         },

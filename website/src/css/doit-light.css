@@ -16,6 +16,12 @@ DoiT brand design system colors
   --doit-color-violet: #3b40b5;
   --doit-color-teal: #2ab9bd;
 
+  --doit-neutral-lighter: rgb(177, 178, 179);
+  --doit-neutral-light: rgb(149, 153, 156);
+  --doit-neutral-midtone: rgb(118, 120, 122);
+  --doit-neutral-dark: rgb(85, 87, 89);
+  --doit-neutral-darker: rgb(14, 23, 33);
+
   /*
   Ground
   =============================================================================
@@ -27,6 +33,7 @@ DoiT brand design system colors
   --doit-color-background-inverse: rgba(53, 53, 64);
   --doit-color-background-dark-inverse: rgb(45, 45, 57);
   --doit-color-backdrop: rgba(0, 0, 0, 0.5);
+  --doit-color-backdrop-flat: rgb(116, 116, 116);
   --doit-color-divider: rgba(0, 0, 0, 0.12);
   --doit-color-outline-border: rgba(0, 0, 0, 0.23);
 
@@ -57,12 +64,20 @@ DoiT brand design system colors
   =============================================================================
   */
 
-  --doit-color-primary: rgb(59, 64, 181);
+  --doit-color-primary-main: rgb(59, 64, 181);
   --doit-color-primary-light: rgb(118, 121, 203);
   --doit-color-primary-dark: rgb(41, 45, 127);
-  --doit-color-primary-background-hover: rgba(59, 64, 181, 0.08);
-  --doit-color-primary-border: rgba(59, 64, 181, 0.5);
   --doit-color-primary-contrast-text: var(--doit-color-text-primary-contrast);
+  --doit-color-primary-content: linear-gradient(0deg,
+      var(--doit-overlay-content),
+      var(--doit-overlay-content)),
+    var(--doit-color-primary-main);
+  --doit-color-primary-background: linear-gradient(0deg,
+      var(--doit-overlay-background),
+      var(--doit-overlay-background)),
+    var(--doit-color-primary-main);
+  --doit-color-primary-hover-background: rgba(59, 64, 181, 0.08);
+  --doit-color-primary-border: rgba(59, 64, 181, 0.5);
 
   /*
   Navigation
