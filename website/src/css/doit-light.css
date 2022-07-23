@@ -1,0 +1,177 @@
+/*
+===============================================================================
+DoiT brand design system colors
+===============================================================================
+*/
+
+:root {
+
+  /*
+  Primary colors
+  =============================================================================
+  */
+
+  --doit-color-ink: #000433;
+  --doit-color-spark: #FC3165;
+  /* Inferred from examples */
+  --doit-color-spark-desaturated: #D51A4E;
+  --doit-color-violet: #3B40B5;
+  --doit-color-teal: #2AB9BD;
+
+  /*
+  Text
+  =============================================================================
+  */
+
+  --doit-color-text-primary: rgba(0, 0, 0, 0.87);
+  /* Inferred from examples */
+  --doit-color-text-primary-contrast: #FFFFFF;
+  --doit-color-text-secondary: rgba(0, 0, 0, 0.6);
+  --doit-color-text-disabled: rgba(0, 0, 0, 0.38);
+
+  /*
+  Actions
+  =============================================================================
+  */
+
+  --doit-color-actions-active: rgba(0, 0, 0, 0.54);
+  --doit-color-actions-hover: rgba(0, 0, 0, 0.04);
+  --doit-color-actions-selected: rgba(0, 0, 0, 0.08);
+  --doit-color-actions-disabled: rgba(0, 0, 0, 0.26);
+  --doit-color-actions-disabled-background: rgba(0, 0, 0, 0.12);
+  --doit-color-actions-focus: rgba(0, 0, 0, 0.12);
+
+  /*
+  Primary
+  =============================================================================
+  */
+
+  --doit-color-primary: var(--doit-color-violet);
+  --doit-color-primary-light: #7679CB;
+  --doit-color-primary-dark: #292D7F;
+  --doit-color-primary-background-hover: rgba(59, 64, 181, 0.08);
+  --doit-color-primary-border: rgba(59, 64, 181, 0.5);
+  --doit-color-primary-contrast-text: var(--doit-color-text-primary-contrast);
+
+  /*
+  Navigation
+  =============================================================================
+  */
+
+  --doit-color-navigation-background: var(--doit-color-ink);
+  --doit-color-navigation-text: var(--doit-color-text-primary-contrast);
+  --doit-color-navigation-search-background: rgba(255, 255, 255, 0.15);
+  --doit-color-navigation-search-placeholder: rgba(255, 255, 255, 0.42);
+  --doit-color-navigation-divider: rgba(255, 255, 255, 0.3);
+  --doit-color-navigation-gradient: linear-gradient(90deg,
+      var(--doit-color-violet) 0.8%,
+      var(--doit-color-spark-desaturated) 99.1%);
+  --doit-color-navigation-accent: var(--doit-color-spark-desaturated);
+
+  /*
+  Status colors
+  =============================================================================
+  */
+
+  /* Used to create derivative colors */
+  --doit-color-content-overlay: rgba(0, 0, 0, 0.6);
+  --doit-color-background-overlay: rgba(255, 255, 255, 0.9);
+
+  /*
+  Success
+  -----------------------------------------------------------------------------
+  */
+
+  --doit-rgb-success: 46, 125, 50;
+  --doit-color-success-main: rgba(var(--doit-rgb-success), 1);
+  --doit-color-success-light: #4CAF50;
+  --doit-color-success-dark: #1B5E20;
+  --doit-color-success-contrast-text: var(--doit-color-text-primary-contrast);
+  --doit-color-success-content: linear-gradient(0deg,
+      var(--doit-color-content-overlay),
+      var(--doit-color-content-overlay)),
+    var(--doit-color-success-main);
+  --doit-color-success-background: linear-gradient(0deg,
+      var(--doit-color-background-overlay),
+      var(--doit-color-background-overlay)),
+    var(--doit-color-success-main);
+  --doit-color-success-background-hover: rgba(var(--doit-rgb-success), 0.08);
+  --doit-color-success-border: rgba(var(--doit-rgb-success), 0.5);
+
+  /*
+  Info
+  -----------------------------------------------------------------------------
+  */
+
+  --doit-rgb-info: 2, 136, 209;
+  --doit-color-info-main: rgba(var(--doit-rgb-info), 1);
+  --doit-color-info-light: #03A9F4;
+  --doit-color-info-dark: #01579B;
+  --doit-color-info-contrast-text: var(--doit-color-text-primary);
+  --doit-color-info-content: linear-gradient(0deg,
+      var(--doit-color-content-overlay),
+      var(--doit-color-content-overlay)),
+    var(--doit-color-info-main);
+  --doit-color-info-background: linear-gradient(0deg,
+      var(--doit-color-background-overlay),
+      var(--doit-color-background-overlay)),
+    var(--doit-color-info-main);
+  --doit-color-info-background-hover: rgba(var(--doit-rgb-info), 0.08);
+  --doit-color-info-border: rgba(var(--doit-rgb-info), 0.5);
+
+  /*
+  Warning
+  -----------------------------------------------------------------------------
+  */
+
+  --doit-rgb-warning: 239, 108, 0;
+  --doit-color-warning-main: rgba(var(--doit-rgb-warning), 1);
+  --doit-color-warning-light: #FF9800;
+  --doit-color-warning-dark: #E65100;
+  --doit-color-warning-contrast-text: var(--doit-color-text-primary);
+  --doit-color-warning-content: linear-gradient(0deg,
+      var(--doit-color-content-overlay),
+      var(--doit-color-content-overlay)),
+    var(--doit-color-warning-main);
+  --doit-color-warning-background: linear-gradient(0deg,
+      var(--doit-color-background-overlay),
+      var(--doit-color-background-overlay)),
+    var(--doit-color-warning-main);
+  --doit-color-warning-background-hover: rgba(var(--doit-rgb-warning), 0.08);
+  --doit-color-warning-border: rgba(var(--doit-rgb-warning), 0.5);
+
+  /*
+  Error
+  -----------------------------------------------------------------------------
+  */
+
+  --doit-rgb-error: 211, 47, 47;
+  --doit-color-error-main: rgba(var(--doit-rgb-error), 1);
+  --doit-color-error-light: #EF5350;
+  --doit-color-error-dark: #C62828;
+  --doit-color-error-contrast-text: var(--doit-color-text-primary-contrast);
+  --doit-color-error-content: linear-gradient(0deg,
+      var(--doit-color-content-overlay),
+      var(--doit-color-content-overlay)),
+    var(--doit-color-error-main);
+  --doit-color-error-background: linear-gradient(0deg,
+      var(--doit-color-background-overlay),
+      var(--doit-color-background-overlay)),
+    var(--doit-color-error-main);
+  --doit-color-error-background-hover: rgba(var(--doit-rgb-error), 0.08);
+  --doit-color-error-border: rgba(var(--doit-rgb-error), 0.5);
+
+  /*
+  Other
+  -----------------------------------------------------------------------------
+  */
+
+  --doit-color-divider: rgba(0, 0, 0, 0.12);
+  --doit-color-outline-border: rgba(0, 0, 0, 0.23);
+  --doit-color-backdrop: rgba(0, 0, 0, 0.5);
+  --doit-color-background-default: #FFFFFF;
+  /* Inferred from dark mode */
+  --doit-color-background-default-inverted: #353540;
+  --doit-color-background-dark: #FAFAFA;
+
+}

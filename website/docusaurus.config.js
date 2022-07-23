@@ -53,7 +53,11 @@ const config = {
           },
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: [
+            require.resolve('./src/css/doit-light.css'),
+            require.resolve('./src/css/infirma.css'),
+            require.resolve('./src/css/custom.css')
+          ],
         },
         sitemap: {
           changefreq: 'daily',

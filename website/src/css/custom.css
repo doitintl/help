@@ -1,111 +1,3 @@
-/* DoiT brand design system colors */
-
-:root {
-  --ifm-color-primary: #3b40b5;
-  --ifm-color-primary-light: #7679cb;
-  --ifm-color-primary-dark: #292d7f;
-  --ifm-color-primary-contrast-text: #ffffff;
-  --ifm-color-primary-content: #1e205b;
-  --ifm-color-primary-background: #9da0da;
-  --ifm-color-primary-background-hover: #3b40b514;
-  --ifm-color-primary-border: #3b40b57f;
-}
-
-/* Infirma framework configuration */
-
-:root {
-  --ifm-color-primary: none;
-  --ifm-color-primary-dark: none;
-  --ifm-color-primary-darker: none;
-  --ifm-color-primary-darkest: none;
-  --ifm-color-primary-light: none;
-  --ifm-color-primary-lighter: none;
-  --ifm-color-primary-lightest: none;
-  --ifm-color-primary-contrast-background: none;
-  --ifm-color-primary-contrast-foreground: none;
-
-  --ifm-color-secondary: none;
-  --ifm-color-secondary-dark: none;
-  --ifm-color-secondary-darker: none;
-  --ifm-color-secondary-darkest: none;
-  --ifm-color-secondary-light: none;
-  --ifm-color-secondary-lighter: none;
-  --ifm-color-secondary-lightest: none;
-  --ifm-color-secondary-contrast-background: none;
-  --ifm-color-secondary-contrast-foreground: none;
-
-  --ifm-color-success: none;
-  --ifm-color-success-dark: none;
-  --ifm-color-success-darker: none;
-  --ifm-color-success-darkest: none;
-  --ifm-color-success-light: none;
-  --ifm-color-success-lighter: none;
-  --ifm-color-success-lightest: none;
-  --ifm-color-success-contrast-background: none;
-  --ifm-color-success-contrast-foreground: none;
-
-  --ifm-color-info: none;
-  --ifm-color-info-dark: none;
-  --ifm-color-info-darker: none;
-  --ifm-color-info-darkest: none;
-  --ifm-color-info-light: none;
-  --ifm-color-info-lighter: none;
-  --ifm-color-info-lightest: none;
-  --ifm-color-info-contrast-background: none;
-  --ifm-color-info-contrast-foreground: none;
-
-  --ifm-color-warning: none;
-  --ifm-color-warning-dark: none;
-  --ifm-color-warning-darker: none;
-  --ifm-color-warning-darkest: none;
-  --ifm-color-warning-light: none;
-  --ifm-color-warning-lighter: none;
-  --ifm-color-warning-lightest: none;
-  --ifm-color-warning-contrast-background: none;
-  --ifm-color-warning-contrast-foreground: none;
-
-  --ifm-color-danger: none;
-  --ifm-color-danger-dark: none;
-  --ifm-color-danger-darker: none;
-  --ifm-color-danger-darkest: none;
-  --ifm-color-danger-light: none;
-  --ifm-color-danger-lighter: none;
-  --ifm-color-danger-lightest: none;
-  --ifm-color-danger-contrast-background: none;
-  --ifm-color-danger-contrast-foreground: none;
-
-  --ifm-color-white: #fff;
-  --ifm-color-black: #000;
-
-  --ifm-color-gray-0: var(--ifm-color-white);
-  --ifm-color-gray-100: none;
-  --ifm-color-gray-200: none;
-  --ifm-color-gray-300: none;
-  --ifm-color-gray-400: none;
-  --ifm-color-gray-500: none;
-  --ifm-color-gray-600: none;
-  --ifm-color-gray-700: none;
-  --ifm-color-gray-800: none;
-  --ifm-color-gray-900: none;
-  --ifm-color-gray-1000: var(--ifm-color-black);
-
-  --ifm-color-emphasis-0: var(--ifm-color-gray-0);
-  --ifm-color-emphasis-100: var(--ifm-color-gray-100);
-  --ifm-color-emphasis-200: var(--ifm-color-gray-200);
-  --ifm-color-emphasis-300: var(--ifm-color-gray-300);
-  --ifm-color-emphasis-400: var(--ifm-color-gray-400);
-  --ifm-color-emphasis-500: var(--ifm-color-gray-500);
-  --ifm-color-emphasis-600: var(--ifm-color-gray-600);
-  --ifm-color-emphasis-700: var(--ifm-color-gray-700);
-  --ifm-color-emphasis-800: var(--ifm-color-gray-800);
-  --ifm-color-emphasis-900: var(--ifm-color-gray-900);
-  --ifm-color-emphasis-1000: var(--ifm-color-gray-1000);
-
-  --ifm-color-content: var(--ifm-color-emphasis-900);
-  --ifm-color-content-inverse: var(--ifm-color-emphasis-0);
-  --ifm-color-content-secondary: none;
-}
-
 /* Old attempt at trying to configure both at once */
 :root {
   --doit-color-primary-ink: #000433;
@@ -274,8 +166,7 @@ div[role='banner'] div {
 .navbar__logo img,
 .theme-doc-sidebar-container a img {
   /* editorconfig-checker-disable-next-line */
-  transition: all var(--ifm-transition-fast)
-    var(--ifm-transition-timing-default);
+  transition: all var(--ifm-transition-fast) var(--ifm-transition-timing-default);
 }
 
 .navbar__logo img:hover,
@@ -300,12 +191,9 @@ div[role='banner'] div {
   border-width: 4px 0;
   border-style: solid;
   /* editorconfig-checker-disable-next-line */
-  border-image: linear-gradient(
-      90deg,
+  border-image: linear-gradient(90deg,
       rgb(59, 64, 181) 0.8%,
-      rgb(213, 26, 78) 99.1%
-    )
-    1 / 1 / 0 stretch;
+      rgb(213, 26, 78) 99.1%) 1 / 1 / 0 stretch;
 }
 
 .footer {
@@ -387,8 +275,7 @@ background: linear-gradient(
   padding: var(--ifm-spacing-vertical-2x) 0;
   margin: 0 auto;
   /* editorconfig-checker-disable-next-line */
-  transition: all var(--ifm-transition-fast)
-    var(--ifm-transition-timing-default);
+  transition: all var(--ifm-transition-fast) var(--ifm-transition-timing-default);
 }
 
 #front-page .container h2 {
@@ -418,11 +305,11 @@ background: linear-gradient(
   white-space: nowrap;
 }
 
-.footer__bottom > div {
+.footer__bottom>div {
   margin: 0 !important;
 }
 
-.footer__bottom > div a {
+.footer__bottom>div a {
   display: block;
 }
 
@@ -441,6 +328,7 @@ background: linear-gradient(
 }
 
 @media screen and (max-width: 995px) {
+
   #front-page .container,
   .footer .container {
     width: 90vw;
@@ -456,13 +344,13 @@ background: linear-gradient(
     flex-direction: column;
   }
 
-  #front-page .row + .row,
-  .footer .row + .row {
+  #front-page .row+.row,
+  .footer .row+.row {
     margin-top: var(--ifm-spacing-vertical-2x);
   }
 
-  #front-page .col + .col,
-  .footer .col + .col {
+  #front-page .col+.col,
+  .footer .col+.col {
     margin-top: var(--ifm-spacing-vertical-2x);
   }
 
@@ -481,18 +369,19 @@ background: linear-gradient(
 }
 
 @media screen and (min-width: 996px) {
+
   #front-page .row,
   .footer .row {
     flex-direction: row;
   }
 
-  #front-page .row + .row,
-  .footer .row + div {
+  #front-page .row+.row,
+  .footer .row+div {
     margin-top: var(--ifm-spacing-vertical-4x);
   }
 
-  #front-page .col + .col,
-  .footer .col + .col {
+  #front-page .col+.col,
+  .footer .col+.col {
     margin-left: var(--ifm-spacing-vertical-4x);
   }
 

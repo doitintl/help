@@ -51,13 +51,13 @@
 /assets/*
   Cache-Control: public, max-age=31536000
 
-# Demo documentation
+# Test documentation
 # -----------------------------------------------------------------------------
 
-/docs/demo
+/docs/test
   X-Robots-Tag: noindex
 
-/docs/demo/*
+/docs/test/*
   X-Robots-Tag: noindex
 
 # Special routes
