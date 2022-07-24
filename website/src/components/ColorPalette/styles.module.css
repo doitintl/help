@@ -26,72 +26,12 @@
   background-size: 30px 30px;
   background-color: #fff;
   background-position: 0px 0px, 0px 15px, 15px -15px, -15px 0px;
-  background-image: linear-gradient(45deg,
-      rgb(230, 230, 230) 25%, transparent 25%),
-    linear-gradient(-45deg,
-      rgb(230, 230, 230) 25%, transparent 25%),
-    linear-gradient(45deg,
-      transparent 75%, rgb(230, 230, 230) 75%),
-    linear-gradient(-45deg,
-      transparent 75%, rgb(230, 230, 230) 75%);
-}
-
-.canvas_background_default {
-  background: var(--doit-color-background-default);
-}
-
-.canvas_background_dark {
-  background: var(--doit-color-background-dark);
-}
-
-.canvas_success_background {
-  background: var(--doit-color-success-background);
-}
-
-.canvas_info_background {
-  background: var(--doit-color-info-background);
-}
-
-.canvas_warning_background {
-  background: var(--doit-color-warning-background);
-}
-
-.canvas_error_background {
-  background: var(--doit-color-error-background);
-}
-
-.canvas_primary {
-  background: var(--doit-color-primary);
-}
-
-.canvas_success_main {
-  background: var(--doit-color-success-main);
-}
-
-.canvas_info_main {
-  background: var(--doit-color-info-main);
-}
-
-.canvas_warning_main {
-  background: var(--doit-color-warning-main);
-}
-
-.canvas_error_main {
-  background: var(--doit-color-error-main);
-}
-
-.canvas_backdrop {
-  background: var(--doit-color-backdrop);
-}
-
-.canvas_navigation_background {
-  background: var(--doit-color-navigation-background);
-}
-
-.canvas_background_default_inverse {
-  background: var(--doit-color-background-default-inverse);
-}
-
-.canvas_background_dark_inverse {
-  background: var(--doit-color-background-dark-inverse);
+  background-image: linear-gradient(
+      45deg,
+      rgb(230, 230, 230) 25%,
+      transparent 25%
+    ),
+    linear-gradient(-45deg, rgb(230, 230, 230) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgb(230, 230, 230) 75%),
+    linear-gradient(-45deg, transparent 75%, rgb(230, 230, 230) 75%);
 }

@@ -5,181 +5,148 @@ DoiT brand design system colors
 */
 
 :root {
+  --doit-color-missing: #ff00ff;
+
   /*
   Brand colors
   =============================================================================
   */
 
-  --doit-color-ink: rgb(0, 4, 51);
-  --doit-color-spark: rgb(252, 49, 101);
-  --doit-color-spark-desaturated: rgb(213, 26, 78);
+  --doit-color-ink: #000433;
+  --doit-color-spark: #fc3165;
   --doit-color-violet: #3b40b5;
   --doit-color-teal: #2ab9bd;
 
-  --doit-neutral-lighter: rgb(177, 178, 179);
-  --doit-neutral-light: rgb(149, 153, 156);
-  --doit-neutral-midtone: rgb(118, 120, 122);
-  --doit-neutral-dark: rgb(85, 87, 89);
-  --doit-neutral-darker: rgb(14, 23, 33);
+  --doit-neutral-lighter: #b1b2b3;
+  --doit-neutral-light: #95999c;
+  --doit-neutral-midtone: #76787a;
+  --doit-neutral-dark: #555759;
+  --doit-neutral-darker: #0e1721;
 
   /*
   Ground
   =============================================================================
   */
 
-  --doit-color-foreground: rgba(0, 0, 0, 0.87);
-  --doit-color-background: rgb(255, 255, 255);
-  --doit-color-background-dark: rgba(250, 250, 250, 1);
-  --doit-color-background-inverse: rgba(53, 53, 64);
-  --doit-color-background-dark-inverse: rgb(45, 45, 57);
-  --doit-color-backdrop: rgba(0, 0, 0, 0.5);
-  --doit-color-backdrop-flat: rgb(116, 116, 116);
-  --doit-color-divider: rgba(0, 0, 0, 0.12);
-  --doit-color-outline-border: rgba(0, 0, 0, 0.23);
+  --doit-color-foreground: #212121;
+  --doit-color-background: #ffffff;
+  --doit-color-background-dark: #fafafa;
+  --doit-color-background-inverse: #353540;
+  --doit-color-background-dark-inverse: #2d2d39;
+  --doit-color-divider: #e0e0e0;
+  --doit-color-outline-border: #c4c4c4;
+  --doit-color-backdrop: #00000080;
 
   /*
   Text
   =============================================================================
   */
 
-  --doit-color-text-primary: var(--doit-color-foreground);
-  --doit-color-text-primary-contrast: var(--doit-color-background);
-  --doit-color-text-secondary: rgba(0, 0, 0, 0.6);
-  --doit-color-text-disabled: rgba(0, 0, 0, 0.38);
+  --doit-color-text-primary: #212121;
+  --doit-color-text-primary-contrast: #ffffff;
+  --doit-color-text-secondary: #666666;
+  --doit-color-text-disabled: #00000061;
 
   /*
   Actions
   =============================================================================
   */
 
-  --doit-color-actions-active: rgba(0, 0, 0, 0.54);
-  --doit-color-actions-hover: rgba(0, 0, 0, 0.04);
-  --doit-color-actions-selected: rgba(0, 0, 0, 0.08);
-  --doit-color-actions-disabled: rgba(0, 0, 0, 0.26);
-  --doit-color-actions-disabled-background: rgba(0, 0, 0, 0.12);
-  --doit-color-actions-focus: rgba(0, 0, 0, 0.12);
+  --doit-color-actions-active: #757575;
+  --doit-color-actions-hover: #f5f5f5;
+  --doit-color-actions-selected: #f5f5f5;
+  --doit-color-actions-disabled: #bdbdbd;
+  --doit-color-actions-disabled-background: #0000001f;
+  --doit-color-actions-focus: #e0e0e0;
 
   /*
   Primary
   =============================================================================
   */
 
-  --doit-color-primary-main: rgb(59, 64, 181);
-  --doit-color-primary-light: rgb(118, 121, 203);
-  --doit-color-primary-dark: rgb(41, 45, 127);
-  --doit-color-primary-contrast-text: var(--doit-color-text-primary-contrast);
-  --doit-color-primary-content: linear-gradient(0deg,
-      var(--doit-overlay-content),
-      var(--doit-overlay-content)),
-    var(--doit-color-primary-main);
-  --doit-color-primary-background: linear-gradient(0deg,
-      var(--doit-overlay-background),
-      var(--doit-overlay-background)),
-    var(--doit-color-primary-main);
-  --doit-color-primary-hover-background: rgba(59, 64, 181, 0.08);
-  --doit-color-primary-border: rgba(59, 64, 181, 0.5);
+  --doit-color-primary-main: #3b40b5;
+  --doit-color-primary-light: #7679cb;
+  --doit-color-primary-dark: #292d7f;
+  --doit-color-primary-contrast-text: #ffffff;
+  --doit-color-primary-background: #3b40b5ff;
+  --doit-color-primary-background-hover: #3b40b514;
+  --doit-color-primary-border: #3b40b580;
 
   /*
   Navigation
   =============================================================================
   */
 
-  --doit-color-navigation-background: var(--doit-color-ink);
-  --doit-color-navigation-text: var(--doit-color-text-primary-contrast);
-  --doit-color-navigation-search-background: rgba(255, 255, 255, 0.15);
-  --doit-color-navigation-search-placeholder: rgba(255, 255, 255, 0.42);
-  --doit-color-navigation-divider: rgba(255, 255, 255, 0.3);
-  --doit-color-navigation-gradient: linear-gradient(90deg,
-      rgba(59, 64, 181, 1) 0%,
-      rgba(213, 26, 78, 1) 100%);
-  --doit-color-navigation-accent: var(--doit-color-spark-desaturated);
+  --doit-color-navigation-background: #000433;
+  --doit-color-navigation-text: #ffffff;
+  --doit-color-navigation-search-background: #262a52;
+  --doit-color-navigation-search-placeholder: #6b6d89;
+  --doit-color-navigation-divider: #4c4f70;
+  --doit-color-navigation-gradient: linear-gradient(
+    90deg,
+    rgba(59, 64, 181, 1) 0%,
+    rgba(213, 26, 78, 1) 100%
+  );
+  --doit-color-navigation-accent: #d51a4e;
 
   /*
   Status colors
   =============================================================================
   */
 
-  --doit-overlay-content: rgba(0, 0, 0, 0.6);
-  --doit-overlay-background: rgba(255, 255, 255, 0.9);
-
   /*
   Success
   -----------------------------------------------------------------------------
   */
 
-  --doit-color-success-main: rgb(46, 125, 50);
-  --doit-color-success-light: rgb(76, 175, 80);
-  --doit-color-success-dark: rgb(27, 94, 32);
-  --doit-color-success-contrast-text: var(--doit-color-text-primary-contrast);
-  --doit-color-success-content: linear-gradient(0deg,
-      var(--doit-overlay-content),
-      var(--doit-overlay-content)),
-    var(--doit-color-success-main);
-  --doit-color-success-background: linear-gradient(0deg,
-      var(--doit-overlay-background),
-      var(--doit-overlay-background)),
-    var(--doit-color-success-main);
-  --doit-color-success-hover-background: rgba(46, 125, 50, 0.08);
-  --doit-color-success-border: rgba(46, 125, 50, 0.5);
+  --doit-color-success-main: #2e7d32;
+  --doit-color-success-light: #4caf50;
+  --doit-color-success-dark: #1b5e20;
+  --doit-color-success-contrast-text: #ffffff;
+  --doit-color-success-content: #123214;
+  --doit-color-success-background: #eaf2ea;
+  --doit-color-success-background-hover: #2e7d3214;
+  --doit-color-success-border: #2e7d3280;
 
   /*
   Info
   -----------------------------------------------------------------------------
   */
 
-  --doit-color-info-main: rgb(2, 136, 209);
-  --doit-color-info-light: rgb(3, 169, 244);
-  --doit-color-info-dark: rgb(1, 87, 155);
-  --doit-color-info-contrast-text: var(--doit-color-text-primary);
-  --doit-color-info-content: linear-gradient(0deg,
-      var(--doit-overlay-content),
-      var(--doit-overlay-content)),
-    var(--doit-color-info-main);
-  --doit-color-info-background: linear-gradient(0deg,
-      var(--doit-overlay-background),
-      var(--doit-overlay-background)),
-    var(--doit-color-info-main);
-  --doit-color-info-hover-background: rgba(2, 136, 209, 0.08);
-  --doit-color-info-border: rgba(2, 136, 209, 0.5);
+  --doit-color-info-main: #0288d1;
+  --doit-color-info-light: #03a9f4;
+  --doit-color-info-dark: #01579b;
+  --doit-color-info-contrast-text: #00121b;
+  --doit-color-info-content: #013654;
+  --doit-color-info-background: #e6f3fa;
+  --doit-color-info-background-hover: #0288d114;
+  --doit-color-info-border: #0288d180;
 
   /*
   Warning
   -----------------------------------------------------------------------------
   */
 
-  --doit-color-warning-main: rgb(239, 108, 0);
-  --doit-color-warning-light: rgb(255, 152, 0);
-  --doit-color-warning-dark: rgb(230, 81, 0);
-  --doit-color-warning-contrast-text: var(--doit-color-text-primary);
-  --doit-color-warning-content: linear-gradient(0deg,
-      var(--doit-overlay-content),
-      var(--doit-overlay-content)),
-    var(--doit-color-warning-main);
-  --doit-color-warning-background: linear-gradient(0deg,
-      var(--doit-overlay-background),
-      var(--doit-overlay-background)),
-    var(--doit-color-warning-main);
-  --doit-color-warning-hover-background: rgba(239, 108, 0, 0.08);
-  --doit-color-warning-border: rgba(239, 108, 0, 0.5);
+  --doit-color-warning-main: #ef6c00;
+  --doit-color-warning-light: #ff9800;
+  --doit-color-warning-dark: #e65100;
+  --doit-color-warning-contrast-text: #1f0e00;
+  --doit-color-warning-content: #5f2b01;
+  --doit-color-warning-background: #fdf0e5;
+  --doit-color-warning-background-hover: #ef6c0014;
+  --doit-color-warning-border: #ef6c0080;
 
   /*
   Error
   -----------------------------------------------------------------------------
 */
 
-  --doit-color-error-main: rgb(211, 47, 47);
-  --doit-color-error-light: rgb(239, 83, 80);
-  --doit-color-error-dark: rgb(198, 40, 40);
-  --doit-color-error-contrast-text: var(--doit-color-text-primary-contrast);
-  --doit-color-error-content: linear-gradient(0deg,
-      var(--doit-overlay-content),
-      var(--doit-overlay-content)),
-    var(--doit-color-error-main);
-  --doit-color-error-background: linear-gradient(0deg,
-      var(--doit-overlay-background),
-      var(--doit-overlay-background)),
-    var(--doit-color-error-main);
-  --doit-color-error-hover-background: rgba(211, 47, 47, 0.08);
-  --doit-color-error-border: rgba(211, 47, 47, 0.5);
-
+  --doit-color-error-main: #d32f2f;
+  --doit-color-error-light: #ef5350;
+  --doit-color-error-dark: #c62828;
+  --doit-color-error-contrast-text: #ffffff;
+  --doit-color-error-content: #541313;
+  --doit-color-error-background: #fbeaea;
+  --doit-color-error-background-hover: #d32f2f14;
+  --doit-color-error-border: #d32f2f80;
 }

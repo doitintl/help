@@ -211,37 +211,34 @@ monospace;
 
 /* Old attempt at trying to configure both at once */
 :root {
-  --ifm-color-primary: var(--doit-color-primary-main);
+  --ifm-color-primary-lightest: var(--doit-color-missing);
+  --ifm-color-primary-lighter: var(--doit-color-missing);
   --ifm-color-primary-light: var(--doit-color-primary-light);
-  --ifm-color-primary-lighter: var(--doit-color-primary-light);
-  --ifm-color-primary-lightest: var(--doit-color-primary-light);
+  --ifm-color-primary: var(--doit-color-primary-main);
   --ifm-color-primary-dark: var(--doit-color-primary-dark);
-  --ifm-color-primary-darker: var(--doit-color-primary-dark);
-  --ifm-color-primary-darkest: var(--doit-color-primary-dark);
-  --ifm-color-primary-contrast-background: var(
-    --doit-color-primary-background
-  );
-  --ifm-color-primary-contrast-foreground: var(
-    --doit-color-primary-content
-  );
+  --ifm-color-primary-darker: var(--doit-color-missing);
+  --ifm-color-primary-darkest: var(--doit-color-missing);
+  --ifm-color-primary-contrast-background: var(--doit-color-missing);
+  --ifm-color-primary-contrast-foreground: var(--doit-color-missing);
 
-  --ifm-color-secondary: var(--doit-neutral-midtone);
+  --ifm-color-secondary-lightest: var(--doit-color-missing);
+  --ifm-color-secondary-lighter: var(--doit-color-missing);
   --ifm-color-secondary-light: var(--doit-neutral-lighter);
-  --ifm-color-secondary-lighter: var(--doit-neutral-lighter);
-  --ifm-color-secondary-lightest: var(--doit-neutral-lighter);
+  --ifm-color-secondary: var(--doit-neutral-midtone);
   --ifm-color-secondary-dark: var(--doit-neutral-dark);
-  --ifm-color-secondary-darker: var(--doit-neutral-dark);
-  --ifm-color-secondary-darkest: var(--doit-neutral-dark);
+  --ifm-color-secondary-darker: var(--doit-color-missing);
+  --ifm-color-secondary-darkest: var(--doit-color-missing);
+  /* Calculated using rules taken from the Design System prototype document */
   --ifm-color-secondary-contrast-background: rgb(240, 240, 240);
   --ifm-color-secondary-contrast-foreground: rgb(41, 42, 43);
 
-  --ifm-color-success: var(--doit-color-success-main);
+  --ifm-color-success-lightest: var(--doit-color-missing);
+  --ifm-color-success-lighter: var(--doit-color-missing);
   --ifm-color-success-light: var(--doit-color-success-light);
-  --ifm-color-success-lighter: var(--doit-color-success-light);
-  --ifm-color-success-lightest: var(--doit-color-success-light);
+  --ifm-color-success: var(--doit-color-success-main);
   --ifm-color-success-dark: var(--doit-color-success-dark);
-  --ifm-color-success-darker: var(--doit-color-success-dark);
-  --ifm-color-success-darkest: var(--doit-color-success-dark);
+  --ifm-color-success-darker: var(--doit-color-missing);
+  --ifm-color-success-darkest: var(--doit-color-missing);
   --ifm-color-success-contrast-background: var(
     --doit-color-success-background
   );
@@ -249,23 +246,23 @@ monospace;
     --doit-color-success-content
   );
 
-  --ifm-color-info: var(--doit-color-info-main);
+  --ifm-color-info-lightest: var(--doit-color-missing);
+  --ifm-color-info-lighter: var(--doit-color-missing);
   --ifm-color-info-light: var(--doit-color-info-light);
-  --ifm-color-info-lighter: var(--doit-color-info-light);
-  --ifm-color-info-lightest: var(--doit-color-info-light);
+  --ifm-color-info: var(--doit-color-info-main);
   --ifm-color-info-dark: var(--doit-color-info-dark);
-  --ifm-color-info-darker: var(--doit-color-info-dark);
-  --ifm-color-info-darkest: var(--doit-color-info-dark);
+  --ifm-color-info-darker: var(--doit-color-missing);
+  --ifm-color-info-darkest: var(--doit-color-missing);
   --ifm-color-info-contrast-background: var(--doit-color-info-background);
   --ifm-color-info-contrast-foreground: var(--doit-color-info-content);
 
-  --ifm-color-warning: var(--doit-color-warning-main);
+  --ifm-color-warning-lightest: var(--doit-color-missing);
+  --ifm-color-warning-lighter: var(--doit-color-missing);
   --ifm-color-warning-light: var(--doit-color-warning-light);
-  --ifm-color-warning-lighter: var(--doit-color-warning-light);
-  --ifm-color-warning-lightest: var(--doit-color-warning-light);
+  --ifm-color-warning: var(--doit-color-warning-main);
   --ifm-color-warning-dark: var(--doit-color-warning-dark);
-  --ifm-color-warning-darker: var(--doit-color-warning-dark);
-  --ifm-color-warning-darkest: var(--doit-color-warning-dark);
+  --ifm-color-warning-darker: var(--doit-color-missing);
+  --ifm-color-warning-darkest: var(--doit-color-missing);
   --ifm-color-warning-contrast-background: var(
     --doit-color-warning-background
   );
@@ -273,13 +270,13 @@ monospace;
     --doit-color-warning-content
   );
 
-  --ifm-color-danger: var(--doit-color-error-main);
-  --ifm-color-danger-light: var(--doit-color-error-light);
-  --ifm-color-danger-lighter: var(--doit-color-error-light);
   --ifm-color-danger-lightest: var(--doit-color-error-light);
+  --ifm-color-danger-lighter: var(--doit-color-missing);
+  --ifm-color-danger-light: var(--doit-color-missing);
+  --ifm-color-danger: var(--doit-color-error-main);
   --ifm-color-danger-dark: var(--doit-color-error-dark);
-  --ifm-color-danger-darker: var(--doit-color-error-dark);
-  --ifm-color-danger-darkest: var(--doit-color-error-dark);
+  --ifm-color-danger-darker: var(--doit-color-missing);
+  --ifm-color-danger-darkest: var(--doit-color-missing);
   --ifm-color-danger-contrast-background: var(
     --doit-color-error-background
   );
