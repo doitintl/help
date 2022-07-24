@@ -46,7 +46,6 @@ dces
 deandra
 debussylaan
 deleter
-desaturated
 devcontainer
 docops
 docsbot
