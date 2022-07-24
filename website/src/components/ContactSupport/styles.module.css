@@ -1,5 +1,5 @@
 .contact_support {
-  background: rgba(0, 0, 0, 0.02);
+  background: var(--doit-color-off-white);
 }
 
 .contact_support_cta {

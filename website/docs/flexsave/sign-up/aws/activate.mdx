@@ -40,7 +40,7 @@ To provide the additional access needed for Flexsave to work, we have prepared a
 
 However, before doing that, you will need supply an AWS [Cost and Usage Report](https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html) (CUR). We will periodically fetch this report and use the data to model your current and future compute usage, allowing Flexsave to predict the ideal blend of Savings Plans to maximize your coverage.
 
-:::tip
+:::attention
 
 You may already have an Cost and Usage Report set up for your AWS account.
 
@@ -79,7 +79,7 @@ In the example above, note:
 - The **File format** value is `text/csv`
 - The **Report content** list contains **Resource IDs**
 
-:::tip
+:::hint
 
 From this list, you are free to choose a custom **S3 bucket** name and **Report path prefix**. However, your report must match all of the other values.
 
@@ -111,7 +111,7 @@ After verifying access to your report files in the previous section, return to t
 
 When you are done, select the **OPEN AWS CLOUDFORMATION CONSOLE** button.
 
-:::info
+:::attention
 
 If we are unable to access access your report files, the page will display an error message. If this happens to you, it may be for one of the following reasons:
 
@@ -124,7 +124,7 @@ If we are unable to access access your report files, the page will display an er
 
 If we are able to successfully access your report files, the browser will open a window prompting you to log into your AWS console.
 
-:::warning
+:::attention
 
 Your you must authenticate as the same account used to [get your estimation](get-estimate.mdx), which should have been a [management account][management-account] (i.e., a _payer account_).
 

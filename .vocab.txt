@@ -50,6 +50,7 @@ devcontainer
 docops
 docsbot
 docsearch
+docutils
 doesn't
 doit
 doitintl
@@ -91,6 +92,7 @@ ignorecase
 imgdup
 imgdupignore
 infima
+infirma
 iops
 jsonld
 kpis
@@ -113,6 +115,7 @@ mbps
 mdash
 mdns
 mdxa
+midtone
 mifs
 mirrorings
 mixpanel

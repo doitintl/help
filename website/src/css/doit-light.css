@@ -1,0 +1,152 @@
+/*
+===============================================================================
+DoiT brand design system colors
+===============================================================================
+*/
+
+:root {
+  --doit-color-missing: #ff00ff;
+
+  /*
+  Brand colors
+  =============================================================================
+  */
+
+  --doit-color-ink: #000433;
+  --doit-color-spark: #fc3165;
+  --doit-color-violet: #3b40b5;
+  --doit-color-teal: #2ab9bd;
+
+  --doit-neutral-lighter: #b1b2b3;
+  --doit-neutral-light: #95999c;
+  --doit-neutral-midtone: #76787a;
+  --doit-neutral-dark: #555759;
+  --doit-neutral-darker: #0e1721;
+
+  /*
+  Ground
+  =============================================================================
+  */
+
+  --doit-color-foreground: #212121;
+  --doit-color-background: #ffffff;
+  --doit-color-background-dark: #fafafa;
+  --doit-color-background-inverse: #353540;
+  --doit-color-background-dark-inverse: #2d2d39;
+  --doit-color-divider: #e0e0e0;
+  --doit-color-outline-border: #c4c4c4;
+  --doit-color-backdrop: #00000080;
+
+  /*
+  Text
+  =============================================================================
+  */
+
+  --doit-color-text-primary: #212121;
+  --doit-color-text-primary-contrast: #ffffff;
+  --doit-color-text-secondary: #666666;
+  --doit-color-text-disabled: #00000061;
+
+  /*
+  Actions
+  =============================================================================
+  */
+
+  --doit-color-actions-active: #757575;
+  --doit-color-actions-hover: #f5f5f5;
+  --doit-color-actions-selected: #f5f5f5;
+  --doit-color-actions-disabled: #bdbdbd;
+  --doit-color-actions-disabled-background: #0000001f;
+  --doit-color-actions-focus: #e0e0e0;
+
+  /*
+  Primary
+  =============================================================================
+  */
+
+  --doit-color-primary-main: #3b40b5;
+  --doit-color-primary-light: #7679cb;
+  --doit-color-primary-dark: #292d7f;
+  --doit-color-primary-contrast-text: #ffffff;
+  --doit-color-primary-background: #3b40b5ff;
+  --doit-color-primary-background-hover: #3b40b514;
+  --doit-color-primary-border: #3b40b580;
+
+  /*
+  Navigation
+  =============================================================================
+  */
+
+  --doit-color-navigation-background: #000433;
+  --doit-color-navigation-text: #ffffff;
+  --doit-color-navigation-search-background: #262a52;
+  --doit-color-navigation-search-placeholder: #6b6d89;
+  --doit-color-navigation-divider: #4c4f70;
+  --doit-color-navigation-gradient: linear-gradient(
+    90deg,
+    rgba(59, 64, 181, 1) 0%,
+    rgba(213, 26, 78, 1) 100%
+  );
+  --doit-color-navigation-accent: #d51a4e;
+
+  /*
+  Status colors
+  =============================================================================
+  */
+
+  /*
+  Success
+  -----------------------------------------------------------------------------
+  */
+
+  --doit-color-success-main: #2e7d32;
+  --doit-color-success-light: #4caf50;
+  --doit-color-success-dark: #1b5e20;
+  --doit-color-success-contrast-text: #ffffff;
+  --doit-color-success-content: #123214;
+  --doit-color-success-background: #eaf2ea;
+  --doit-color-success-background-hover: #2e7d3214;
+  --doit-color-success-border: #2e7d3280;
+
+  /*
+  Info
+  -----------------------------------------------------------------------------
+  */
+
+  --doit-color-info-main: #0288d1;
+  --doit-color-info-light: #03a9f4;
+  --doit-color-info-dark: #01579b;
+  --doit-color-info-contrast-text: #00121b;
+  --doit-color-info-content: #013654;
+  --doit-color-info-background: #e6f3fa;
+  --doit-color-info-background-hover: #0288d114;
+  --doit-color-info-border: #0288d180;
+
+  /*
+  Warning
+  -----------------------------------------------------------------------------
+  */
+
+  --doit-color-warning-main: #ef6c00;
+  --doit-color-warning-light: #ff9800;
+  --doit-color-warning-dark: #e65100;
+  --doit-color-warning-contrast-text: #1f0e00;
+  --doit-color-warning-content: #5f2b01;
+  --doit-color-warning-background: #fdf0e5;
+  --doit-color-warning-background-hover: #ef6c0014;
+  --doit-color-warning-border: #ef6c0080;
+
+  /*
+  Error
+  -----------------------------------------------------------------------------
+*/
+
+  --doit-color-error-main: #d32f2f;
+  --doit-color-error-light: #ef5350;
+  --doit-color-error-dark: #c62828;
+  --doit-color-error-contrast-text: #ffffff;
+  --doit-color-error-content: #541313;
+  --doit-color-error-background: #fbeaea;
+  --doit-color-error-background-hover: #d32f2f14;
+  --doit-color-error-border: #d32f2f80;
+}

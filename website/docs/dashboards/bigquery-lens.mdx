@@ -23,7 +23,7 @@ To access the BigQuery Lens, make sure that you have followed the steps at [Conn
 
 After attaching the BigQuery Lens dashboard, a BQ Lens icon will appear on your dashboard, and the CMP will start gathering information about your account usage patterns. You will see messages on the screen informing you of the progress.
 
-:::info
+:::important
 
 The BigQuery historical jobs are backfilled for the last 30 days.
 
@@ -45,7 +45,7 @@ Before diving into the widgets, have a look at the options provided in the two d
   alt="A partial screenshot of the BigQuery Lens dashboard"
 />
 
-:::info
+:::hint
 
 Except [BigQuery Spend by SKU](#bigquery-spend-by-sku-widget), all other widgets on the BigQuery Lens dashboard are updated daily at 1:00 AM UTC.
 
@@ -82,7 +82,7 @@ You can select the three dots menu (**&#8942**) in the upper-right corner of the
 
 - **Refresh**: By default, the BigQuery Spend by SKU widget is updated twice per day. You can use the _Refresh_ option to fetch the latest billing data from Google.
 
-  :::note
+  :::important
 
   The information shown here is when CMP retrieves the billing data, while the freshness of the data is decided by Google Cloud's [frequency of data loads](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#data-loads).
 
@@ -130,7 +130,7 @@ It allows us to query your BigQuery tables, find your top 20 non-clustered table
 
 More specifically, this permission helps us identify the cardinality of the columns referenced in the `WHERE` clause (i.e., the columns which can be clustered on). Knowing how many distinct elements exist in each column allows us to compute the average chunk size and determine the best savings candidates.
 
-:::info
+:::important
 
 BigQuery Lens Advanced provides recommendations based on the assumption that:
 
@@ -179,7 +179,7 @@ BigQuery Lens creates and maintains the `doitintl-cmp-bq` dataset on your behalf
 
 It is worth mentioning that the actual cost depends on the volume of your logs. If your organization uses BigQuery heavily, the cost could be much higher if you are using BigQuery's [on-demand analysis pricing model](https://cloud.google.com/bigquery/pricing#analysis_pricing_models).
 
-:::caution
+:::attention
 
 If you have an excess of historical jobs, you may see an increased cost for BigQuery Streaming Inserts when we backfill them for the last 30 days during your service account setup.
 

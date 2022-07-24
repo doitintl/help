@@ -47,14 +47,18 @@ const config = {
               'hint',
               'tip',
               'important',
-              'info', // TODO: Temporary, remove
               'note',
               'seealso',
             ],
           },
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: [
+            require.resolve('./src/css/doit-light.css'),
+            require.resolve('./src/css/infirma-light.css'),
+            require.resolve('./src/css/docsearch.css'),
+            require.resolve('./src/css/custom.css'),
+          ],
         },
         sitemap: {
           changefreq: 'daily',

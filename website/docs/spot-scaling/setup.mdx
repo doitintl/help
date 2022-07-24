@@ -107,12 +107,16 @@ To enable Auto-Enrollment, use the following tags when creating your ASGs:
     - `true`: When there are not enough EC2 instances to meet the capacity demand for Spot Instances, Spot Scaling will automatically fall back to On-Demand Instances.
     - `false`: Spot Scaling will not fall back to On-Demand Instances in case of [Spot Instance interruptions](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-interruptions.html).
 
-:::note
+:::hint
+
 Tag keys and values are case-sensitive.
+
 :::
 
-:::info
+:::important
+
 The current implementation of Auto-Enrollment only allows the two tags mentioned above. Recommendations will be made based on 20% of desired capacity exists On-Demand and 80% with Spot Instances. For the allowed instance type, the recommendations are similar machine types based on vCPUs and memory configuration.
 
 To adjust the recommendations, you need to log in to the CMP to [Modify Recommendations](#modify-recommendations).
+
 :::

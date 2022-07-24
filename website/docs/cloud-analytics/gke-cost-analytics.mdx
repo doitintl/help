@@ -23,7 +23,7 @@ You may have already executed some or all of these steps. However, unless ALL st
 
 :::
 
-:::note
+:::important
 
 GKE Cost Analytics is not applicable to **Autopilot clusters** because they currently do not support Usage Metering feature as noted [here](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview#unsupported_cluster_features).
 
@@ -44,7 +44,7 @@ Click on the "Create Service Account" button. This will display all of the Googl
 
 Finally, once you've executed all of the commands, select the _UPLOAD KEY_ button to upload the service account to the CMP.
 
-:::tip
+:::note
 
 Remember the service account email you created in this step. You will need it for step three.
 
@@ -58,7 +58,7 @@ After that, you can enable GKE usage metering on a new or existing cluster, usin
 
 You can find a more detailed description of these steps in the Google Kubernetes Engine [documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering#enabling).
 
-:::note
+:::tip
 
 - You can set multiple clusters in your project to write to the same BigQuery dataset
 - Clusters can export usage data only to BigQuery datasets in the same project
@@ -85,7 +85,7 @@ Then enter the service account email in the "Add members" field. Finally, grant 
   alt="A screenshot showing how to grant the BigQuery Data Viewer role"
 />
 
-:::note
+:::important
 
 Datasets to which the Service Account email is not granted this permission will not be available in the GKE Cost Analytics feature of the DoiT CMP.
 

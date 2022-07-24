@@ -1,0 +1,322 @@
+/*
+===============================================================================
+Infirma CSS variables configuration
+===============================================================================
+*/
+
+/*
+Copy of the default code
+https://github.com/facebookincubator/infima/blob/main/packages/core/styles/common/variables.pcss
+===============================================================================
+*/
+
+/*:root {*/
+/* --ifm-color-scheme: light; */
+
+/* Colors. */
+/*
+--ifm-dark-value: 10%;
+--ifm-darker-value: 15%;
+--ifm-darkest-value: 30%;
+--ifm-light-value: 15%;
+--ifm-lighter-value: 30%;
+--ifm-lightest-value: 50%;
+*/
+
+/*
+  This seems like a lot, but we want to ensure enough contrast.
+  Goal is to have a min score of 3 on https://www.myndex.com/APCA/fullmatrix
+  For fontWeight 400 + score 3, the cell must show a value < 16px (font size we use in places like alerts)
+  See also https://github.com/facebookincubator/infima/issues/55#issuecomment-884023075
+   */
+/*
+--ifm-contrast-background-value: 90%;
+--ifm-contrast-foreground-value: 70%;
+*/
+/* Using slightly different values for dark mode */
+/*
+--ifm-contrast-background-dark-value: 70%;
+--ifm-contrast-foreground-dark-value: 90%;
+*/
+
+/*
+--ifm-color-primary: #3578e5;
+--ifm-color-secondary: #ebedf0;
+--ifm-color-success: #00a400;
+--ifm-color-info: #54c7ec;
+--ifm-color-warning: #ffba00;
+--ifm-color-danger: #fa383e;
+*/
+
+/*
+@each $color in (primary, secondary, success, info, warning, danger) {
+  --ifm-color-$(color)-dark: color-mod(var(--ifm-color-$(
+        color)) shade(var(--ifm-dark-value))
+  );
+--ifm-color-$(color)-darker: color-mod(var(--ifm-color-$(
+      color)),
+  shade(var(--ifm-darker-value))
+);
+--ifm-color-$(color)-darkest: color-mod(var(--ifm-color-$(
+      color)),
+  shade(var(--ifm-darkest-value))
+);
+--ifm-color-$(color)-light: color-mod(var(--ifm-color-$(
+      color)),
+  tint(var(--ifm-light-value))
+);
+--ifm-color-$(color)-lighter: color-mod(var(--ifm-color-$(
+      color)),
+  tint(var(--ifm-lighter-value))
+);
+--ifm-color-$(color)-lightest: color-mod(var(--ifm-color-$(
+      color)),
+  tint(var(--ifm-lightest-value))
+);
+--ifm-color-$(color)-contrast-background: color-mod(var(--ifm-color-$(
+      color)),
+  tint(var(--ifm-contrast-background-value))
+);
+--ifm-color-$(color)-contrast-foreground: color-mod(var(--ifm-color-$(
+      color)),
+  shade(var(--ifm-contrast-foreground-value))
+);
+}
+*/
+
+/*
+--ifm-color-white: #fff;
+--ifm-color-black: #000;
+*/
+
+/*
+--ifm-color-gray-0: var(--ifm-color-white);
+--ifm-color-gray-100: #f5f6f7;
+--ifm-color-gray-200: #ebedf0;
+--ifm-color-gray-300: #dadde1;
+--ifm-color-gray-400: #ccd0d5;
+--ifm-color-gray-500: #bec3c9;
+--ifm-color-gray-600: #8d949e;
+--ifm-color-gray-700: #606770;
+--ifm-color-gray-800: #444950;
+--ifm-color-gray-900: #1c1e21;
+--ifm-color-gray-1000: var(--ifm-color-black);
+*/
+
+/*
+--ifm-color-emphasis-0: var(--ifm-color-gray-0);
+--ifm-color-emphasis-100: var(--ifm-color-gray-100);
+--ifm-color-emphasis-200: var(--ifm-color-gray-200);
+--ifm-color-emphasis-300: var(--ifm-color-gray-300);
+--ifm-color-emphasis-400: var(--ifm-color-gray-400);
+--ifm-color-emphasis-500: var(--ifm-color-gray-500);
+--ifm-color-emphasis-600: var(--ifm-color-gray-600);
+--ifm-color-emphasis-700: var(--ifm-color-gray-700);
+--ifm-color-emphasis-800: var(--ifm-color-gray-800);
+--ifm-color-emphasis-900: var(--ifm-color-gray-900);
+--ifm-color-emphasis-1000: var(--ifm-color-gray-1000);
+*/
+
+/* Base. */
+/*
+--ifm-color-content: var(--ifm-color-emphasis-900);
+--ifm-color-content-inverse: var(--ifm-color-emphasis-0);
+--ifm-color-content-secondary: #525860;
+*/
+
+/*
+--ifm-background-color: transparent;
+*/
+/* Body's background. */
+/*
+--ifm-background-surface-color: var(--ifm-color-content-inverse);
+--ifm-global-border-width: 1px;
+--ifm-global-radius: 0.4rem;
+*/
+
+/*
+--ifm-hover-overlay: rgba(0, 0, 0, 0.05);
+*/
+
+/* Typography. */
+/*
+--ifm-font-color-base: var(--ifm-color-content);
+--ifm-font-color-base-inverse: var(--ifm-color-content-inverse);
+--ifm-font-color-secondary: var(--ifm-color-content-secondary);
+--ifm-font-family-base: system-ui,
+-apple-system,
+BlinkMacSystemFont,
+'Segoe UI',
+Helvetica,
+Arial,
+sans-serif,
+'Apple Color Emoji',
+'Segoe UI Emoji',
+'Segoe UI Symbol';
+--ifm-font-family-monospace: SFMono-Regular,
+Menlo,
+Monaco,
+Consolas,
+'Liberation Mono',
+'Courier New',
+monospace;
+--ifm-font-size-base: 100%;
+
+--ifm-font-weight-light: 300;
+--ifm-font-weight-normal: 400;
+--ifm-font-weight-semibold: 500;
+--ifm-font-weight-bold: 700;
+
+--ifm-font-weight-base: var(--ifm-font-weight-normal);
+--ifm-line-height-base: 1.65;
+*/
+
+/* Spacing. */
+/*
+--ifm-global-spacing: 1rem;
+--ifm-spacing-vertical: var(--ifm-global-spacing);
+--ifm-spacing-horizontal: var(--ifm-global-spacing);
+*/
+
+/* Transitions. */
+/*
+--ifm-transition-fast: 200ms;
+--ifm-transition-slow: 400ms;
+--ifm-transition-timing-default: cubic-bezier(0.08, 0.52, 0.52, 1);
+*/
+
+/* Shadows. */
+/*
+--ifm-global-shadow-lw: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+--ifm-global-shadow-md: 0 5px 40px rgba(0, 0, 0, 0.2);
+--ifm-global-shadow-tl: 0 12px 28px 0 rgba(0, 0, 0, 0.2),
+0 2px 4px 0 rgba(0, 0, 0, 0.1);
+*/
+
+/* Z-index. */
+/*
+--ifm-z-index-dropdown: 100;
+--ifm-z-index-fixed: 200;
+--ifm-z-index-overlay: 400;
+*/
+/*}*/
+
+/*
+@custom-media --ifm-narrow-window (max-width: 996px);
+*/
+
+/*
+================================================================================
+*/
+
+/* Old attempt at trying to configure both at once */
+:root {
+  --ifm-color-primary-lightest: var(--doit-color-missing);
+  --ifm-color-primary-lighter: var(--doit-color-missing);
+  --ifm-color-primary-light: var(--doit-color-primary-light);
+  --ifm-color-primary: var(--doit-color-primary-main);
+  --ifm-color-primary-dark: var(--doit-color-primary-dark);
+  --ifm-color-primary-darker: var(--doit-color-missing);
+  --ifm-color-primary-darkest: var(--doit-color-missing);
+  --ifm-color-primary-contrast-background: var(--doit-color-missing);
+  --ifm-color-primary-contrast-foreground: var(--doit-color-missing);
+
+  --ifm-color-secondary-lightest: var(--doit-color-missing);
+  --ifm-color-secondary-lighter: var(--doit-color-missing);
+  --ifm-color-secondary-light: var(--doit-neutral-lighter);
+  --ifm-color-secondary: var(--doit-neutral-midtone);
+  --ifm-color-secondary-dark: var(--doit-neutral-dark);
+  --ifm-color-secondary-darker: var(--doit-color-missing);
+  --ifm-color-secondary-darkest: var(--doit-color-missing);
+  /* Calculated using rules taken from the Design System prototype document */
+  --ifm-color-secondary-contrast-background: rgb(240, 240, 240);
+  --ifm-color-secondary-contrast-foreground: rgb(41, 42, 43);
+
+  --ifm-color-success-lightest: var(--doit-color-missing);
+  --ifm-color-success-lighter: var(--doit-color-missing);
+  --ifm-color-success-light: var(--doit-color-success-light);
+  --ifm-color-success: var(--doit-color-success-main);
+  --ifm-color-success-dark: var(--doit-color-success-dark);
+  --ifm-color-success-darker: var(--doit-color-missing);
+  --ifm-color-success-darkest: var(--doit-color-missing);
+  --ifm-color-success-contrast-background: var(
+    --doit-color-success-background
+  );
+  --ifm-color-success-contrast-foreground: var(
+    --doit-color-success-content
+  );
+
+  --ifm-color-info-lightest: var(--doit-color-missing);
+  --ifm-color-info-lighter: var(--doit-color-missing);
+  --ifm-color-info-light: var(--doit-color-info-light);
+  --ifm-color-info: var(--doit-color-info-main);
+  --ifm-color-info-dark: var(--doit-color-info-dark);
+  --ifm-color-info-darker: var(--doit-color-missing);
+  --ifm-color-info-darkest: var(--doit-color-missing);
+  --ifm-color-info-contrast-background: var(--doit-color-info-background);
+  --ifm-color-info-contrast-foreground: var(--doit-color-info-content);
+
+  --ifm-color-warning-lightest: var(--doit-color-missing);
+  --ifm-color-warning-lighter: var(--doit-color-missing);
+  --ifm-color-warning-light: var(--doit-color-warning-light);
+  --ifm-color-warning: var(--doit-color-warning-main);
+  --ifm-color-warning-dark: var(--doit-color-warning-dark);
+  --ifm-color-warning-darker: var(--doit-color-missing);
+  --ifm-color-warning-darkest: var(--doit-color-missing);
+  --ifm-color-warning-contrast-background: var(
+    --doit-color-warning-background
+  );
+  --ifm-color-warning-contrast-foreground: var(
+    --doit-color-warning-content
+  );
+
+  --ifm-color-danger-lightest: var(--doit-color-error-light);
+  --ifm-color-danger-lighter: var(--doit-color-missing);
+  --ifm-color-danger-light: var(--doit-color-missing);
+  --ifm-color-danger: var(--doit-color-error-main);
+  --ifm-color-danger-dark: var(--doit-color-error-dark);
+  --ifm-color-danger-darker: var(--doit-color-missing);
+  --ifm-color-danger-darkest: var(--doit-color-missing);
+  --ifm-color-danger-contrast-background: var(
+    --doit-color-error-background
+  );
+  --ifm-color-danger-contrast-foreground: var(--doit-color-error-content);
+}
+
+/*
+Experiments using spark as a primary color in some contexts...
+
+:root {
+  --ifm-navbar-link-hover-color: var(--doit-color-primary-spark);
+}
+
+:where(.button--primary) {
+  --ifm-button-background-color: var(--doit-color-primary-spark);
+  --ifm-button-border-color: var(--doit-color-primary-spark)
+}
+
+:where(.button--primary):not(.button--outline):hover {
+  --ifm-button-background-color: var(--doit-color-primary-spark);
+  --ifm-button-border-color: var(--doit-color-primary-spark)
+}
+
+.pagination-nav a {
+  color: var(--doit-color-primary-spark);
+}
+*/
+
+:root {
+  --ifm-spacing-vertical-2x: calc(var(--ifm-spacing-vertical) * 2);
+  --ifm-spacing-vertical-4x: calc(var(--ifm-spacing-vertical) * 4);
+}
+
+.footer {
+  --ifm-footer-background-color: var(--ifm-font-color-base);
+  --ifm-footer-color: var(--ifm-color-white);
+  --ifm-footer-link-color: var(--ifm-color-white);
+  --ifm-footer-title-color: var(--ifm-color-white);
+}
+
+[data-theme='dark'] .footer {
+  --ifm-footer-background-color: var(--ifm-navbar-background-color);
+}

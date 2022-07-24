@@ -15,7 +15,7 @@ When you open a technical support request with DoiT International, we may occasi
 - Support engineers never have write-access to your AWS account. The only exception to this rule is that we are able to raise AWS support requests on your behalf.
 - [AWS CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html) can provide a complete log of every action that we perform on your account.
 
-:::info
+:::important
 
 When you grant an access request, the individual staff member will not have write-access to your account.
 
@@ -35,7 +35,7 @@ To grant access, you must configure an AWS CloudFormation stack which allows our
 
 Below is the [template YAML file](https://doit-aws-ops-prod-templates.s3.amazonaws.com/awsops_sns.yaml) in full.
 
-:::caution
+:::attention
 
 If you are installing this CloudFormation template manually, be sure to set your AWS region to `us-east-1`.
 

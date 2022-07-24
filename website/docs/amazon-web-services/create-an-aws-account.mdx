@@ -7,7 +7,7 @@ description: Create new AWS account/s with preconfigured consolidated billing di
 
 As a customer, you can create a new AWS account directly from the _Cloud Management Platform_ (CMP).
 
-:::note
+:::important
 
 You must be assigned access to the specific _Billing Profile_ under which the domain is managed in order to create a new account.
 
@@ -38,7 +38,7 @@ Then:
 3. Set the root email.
 4. Optionally, clear the **Delete AWS Organization role** checkbox.
 
-   :::tip
+   :::hint
 
    When you create a new account in an organization, AWS automatically creates an IAM role named `OrganizationAccountAccessRole`.
    This role has full administrative permissions in the new account, and the organization can assume this role to access your account.

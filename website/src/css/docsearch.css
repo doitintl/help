@@ -1,0 +1,5 @@
+:root {
+  --docsearch-primary-color: var(--ifm-color-primary) !important;
+  --docsearch-muted-color: var(--ifm-color-emphasis-700) !important;
+  --docsearch-modal-width: 90vw !important;
+}
