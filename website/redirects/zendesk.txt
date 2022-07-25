@@ -1,4 +1,5 @@
 /hc                                                                                                        /
+/hc/article_attachments/360046632732/Configure_Cost_Label.png                                              /docs/cloud-analytics/gke-cost-analytics#analyze-gke-cost
 /hc/en-us                                                                                                  /
 /hc/en-us/articles/360031902452-Update-Company-Name                                                        /docs/invoices-and-payments/changing-your-company-name
 /hc/en-us/articles/360032246812-Add-New-G-Suite-Subscription-                                              /docs/g-suite-and-workspace/add-a-new-g-suite-subscription
@@ -16,6 +17,7 @@
 /hc/en-us/articles/360032598511-Open-A-New-Support-Request                                                 /docs/services/consulting-support#create-a-new-request
 /hc/en-us/articles/360032605811-Download-Invoice-Reconciliation-File                                       /docs/invoices-and-payments/downloading-your-invoice-reconciliation-file
 /hc/en-us/articles/360032605871                                                                            /docs/cmp
+/hc/en-us/articles/360033158952                                                                            /docs/dashboards/creating-a-new-dashboard
 /hc/en-us/articles/360033158952-Create-A-New-Dashboard                                                     /docs/dashboards/creating-a-new-dashboard
 /hc/en-us/articles/360033254031-User-Permissions                                                           /docs/user-management/user-permissions-explained
 /hc/en-us/articles/360033254111--Change-Invoice-Settings                                                   /docs/invoices-and-payments/changing-invoice-settings
@@ -33,6 +35,7 @@
 /hc/en-us/articles/360036449891-AWS-FinOps-Dashboard                                                       /docs/dashboards/aws-lens
 /hc/en-us/articles/360037219472-Create-An-AWS-Account-Video-                                               /docs/amazon-web-services/create-an-aws-account
 /hc/en-us/articles/360037476972-Update-Payment-Method-Video-                                               /docs/invoices-and-payments/updating-your-payment-method
+/hc/en-us/articles/360037477012-Update-Billing-Address-Video-                                              /docs/invoices-and-payments/updating-your-billing-address
 /hc/en-us/articles/360037477152-Update-Accounts-Payable-AP-Information-Video-                              /docs/invoices-and-payments/updating-your-accounts-payable-ap-information
 /hc/en-us/articles/360037549512-New-Invoices                                                               /docs/general/profile#notification-preferences
 /hc/en-us/articles/360037587311-Company-Registration                                                       /docs/general/registration
@@ -43,6 +46,7 @@
 /hc/en-us/articles/360038098731-Upgrading-G-Suite-Edition-                                                 /docs/g-suite-and-workspace/upgrading-your-g-suite-edition
 /hc/en-us/articles/360038122452-Transfer-Google-Cloud-Projects-                                            /docs/google-cloud/transfer-google-cloud-projects
 /hc/en-us/articles/360038354291-reOptimize-Data-Access-Policy                                              /docs/dashboards/bigquery-lens
+/hc/en-us/articles/360038480571-Escalating-Support-Request                                                 /docs/services/consulting-support/escalate
 /hc/en-us/articles/360038501431-Transfer-Google-Cloud-Projects-Video-                                      /docs/google-cloud/transfer-google-cloud-projects
 /hc/en-us/articles/360038581272-AWS-Migration-TCO-Analysis                                                 /docs/amazon-web-services/invite-existing-aws-account
 /hc/en-us/articles/360038791071                                                                            /docs/amazon-web-services/aws-quotas
@@ -70,7 +74,6 @@
 /hc/en-us/articles/360050404732-Managing-Alerts-in-Shared-Slack-Channels                                   /docs/services/consulting-support/shared-slack-channel
 /hc/en-us/categories/200035127-Cloud-Management-Platform                                                   /docs/cmp
 /hc/en-us/sections/360006079692-Manage-Assets-Licenses                                                     /docs/cmp#asset-management
-/hc/en-us/sections/360006391112-Customer-Support                                                           /docs/services/consulting-support
 /hc/en-us/sections/360006391112-Customer-Support                                                           /docs/services/consulting-support
 /hc/en-us/sections/360006391152-Invoices-Payments                                                          /docs/cmp#advanced-billing
 /hc/en-us/sections/360006391192-Dashboards                                                                 /docs/dashboards/widgets-overview
