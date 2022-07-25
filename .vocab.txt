@@ -141,6 +141,7 @@ pngquant
 pngs
 porta
 posix
+precomposed
 preconfigured
 preemptible
 prefetch
@@ -173,6 +174,7 @@ serviceusage
 shellcheck
 shfmt
 signcl
+signin
 skus
 sles
 smallhadroncollider

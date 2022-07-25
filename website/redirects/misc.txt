@@ -5,6 +5,8 @@
 /brand/logo-hero.svg                     /logo-hero.png
 /brand/logo-white.svg                    /logo-white.png
 /og-image.png                            /preview.png
+
+/hc/en-us/signin                         /
 /readme                                  /
 /start.html                              /
 
@@ -36,27 +38,39 @@
 /.well-known/sellers.json                /cgi-bin/brew/_coffee.html 418
 /.well-known/trust.txt                   /cgi-bin/brew/_coffee.html 418
 /apple-app-site-association              /cgi-bin/brew/_coffee.html 418
+/apple-touch-icon-precomposed.png        /cgi-bin/brew/_coffee.html 418
 
 # Malicious (or invalid) requests
 
 # cspell:disable
 
 /.*                                      /cgi-bin/brew/_coffee.html 418
+//*                                      /cgi-bin/brew/_coffee.html 418
 /~/*                                     /cgi-bin/brew/_coffee.html 418
 /2019/wp-*                               /cgi-bin/brew/_coffee.html 418
+/admin.php                               /cgi-bin/brew/_coffee.html 418
 /admin/*                                 /cgi-bin/brew/_coffee.html 418
 /attachments/*                           /cgi-bin/brew/_coffee.html 418
+/bitrix/*                                /cgi-bin/brew/_coffee.html 418
 /carbon/*                                /cgi-bin/brew/_coffee.html 418
 /clientscript/*                          /cgi-bin/brew/_coffee.html 418
+/console/                                /cgi-bin/brew/_coffee.html 418
+/console/*                               /cgi-bin/brew/_coffee.html 418
 /CoreCode/*                              /cgi-bin/brew/_coffee.html 418
 /dashboard/*                             /cgi-bin/brew/_coffee.html 418
 /fpui/*                                  /cgi-bin/brew/_coffee.html 418
+/graphql                                 /cgi-bin/brew/_coffee.html 418
+/index.action                            /cgi-bin/brew/_coffee.html 418
 /index.php                               /cgi-bin/brew/_coffee.html 418
 /jmx-console/*                           /cgi-bin/brew/_coffee.html 418
 /language/*                              /cgi-bin/brew/_coffee.html 418
+/libs/*                                  /cgi-bin/brew/_coffee.html 418
 /login                                   /cgi-bin/brew/_coffee.html 418
 /login.*                                 /cgi-bin/brew/_coffee.html 418
+/manager/html                            /cgi-bin/brew/_coffee.html 418
 /mifs/*                                  /cgi-bin/brew/_coffee.html 418
+/mobile/index.php                        /cgi-bin/brew/_coffee.html 418
+/oauth/*                                 /cgi-bin/brew/_coffee.html 418
 /owa/*                                   /cgi-bin/brew/_coffee.html 418
 /sessions/*                              /cgi-bin/brew/_coffee.html 418
 /sftp-config.json                        /cgi-bin/brew/_coffee.html 418
