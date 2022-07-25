@@ -20,6 +20,7 @@ doit.blogUrl = 'https://blog.' + doit.domain + '/';
 doit.appUrl = 'https://app.' + doit.domain + '/';
 doit.supportUrl = doit.appUrl + 'support';
 doit.developerUrl = 'https://developer.' + doit.domain + '/';
+doit.changelogUrl = 'https://changelog.' + doit.domain + '/';
 doit.feedbackUrl = 'https://feedback.' + doit.domain + '/';
 doit.helpUrl = process.env.URL || 'http://localhost:3000';
 doit.helpDomain = doit.helpUrl.split('//')[1];
