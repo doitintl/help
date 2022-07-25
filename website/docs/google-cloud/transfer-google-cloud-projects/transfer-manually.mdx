@@ -57,6 +57,12 @@ Get in touch with your organization's Google Cloud administrator if you need hel
 
 ## Use the `gcloud` tool
 
+:::important
+
+To transfer a Google Cloud project to a DoiT billing account using the `gcloud` tool, you must be the owner of the project and have a billing role (or higher) on the desired billing account.
+
+:::
+
 ### Link one project
 
 The `gcloud` CLI tool has a (beta) [billing project link](https://cloud.google.com/sdk/gcloud/reference/beta/billing/projects/link) command, which you can use to link a project to a billing account.
@@ -135,12 +141,6 @@ import Link from '@docusaurus/Link';
    :::attention
 
    Running this command will link all your Google Cloud projects to the specified billing account ID provided by DoiT.
-
-   :::
-
-   :::note
-
-   You can only link projects if you have the Owner permission.
 
    :::
 
