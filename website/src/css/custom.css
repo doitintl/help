@@ -52,7 +52,7 @@
   --ifm-color-danger-contrast-foreground: #1d070c;
 
   /* Taken directly from the Docusaurus website */
-  --docusaurus-highlighted-code-line-bg: rgba(0,0,0,0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* Announcement bar */
