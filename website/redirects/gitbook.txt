@@ -20,7 +20,7 @@
 /cloud-analytics/cloning-and-or-customizing-cloud-reports                                        /docs/cloud-analytics/reports/create-report
 /cloud-analytics/create-cloud-report/                                                            /docs/cloud-analytics/reports/
 /cloud-analytics/create-cloud-report/report-dimensions-groupings-and-filters                     /docs/cloud-analytics/reports/report-dimensions-groupings-and-filters
-/cloud-analytics/custom-metrics                                                                  /docs/cloud-analytics/reports/custom-metrics
+/cloud-analytics/custom-metrics                                                                  /docs/cloud-analytics/custom-metrics
 /cloud-analytics/editing-your-cloud-report                                                       /docs/cloud-analytics/reports/editing-your-cloud-report
 /cloud-analytics/exporting-cloud-reports                                                         /docs/cloud-analytics/reports/exporting-cloud-reports
 /cloud-analytics/forecasting                                                                     /docs/cloud-analytics/reports/forecasting
