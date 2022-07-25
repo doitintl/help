@@ -4,6 +4,10 @@ const colSupport = {
   title: 'Support and consulting',
   items: [
     {
+      label: 'Changelog',
+      href: doit.changelogUrl,
+    },
+    {
       label: 'Feature requests',
       href: doit.feedbackUrl,
     },
