@@ -71,10 +71,10 @@ For example:
 
 ```shell
 gcloud beta \
-    billing projects link MY_PROJECT_ID --billing-account 0X0X0X-0X0X0X-0X0X0X
+    billing projects link PROJECT_ID --billing-account 0X0X0X-0X0X0X-0X0X0X
 ```
 
-Here, replace `MY_PROJECT_ID` with the Google Cloud project ID and replace `0X0X0X-0X0X0X-0X0X0X` with the billing account ID provided by DoiT.
+Here, replace `PROJECT_ID` with the Google Cloud project ID and replace `0X0X0X-0X0X0X-0X0X0X` with the billing account ID provided by DoiT.
 
 ### Link multiple projects
 
@@ -98,7 +98,7 @@ Like before, replace `0X0X0X-0X0X0X-0X0X0X` with the billing account ID provided
 
 :::hint
 
-The highlighted line which shows the `echo` command used to print the `gcloud` command that _would_ be executed, instead of executing it (i.e., it performs a dry run).
+The highlighted line shows the `echo` command used to print the `gcloud` command to the console instead of executing it (i.e., a dry run). A dry run allows you to verify that everything looks correct before you proceed with execution.
 
 :::
 
@@ -132,16 +132,16 @@ Here's what the rest of the pipeline does:
       <Link to="https://en.wikipedia.org/wiki/Standard_streams">STDIN</Link>.
     </p>
     <p>
-      Then, for each Project ID, it runs the the <code>echo</code> command
-      (and everything that follows it), substituting <code>{'{}'}</code> for
-      the Project ID.
+      Then, for each Project ID, <code>xargs</code> runs the{' '}
+      <code>echo</code> command (and everything that follows), substituting{' '}
+      <code>{'{}'}</code> for the Project ID.
     </p>
   </dd>
 </dl>
 
-#### Execution run
+#### Execution
 
-Remove the `echo` from the pipeline above to execute the `billing project link` command for every project you have access to:
+Remove the `echo` from the pipeline above to execute the `gcloud` command for every project you have access to:
 
 ```shell
 gcloud projects list --format="value(project_id)" |
