@@ -55,7 +55,7 @@ Get in touch with your organization's Google Cloud administrator if you need hel
 
    2. In the popup window, select the new billing account provided by DoiT International.
 
-## Use the `gcloud` tool
+## Use the Google Cloud CLI
 
 :::important
 
@@ -65,7 +65,7 @@ To transfer a Google Cloud project to a DoiT billing account using the `gcloud` 
 
 ### Link one project
 
-The `gcloud` CLI tool has a (beta) [billing project link](https://cloud.google.com/sdk/gcloud/reference/beta/billing/projects/link) command, which you can use to link a project to a billing account.
+The [Google Cloud CLI](https://cloud.google.com/sdk/gcloud) (i.e., `gcloud`) has a [beta](https://cloud.google.com/sdk/gcloud#release_levels) [`billing project link`](https://cloud.google.com/sdk/gcloud/reference/beta/billing/projects/link) command, which you can use to link a project to a billing account.
 
 For example:
 
@@ -74,75 +74,88 @@ gcloud beta \
     billing projects link MY_PROJECT_ID --billing-account 0X0X0X-0X0X0X-0X0X0X
 ```
 
-Here, replace `MY_PROJECT_ID` with the Google Cloud project ID and replace `0X0X0X-0X0X0X-0X0X0X` with the billing account ID provided by DoiT
+Here, replace `MY_PROJECT_ID` with the Google Cloud project ID and replace `0X0X0X-0X0X0X-0X0X0X` with the billing account ID provided by DoiT.
 
 ### Link multiple projects
 
-It's also possible to link multiple projects to a billing account using one `gcloud` command.
+It's also possible to link multiple projects to a billing account using a [shell pipeline](<https://en.wikipedia.org/wiki/Pipeline_(Unix)>) that executes many `gcloud` commands in sequence, one for each Google Cloud project.
 
 import Link from '@docusaurus/Link';
 
-1. Run the command below to perform a dry-run of the `gcloud beta billing project link` command for every Google Cloud project you have access to (i.e., have at least _one_ permission).
+#### Dry run
 
-   ```shell
-   gcloud projects list --format="value(project_id)" |
-   # highlight-next-line
-       xargs -I {} echo \
-           gcloud beta \
-               billing projects link {} --billing-account 0X0X0X-0X0X0X-0X0X0X
-   ```
+Run the pipeline command below to print one complete `gcloud` command for every project you have access to (i.e., have at least _one_ permission).
 
-   Like before, replace `0X0X0X-0X0X0X-0X0X0X` with the billing account ID provided by DoiT.
+```shell
+gcloud projects list --format="value(project_id)" |
+# highlight-next-line
+    xargs -I {} echo \
+        gcloud beta \
+            billing projects link {} --billing-account 0X0X0X-0X0X0X-0X0X0X
+```
 
-   Notice the highlighted line showing the `echo` command is used to print the `gcloud` command that _would_ be run instead of running it (i.e., performs a dry run).
+Like before, replace `0X0X0X-0X0X0X-0X0X0X` with the billing account ID provided by DoiT.
 
-   Here's what the rest of the command does:
+:::hint
 
-   <dl>
-     <dt>
-       <code>--format="value(project_id)"</code>
-     </dt>
-     <dd>
-       <Link to="https://cloud.google.com/sdk/gcloud/reference#--format">
-         Formats the result
-       </Link>{' '}
-       to return the project ID.
-     </dd>
-     <dt>
-       <code>|</code>
-     </dt>
-     <dd>
-       Pipes the result of the left side of the pipe (<code>|</code>) into
-       the right side of the pipe.
-     </dd>
-     <dt>
-       <code>xargs</code>
-     </dt>
-     <dd>Builds and executes command lines from standard input.</dd>
-     <dt>
-       <code>-I {'{}'}</code>
-     </dt>
-     <dd>
-       Replaces occurrences of <code>{'{}'}</code> in the initial arguments
-       with names read from standard input.
-     </dd>
-   </dl>
+The highlighted line which shows the `echo` command used to print the `gcloud` command that _would_ be executed, instead of executing it (i.e., it performs a dry run).
 
-2. Run the same command without the `echo` to actually run the `gcloud beta billing project link` command for every project you have access to:
+:::
 
-   ```shell
-   gcloud projects list --format="value(project_id)" |
-   # highlight-next-line
-       xargs -I {} \
-           gcloud beta \
-               billing projects link {} --billing-account 0X0X0X-0X0X0X-0X0X0X
-   ```
+Here's what the rest of the pipeline does:
 
-   :::attention
+<dl>
+  <dt>
+    <code>gcloud projects list --format="value(project_id)"</code>
+  </dt>
+  <dd>
+    <p>
+      Gets a list of every project you have access to and{' '}
+      <Link to="https://cloud.google.com/sdk/gcloud/reference#--format">
+        formats the result
+      </Link>{' '}
+      to print the project ID to{' '}
+      <Link to="https://en.wikipedia.org/wiki/Standard_streams">
+        STDOUT
+      </Link>
+      , which is then passed to <Link to="https://en.wikipedia.org/wiki/Xargs">
+        <code>xargs</code>
+      </Link> through the pipe (<code>|</code>) operator.
+    </p>
+  </dd>
+  <dt>
+    <code>xargs -I {'{}'}</code>
+  </dt>
+  <dd>
+    <p>
+      Reads the list of Project IDs from{' '}
+      <Link to="https://en.wikipedia.org/wiki/Standard_streams">STDIN</Link>.
+    </p>
+    <p>
+      Then, for each Project ID, it runs the the <code>echo</code> command
+      (and everything that follows it), substituting <code>{'{}'}</code> for
+      the Project ID.
+    </p>
+  </dd>
+</dl>
 
-   Running this command will link all your Google Cloud projects to the specified billing account ID provided by DoiT.
+#### Execution run
 
-   :::
+Remove the `echo` from the pipeline above to execute the `billing project link` command for every project you have access to:
+
+```shell
+gcloud projects list --format="value(project_id)" |
+# highlight-next-line
+    xargs -I {} \
+        gcloud beta \
+            billing projects link {} --billing-account 0X0X0X-0X0X0X-0X0X0X
+```
+
+:::attention
+
+Running this command will link all your Google Cloud projects to the specified billing account ID provided by DoiT.
+
+:::
 
 ## Verify the transfer
 
