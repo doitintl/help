@@ -11,6 +11,7 @@
     "fnando.linter",
     "foxundermoon.shell-format",
     "golang.go",
+    "jock.svg",
     "jounqin.vscode-mdx",
     "redhat.vscode-yaml",
     "rvest.vs-code-prettier-eslint",
@@ -26,6 +27,5 @@
     "vadistic.mdx-inline",
     "viktorzetterstrom.non-breaking-space-highlighter",
     "xyc.vscode-mdx-preview",
-    "cssho.vscode-svgviewer"
   ]
 }
