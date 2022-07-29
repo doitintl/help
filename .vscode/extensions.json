@@ -27,6 +27,8 @@
     "vadistic.mdx-inline",
     "viktorzetterstrom.non-breaking-space-highlighter",
     "xyc.vscode-mdx-preview",
-    "webhint.vscode-webhint"
+    "webhint.vscode-webhint",
+    "xyc.vscode-mdx-preview",
+    "xyc.vscode-mdx-preview",
   ]
 }
